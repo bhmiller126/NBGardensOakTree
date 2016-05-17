@@ -1,0 +1,57 @@
+db.products.insert( {_id : 1, Catalogue: 1, Product_Name: "Garden Angel", Product_Description: "Small angel decorative ornament, stone", Product_Category: "Decor"} )
+db.products.insert( {_id : 1, Catalogue: 1, Product_Name: "Garden Angel", Product_Description: "Small angel decorative ornament, stone", Product_Category: "Decor"} )
+
+https://shancarter.github.io/mr-data-converter/
+
+
+	db.products.insert(
+[{_id:1,"catalogue_id":1,"product_name":"Garden Angel","product_description":"Small Angel Decorative Ornament, Stone","product_catagory":"Decor"},
+{_id:2,"catalogue_id":2,"product_name":"African Lady","product_description":"Medium Brass Ornament, Wood Accents","product_catagory":"Decor"},
+{_id:3,"catalogue_id":3,"product_name":"Gnomey McGnome Face","product_description":"Gnome, Blue hat, Two Faces","product_catagory":"Gnome"},
+{_id:4,"catalogue_id":4,"product_name":"Green Sparkle Suit Gnome","product_description":"Gnome, With Suit, Green Glitter","product_catagory":"Gnome"},
+{_id:5,"catalogue_id":5,"product_name":"Baby Gnome","product_description":"Gnome in Pram, Pink Hat with teddy","product_catagory":"Gnome"},
+{_id:6,"catalogue_id":6,"product_name":"MEGA Drill","product_description":"Red Drill, Black Case, 14 Drill Bits, Large","product_catagory":"Power Tool"},
+{_id:7,"catalogue_id":7,"product_name":"Rock Enamel Garden Suite","product_description":"Marbel Rock Table, 4 Iron Chairs","product_catagory":"Furniture"},
+{_id:8,"catalogue_id":8,"product_name":"Sweetpea","product_description":"Sweetpea flower in planter pot","product_catagory":"Plant"},
+{_id:9,"catalogue_id":9,"product_name":"Turbo Mow","product_description":"Petrol Drive Mower, Matt black, 6 Wheels","product_catagory":"Lawn Mower"},
+{_id:10,"catalogue_id":10,"product_name":"Justin Beiber Gnome","product_description":"Gnome, White jeans, floppy hair, Sings 'Baby'","product_catagory":"Gnome"},
+{_id:11,"catalogue_id":11,"product_name":"Grizzly Pressure Washer","product_description":"Metal with purple plastic, telescopic handle","product_catagory":"Garden Power Tool"},
+{_id:12,"catalogue_id":12,"product_name":"Ultimate BBQ","product_description":"Chrome Gas Burner BBQ , 6ft Grill Plate","product_catagory":"Outdoor Living"},
+{_id:13,"catalogue_id":13,"product_name":"Gareth Davis Gnome","product_description":"Lederhosen, Holding Stein of Beer","product_catagory":"Gnome"},
+{_id:14,"catalogue_id":14,"product_name":"3 Tier Grow Rack","product_description":"Steel Frame, green mesh, wooden shelves","product_catagory":"Greenhouses"},
+{_id:15,"catalogue_id":15,"product_name":"Junior Playhouse with Slide","product_description":"Wooden Playhouse, steps, pink plastic slide","product_catagory":"Sheds and Playhouses"},
+{_id:16,"catalogue_id":16,"product_name":"Aaron Mulholland Gnome","product_description":"Dressed as a cat, Holding two cats","product_catagory":"Gnome"},
+{_id:17,"catalogue_id":17,"product_name":"Beyonce 'Single Ladies' Gnome","product_description":"Gnome dressed in leotard with large ring on","product_catagory":"Gnome"},
+{_id:18,"catalogue_id":18,"product_name":"Dobby Gnome","product_description":"Elf gnome, with rags, holding a sock","product_catagory":"Gnome"},
+{_id:19,"catalogue_id":19,"product_name":"Extra Large Terracotta Pot","product_description":"3ft Plant Pot","product_catagory":"Pots and Planters"},
+{_id:20,"catalogue_id":20,"product_name":"Hanging Basket","product_description":"Banana braid hanging basket 6 inches ","product_catagory":"Pots and Planters"},
+{_id:21,"catalogue_id":21,"product_name":"Mega Fertiliser","product_description":"Fertilser that promises to grow whole garden in 8 minutes","product_catagory":"Lawn Care"},
+{_id:22,"catalogue_id":22,"product_name":"Doctor Who Gnome","product_description":"Peter Capaldi Doctor inside a Tardis","product_catagory":"Gnome"},
+{_id:23,"catalogue_id":23,"product_name":"3 Piece Swivel Sofa Chair","product_description":"Mixed Brown Rattan Wood, 2 Sofas and small table","product_catagory":"Furniture"},
+{_id:24,"catalogue_id":24,"product_name":"Wooden Deckchair","product_description":"Floral Pattern Polyester with Dark wood frame","product_catagory":"Furniture"},
+{_id:25,"catalogue_id":25,"product_name":"Chocoholic Gnome","product_description":"Female Gnome surrounded by and eating chocolate","product_catagory":"Gnome"},
+{_id:26,"catalogue_id":26,"product_name":"Farmer Gnome","product_description":"Old man gnome driving a tractor","product_catagory":"Gnome"},
+{_id:27,"catalogue_id":27,"product_name":"Handy Trim","product_description":"Hand Held Hedge Trimmer","product_catagory":"Power Tool"},
+{_id:28,"catalogue_id":28,"product_name":"Buddha","product_description":"Cornish Stone Buddha","product_catagory":"Decor"},
+{_id:29,"catalogue_id":29,"product_name":"Gangsta Gnome","product_description":"Gnome with baseball cap, gold chains and jeans not pulled up","product_catagory":"Gnome"},
+{_id:30,"catalogue_id":30,"product_name":"Sunflower","product_description":"Sunflower in terracotta pot","product_catagory":"Plant"}]
+	)
+
+db.address.insert(
+[
+{_id:1,"line_1":"27 Salmon Street","line_2":"Fishery Lake","town":"Salford","city":"Salford","county":"Manchester","postcode":"M9 7QH","home_phone_number":"01895 203485"},
+{_id:2,"line_1":"36 Teeside Way","line_2":"NULL","town":"Oadby","city":"Leicester","county":"Lancashire","postcode":"PR1 1QR","home_phone_number":"01776 553802"},
+{_id:3,"line_1":"88 Fatlady Road","line_2":"NULL","town":"Chubby","city":"Rotund","county":"Essex","postcode":"WA14 5GG","home_phone_number":"NULL"},
+{_id:4,"line_1":"5 Gerbil Avenue","line_2":"NULL","town":"Rodentville","city":"Pets City","county":"Farnborough","postcode":"KL16 9IL","home_phone_number":"NULL"},
+{_id:5,"line_1":"99 Everyway","line_2":"House 45","town":"Bamber Bridge","city":"Preston","county":"Lancashire","postcode":"PR1 1LL","home_phone_number":"01776 859224"},
+{_id:6,"line_1":"68 Finch Road","line_2":"Goodway","town":"Great","city":"Goodcity","county":"GGville","postcode":"GG16 8HL","home_phone_number":"01147 856993"},
+{_id:7,"line_1":"68 Finch Road","line_2":"Goodway","town":"Great","city":"Goodcity","county":"GGville","postcode":"GG16 8HL","home_phone_number":"01147 856993"},
+{_id:8,"line_1":"4 Richmond Drive","line_2":"NULL","town":"Humperdink","city":"Florin","county":"Northamptonshire","postcode":"NN14 7FQ","home_phone_number":"NULL"},
+{_id:9,"line_1":"2 Seconday Street","line_2":"Romaine Way","town":"Italia","city":"Cheshire","county":"Jersey","postcode":"JJ12 8FV","home_phone_number":"01668 542915"},
+{_id:10,"line_1":"Castle 1","line_2":"NULL","town":"Govan","city":"Glasgow","county":"Hogwarts","postcode":"HG01 3DE","home_phone_number":"01156 406385"},
+{_id:11,"line_1":"3 Cecil Road ","line_2":"NULL","town":"Blackley","city":"Manchester","county":"Greater Manchester","postcode":"M9 6RP","home_phone_number":"NULL"},
+{_id:12,"line_1":"8 Cecil Road","line_2":"NULL","town":"Blackley","city":"Manchester","county":"Greater Manchester","postcode":"M9 6RP","home_phone_number":"NULL"},
+{_id:13,"line_1":"Touche House","line_2":"NULL","town":"Great","city":"Goodcity","county":"GGville","postcode":"GG16 8HL","home_phone_number":"01563 333554"},
+{_id:14,"line_1":"Grotto","line_2":"Pole Street","town":"Winterfell","city":"Artic","county":"Freezer","postcode":"NP1","home_phone_number":"NULL"},
+{_id:15,"line_1":"Summer Grotto","line_2":"Penguin Avenue","town":"","city":"Southville","county":"Freezer","postcode":"SP1","home_phone_number":"NULL"}]
+)
