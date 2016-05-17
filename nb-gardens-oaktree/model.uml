@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ">
+  <uml:Model xmi:id="_3xz1gBwqEeaAypVZ0p8n1Q" name="RootElement">
+    <packagedElement xmi:type="uml:Class" xmi:id="_5nJmgBwqEeaAypVZ0p8n1Q" name="Customer" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_31V4YBwvEeaAypVZ0p8n1Q" name="username" visibility="private" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-2XEEBwvEeaAypVZ0p8n1Q" name="emailAddress" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OeugEBwwEeaAypVZ0p8n1Q" name="title" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FOiuIBwwEeaAypVZ0p8n1Q" name="firstName" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IYfhoBwwEeaAypVZ0p8n1Q" name="lastName" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xT2MMBwtEeaAypVZ0p8n1Q" name="StockItem">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TKq1UBwxEeaAypVZ0p8n1Q" name="productID" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_z_LKABwtEeaAypVZ0p8n1Q" name="PaymentMethod"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1g-7ABwtEeaAypVZ0p8n1Q" name="Address">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MNcIABwyEeaAypVZ0p8n1Q" name="addressLine1" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XmTdsBwyEeaAypVZ0p8n1Q" name="addressLine2" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_aAb90BwyEeaAypVZ0p8n1Q" name="addressLine3" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cWTB8BwyEeaAypVZ0p8n1Q" name="city" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_d4wTMBwyEeaAypVZ0p8n1Q" name="county" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_faUzoBwyEeaAypVZ0p8n1Q" name="postalCode" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3UzCABwtEeaAypVZ0p8n1Q" name="Supplier"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PEptEBwvEeaAypVZ0p8n1Q" name="Order">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-WKPIBwxEeaAypVZ0p8n1Q" name="orderID" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TtdHYBwzEeaAypVZ0p8n1Q" name="customer" visibility="private" type="_5nJmgBwqEeaAypVZ0p8n1Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_D4XWoBw2EeaAypVZ0p8n1Q" name="supplier" visibility="private" type="_3UzCABwtEeaAypVZ0p8n1Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w3aDoBw0EeaAypVZ0p8n1Q" name="orderLines" visibility="private" type="_nDMCcBwyEeaAypVZ0p8n1Q" isOrdered="true">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4aCuoBw0EeaAypVZ0p8n1Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4aCuoRw0EeaAypVZ0p8n1Q" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JTLrcBw0EeaAypVZ0p8n1Q" name="orderTotal" visibility="private" isDerived="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FM5uYBw7EeaAypVZ0p8n1Q" name="returnReason" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Av_-4BwzEeaAypVZ0p8n1Q" name="order">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zHW3kBw1EeaAypVZ0p8n1Q" name="customer" type="_5nJmgBwqEeaAypVZ0p8n1Q"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XhnqoBw1EeaAypVZ0p8n1Q" name="order">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SxKW4Bw2EeaAypVZ0p8n1Q" name="supplier" type="_3UzCABwtEeaAypVZ0p8n1Q"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nDMCcBwyEeaAypVZ0p8n1Q" name="OrderLine">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RS10MBw1EeaAypVZ0p8n1Q" name="orderID" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wQ8WABwzEeaAypVZ0p8n1Q" name="product" visibility="private" type="_xT2MMBwtEeaAypVZ0p8n1Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_yenHcBwzEeaAypVZ0p8n1Q" name="quantity" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3dVAABw6EeaAypVZ0p8n1Q" name="returnedToShelf" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1S-FcBwzEeaAypVZ0p8n1Q" name="unitCost" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__9UIQBwzEeaAypVZ0p8n1Q" name="lineTotal" visibility="private" isDerived="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_iLMKABw4EeaAypVZ0p8n1Q" name="orderLine">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nGwFEBw4EeaAypVZ0p8n1Q" name="orderID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sMWF4Bw4EeaAypVZ0p8n1Q" name="productID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xzLykBw4EeaAypVZ0p8n1Q" name="quantity">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2_xMMBw4EeaAypVZ0p8n1Q" name="unitCost">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_s78r8Bw6EeaAypVZ0p8n1Q" name="orderLine">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_vq0tABw6EeaAypVZ0p8n1Q" name="orderID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_yKM5gBw6EeaAypVZ0p8n1Q" name="productID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0Ftj8Bw6EeaAypVZ0p8n1Q" name="quantity">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2aWgEBw6EeaAypVZ0p8n1Q" name="returnedToShelf">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5CaZYBw4EeaAypVZ0p8n1Q" name="orderLine">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9b4UABw4EeaAypVZ0p8n1Q" name="productID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__XmZ0Bw4EeaAypVZ0p8n1Q" name="quantity">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_MkUwQBwtEeaAypVZ0p8n1Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MkUwQRwtEeaAypVZ0p8n1Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <ActionLanguage:TextualRepresentation xmi:id="_MkUwQhwtEeaAypVZ0p8n1Q" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+</xmi:XMI>
