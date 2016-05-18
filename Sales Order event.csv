@@ -1,0 +1,27 @@
+sales_event_id,Sales_Order_sales_id,time_stamp,description,type
+1,1,14/04/2016 10:00,Order Created,Create
+2,1,14/04/2016 12:00,Order Picked and Packed,Packed
+6,1,18/04/2016 09:10,Order Dispatched,Dispatch
+11,1,01/05/2016 00:00,Full Payment Received,Payment
+3,2,15/04/2016 12:15,Order Created,Create
+4,2,15/04/2016 14:20,Order Picked and Packed,Packed
+5,2,16/04/2016 09:10,Order Dispatched,Dispatch
+13,2,03/05/2016 12:04,Partial Payment Received,Payment
+16,2,04/05/2016 16:12,Return Received,Return
+7,3,19/04/2016 08:20,Order Created,Create
+18,3,04/05/2016 16:31,Order Packed,Packed
+19,3,04/05/2016 16:32,Order Dispatched,Dispatch
+24,3,08/05/2016 00:00,Full Payment received ,Payment
+8,4,25/04/2016 16:00,Order Packed,Packed
+9,4,29/04/2016 17:00,Order Dispatched,Dispatch
+20,4,05/05/2016 09:20,Full Payment received ,Payment
+10,5,01/05/2016 00:00,Order Created,Create
+12,5,02/05/2016 00:00,Order Dispatched,Dispatch
+21,5,05/05/2016 09:21,Full Payment received ,Payment
+14,6,04/05/2016 10:30,Order Created,Create
+15,6,04/05/2016 15:24,Order Packed,Packed
+17,6,04/05/2016 16:30,Order Dispatched,Dispatch
+25,6,09/05/2016 15:10,Full Return,Return
+22,7,07/05/2016 08:45,Order Created,Create
+23,7,07/05/2016 10:35,Order Packed,Packed
+26,7,10/05/2016 10:00,Full Payment Received,Payment

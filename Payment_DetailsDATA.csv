@@ -1,0 +1,13 @@
+Customer_user_name,card_number,name_on_card,card_type,exp_date,start_date,Address_line_1,Address_post_code
+father,1,Nicholas,American Express,25/12/2222,17/05/2014,27 Salmon Street,M9 7QH
+bryony,9.87654E+14,Bryony,VISA,01/04/2012,18/05/2014,Castle 1,HG01 3DE
+bryony,1.23457E+15,Bryony,VISA,01/05/2019,NULL,Castle 1,HG01 3DE
+bilbo,1.23457E+15,Bilbo Baggins,MasterCard,09/09/2019,20/05/2014,68 Finch Road,GG16 8HL
+angus,4.53205E+15,Angus,VISA,01/05/2019,21/05/2014,99 Everyway,PR1 1LL
+daniel,4.57837E+15,D Armstrong,MasterCard,05/06/2018,04/06/2012,88 Fatlady Road,WA14 5GG
+frodo,1.23457E+15,Frodo Baggins,MasterCard,04/03/2020,04/03/2015,68 Finch Road,GG16 8HL
+sam,6.54321E+15,S Bartlett,VISA,05/05/2019,04/05/2016,Touche House,GG16 8HL
+mark,5.68493E+15,Mark Leech,VISA,04/10/2018,NULL,8 Cecil Road,M9 6RP
+amy,5.68493E+15,Mark Leech,VISA,05/10/2018,NULL,9 Cecil Road,M9 6RP
+laurence,6.82957E+15,L Parker,American Express,05/05/2020,NULL,36 Teeside Way,PR1 1QR
+eharris,1.0011E+15,E Harris,VISA,12/12/2016,12/12/2012,99 Everyway,PR1 1LL

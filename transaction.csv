@@ -1,0 +1,9 @@
+transaction_id,payment_details_customer_username,payment_details_card_number,sales_oder_id,date,amount
+1,eharris,1.0011E+15,1,14/04/2016 10:00,59.88
+2,laurence,6.82957E+15,2,14/04/2016 12:00,3000
+3,angus,4.53205E+15,3,15/04/2016 12:15,699
+6,father,1,4,18/04/2016 09:10,280
+7,laurence,6.82957E+15,5,19/04/2016 08:20,9500
+10,sam,6.54321E+15,7,01/05/2016 00:00,1708.85
+,,,,,
+,,,,,
