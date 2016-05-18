@@ -175,7 +175,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_vnTYgBz2EeaAypVZ0p8n1Q" name="postalCode">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xMNg0Bz2EeaAypVZ0p8n1Q" name="county">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xMNg0Bz2EeaAypVZ0p8n1Q" name="country">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>
