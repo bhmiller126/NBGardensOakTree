@@ -1,0 +1,27 @@
+sales_event_id,Sales_Order_sales_id,time_stamp,description,type
+1,1,"2016-04-14 10:00:00","Order Created",Create
+2,1,"2016-04-14 12:00:00","Order Picked and Packed",Packed
+3,2,"2016-04-15 12:15:00","Order Created",Create
+4,2,"2016-04-15 14:20:00","Order Picked and Packed",Packed
+5,2,"2016-04-16 09:10:00","Order Dispatched",Dispatch
+6,1,"2016-04-18 09:10:00","Order Dispatched",Dispatch
+7,3,"2016-04-19 08:20:00","Order Created",Create
+8,4,"2016-04-25 16:00:00","Order Packed",Packed
+9,4,"2016-04-29 17:00:00","Order Dispatched",Dispatch
+10,5,"2016-05-01 00:00:00","Order Created",Create
+11,1,"2016-05-01 00:00:00","Full Payment Received",Payment
+12,5,"2016-05-02 00:00:00","Order Dispatched",Dispatch
+13,2,"2016-05-03 12:04:00","Partial Payment Received",Payment
+14,6,"2016-05-04 10:30:00","Order Created",Create
+15,6,"2016-05-04 15:24:00","Order Packed",Packed
+16,2,"2016-05-04 16:12:00","Return Received",Return
+17,6,"2016-05-04 16:30:00","Order Dispatched",Dispatch
+18,3,"2016-05-04 16:31:00","Order Packed",Packed
+19,3,"2016-05-04 16:32:00","Order Dispatched",Dispatch
+20,4,"2016-05-05 09:20:00","Full Payment received ",Payment
+21,5,"2016-05-05 09:21:00","Full Payment received ",Payment
+22,7,"2016-05-07 08:45:00","Order Created",Create
+23,7,"2016-05-07 10:35:00","Order Packed",Packed
+24,3,"2016-05-08 00:00:00","Full Payment received ",Payment
+25,6,"2016-05-09 15:10:00","Full Return",Return
+26,7,"2016-05-10 10:00:00","Full Payment Received",Payment

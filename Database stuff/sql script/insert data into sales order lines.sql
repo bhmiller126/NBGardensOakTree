@@ -1,0 +1,12 @@
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('1', '8', '12', '4.99');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('2', '7', '2', '3000');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('3', '16', '5', '85.99');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('3', '21', '1', '45');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('3', '1', '3', '75');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('4', '5', '5', '38');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('5', '9', '1', '9500');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('6', '2', '3', '350');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('6', '16', '2', '85.99');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('7', '13', '5', '135');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('7', '11', '1', '899');
+INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('7', '30', '15', '8.99');

@@ -1,0 +1,12 @@
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('aharris', '3', '2');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('aharris', '9', '1');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('bmiller', '13', '1');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('mleech', '14', '1');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('fchristmas', '18', '1');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('bbaggins', '17', '5');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('bbaggins', '20', '3');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('lparker', '25', '9');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('sbartlett', '25', '12');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('darmstrong', '8', '3');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('fchristmas', '8', '10');
+INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('bstinch', '8', '1');

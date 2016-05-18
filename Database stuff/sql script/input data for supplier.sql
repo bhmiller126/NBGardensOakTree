@@ -1,0 +1,11 @@
+
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('1', 'Gnomes \'R\' Us', '01156 785 201', 'supplies@gnomesrus.co.uk', 'Unit 4402, Trafford Park', 'M445EG');
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('2', 'Cornish Furniture', '01459 258 746', 'purchasing@cftables.com', 'Container 1, Ledwell Road', 'G698UJ');
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('3', 'Screw Fix', '01785 236 259', 'enquiries@screwfix.co.uk', 'Building 6, New Found Street', 'BA347YH');
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('4', 'MowMow', '01258 459 657', 'sale@lawnmowers.com', '95 Lawn road', 'JJ446HH');
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('5', 'Plants and Things', '01547 859 630', 'suppliesandthat@plantsandthings.org', 'Unit 43, Crewe Business Park', 'A43GT');
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('6', 'Garden Living and Lawns', '01111 859 654', 'buying@gardenthings.com', '83 Willow Pace', 'FF567HG');
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('7', 'Celeb Gnomes', '01238 549 555', 'gnomesandgnomes@foryou.com', '1 Farnby Road', 'LL097YD');
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('8', 'Exclusive Decor', '01548 555 489', 'bespokedecor@poshgardens.com', 'Building 28, Earlstree Industrial Estate', 'DD36DD');
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('9', 'Custom Gnomes', '01161 154 889', 'sales@gnomeaccessories.co.uk', '99 High Road', 'TT19NB');
+INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('10', 'Pots and Plants and Pots', '01547 581 214', 'purchases@plantsnpotsnpotsnplants.co.uk', 'Room 3, Moldyhawk Lane', 'W356FB');
