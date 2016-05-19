@@ -1,0 +1,14 @@
+employee_name,employee_username,employee_password,employee_department,employee_access,employee_secret_question,employee_secret_answer
+Al Stock,astock,inventory,Warehouse,80,Favourite Colour,Purple
+Chris Corder,ccorder,iamthebest,COFT,60,Favourite Colour,Orange
+Jessie Jones,jjones,banana,COFT,20,Favourite Animal,Dog
+Mark Jones,mjones,moresales,COFT,25,Favourite Animal,Rhino
+Betty Finch,bfinch,birdyman,Sales,15,Favourite Animal,Elephant
+Deborah Elm,delm,elmtreegarden,Sales,15,Favourite Animal,Hamster
+James Finch,jfinch,parrotmess,Sales,30,Mothers Maiden Name,Jones
+Jerry Jones,jjones1,mathsextra,Sales,30,Mothers Maiden Name,Smith
+Ben Back,bback,retirement,Warehouse,40,Favourite Colour,Purple
+Rebecca Flack,rflack,fridayfriday,Sales,50,Mothers Maiden Name,Back
+Gerald House,ghouse,houseismyname,COFT,25,Mothers Maiden Name,Wilson
+Gary Love,glove,password,COFT,20,Favourite Colour,Blue
+Karen Cake,kcake,chocolatefudge,Sales,65,Favourite Colour,Yellow
