@@ -1,30 +1,30 @@
 package com.qa.oaktree;
 
 public class supplier {
-	int supplier_id; 
+	int supplier_Id; 
 	String name; 
-	String contact_no; 
+	String contact_No; 
 	String email; 
-	String address_line_1;
-	String address_postcode;
+	String address_Line_1;
+	String address_Postcode;
 	
 	public supplier (int supplier_id, String name, String contact_no, String email, String address_line_1, String address_postcode) {
 		
-		this.supplier_id = supplier_id; 
+		this.supplier_Id = supplier_id; 
 		this.name = name; 
-		this.contact_no = contact_no; 
+		this.contact_No = contact_no; 
 		this.email = email; 
-		this.address_line_1 = address_line_1; 
-		this.address_postcode = address_postcode; 
+		this.address_Line_1 = address_line_1; 
+		this.address_Postcode = address_postcode; 
 		
 	}
 
 	public int getSupplier_id() {
-		return supplier_id;
+		return supplier_Id;
 	}
 
 	public void setSupplier_id(int supplier_id) {
-		this.supplier_id = supplier_id;
+		this.supplier_Id = supplier_id;
 	}
 
 	public String getName() {
@@ -36,11 +36,11 @@ public class supplier {
 	}
 
 	public String getContact_no() {
-		return contact_no;
+		return contact_No;
 	}
 
 	public void setContact_no(String contact_no) {
-		this.contact_no = contact_no;
+		this.contact_No = contact_no;
 	}
 
 	public String getEmail() {
@@ -52,19 +52,19 @@ public class supplier {
 	}
 
 	public String getAddress_line_1() {
-		return address_line_1;
+		return address_Line_1;
 	}
 
 	public void setAddress_line_1(String address_line_1) {
-		this.address_line_1 = address_line_1;
+		this.address_Line_1 = address_line_1;
 	}
 
 	public String getAddress_postcode() {
-		return address_postcode;
+		return address_Postcode;
 	}
 
 	public void setAddress_postcode(String address_postcode) {
-		this.address_postcode = address_postcode;
+		this.address_Postcode = address_postcode;
 	}
 
 }
