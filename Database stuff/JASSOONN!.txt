@@ -1,0 +1,178 @@
+db.products.insert( {_id : 1, Catalogue: 1, Product_Name: "Garden Angel", Product_Description: "Small angel decorative ornament, stone", Product_Category: "Decor"} )
+db.products.insert( {_id : 1, Catalogue: 1, Product_Name: "Garden Angel", Product_Description: "Small angel decorative ornament, stone", Product_Category: "Decor"} )
+
+https://shancarter.github.io/mr-data-converter/
+
+
+	db.products.insert(
+[{_id:1,"catalogue_id":1,"product_name":"Garden Angel","product_description":"Small Angel Decorative Ornament, Stone","product_catagory":"Decor"},
+{_id:2,"catalogue_id":2,"product_name":"African Lady","product_description":"Medium Brass Ornament, Wood Accents","product_catagory":"Decor"},
+{_id:3,"catalogue_id":3,"product_name":"Gnomey McGnome Face","product_description":"Gnome, Blue hat, Two Faces","product_catagory":"Gnome"},
+{_id:4,"catalogue_id":4,"product_name":"Green Sparkle Suit Gnome","product_description":"Gnome, With Suit, Green Glitter","product_catagory":"Gnome"},
+{_id:5,"catalogue_id":5,"product_name":"Baby Gnome","product_description":"Gnome in Pram, Pink Hat with teddy","product_catagory":"Gnome"},
+{_id:6,"catalogue_id":6,"product_name":"MEGA Drill","product_description":"Red Drill, Black Case, 14 Drill Bits, Large","product_catagory":"Power Tool"},
+{_id:7,"catalogue_id":7,"product_name":"Rock Enamel Garden Suite","product_description":"Marbel Rock Table, 4 Iron Chairs","product_catagory":"Furniture"},
+{_id:8,"catalogue_id":8,"product_name":"Sweetpea","product_description":"Sweetpea flower in planter pot","product_catagory":"Plant"},
+{_id:9,"catalogue_id":9,"product_name":"Turbo Mow","product_description":"Petrol Drive Mower, Matt black, 6 Wheels","product_catagory":"Lawn Mower"},
+{_id:10,"catalogue_id":10,"product_name":"Justin Beiber Gnome","product_description":"Gnome, White jeans, floppy hair, Sings 'Baby'","product_catagory":"Gnome"},
+{_id:11,"catalogue_id":11,"product_name":"Grizzly Pressure Washer","product_description":"Metal with purple plastic, telescopic handle","product_catagory":"Garden Power Tool"},
+{_id:12,"catalogue_id":12,"product_name":"Ultimate BBQ","product_description":"Chrome Gas Burner BBQ , 6ft Grill Plate","product_catagory":"Outdoor Living"},
+{_id:13,"catalogue_id":13,"product_name":"Gareth Davis Gnome","product_description":"Lederhosen, Holding Stein of Beer","product_catagory":"Gnome"},
+{_id:14,"catalogue_id":14,"product_name":"3 Tier Grow Rack","product_description":"Steel Frame, green mesh, wooden shelves","product_catagory":"Greenhouses"},
+{_id:15,"catalogue_id":15,"product_name":"Junior Playhouse with Slide","product_description":"Wooden Playhouse, steps, pink plastic slide","product_catagory":"Sheds and Playhouses"},
+{_id:16,"catalogue_id":16,"product_name":"Aaron Mulholland Gnome","product_description":"Dressed as a cat, Holding two cats","product_catagory":"Gnome"},
+{_id:17,"catalogue_id":17,"product_name":"Beyonce 'Single Ladies' Gnome","product_description":"Gnome dressed in leotard with large ring on","product_catagory":"Gnome"},
+{_id:18,"catalogue_id":18,"product_name":"Dobby Gnome","product_description":"Elf gnome, with rags, holding a sock","product_catagory":"Gnome"},
+{_id:19,"catalogue_id":19,"product_name":"Extra Large Terracotta Pot","product_description":"3ft Plant Pot","product_catagory":"Pots and Planters"},
+{_id:20,"catalogue_id":20,"product_name":"Hanging Basket","product_description":"Banana braid hanging basket 6 inches ","product_catagory":"Pots and Planters"},
+{_id:21,"catalogue_id":21,"product_name":"Mega Fertiliser","product_description":"Fertilser that promises to grow whole garden in 8 minutes","product_catagory":"Lawn Care"},
+{_id:22,"catalogue_id":22,"product_name":"Doctor Who Gnome","product_description":"Peter Capaldi Doctor inside a Tardis","product_catagory":"Gnome"},
+{_id:23,"catalogue_id":23,"product_name":"3 Piece Swivel Sofa Chair","product_description":"Mixed Brown Rattan Wood, 2 Sofas and small table","product_catagory":"Furniture"},
+{_id:24,"catalogue_id":24,"product_name":"Wooden Deckchair","product_description":"Floral Pattern Polyester with Dark wood frame","product_catagory":"Furniture"},
+{_id:25,"catalogue_id":25,"product_name":"Chocoholic Gnome","product_description":"Female Gnome surrounded by and eating chocolate","product_catagory":"Gnome"},
+{_id:26,"catalogue_id":26,"product_name":"Farmer Gnome","product_description":"Old man gnome driving a tractor","product_catagory":"Gnome"},
+{_id:27,"catalogue_id":27,"product_name":"Handy Trim","product_description":"Hand Held Hedge Trimmer","product_catagory":"Power Tool"},
+{_id:28,"catalogue_id":28,"product_name":"Buddha","product_description":"Cornish Stone Buddha","product_catagory":"Decor"},
+{_id:29,"catalogue_id":29,"product_name":"Gangsta Gnome","product_description":"Gnome with baseball cap, gold chains and jeans not pulled up","product_catagory":"Gnome"},
+{_id:30,"catalogue_id":30,"product_name":"Sunflower","product_description":"Sunflower in terracotta pot","product_catagory":"Plant"}]
+	)
+
+db.address.insert(
+[
+{_id:1,"line_1":"27 Salmon Street","line_2":"Fishery Lake","town":"Salford","city":"Salford","county":"Manchester","postcode":"M9 7QH","home_phone_number":"01895 203485"},
+{_id:2,"line_1":"36 Teeside Way","line_2":"NULL","town":"Oadby","city":"Leicester","county":"Lancashire","postcode":"PR1 1QR","home_phone_number":"01776 553802"},
+{_id:3,"line_1":"88 Fatlady Road","line_2":"NULL","town":"Chubby","city":"Rotund","county":"Essex","postcode":"WA14 5GG","home_phone_number":"NULL"},
+{_id:4,"line_1":"5 Gerbil Avenue","line_2":"NULL","town":"Rodentville","city":"Pets City","county":"Farnborough","postcode":"KL16 9IL","home_phone_number":"NULL"},
+{_id:5,"line_1":"99 Everyway","line_2":"House 45","town":"Bamber Bridge","city":"Preston","county":"Lancashire","postcode":"PR1 1LL","home_phone_number":"01776 859224"},
+{_id:6,"line_1":"68 Finch Road","line_2":"Goodway","town":"Great","city":"Goodcity","county":"GGville","postcode":"GG16 8HL","home_phone_number":"01147 856993"},
+{_id:7,"line_1":"68 Finch Road","line_2":"Goodway","town":"Great","city":"Goodcity","county":"GGville","postcode":"GG16 8HL","home_phone_number":"01147 856993"},
+{_id:8,"line_1":"4 Richmond Drive","line_2":"NULL","town":"Humperdink","city":"Florin","county":"Northamptonshire","postcode":"NN14 7FQ","home_phone_number":"NULL"},
+{_id:9,"line_1":"2 Seconday Street","line_2":"Romaine Way","town":"Italia","city":"Cheshire","county":"Jersey","postcode":"JJ12 8FV","home_phone_number":"01668 542915"},
+{_id:10,"line_1":"Castle 1","line_2":"NULL","town":"Govan","city":"Glasgow","county":"Hogwarts","postcode":"HG01 3DE","home_phone_number":"01156 406385"},
+{_id:11,"line_1":"3 Cecil Road ","line_2":"NULL","town":"Blackley","city":"Manchester","county":"Greater Manchester","postcode":"M9 6RP","home_phone_number":"NULL"},
+{_id:12,"line_1":"8 Cecil Road","line_2":"NULL","town":"Blackley","city":"Manchester","county":"Greater Manchester","postcode":"M9 6RP","home_phone_number":"NULL"},
+{_id:13,"line_1":"Touche House","line_2":"NULL","town":"Great","city":"Goodcity","county":"GGville","postcode":"GG16 8HL","home_phone_number":"01563 333554"},
+{_id:14,"line_1":"Grotto","line_2":"Pole Street","town":"Winterfell","city":"Artic","county":"Freezer","postcode":"NP1","home_phone_number":"NULL"},
+{_id:15,"line_1":"Summer Grotto","line_2":"Penguin Avenue","town":"","city":"Southville","county":"Freezer","postcode":"SP1","home_phone_number":"NULL"}]
+)
+
+db.employee.insert(
+[{"employee_id":401,"employee_name":"Al Stock","employee_username":"astock","employee_password":"inventory","employee_department":"Warehouse","employee_access":80,"employee_secret_question":"Favourite Colour","employee_secret_answer":"Purple"},
+{"employee_id":402,"employee_name":"Chris Corder","employee_username":"ccorder","employee_password":"iamthebest","employee_department":"COFT","employee_access":60,"employee_secret_question":"Favourite Colour","employee_secret_answer":"Orange"},
+{"employee_id":403,"employee_name":"Jessie Jones","employee_username":"jjones","employee_password":"banana","employee_department":"COFT","employee_access":20,"employee_secret_question":"Favourite Animal","employee_secret_answer":"Dog"},
+{"employee_id":404,"employee_name":"Mark Jones","employee_username":"mjones","employee_password":"moresales","employee_department":"COFT","employee_access":25,"employee_secret_question":"Favourite Animal","employee_secret_answer":"Rhino"},
+{"employee_id":405,"employee_name":"Betty Finch","employee_username":"bfinch","employee_password":"birdyman","employee_department":"Sales","employee_access":15,"employee_secret_question":"Favourite Animal","employee_secret_answer":"Elephant"},
+{"employee_id":406,"employee_name":"Deborah Elm","employee_username":"delm","employee_password":"elmtreegarden","employee_department":"Sales","employee_access":15,"employee_secret_question":"Favourite Animal","employee_secret_answer":"Hamster"},
+{"employee_id":407,"employee_name":"James Finch","employee_username":"jfinch","employee_password":"parrotmess","employee_department":"Sales","employee_access":30,"employee_secret_question":"Mothers Maiden Name","employee_secret_answer":"Jones"},
+{"employee_id":408,"employee_name":"Jerry Jones","employee_username":"jjones1","employee_password":"mathsextra","employee_department":"Sales","employee_access":30,"employee_secret_question":"Mothers Maiden Name","employee_secret_answer":"Smith"},
+{"employee_id":409,"employee_name":"Ben Back","employee_username":"bback","employee_password":"retirement","employee_department":"Warehouse","employee_access":40,"employee_secret_question":"Favourite Colour","employee_secret_answer":"Purple"},
+{"employee_id":410,"employee_name":"Rebecca Flack","employee_username":"rflack","employee_password":"fridayfriday","employee_department":"Sales","employee_access":50,"employee_secret_question":"Mothers Maiden Name","employee_secret_answer":"Back"},
+{"employee_id":411,"employee_name":"Gerald House","employee_username":"ghouse","employee_password":"houseismyname","employee_department":"COFT","employee_access":25,"employee_secret_question":"Mothers Maiden Name","employee_secret_answer":"Wilson"},
+{"employee_id":412,"employee_name":"Gary Love","employee_username":"glove","employee_password":"password","employee_department":"COFT","employee_access":20,"employee_secret_question":"Favourite Colour","employee_secret_answer":"Blue"},
+{"employee_id":413,"employee_name":"Karen Cake","employee_username":"kcake","employee_password":"chocolatefudge","employee_department":"Sales","employee_access":65,"employee_secret_question":"Favourite Colour","employee_secret_answer":"Yellow"}]
+)
+
+
+Query: db.employee.find( {employee_id: { $gt: 350, $lt: 375} } );
+
+RETURNS:
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c33"), "employee_id" : 351, "employee_name" : "Adam",
+ "employee_username" : "astevens9q", "employee_password" : "DavtbUXK", "employee_department" :
+ "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your fav
+ourite colour?", "employee_secret_answer" : "Blue" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c34"), "employee_id" : 352, "employee_name" : "Willie
+", "employee_username" : "wmendoza9r", "employee_password" : "XrtrXlAG", "employee_department"
+ : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your f
+avourite colour?", "employee_secret_answer" : "Fuscia" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c35"), "employee_id" : 353, "employee_name" : "Steven
+", "employee_username" : "sford9s", "employee_password" : "TtpUgAq", "employee_department" : "
+Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your favou
+rite colour?", "employee_secret_answer" : "Crimson" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c36"), "employee_id" : 354, "employee_name" : "Maria"
+, "employee_username" : "mfoster9t", "employee_password" : "YCPfCU", "employee_department" : "
+Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your favou
+rite colour?", "employee_secret_answer" : "Green" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c37"), "employee_id" : 355, "employee_name" : "Amy",
+"employee_username" : "acarter9u", "employee_password" : "ujyVwv", "employee_department" : "Wa
+rehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your favouri
+te colour?", "employee_secret_answer" : "Fuscia" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c38"), "employee_id" : 356, "employee_name" : "Willia
+m", "employee_username" : "wjames9v", "employee_password" : "aeZUlHaRCVJO", "employee_departme
+nt" : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is you
+r favourite colour?", "employee_secret_answer" : "Orange" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c39"), "employee_id" : 357, "employee_name" : "Pamela
+", "employee_username" : "parnold9w", "employee_password" : "ENc4dUT3", "employee_department"
+: "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your fa
+vourite colour?", "employee_secret_answer" : "Turquoise" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c3a"), "employee_id" : 358, "employee_name" : "Howard
+", "employee_username" : "hbell9x", "employee_password" : "muMz0m3UqMK7", "employee_department
+" : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your
+favourite colour?", "employee_secret_answer" : "Mauv" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c3b"), "employee_id" : 359, "employee_name" : "Paul",
+ "employee_username" : "pmccoy9y", "employee_password" : "sqiU2a83S", "employee_department" :
+"Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your favo
+urite colour?", "employee_secret_answer" : "Maroon" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c3c"), "employee_id" : 360, "employee_name" : "Emily"
+, "employee_username" : "ekelley9z", "employee_password" : "CITzu75oPU", "employee_department"
+ : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your f
+avourite colour?", "employee_secret_answer" : "Yellow" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c3d"), "employee_id" : 361, "employee_name" : "Anthon
+y", "employee_username" : "amyersa0", "employee_password" : "iTdAcblkYnfg", "employee_departme
+nt" : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is you
+r favourite colour?", "employee_secret_answer" : "Indigo" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c3e"), "employee_id" : 362, "employee_name" : "Anthon
+y", "employee_username" : "ameyera1", "employee_password" : "LE122ISAT", "employee_department"
+ : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your f
+avourite colour?", "employee_secret_answer" : "Red" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c3f"), "employee_id" : 363, "employee_name" : "David"
+, "employee_username" : "dpattersona2", "employee_password" : "cmnLAWmjX1TJ", "employee_depart
+ment" : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is y
+our favourite colour?", "employee_secret_answer" : "Turquoise" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c40"), "employee_id" : 364, "employee_name" : "Jonath
+an", "employee_username" : "jpetersa3", "employee_password" : "8kNcE1U", "employee_department"
+ : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your f
+avourite colour?", "employee_secret_answer" : "Khaki" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c41"), "employee_id" : 365, "employee_name" : "Amy",
+"employee_username" : "arussella4", "employee_password" : "3a78gQ2Ua4n", "employee_department"
+ : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your f
+avourite colour?", "employee_secret_answer" : "Puce" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c42"), "employee_id" : 366, "employee_name" : "Emily"
+, "employee_username" : "ecarpentera5", "employee_password" : "iyvUNoWGwit", "employee_departm
+ent" : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is yo
+ur favourite colour?", "employee_secret_answer" : "Teal" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c43"), "employee_id" : 367, "employee_name" : "Ernest
+", "employee_username" : "ejamesa6", "employee_password" : "Uf7Hoyw", "employee_department" :
+"Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your favo
+urite colour?", "employee_secret_answer" : "Crimson" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c44"), "employee_id" : 368, "employee_name" : "Christ
+opher", "employee_username" : "chuntera7", "employee_password" : "vKsLpyhR2", "employee_depart
+ment" : "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is y
+our favourite colour?", "employee_secret_answer" : "Purple" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c45"), "employee_id" : 369, "employee_name" : "Sarah"
+, "employee_username" : "ssimsa8", "employee_password" : "X9PRu9Oxks3", "employee_department"
+: "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your fa
+vourite colour?", "employee_secret_answer" : "Khaki" }
+
+{ "_id" : ObjectId("573dd1f92a357b01d3e53c46"), "employee_id" : 370, "employee_name" : "Steven
+", "employee_username" : "scruza9", "employee_password" : "3qgxJ82be", "employee_department" :
+ "Warehouse Operative", "employee_access" : 10, "employee_secret_question" : "What is your fav
+ourite colour?", "employee_secret_answer" : "Fuscia" }
+Type "it" for more
