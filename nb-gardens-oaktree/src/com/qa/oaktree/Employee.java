@@ -1,4 +1,4 @@
-package main.java.com.qa.nb_gardens_oaktree;
+package com.qa.oaktree;
 
 public class Employee 
 {
