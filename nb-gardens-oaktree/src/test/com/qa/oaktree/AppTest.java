@@ -1,4 +1,4 @@
-package com.qa.oaktree;
+package test.com.qa.oaktree;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
