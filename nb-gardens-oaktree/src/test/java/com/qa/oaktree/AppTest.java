@@ -1,4 +1,4 @@
-package test.java.com.qa.nb_gardens_oaktree;
+package com.qa.oaktree;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,4 +1,4 @@
-package src.main.java.com.qa.nb_gardens_oaktree;
+package com.qa.oaktree;
 
 /**
  * Hello world!
