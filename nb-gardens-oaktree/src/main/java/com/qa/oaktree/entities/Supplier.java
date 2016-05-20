@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne; 
 import javax.persistence.JoinColumn; 
 
-public class supplier {
+public class Supplier {
 	int supplier_Id; 
 	String name; 
 	String contact_No; 
@@ -17,7 +17,7 @@ public class supplier {
 	String address_Line_1;
 	String address_Postcode;
 	
-	public supplier (int supplier_id, String name, String contact_no, String email, String address_line_1, String address_postcode) {
+	public Supplier (int supplier_id, String name, String contact_no, String email, String address_line_1, String address_postcode) {
 		
 		this.supplier_Id = supplier_id; 
 		this.name = name; 

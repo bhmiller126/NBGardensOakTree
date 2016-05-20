@@ -28,9 +28,11 @@ public class OrderEvent {
 	@NotNull
 	private int salesOrderId; 
 	
+	//TODO double check on date time stamp
 	@Column (name = "time_stamp", nullable = false)
 	@NotNull
-	private DateTimeSyntax timeStamp; 
+	private DateTimeSyntax timeStamp;
+	
 	
 	@Column (name = "description", nullable = true, length = 225)
 	@Null
