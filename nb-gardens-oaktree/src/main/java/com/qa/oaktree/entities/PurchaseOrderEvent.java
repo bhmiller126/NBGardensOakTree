@@ -1,4 +1,4 @@
-package pojo;
+package src.main.java.com.qa.oaktree.entities;
 
 import javax.print.attribute.DateTimeSyntax;
 

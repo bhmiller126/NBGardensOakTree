@@ -1,4 +1,5 @@
-package com.qa.oaktree.entities;
+
+package src.main.java.com.qa.oaktree.entities;
 
 public class supplier {
 	int supplier_Id; 

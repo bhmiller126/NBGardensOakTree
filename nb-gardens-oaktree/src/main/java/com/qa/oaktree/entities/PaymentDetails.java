@@ -1,4 +1,4 @@
-package com.qa.oaktree.entities;
+package src.main.java.com.qa.oaktree.entities;
 
 import java.util.Date;
 

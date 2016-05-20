@@ -1,4 +1,4 @@
-package pojo;
+package src.main.java.com.qa.oaktree.entities;
 
 public class WishList {
 	private int customerUserName; 
