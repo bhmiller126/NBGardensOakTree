@@ -21,7 +21,7 @@ public class OrderLine {
 	@NotNull
 	private Product product;
 
-	@Column(name = "sales_quantity" table="Sales_Order_Line")
+	@Column(name = "sales_quantity", table="Sales_Order_Line")
 	private int quantity;
 	private int returnToShelf;
 	private double unitCost;
