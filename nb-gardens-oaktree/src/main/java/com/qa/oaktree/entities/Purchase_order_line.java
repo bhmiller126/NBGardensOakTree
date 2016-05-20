@@ -1,4 +1,4 @@
-package com.qa.oaktree;
+package com.qa.oaktree.entities;
 
 public class Purchase_order_line {
 	int purchase_Order_Purchase_Id; 
