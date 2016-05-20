@@ -22,6 +22,9 @@ public class SalesOrderEvent {
 	
 	@ManyToOne
 	@JoinColumn (name = "Sales_Order_sales_id", nullable = false)
+	public int getSalesOrderId() {
+		return salesOrderId;
+	}
 	@NotNull
 	private int salesOrderId; 
 	
@@ -56,9 +59,7 @@ public class SalesOrderEvent {
 		this.salesEventId = salesEventId;
 	}
 
-	public int getSalesOrderId() {
-		return salesOrderId;
-	}
+	
 
 	public void setSalesOrderId(int salesOrderId) {
 		this.salesOrderId = salesOrderId;
