@@ -1,7 +1,5 @@
 package com.qa.oaktree;
 
-import org.hibernate.context.spi.CurrentTenantIdentifierResolver;
-
 public class stock {
 	int catalogue_Id; 
 	double sale_Price;
