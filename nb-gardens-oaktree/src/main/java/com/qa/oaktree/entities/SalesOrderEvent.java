@@ -1,7 +1,16 @@
 package com.qa.oaktree.entities;
-
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Column; 
+import javax.persistence.Id; 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.ManyToOne; 
+import javax.persistence.JoinColumn; 
 import javax.print.attribute.DateTimeSyntax;
-//hello
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table (name = "Sales_Order_Event")
@@ -11,7 +20,7 @@ public class SalesOrderEvent {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	public int salesEventId; 
 	
-	@ManytoOne
+	@ManyToOne
 	@JoinColumn (name = "Sales_Order_sales_id", nullable = false)
 	@NotNull
 	private int salesOrderId; 
