@@ -1,4 +1,5 @@
 package com.qa.oaktree.entities;
+
 public class Customer 
 {
 	private String user_name;
