@@ -1,4 +1,4 @@
-package com.qa.oaktree;
+package src.com.qa.oaktree;
 
 public class Employee 
 {
