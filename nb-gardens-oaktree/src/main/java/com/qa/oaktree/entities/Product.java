@@ -37,7 +37,16 @@ public class Product
 	@NotNull
 	@Size(min = 2, max = 225)
 	private String product_status;
-	
+
+	/**
+	 * This method is the constructor for this class. It will take the later mentioned 
+	 * parameters and assign them to the corresponding class variables for the particular instance.
+ 	 * @param catalogue_id
+	 * @param product_name
+	 * @param product_description
+	 * @param product_category
+	 * @param product_status
+	 */
 	public Product(int catalogue_id, String product_name, String product_description, String product_category, String product_status)
 	{
 		this.catalogue_id = catalogue_id;
@@ -47,36 +56,75 @@ public class Product
 		this.product_status = product_status;
 	}
 
+	/**
+	 * This method is the "getter" for the String representing product status.
+	 * @return
+	 */
 	public String getProduct_status()
 	{return product_status;}
-	
+
+	/**
+	 * This method is the "setter" for the String representing product status.
+	 * @param product_status
+	 */
 	public void setProduct_status(String product_status)
 	{this.product_status = product_status;}
 
+	/**
+	 * This method is the "getter" for the integer representing the product's catalogue id.
+	 * This variable is the Primary Key.
+	 * @return
+	 */
 	public int getCatalogue_id() 
 	{return catalogue_id;}
 
+	/**
+	 * This method is the "setter" for the integer representing the product's catalogue id.
+	 * @param catalogue_id
+	 */
 	public void setCatalogue_id(int catalogue_id) 
 	{this.catalogue_id = catalogue_id;}
 
+	/**
+	 * This method is the "getter" for the String representing the product's name.
+	 * @return
+	 */
 	public String getProduct_name() 
 	{return product_name;}
 
+	/**
+	 * This method is the "setter" for the String representing the product's name.
+	 * @param product_name
+	 */
 	public void setProduct_name(String product_name) 
 	{this.product_name = product_name;}
 
+	/**
+	 * This method is the "getter" for the String representing the product's description.
+	 * @return
+	 */
 	public String getProduct_description() 
 	{return product_description;}
 
+	/**
+	 * This method is the "setter" for the String representing the product's description.
+	 * @param product_description
+	 */
 	public void setProduct_description(String product_description) 
 	{this.product_description = product_description;}
 
+	/**
+	 * This method is the "getter" for the String representing the product's category.
+	 * @return
+	 */
 	public String getProduct_category()
 	{return product_category;}
 
+	/**
+	 * This method is the "setter" for the String representing the product's description.
+	 * @param product_category
+	 */
 	public void setProduct_category(String product_category) 
 	{this.product_category = product_category;}
 	
-
-
 }
