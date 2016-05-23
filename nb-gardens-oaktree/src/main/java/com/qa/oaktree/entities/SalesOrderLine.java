@@ -91,7 +91,7 @@ public class SalesOrderLine {
 	 * @return true if the requested change was successfull 
 	 */
 	public boolean setSalesOrder(int salesOrderID){
-		if (salesOrderID==-1){
+		if (this.salesOrderID==-1){
 			this.salesOrderID = salesOrderID;
 			return true;
 		}else{
@@ -101,7 +101,7 @@ public class SalesOrderLine {
 	}
 
 	/**
-	 * returns the product object on the orderlilne
+	 * returns the product object on the orderline
 	 * 
 	 * @return
 	 */
@@ -157,5 +157,34 @@ public class SalesOrderLine {
 	private void setLineTotal() {
 		this.lineTotal = quantity*unitCost;
 	}
+
+
+	/**
+	 * 
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SalesOrderLine other = (SalesOrderLine) obj;
+		if (Double.doubleToLongBits(lineTotal) != Double.doubleToLongBits(other.lineTotal))
+			return false;
+		if (productID != other.productID)
+			return false;
+		if (quantity != other.quantity)
+			return false;
+		if (salesOrderID != other.salesOrderID)
+			return false;
+		if (Double.doubleToLongBits(unitCost) != Double.doubleToLongBits(other.unitCost))
+			return false;
+		return true;
+	}
+	
+	
 
 }
