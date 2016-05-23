@@ -2,11 +2,6 @@ package com.qa.oaktree.entities;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Column; 
-import javax.persistence.Id; 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.ManyToOne; 
-import javax.persistence.JoinColumn; 
 
 /**
  * 
@@ -219,5 +214,21 @@ public class Address
 		} else {
 			return false;
 		}
+	}
+	
+	/** 
+	 * Override object's toString method for Address
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Address [line1=" + line1 + 
+				", line2=" + line2 + 
+				", town=" + town + 
+				", city=" + city + 
+				", county=" + county + 
+				", country=" + country + 
+				", postcode=" + postcode + 
+				", homePhoneNumber=" + homePhoneNumber + "]";
 	}
 }
