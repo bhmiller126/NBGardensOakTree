@@ -11,36 +11,38 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "Sales_Order_Line")
-@SecondaryTables({ @SecondaryTable(name = "Sales_Order_Rerturn_Line"), 
-	@SecondaryTable(name = "Purchase_Order_Line"),
-	@SecondaryTable(name = "Purchase_Order_Return_Line") })
-public class OrderLine {
+public class SalesOrderLine {
+	
+	@ManyToOne
+	@JoinColumn(name="Sales_Order_sales_id", nullable = false)
+	@NotNull
+	private SalesOrder salesOrder;
 
 	@ManyToOne
 	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
 	@NotNull
 	private Product product;
 
-	@Column(name = "sales_quantity", table="Sales_Order_Line")
+	@Column(name = "sales_quantity")
 	private int quantity;
 	private int returnToShelf;
 	private double unitCost;
 	private double lineTotal;
 
-	public OrderLine(Product product, int quantity) {
+	public SalesOrderLine(Product product, int quantity) {
 		super();
 		this.product = product;
 		this.quantity = quantity;
 	}
 
-	public OrderLine(Product product, int quantity, double unitCost) {
+	public SalesOrderLine(Product product, int quantity, double unitCost) {
 		super();
 		this.product = product;
 		this.quantity = quantity;
 		this.unitCost = unitCost;
 	}
 
-	public OrderLine(Product product, int quantity, int returnToShelf) {
+	public SalesOrderLine(Product product, int quantity, int returnToShelf) {
 		super();
 		this.product = product;
 		this.quantity = quantity;
