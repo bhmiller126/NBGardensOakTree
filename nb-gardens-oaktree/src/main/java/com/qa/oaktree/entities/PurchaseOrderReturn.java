@@ -1,11 +1,11 @@
 package com.qa.oaktree.entities;
-public class Purchase_Order_Return 
+public class PurchaseOrderReturn 
 {
 	private int Purchase_Order_purchase_id;
 	private String date;
 	private String reason;
 	
-	public Purchase_Order_Return(int Purchase_Order_purchase_id, String date, String reason)
+	public PurchaseOrderReturn(int Purchase_Order_purchase_id, String date, String reason)
 	{
 		this.Purchase_Order_purchase_id = Purchase_Order_purchase_id;
 		this.date = date;

@@ -10,7 +10,7 @@ import java.util.function.Supplier;
  * Colaboration OakTree 
  */
 
-public class Order {
+public class Order_Deleted {
 
 	private int orderID;
 	private Customer customer;
@@ -24,12 +24,12 @@ public class Order {
 	private String returnReason;
 	private ArrayList<PurchaseOrderEvent> orderEvent = new ArrayList<PurchaseOrderEvent>();
 	private PaymentTransaction paymentTransaction;
-	private Order returnOf;
+	private Order_Deleted returnOf;
 	/**
 	 * Constructor for create Wishlist or Basket
 	 * @param {@link {@link Customer}}customer who owns the order
 	 */
-	public Order (Customer customer) {
+	public Order_Deleted (Customer customer) {
 		this.orderID = 0;
 		this.customer = customer;
 		this.supplier = null;
@@ -52,7 +52,7 @@ public class Order {
 	 * @param {@link Address} deliveryAddress for warehouse to deliver to
 	 * @param {{@link ArrayList} {@link SalesOrderLine}} orderLines to be added to order
 	 */
-	public Order(Customer customer, Address billingAddress, Address deliveryAddress, ArrayList<SalesOrderLine> orderLines) {
+	public Order_Deleted(Customer customer, Address billingAddress, Address deliveryAddress, ArrayList<SalesOrderLine> orderLines) {
 		this.orderID = 0;
 		this.customer = customer;
 		this.supplier = null;
@@ -72,7 +72,7 @@ public class Order {
 	 * Constructor for create Purchase Order
 	 * @param {@link Supplier} supplier to purchase from
 	 */
-	public Order(Supplier supplier){
+	public Order_Deleted(Supplier supplier){
 		this.orderID = 0;
 		this.customer = null;
 		this.supplier = supplier;
@@ -90,11 +90,11 @@ public class Order {
 	
 	/**
 	 * Constructor for create Return Order
-	 * @param {@link Order} originalOrder that return is associated to
+	 * @param {@link Order_Deleted} originalOrder that return is associated to
 	 * @param {{@link Date} orderDate of the return Order
 	 * @param {@link String} returnReason that is given
 	 */
-	public Order(Order originalOrder, Date orderDate, String returnReason) {
+	public Order_Deleted(Order_Deleted originalOrder, Date orderDate, String returnReason) {
 		this.orderID = 0;
 		this.customer = null;
 		this.supplier = supplier;
@@ -115,7 +115,7 @@ public class Order {
 	 * @param customer
 	 * @param orderLines
 	 */
-	public Order(Customer customer, ArrayList<SalesOrderLine> orderLines) {
+	public Order_Deleted(Customer customer, ArrayList<SalesOrderLine> orderLines) {
 		this.orderID = 0;
 		this.customer = customer;
 		this.supplier = null;
@@ -131,7 +131,7 @@ public class Order {
 		this.returnOf = null;
 	}
 	
-	public Order() {
+	public Order_Deleted() {
 		//TODO 3 more constructors
 		/*
 		 * order id, customer orderdate, billing, delivery, oline, ostatus, oevent, payment, returnof,
@@ -139,7 +139,7 @@ public class Order {
 		 * return of, odate, oline, return reason
 		 */
 	}
-	public Order(int orderID, Customer customer, Supplier supplier, Date orderDate, Address billingAddress,
+	public Order_Deleted(int orderID, Customer customer, Supplier supplier, Date orderDate, Address billingAddress,
 			Address deliveryAddress, ArrayList<SalesOrderLine> orderLines, double orderTotal, String orderStatus,
 			String returnReason, ArrayList<PurchaseOrderEvent> orderEvent, PaymentTransaction paymentTransaction) {
 		super();
