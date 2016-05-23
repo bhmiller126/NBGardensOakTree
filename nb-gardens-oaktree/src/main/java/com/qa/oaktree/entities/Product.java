@@ -12,7 +12,7 @@ import javax.persistence.JoinColumn;
 
 /**
  * 
- * @author OakTree 
+ * @author StephenB 
  * Address noSQL entity
  */
 @Entity
@@ -142,7 +142,12 @@ public class Product
 	 */
 	public void setProduct_category(String product_category) 
 	{this.product_category = product_category;}
-	
+
+	/**
+	 * Override object equals method for Product entity
+	 * @param other Product to be checked against
+	 * @return boolean true if products' are the same
+	 */
 	public boolean equals(Product other)
 	{
 		if(this.catalogue_id == other.getCatalogue_id() && this.product_name.equals(other.getProduct_name()) && this.product_description.equals(other.getProduct_description()) && this.product_category.equals(other.getProduct_category()) && this.product_status.equals(other.getProduct_status()))
@@ -150,4 +155,17 @@ public class Product
 		else
 		{return false;}
 	}
+
+	/** 
+	 * Override object's toString method for Products
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Product [catalogue_id=" + catalogue_id + ", product_name=" + product_name + ", product_description="
+				+ product_description + ", product_category=" + product_category + ", product_status=" + product_status
+				+ "]";
+	}
+	
+	
 }
