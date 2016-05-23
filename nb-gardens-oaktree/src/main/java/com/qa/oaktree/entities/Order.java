@@ -18,7 +18,7 @@ public class Order {
 	private Date orderDate; //TODO double check how we are using dates
 	private Address billingAddress;
 	private Address deliveryAddress;
-	private ArrayList<OrderLine> orderLines = new ArrayList<OrderLine>();
+	private ArrayList<SalesOrderLine> orderLines = new ArrayList<SalesOrderLine>();
 	private double orderTotal;
 	private String orderStatus;
 	private String returnReason;
@@ -36,7 +36,7 @@ public class Order {
 		this.orderDate = null;
 		this.billingAddress = null;
 		this.deliveryAddress = null;
-		this.orderLines = new ArrayList<OrderLine>();
+		this.orderLines = new ArrayList<SalesOrderLine>();
 		this.orderTotal = 0.0;
 		this.orderStatus = "initialising";
 		this.returnReason = null;
@@ -50,9 +50,9 @@ public class Order {
 	 * @param {@link Customer} customer who owns the order
 	 * @param {@link Address} billingAddress for finance to bill to 
 	 * @param {@link Address} deliveryAddress for warehouse to deliver to
-	 * @param {{@link ArrayList} {@link OrderLine}} orderLines to be added to order
+	 * @param {{@link ArrayList} {@link SalesOrderLine}} orderLines to be added to order
 	 */
-	public Order(Customer customer, Address billingAddress, Address deliveryAddress, ArrayList<OrderLine> orderLines) {
+	public Order(Customer customer, Address billingAddress, Address deliveryAddress, ArrayList<SalesOrderLine> orderLines) {
 		this.orderID = 0;
 		this.customer = customer;
 		this.supplier = null;
@@ -79,7 +79,7 @@ public class Order {
 		this.orderDate = null;
 		this.billingAddress = null;
 		this.deliveryAddress = null;
-		this.orderLines = new ArrayList<OrderLine>();
+		this.orderLines = new ArrayList<SalesOrderLine>();
 		this.orderTotal = 0.0;
 		this.orderStatus = "initialising";
 		this.returnReason = null;
@@ -101,7 +101,7 @@ public class Order {
 		this.orderDate = orderDate;
 		this.billingAddress = null;
 		this.deliveryAddress = null;
-		this.orderLines = new ArrayList<OrderLine>();
+		this.orderLines = new ArrayList<SalesOrderLine>();
 		this.orderTotal = 0.0;
 		this.orderStatus = "return";
 		this.returnReason = returnReason;
@@ -115,7 +115,7 @@ public class Order {
 	 * @param customer
 	 * @param orderLines
 	 */
-	public Order(Customer customer, ArrayList<OrderLine> orderLines) {
+	public Order(Customer customer, ArrayList<SalesOrderLine> orderLines) {
 		this.orderID = 0;
 		this.customer = customer;
 		this.supplier = null;
@@ -140,7 +140,7 @@ public class Order {
 		 */
 	}
 	public Order(int orderID, Customer customer, Supplier supplier, Date orderDate, Address billingAddress,
-			Address deliveryAddress, ArrayList<OrderLine> orderLines, double orderTotal, String orderStatus,
+			Address deliveryAddress, ArrayList<SalesOrderLine> orderLines, double orderTotal, String orderStatus,
 			String returnReason, ArrayList<OrderEvent> orderEvent, PaymentTransaction paymentTransaction) {
 		super();
 		this.orderID = orderID;
