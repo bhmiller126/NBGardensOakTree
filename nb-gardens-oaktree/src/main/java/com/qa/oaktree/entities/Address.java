@@ -8,15 +8,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne; 
 import javax.persistence.JoinColumn; 
 
+/**
+ * 
+ * @author OakTree 
+ * Address noSQL entity
+ */
 @Entity
 @Table(name = "Address")
 public class Address 
 {
 	@Column(name = "line_1")
-	private String line_1;
+	private String line1;
 	
 	@Column(name = "line_2")
-	private String line_2;
+	private String line2;
 	
 	@Column(name = "town")
 	private String town;
@@ -34,66 +39,185 @@ public class Address
 	private String postcode;
 	
 	@Column(name = "home_phone_number")
-	private String home_phone_number;
+	private String homePhoneNumber;
 	
-	public Address(String line_1, String line_2, String town, String city, String county, String country, String postcode, String home_phone_number)
-	{
-		this.line_1 = line_1;
-		this.line_2 = line_2;
+	/**
+	 * Null constructer for Address 
+	 */
+	public Address() {
+		this.line1 = "";
+		this.line2 = "";
+		this.town = "";
+		this.city = "";
+		this.county = "";
+		this.country = "";
+		this.postcode = "";
+		this.homePhoneNumber = "";
+	}
+	/**
+	 * Full constructor for Address entity
+	 * @param line1, address line 1, house name or postcode
+	 * @param line2, address line 2, nullable
+	 * @param town, address town
+	 * @param city, address city 
+	 * @param county, address county 
+	 * @param country, country of address
+	 * @param postcode, address postcode 
+	 * @param home_phone_number, contact number for address, nullable
+	 */
+	public Address(String line1, String line2, String town, String city, String county, String country, String postcode, String homePhoneNumber) {
+		this.line1 = line1;
+		this.line2 = line2;
 		this.town = town;
 		this.city = city;
 		this.county = county;
 		this.country = country;
 		this.postcode = postcode;
-		this.home_phone_number = home_phone_number;
+		this.homePhoneNumber = homePhoneNumber;
 	}
 
-	public String getLine_1() 
-	{return line_1;}
+	/**
+	 * Address line 1 getter method
+	 * @return line 1 of Address
+	 */
+	public String getLine1() {
+		return line1;
+	}
 
-	public void setLine_1(String line_1) 
-	{this.line_1 = line_1;}
+	/**
+	 * Address line 2 getter method
+	 * @return line 2 of Address 
+	 */
+	public String getLine2() {
+		return line2;
+	}
 
-	public String getLine_2() 
-	{return line_2;}
+	/**
+	 * Address town getter
+	 * @return town of Address
+	 */
+	public String getTown() {
+		return town;
+	}
 
-	public void setLine_2(String line_2) 
-	{this.line_2 = line_2;}
+	/**
+	 * Address city getter
+	 * @return city of Address
+	 */
+	public String getCity() {
+		return city;
+	}
+	
+	/**
+	 * Address county getter method
+	 * @return county of Address
+	 */
+	public String getCounty() {
+		return county;
+	}
 
-	public String getTown() 
-	{return town;}
+	/**
+	 * Address country getter method
+	 * @return country of Address
+	 */
+	public String getCountry() {
+		return country;
+	}
 
-	public void setTown(String town)
-	{this.town = town;}
+	/**
+	 * Address postcode getter method
+	 * @return postcode of Address
+	 */
+	public String getPostcode() {
+		return postcode;
+	}
+	
+	/**
+	 * Address phone number getter method
+	 * @return phone numer of Address
+	 */
+	public String getHomePhoneNumber() {
+		return homePhoneNumber;
+	}
+	
+	/**
+	 * Address line 1 setter 
+	 * @param line_1 String to set as address line 1
+	 */
+	public void setLine1(String line1) {
+		this.line1 = line1;
+	}
 
-	public String getCity() 
-	{return city;}
+	/**
+	 * Address line 2 setter 
+	 * @param line_2 String to set as address line 2
+	 */
+	public void setLine2(String line2) {
+		this.line2 = line2;
+	}
 
+	/**
+	 * Address town setter 
+	 * @param town String to set as address town 
+	 */
+	public void setTown(String town) {
+		this.town = town;
+	}
+
+	/**
+	 * Address city setter 
+	 * @param city String to set as address city 
+	 */
 	public void setCity(String city) 
 	{this.city = city;}
 
-	public String getCounty() 
-	{return county;}
-
-	public void setCounty(String county) 
+	/**
+	 * Address county setter 
+	 * @param county String to set as address county
+	 */	public void setCounty(String county) 
 	{this.county = county;}
 
-	public String getConutry() 
-	{return country;}
-
-	public void setConutry(String country) 
+	/**
+	 * Address country setter 
+	 * @param country String to set as address country
+	 */
+	 public void setCountry(String country) 
 	{this.country = country;}
 
-	public String getPostcode()
-	{return postcode;}
 
-	public void setPostcode(String postcode) 
-	{this.postcode = postcode;}
+	/**
+	 * Address postcode setter 
+	 * @param postcode String to set as address postcode
+	 */
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
 
-	public String getHome_phone_number() 
-	{return home_phone_number;}
-
-	public void setHome_phone_number(String home_phone_number)
-	{this.home_phone_number = home_phone_number;}	
+	/**
+	 * Address homePhoneNumber setter 
+	 * @param homePhoneNumber String to set as address homePhoneNumber
+	 */
+	public void setHomePhoneNumber(String homePhoneNumber) {
+		this.homePhoneNumber = homePhoneNumber;
+	}
 	
+	/**
+	 * Override object equals method for Address entity
+	 * @param other Address to be checked against
+	 * @return boolean true if address' are the same
+	 */
+	public boolean equals(Address other) {
+		if (this.line1.equals(other.getLine1()) &&
+				this.line2.equals(other.getLine2()) &&
+				this.town.equals(other.getTown()) &&
+				this.city.equals(other.getCity()) &&
+				this.county.equals(other.getCounty()) &&
+				this.postcode.equals(other.getPostcode()) &&
+				this.country.equals(other.getCountry()) &&
+				this.homePhoneNumber.equals(other.getHomePhoneNumber())) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
