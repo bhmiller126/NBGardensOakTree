@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
@@ -42,7 +45,7 @@ public class Stock {
 
 	@Column(name = "sale_price", nullable = false)
 	@NotNull
-	double salePrice;
+	BigDecimal salePrice;
 
 	@Column(name = "current_quantity", nullable = false)
 	@NotNull
@@ -94,6 +97,21 @@ public class Stock {
 	int supplierId;
 
 	/**
+	 * Null constructor for stock
+	 */
+
+	public Stock() {
+		this.catalogueId = 0;
+		this.salePrice = new BigDecimal("");
+		this.currentQuantity = 0;
+		this.reorderLevel = 0;
+		this.reorderQuantity = 0;
+		this.stockStatus = "";
+		this.warehouseLocation = "";
+		this.supplierId = 0;
+	}
+
+	/**
 	 * Full constructor for stock
 	 * 
 	 * @param catalogueId
@@ -110,7 +128,7 @@ public class Stock {
 	 * @param warehouseLocation
 	 * @param supplierId
 	 */
-	public Stock(int catalogueId, double salePrice, int currentQuantity, int reorderLevel, int reorderQuantity,
+	public Stock(int catalogueId, BigDecimal salePrice, int currentQuantity, int reorderLevel, int reorderQuantity,
 			String stockStatus, String warehouseLocation, int supplierId) {
 
 		this.catalogueId = catalogueId;
@@ -141,69 +159,184 @@ public class Stock {
 	public void setCatalogueId(int catalogueId) {
 		this.catalogueId = catalogueId;
 	}
-/**
- * Sale price getter
- * @return salePrice
- */
-	public double getSalePrice() {
+
+	/**
+	 * Sale price getter
+	 * 
+	 * @return salePrice
+	 */
+	public BigDecimal getSalePrice() {
 		return salePrice;
 	}
-/**
- * set Saleprice method
- * @param salePrice for when we need to change or add new price
- */
-	public void setSalePrice(double salePrice) {
+
+	/**
+	 * set Saleprice method
+	 * 
+	 * @param salePrice
+	 *            for when we need to change or add new price
+	 */
+	public void setSalePrice(BigDecimal salePrice) {
 		this.salePrice = salePrice;
 	}
-/**
- * get current quantity method
- * @return current quantity in stock
- */
+
+	/**
+	 * get current quantity method
+	 * 
+	 * @return current quantity in stock
+	 */
 	public int getCurrentQuantity() {
 		return currentQuantity;
 	}
-/**
- * set current quantity method
- * @set currentQuantity in case we need to add something back to shelf
- */
+
+	/**
+	 * set current quantity method
+	 * 
+	 * @set currentQuantity in case we need to add something back to shelf
+	 */
 	public void setCurrentQuantity(int currentQuantity) {
 		this.currentQuantity = currentQuantity;
 	}
 
+	/**
+	 * get reorder level method
+	 * 
+	 * @return redorder level
+	 */
 	public int getReorderLevel() {
 		return reorderLevel;
 	}
+
+	/**
+	 * set reorder level method
+	 * 
+	 * @set reorder level in case demand of a product changes
+	 */
 
 	public void setReorderLevel(int reorderLevel) {
 		this.reorderLevel = reorderLevel;
 	}
 
+	/**
+	 * get reorder quanitity method
+	 * 
+	 * @return redorder quantity
+	 */
 	public int getReorderQuantity() {
 		return reorderQuantity;
 	}
 
+	/**
+	 * set reorder quantity method
+	 * 
+	 * @set redorder quantity incase need to do a manual purchase order
+	 */
 	public void setReorderQuantity(int reorderQuantity) {
 		this.reorderQuantity = reorderQuantity;
 	}
 
+	/**
+	 * get stock status method
+	 * 
+	 * @return status of the stock e.g. in stock
+	 */
 	public String getStockStatus() {
 		return stockStatus;
 	}
 
+	/**
+	 * set stock status method
+	 * 
+	 * @set status of the stock, normally after confirming and order or
+	 *      recieving confirmation of despatch
+	 */
 	public void setStockStatus(String stockStatus) {
 		this.stockStatus = stockStatus;
 	}
 
+	/**
+	 * get warehouse location method
+	 * 
+	 * @return location of stock item
+	 */
 	public String getWarehouseLocation() {
 		return warehouseLocation;
 	}
 
+	/**
+	 * set warehouse location method
+	 * 
+	 * @set warehouse location e.g. G4
+	 */
 	public void setWarehouseLocation(String warehouseLocation) {
 		this.warehouseLocation = warehouseLocation;
 	}
 
+	/**
+	 * set stock status method
+	 * 
+	 * @set supplier Id if prefferred supplier changes
+	 */
 	public void setSupplierId(int supplierId) {
 		this.supplierId = supplierId;
+	}
+
+
+	/**
+	 * Override object equals methof for Stock entity 
+	 * @param other stock items to be checked against
+	 * @return boolean true if stock items are the same
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Stock other = (Stock) obj;
+		if (catalogueId != other.catalogueId)
+			return false;
+		if (currentQuantity != other.currentQuantity)
+			return false;
+		if (reorderLevel != other.reorderLevel)
+			return false;
+		if (reorderQuantity != other.reorderQuantity)
+			return false;
+		if (salePrice == null) {
+			if (other.salePrice != null)
+				return false;
+		} else if (!salePrice.equals(other.salePrice))
+			return false;
+		if (stockStatus == null) {
+			if (other.stockStatus != null)
+				return false;
+		} else if (!stockStatus.equals(other.stockStatus))
+			return false;
+		if (supplierId != other.supplierId)
+			return false;
+		if (warehouseLocation == null) {
+			if (other.warehouseLocation != null)
+				return false;
+		} else if (!warehouseLocation.equals(other.warehouseLocation))
+			return false;
+		return true;
+	}
+
+	/**
+	 * Override Objects toString method for stock 
+	 *
+	 */
+	@Override
+	public String toString() {
+		return "Stock [catalogueId= " + catalogueId + ","
+				+ "salePrice= " + salePrice + "," 
+				+ "currentQuantity= " + currentQuantity + ","
+				+ "reorderLevel= " + reorderLevel + "," 
+				+ "reorderQuantity= " + reorderQuantity + "," 
+				+ "stockStatus= " + stockStatus + "," 
+				+ "warehouseLocation= " + warehouseLocation + ","
+				+ "supplierId= " + supplierId + "]";
 	}
 
 }
