@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
 
@@ -33,7 +34,7 @@ public class WishList {
 
 	// TODO check that the cardinallities are correct for annotations
 
-	@OneToOne
+	@OneToMany
 	@JoinColumn(name = "Customer_user_name", nullable = false)
 
 	public int getCustomerUserName() {
@@ -118,6 +119,41 @@ public class WishList {
 	 */
 	public void setWishQuantity(int wishQuantity) {
 		this.wishQuantity = wishQuantity;
+	}
+
+
+
+	/** 
+	 * Override object equals method for Wishlist entity
+	 * @param other wishlist items to be checked against
+	 * @return boolean true if items are the same
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		WishList other = (WishList) obj;
+		if (catalogueId != other.catalogueId)
+			return false;
+		if (customerUserName != other.customerUserName)
+			return false;
+		if (wishQuantity != other.wishQuantity)
+			return false;
+		return true;
+	}
+
+	/** 
+	 * Override object's toString method for Address
+	 */
+	@Override
+	public String toString() {
+		return "WishList [customerUserName= " + customerUserName + "," 
+	+"catalogueId= " + catalogueId + ","
+	+"wishQuantity= " + wishQuantity + "]";
 	}
 
 }
