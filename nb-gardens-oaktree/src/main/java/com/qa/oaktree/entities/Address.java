@@ -10,7 +10,7 @@ import javax.persistence.JoinColumn;
 
 /**
  * 
- * @author OakTree 
+ * @author OakTree LP
  * Address noSQL entity
  */
 @Entity
