@@ -132,4 +132,11 @@ public class Product
 	public void setProduct_category(String product_category) 
 	{this.product_category = product_category;}
 	
+	public boolean equals(Product other)
+	{
+		if(this.catalogue_id == other.getCatalogue_id() && this.product_name.equals(other.getProduct_name()) && this.product_description.equals(other.getProduct_description()) && this.product_category.equals(other.getProduct_category()) && this.product_status.equals(other.getProduct_status()))
+		{return true;}
+		else
+		{return false;}
+	}
 }
