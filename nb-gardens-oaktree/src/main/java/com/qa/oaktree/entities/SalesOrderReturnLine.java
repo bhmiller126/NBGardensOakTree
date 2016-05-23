@@ -1,12 +1,12 @@
 package com.qa.oaktree.entities;
-public class Sales_Order_Returnline 
+public class SalesOrderReturnLine 
 {
 	private int stock_catalogue_id;
 	private int Sales_Order_Return_Sales_Order_sales_id;
 	private int return_quantity;
 	private int shelved_quantity;
 	
-	public Sales_Order_Returnline(int Stock_catalogue_id, int Sales_Order_Return_Sales_Order_sales_id, int return_quantity, int shelved_quantity)
+	public SalesOrderReturnLine(int Stock_catalogue_id, int Sales_Order_Return_Sales_Order_sales_id, int return_quantity, int shelved_quantity)
 	{
 		this.stock_catalogue_id = Stock_catalogue_id;
 		this.Sales_Order_Return_Sales_Order_sales_id = Sales_Order_Return_Sales_Order_sales_id;

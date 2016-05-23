@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.SecondaryTable;
-import javax.persistence.SecondaryTables;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -24,13 +22,13 @@ public class SalesOrderLine {
 	@ManyToOne
 	@JoinColumn(name = "Sales_Order_sales_id", nullable = false)
 	@NotNull
-	private SalesOrder salesOrder;
+	private int salesOrderID;
 
 	@Id
 	@ManyToOne
 	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
 	@NotNull
-	private Product product;
+	private int productID;
 
 	@Column(name = "sales_quantity")
 	@NotNull
@@ -43,13 +41,14 @@ public class SalesOrderLine {
 	private double lineTotal;
 
 	/**
-	 * Defualt SalesOrderLine constructor that creates a empty orderline for a given product and order.
+	 * Default SalesOrderLine constructor that creates a empty orderline for a given product and order.
+	 * OrderID must be updated when order is committed to the database and given an ID
 	 * The primary key fields must be passed as they cannot be modified later
 	 */
-	public SalesOrderLine(SalesOrder salesOrder, Product product) {
+	public SalesOrderLine(int product) {
 		super();
-		this.salesOrder = salesOrder;
-		this.product = product;
+		this.salesOrderID = -1;
+		this.productID = product;
 		this.quantity = 0;
 		this.unitCost = 0;
 		this.lineTotal = 0;
@@ -59,18 +58,18 @@ public class SalesOrderLine {
 	 * Full constructor for SalesOrderLine
 	 * 
 	 * @param salesorder
-	 *            The order within which the orderline is situated
+	 *            The order ID for the orderline
 	 * @param product
-	 *            the product on the orderline
+	 *            the product ID on the orderline
 	 * @param quantity
 	 *            the quantity of the product ordered
 	 * @param unitCost
 	 *            the saleprice per item
 	 */
-	public SalesOrderLine(SalesOrder salesorder, Product product, int quantity, double unitCost) {
+	public SalesOrderLine(int salesorder, int product, int quantity, double unitCost) {
 		super();
-		this.salesOrder = salesorder;
-		this.product = product;
+		this.salesOrderID = salesorder;
+		this.productID = product;
 		this.quantity = quantity;
 		this.unitCost = unitCost;
 		this.lineTotal = quantity * unitCost;
@@ -81,8 +80,24 @@ public class SalesOrderLine {
 	 * 
 	 * @return the sales order that contains this sales orderline
 	 */
-	public SalesOrder getSalesOrder() {
-		return this.salesOrder;
+	public int getSalesOrder() {
+		return this.salesOrderID;
+	}
+	
+
+	/**
+	 * updates the sales order ID of the order line if it has not already been set
+	 * @param salesOrderID
+	 * @return true if the requested change was successfull 
+	 */
+	public boolean setSalesOrder(int salesOrderID){
+		if (salesOrderID==-1){
+			this.salesOrderID = salesOrderID;
+			return true;
+		}else{
+			return false;
+		}
+		
 	}
 
 	/**
@@ -90,8 +105,8 @@ public class SalesOrderLine {
 	 * 
 	 * @return
 	 */
-	public Product getProduct() {
-		return product;
+	public int getProduct() {
+		return productID;
 	}
 
 	/**
