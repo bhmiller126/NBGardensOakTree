@@ -1,133 +1,209 @@
 package com.qa.oaktree.entities;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.persistence.Column; 
-import javax.persistence.Id; 
+import javax.persistence.Column;
+import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import javax.persistence.JoinColumn; 
+import javax.persistence.JoinColumn;
+
+/**
+ * 
+ * @author OakTree Stock SQl entity
+ */
 
 @Entity
-@Table (name = "Stock")
+@Table(name = "Stock")
 public class Stock {
-	
+
+	/**
+	 * The first variable catalogueId has @Id and @GeneratedValue.
+	 * 
+	 * @Id dicatetes that this is the primary key in the database table
+	 * @GeneratedValue allows the Id to know that it is an auto incrimented
+	 *                 number After @Column the name = " " has to match the name
+	 *                 of the table in the datbase so it can be accessed from
+	 *                 the application
+	 * @NotNull means that column cannot be null, therefore always needs a value
+	 *          input
+	 * 
+	 */
+
 	@Id
-	@Column (name = "catalogue_id", nullable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "catalogue_id", nullable = false)
 	@NotNull
-	int catalogueId; 
-	
-	@Column (name = "sale_price", nullable = false)
+	int catalogueId;
+
+	@Column(name = "sale_price", nullable = false)
 	@NotNull
 	double salePrice;
-	
-	@Column (name = "current_quantity", nullable = false)
+
+	@Column(name = "current_quantity", nullable = false)
 	@NotNull
 	int currentQuantity;
-	
-	@Column (name = "reorder_level", nullable = false)
+
+	@Column(name = "reorder_level", nullable = false)
 	@NotNull
-	int reorderLevel; 
-	
-	@Column (name = "re_order_quantity", nullable = false)
+	int reorderLevel;
+
+	@Column(name = "re_order_quantity", nullable = false)
 	@NotNull
 	int reorderQuantity;
-	
-	@Column (name = "stock_status", length = 30, nullable = false)
+
+	/**
+	 * Stock status column, has @Size parameter This states that it must have a
+	 * minimum of one character and a maximum of 30
+	 */
+
+	@Column(name = "stock_status", length = 30, nullable = false)
 	@NotNull
-	@Size (min = 1, max = 30)
+	@Size(min = 1, max = 30)
 	String stockStatus;
-	
-	@Column (name = "warehouse_location", length = 10, nullable = false)
+
+	/**
+	 * warehouse location column, has @Size parameter This states that it must
+	 * have a minimum of one character and a maximum of 10
+	 */
+
+	@Column(name = "warehouse_location", length = 10, nullable = false)
 	@NotNull
-	@Size (min = 1, max = 10)
-	String warehouseLocation; 
-	
+	@Size(min = 1, max = 10)
+	String warehouseLocation;
+
+	/**
+	 * *@OneToOne is the cardinality for that variable with another variable in
+	 * a separate entity
+	 * 
+	 * @JoinColumn lets the application know where to access the variable and
+	 *             what to return
+	 * @return supplierId from the Supplier entity
+	 */
 	@OneToOne
-	@JoinColumn (name = "Supplier_supplier_id", nullable = false)
-	public int getSupplier_supplier_id() {
+	@JoinColumn(name = "Supplier_supplier_id", nullable = false)
+	public int getSupplierId() {
 		return supplierId;
 	}
-	@NotNull
-	int supplierId; 
-	
-	
-	
-	 public Stock(int catalogue_id, double sale_price, int current_quantity, int redorder_level, int reorder_quantity, String stock_status, String warehouse_location, int Supplier_supplier_id   ){
-		
-		 this.catalogueId = catalogue_id;
-		 this.salePrice = sale_price;
-		 this.currentQuantity = current_quantity;
-		 this.reorderLevel = redorder_level; 
-		 this.reorderQuantity = reorder_quantity;
-		 this.stockStatus = stock_status;
-		 this.warehouseLocation = warehouse_location;
-		 this.supplierId = Supplier_supplier_id; 
-	 }
 
-	public int getCatalogue_id() {
+	@NotNull
+	int supplierId;
+
+	/**
+	 * Full constructor for stock
+	 * 
+	 * @param catalogueId
+	 * @param salePrice,
+	 *            price item is sold for
+	 * @param currentQuantity,
+	 *            amount currently in stock
+	 * @param reorderLevel,
+	 *            at what level do we reorder more stock
+	 * @param reorderQuantity,
+	 *            how much do we want to reorder
+	 * @param stockStatus,
+	 *            in stock, discontinued, on order, back order
+	 * @param warehouseLocation
+	 * @param supplierId
+	 */
+	public Stock(int catalogueId, double salePrice, int currentQuantity, int reorderLevel, int reorderQuantity,
+			String stockStatus, String warehouseLocation, int supplierId) {
+
+		this.catalogueId = catalogueId;
+		this.salePrice = salePrice;
+		this.currentQuantity = currentQuantity;
+		this.reorderLevel = reorderLevel;
+		this.reorderQuantity = reorderQuantity;
+		this.stockStatus = stockStatus;
+		this.warehouseLocation = warehouseLocation;
+		this.supplierId = supplierId;
+	}
+
+	/**
+	 * get CatalogueId method
+	 * 
+	 * @return catalogueId
+	 */
+
+	public int getCatalogueId() {
 		return catalogueId;
 	}
 
-	public void setCatalogue_id(int catalogue_id) {
-		this.catalogueId = catalogue_id;
+	/**
+	 * set CatalogueId method
+	 * 
+	 * @set catalogueId in case we need to add new stock
+	 */
+	public void setCatalogueId(int catalogueId) {
+		this.catalogueId = catalogueId;
 	}
-
-	public double getSale_price() {
+/**
+ * Sale price getter
+ * @return salePrice
+ */
+	public double getSalePrice() {
 		return salePrice;
 	}
-
-	public void setSale_price(double sale_price) {
-		this.salePrice = sale_price;
+/**
+ * set Saleprice method
+ * @param salePrice for when we need to change or add new price
+ */
+	public void setSalePrice(double salePrice) {
+		this.salePrice = salePrice;
 	}
-
-	public int getCurrent_quantity() {
+/**
+ * get current quantity method
+ * @return current quantity in stock
+ */
+	public int getCurrentQuantity() {
 		return currentQuantity;
 	}
-
-	public void setCurrent_quantity(int current_quantity) {
-		this.currentQuantity = current_quantity;
+/**
+ * set current quantity method
+ * @set currentQuantity in case we need to add something back to shelf
+ */
+	public void setCurrentQuantity(int currentQuantity) {
+		this.currentQuantity = currentQuantity;
 	}
 
-	public int getReorder_level() {
+	public int getReorderLevel() {
 		return reorderLevel;
 	}
 
-	public void setReorder_level(int reorder_level) {
-		this.reorderLevel = reorder_level;
+	public void setReorderLevel(int reorderLevel) {
+		this.reorderLevel = reorderLevel;
 	}
 
-	public int getReorder_quantity() {
+	public int getReorderQuantity() {
 		return reorderQuantity;
 	}
 
-	public void setReorder_quantity(int reorder_quantity) {
-		this.reorderQuantity = reorder_quantity;
+	public void setReorderQuantity(int reorderQuantity) {
+		this.reorderQuantity = reorderQuantity;
 	}
 
-	public String getStock_status() {
+	public String getStockStatus() {
 		return stockStatus;
 	}
 
-	public void setStock_status(String stock_status) {
-		this.stockStatus = stock_status;
+	public void setStockStatus(String stockStatus) {
+		this.stockStatus = stockStatus;
 	}
 
-	public String getWarehouse_location() {
+	public String getWarehouseLocation() {
 		return warehouseLocation;
 	}
 
-	public void setWarehouse_location(String warehouse_location) {
-		this.warehouseLocation = warehouse_location;
+	public void setWarehouseLocation(String warehouseLocation) {
+		this.warehouseLocation = warehouseLocation;
 	}
 
-
-	public void setSupplier_supplier_id(int supplier_supplier_id) {
-		supplierId = supplier_supplier_id;
+	public void setSupplierId(int supplierId) {
+		this.supplierId = supplierId;
 	}
-	
 
 }
