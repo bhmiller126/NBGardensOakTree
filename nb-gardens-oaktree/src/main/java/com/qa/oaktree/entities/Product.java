@@ -10,6 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne; 
 import javax.persistence.JoinColumn; 
 
+/**
+ * 
+ * @author OakTree 
+ * Address noSQL entity
+ */
 @Entity
 @Table (name = "Product")
 public class Product 
@@ -39,13 +44,12 @@ public class Product
 	private String product_status;
 
 	/**
-	 * This method is the constructor for this class. It will take the later mentioned 
-	 * parameters and assign them to the corresponding class variables for the particular instance.
- 	 * @param catalogue_id
-	 * @param product_name
-	 * @param product_description
-	 * @param product_category
-	 * @param product_status
+	 * Full Constructor for Product entity. 
+ 	 * @param catalogue_id, product's number in catalogue
+	 * @param product_name, product's name
+	 * @param product_description, a description of the product
+	 * @param product_category, product's category grouping it with like products
+	 * @param product_status, product's status as to whether it is discontinued, on order, in stock or back order
 	 */
 	public Product(int catalogue_id, String product_name, String product_description, String product_category, String product_status)
 	{
@@ -57,71 +61,72 @@ public class Product
 	}
 
 	/**
-	 * This method is the "getter" for the String representing product status.
-	 * @return
+	 * getter method for product's status.
+	 * @return product's status
 	 */
 	public String getProduct_status()
 	{return product_status;}
 
 	/**
-	 * This method is the "setter" for the String representing product status.
+	 * setter method for product's status.
 	 * @param product_status
 	 */
 	public void setProduct_status(String product_status)
 	{this.product_status = product_status;}
 
 	/**
-	 * This method is the "getter" for the integer representing the product's catalogue id.
+	 * getter method for product's catalogue id.
 	 * This variable is the Primary Key.
-	 * @return
+	 * @return catalogue_id
 	 */
 	public int getCatalogue_id() 
 	{return catalogue_id;}
 
 	/**
-	 * This method is the "setter" for the integer representing the product's catalogue id.
+	 * setter method for product's catalogue id.
+	 * This variable is the Primary Key
 	 * @param catalogue_id
 	 */
 	public void setCatalogue_id(int catalogue_id) 
 	{this.catalogue_id = catalogue_id;}
 
 	/**
-	 * This method is the "getter" for the String representing the product's name.
-	 * @return
+	 * getter method for the product's name.
+	 * @return product_name
 	 */
 	public String getProduct_name() 
 	{return product_name;}
 
 	/**
-	 * This method is the "setter" for the String representing the product's name.
+	 * setter method for the product's name.
 	 * @param product_name
 	 */
 	public void setProduct_name(String product_name) 
 	{this.product_name = product_name;}
 
 	/**
-	 * This method is the "getter" for the String representing the product's description.
-	 * @return
+	 * getter method for the product's description.
+	 * @return product_description
 	 */
 	public String getProduct_description() 
 	{return product_description;}
 
 	/**
-	 * This method is the "setter" for the String representing the product's description.
+	 * setter method for the product's description.
 	 * @param product_description
 	 */
 	public void setProduct_description(String product_description) 
 	{this.product_description = product_description;}
 
 	/**
-	 * This method is the "getter" for the String representing the product's category.
-	 * @return
+	 * getter method for the product's category.
+	 * @return product_category
 	 */
 	public String getProduct_category()
 	{return product_category;}
 
 	/**
-	 * This method is the "setter" for the String representing the product's description.
+	 * setter method for the product's description.
 	 * @param product_category
 	 */
 	public void setProduct_category(String product_category) 
