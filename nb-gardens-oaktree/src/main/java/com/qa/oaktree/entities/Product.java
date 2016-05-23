@@ -17,14 +17,20 @@ public class Product
 	@Id
 	@Column (name = "Catalogue_ID", nullable = false, length = 225)
 	private int catalogue_id;
+	
 	@Column (name = "Product_Name", nullable = false, length = 225)
 	@NotNull
 	@Size(min = 2, max = 225)
 	private String product_name;
+	
 	@Column (name = "Product_Description", nullable = false, length = 225)
 	@NotNull
-	@Size(min = 2, max =225  )
+	@Size(min = 2, max = 225)
 	private String product_description;
+	
+	@Column (name =  "Product_Category", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String product_category;
 	
 	
