@@ -2,7 +2,13 @@ package com.qa.oaktree.entities;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.util.Calendar;
+
 import javax.persistence.Column; 
 import javax.persistence.Id; 
 
@@ -26,77 +32,75 @@ public class Customer {
 	
 	@Column (name = "first_name", nullable = false, length = 225)
 	@NotNull
-	@Size(min = 2, max = 225)
+	@Size(min = 2, max = 50)
 	private String firstName;
 	
 	@Column (name = "last_name", nullable = false, length = 225)
 	@NotNull
-	@Size(min = 2, max = 225)
+	@Size(min = 2, max = 50)
 	private String lastName;
 	
 	@Column (name = "password", nullable = false, length = 225)
 	@NotNull
-	@Size(min = 2, max = 225)
+	@Size(min = 6, max = 45)
 	private String password;
 	
 	@Column (name = "date_of_birth", nullable = false, length = 225)
 	@NotNull
-	@Size(min = 2, max = 225)
-	private String dateOfBirth;
+	@Past
+	private Date dateOfBirth;
 	
 	@Column (name = "gender", nullable = true)
 	private boolean gender;
 
 	@Column (name = "credit", nullable = false, length = 225)
-	@NotNull
-	@Size(min = 2, max = 225)
-	private float credit;
+	private BigDecimal credit;
 	
 	@Column (name = "email", nullable = true, length = 225)
-	@Size(min = 2, max = 225)
+	@Size(min = 8, max = 100)
 	private String email;
 	
 	@Column (name = "contact_no", nullable = true, length = 225)
-	@Size(min = 2, max = 225)
+	@Size(min = 11, max = 11)
 	private String contactNum;
 	
 	@Column (name = "status", nullable = false, length = 225)
-	@NotNull
-	@Size(min = 2, max = 225)
+	@Size(min = 4, max = 20)
 	private String status;
 	
 	@Column (name = "secret_question", nullable = false, length = 225)
 	@NotNull
-	@Size(min = 2, max = 225)
+	@Size(min = 5, max = 225)
 	private String secretQuestion;
 	
 	@Column (name = "secret_answer", nullable = false, length = 225)
 	@NotNull
-	@Size(min = 2, max = 225)
+	@Size(min = 2, max = 50)
 	private String secretAnswer;
 	
 	@Column (name = "Address_line_1", nullable = false, length = 225)
 	@NotNull
-	@Size(min = 2, max = 225)
+	@Size(min = 2, max = 45)
 	private String addressLine1;
 
 	@Column (name = "Address_Postcode", nullable = false, length = 225)
 	@NotNull
-	@Size(min = 2, max = 225)
+	@Size(min = 5, max = 8)
 	private String addressPostcode;
 		
 	/**
 	 * Default Null constructor for Customer 
 	 */
 	public Customer () {
+		Calendar cal = Calendar.getInstance();
 		this.userName = "";
 		this.title = "";
 		this.firstName = "";
 		this.lastName = "";
 		this.password = "";
-		this.dateOfBirth = "";
+		this.dateOfBirth = (Date) cal.getTime();
 		this.gender = false;
-		this.credit = 0;
+		this.credit = new BigDecimal("");
 		this.email = "";
 		this.contactNum = "";
 		this.status = "";
@@ -125,7 +129,7 @@ public class Customer {
 	 * @param addressPostcode String customers postcode of their address
 	 */
 	public Customer(String userName, String title, String firstName, String lastName, String password,
-			String dateOfBirth, boolean gender, float credit, String email, String contactNum, String status,
+			Date dateOfBirth, boolean gender, BigDecimal credit, String email, String contactNum, String status,
 			String secretQuestion, String secretAnswer, String addressLine1, String addressPostcode) {
 		this.userName = userName;
 		this.title = title;
@@ -182,7 +186,7 @@ public class Customer {
 	/**
 	 * @return the dateOfBirth
 	 */
-	public String getDateOfBirth() {
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 
@@ -196,7 +200,7 @@ public class Customer {
 	/**
 	 * @return the credit
 	 */
-	public float getCredit() {
+	public BigDecimal getCredit() {
 		return credit;
 	}
 
@@ -287,7 +291,7 @@ public class Customer {
 	/**
 	 * @param dateOfBirth the dateOfBirth to set
 	 */
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
@@ -301,7 +305,7 @@ public class Customer {
 	/**
 	 * @param credit the credit to set
 	 */
-	public void setCredit(float credit) {
+	public void setCredit(BigDecimal credit) {
 		this.credit = credit;
 	}
 
@@ -383,7 +387,10 @@ public class Customer {
 				return false;
 		} else if (!contactNum.equals(other.contactNum))
 			return false;
-		if (Float.floatToIntBits(credit) != Float.floatToIntBits(other.credit))
+		if (credit == null) {
+			if (other.credit != null)
+				return false;
+		} else if (!credit.equals(other.credit))
 			return false;
 		if (dateOfBirth == null) {
 			if (other.dateOfBirth != null)

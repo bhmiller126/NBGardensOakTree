@@ -1,6 +1,8 @@
 package com.qa.oaktree.entities;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.persistence.Column; 
 
 /**
@@ -13,27 +15,39 @@ import javax.persistence.Column;
 public class Address 
 {
 	@Column(name = "line_1")
+	@NotNull
+	@Size(min = 2, max = 50)
 	private String line1;
 	
 	@Column(name = "line_2")
+	@Size(min = 2, max = 50)
 	private String line2;
 	
 	@Column(name = "town")
+	@Size(min = 2, max = 50)
 	private String town;
 	
 	@Column(name = "city")
+	@NotNull
+	@Size(min = 2, max = 50)
 	private String city;
 	
 	@Column(name = "county")
+	@NotNull
+	@Size(min = 2, max = 50)
 	private String county;
 	
 	@Column(name = "country")
+	@Size(min = 2, max = 50)
 	private String country;
 	
 	@Column(name = "postcode")
+	@NotNull
+	@Size(min = 2, max = 50)
 	private String postcode;
 	
 	@Column(name = "home_phone_number")
+	@Size(min = 11, max = 13)
 	private String homePhoneNumber;
 	
 	/**
