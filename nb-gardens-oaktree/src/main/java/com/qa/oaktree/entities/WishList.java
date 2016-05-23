@@ -12,15 +12,24 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
 
+/**
+ * 
+ * @author OakTree WishList SQL entity
+ */
 @Entity
 @Table(name = "Wishlist")
 public class WishList {
 
-	// This section adds customer username and uses it as a foreign key from the
-	// customer table
-	// Added the getter within here so the column knows to access
-	// getCustomerUserName.
-	// copied the format for this from online, usure if this is std practice
+	/**
+	 * This section adds customer username and uses it as a foreign key from the
+	 * customer table with one to one cardinality Added the getter within here
+	 * so the column knows to access getCustomerUserName. The getter will return
+	 * the customer username stored in the database copied the format for this
+	 * from online, sure if this is std practice
+	 * 
+	 * name = "Customer_user_name" should match the name of the table specified
+	 * in the database so it knows what to access the foreign key from
+	 */
 
 	// TODO check that the cardinallities are correct for annotations
 
@@ -34,46 +43,79 @@ public class WishList {
 	@NotNull
 	private int customerUserName;
 
-	// This section adds stock catalogue as a foreign key, similar to customer
-	// username above
-	// The name = has to match the name of the table created in the database
+	/**
+	 * This section adds stock catalogue as a foreign key, similar to customer
+	 * username above This is a many to one cardinality The name = has to match
+	 * the name of the table created in the database
+	 */
 
 	@ManyToOne
 	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
 	public int getStockCatalogueId() {
-		return stockCatalogueId;
+		return catalogueId;
 	}
 
 	@NotNull
-	private int stockCatalogueId;
+	private int catalogueId;
 
-	// The below section will add the wish quanity column and default value of 1
-	// this will happen when no quantity is selected by user
-	// Not sure if it will work as setting default but will look into it further
-	// for other cases
+	/**
+	 * columnDefinition = "int default '1'" this should make sure that if the
+	 * customer does not insert a quanity within the wishlist it will place 1 in
+	 * there instead
+	 */
+
 	// TODO look int setting default values
 
 	@Column(name = "wish_quantity", columnDefinition = "int default '1'")
 	private int wishQuantity;
 
-	public WishList(int customerUserName, int stockCatalogueId, int wishQuantity) {
+	/**
+	 * Full constructor for wishlist entity Every entry must have a customer
+	 * username, the cataloogue Id and quantity quantity has a default setting
+	 * of 1
+	 * 
+	 * @param customerUserName
+	 * @param catalogueId
+	 * @param wishQuantity
+	 */
+	public WishList(int customerUserName, int catalogueId, int wishQuantity) {
 		this.customerUserName = customerUserName;
-		this.stockCatalogueId = stockCatalogueId;
+		this.catalogueId = catalogueId;
 		this.wishQuantity = wishQuantity;
 	}
 
+	/**
+	 * Customer username setter method
+	 * 
+	 * @set customerUserName to the string entered
+	 */
 	public void setCustomerUserName(int customerUserName) {
 		this.customerUserName = customerUserName;
 	}
 
-	public void setStockCatalogueId(int stockCatalogueId) {
-		this.stockCatalogueId = stockCatalogueId;
+	/**
+	 * catalogueId setter method
+	 * 
+	 * @set catalogueId to the integer entered
+	 */
+	public void setStockCatalogueId(int catalogueId) {
+		this.catalogueId = catalogueId;
 	}
 
+	/**
+	 * Wish quantity getter method
+	 * 
+	 * @return quantity of the item on wishlist
+	 */
 	public int getWishQuantity() {
 		return wishQuantity;
 	}
 
+	/**
+	 * Set wish quantity method
+	 * 
+	 * @set wishQuantity, default of 1 as added to the column specification
+	 */
 	public void setWishQuantity(int wishQuantity) {
 		this.wishQuantity = wishQuantity;
 	}
