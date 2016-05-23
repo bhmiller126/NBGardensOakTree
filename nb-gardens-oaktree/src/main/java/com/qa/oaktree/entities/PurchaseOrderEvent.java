@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table (name = "Sales_Order_Event")
-public class OrderEvent {
+public class PurchaseOrderEvent {
 	@Id
 	@Column (name = "sales_event_id" )
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -44,7 +44,7 @@ public class OrderEvent {
 	@Size (min = 1, max = 20)
 	private String type; 
 	
-	public OrderEvent (int salesEventId, int salesOrderId, DateTimeSyntax timeStamp, String description, String type) {
+	public PurchaseOrderEvent (int salesEventId, int salesOrderId, DateTimeSyntax timeStamp, String description, String type) {
 		this.salesEventId = salesEventId; 
 		this.salesOrderId = salesOrderId; 
 		this.timeStamp = timeStamp; 

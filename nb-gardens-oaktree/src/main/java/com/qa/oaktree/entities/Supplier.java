@@ -2,6 +2,8 @@ package com.qa.oaktree.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.persistence.Column; 
 import javax.persistence.Id; 
 import javax.persistence.OneToOne;
@@ -21,20 +23,29 @@ public class Supplier {
 	private int supplierID;
 	
 	@Column (name = "name", nullable = false, length = 45)
+	@NotNull
+	@Size (min = 2, max = 45)
 	private String name;
 	
 	@Column (name = "contact_no", nullable = false, length = 13)
+	@NotNull
+	@Size ( min = 10, max = 13)
 	private String contactPhoneNumber;
 	
 	@Column (name = "email", nullable = true, length = 100)
+	@Size (min = 10, max = 100)
 	private String contactEmail;
 	
 	@OneToOne
 	@JoinColumn (name = "Address_line_1", nullable = false)
+	@NotNull
+	@Size (min = 2, max = 45)
 	private String addressLine1;
 	
 	@OneToOne
 	@JoinColumn (name = "Address_postcode", nullable = false)
+	@NotNull
+	@Size (min = 4, max = 8)
 	private String addressPostcode;
 	
 	/**

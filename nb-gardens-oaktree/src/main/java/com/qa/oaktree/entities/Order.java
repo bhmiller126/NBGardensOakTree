@@ -22,7 +22,7 @@ public class Order {
 	private double orderTotal;
 	private String orderStatus;
 	private String returnReason;
-	private ArrayList<OrderEvent> orderEvent = new ArrayList<OrderEvent>();
+	private ArrayList<PurchaseOrderEvent> orderEvent = new ArrayList<PurchaseOrderEvent>();
 	private PaymentTransaction paymentTransaction;
 	private Order returnOf;
 	/**
@@ -40,7 +40,7 @@ public class Order {
 		this.orderTotal = 0.0;
 		this.orderStatus = "initialising";
 		this.returnReason = null;
-		this.orderEvent = new ArrayList<OrderEvent>();
+		this.orderEvent = new ArrayList<PurchaseOrderEvent>();
 		this.paymentTransaction = null;
 		this.returnOf = null;
 	}
@@ -63,7 +63,7 @@ public class Order {
 		this.orderTotal = 0.0;
 		this.orderStatus = "initialising";
 		this.returnReason = null;
-		this.orderEvent = new ArrayList<OrderEvent>();
+		this.orderEvent = new ArrayList<PurchaseOrderEvent>();
 		this.paymentTransaction = null;
 		this.returnOf = null;
 	}
@@ -83,7 +83,7 @@ public class Order {
 		this.orderTotal = 0.0;
 		this.orderStatus = "initialising";
 		this.returnReason = null;
-		this.orderEvent = new ArrayList<OrderEvent>();
+		this.orderEvent = new ArrayList<PurchaseOrderEvent>();
 		this.paymentTransaction = null;
 		this.returnOf = null;
 	}
@@ -105,7 +105,7 @@ public class Order {
 		this.orderTotal = 0.0;
 		this.orderStatus = "return";
 		this.returnReason = returnReason;
-		this.orderEvent = new ArrayList<OrderEvent>();
+		this.orderEvent = new ArrayList<PurchaseOrderEvent>();
 		this.paymentTransaction = null;
 		this.returnOf = originalOrder;
 	}
@@ -126,7 +126,7 @@ public class Order {
 		this.orderTotal = 0.0;
 		this.orderStatus = "initialising";
 		this.returnReason = null;
-		this.orderEvent = new ArrayList<OrderEvent>();
+		this.orderEvent = new ArrayList<PurchaseOrderEvent>();
 		this.paymentTransaction = null;
 		this.returnOf = null;
 	}
@@ -141,7 +141,7 @@ public class Order {
 	}
 	public Order(int orderID, Customer customer, Supplier supplier, Date orderDate, Address billingAddress,
 			Address deliveryAddress, ArrayList<SalesOrderLine> orderLines, double orderTotal, String orderStatus,
-			String returnReason, ArrayList<OrderEvent> orderEvent, PaymentTransaction paymentTransaction) {
+			String returnReason, ArrayList<PurchaseOrderEvent> orderEvent, PaymentTransaction paymentTransaction) {
 		super();
 		this.orderID = orderID;
 		this.customer = customer;
