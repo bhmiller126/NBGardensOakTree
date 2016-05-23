@@ -15,33 +15,43 @@ import javax.persistence.JoinColumn;
 public class Product 
 {
 	@Id
-	@Column (name = "Catalogue_ID", nullable = false, length = 225)
+	@Column (name = "catalogue_id", nullable = false, length = 225)
 	private int catalogue_id;
 	
-	@Column (name = "Product_Name", nullable = false, length = 225)
+	@Column (name = "product_name", nullable = false, length = 225)
 	@NotNull
 	@Size(min = 2, max = 225)
 	private String product_name;
 	
-	@Column (name = "Product_Description", nullable = false, length = 225)
+	@Column (name = "product_description", nullable = false, length = 225)
 	@NotNull
 	@Size(min = 2, max = 225)
 	private String product_description;
 	
-	@Column (name =  "Product_Category", nullable = false, length = 225)
+	@Column (name =  "product_category", nullable = false, length = 225)
 	@NotNull
 	@Size(min = 2, max = 225)
 	private String product_category;
 	
+	@Column (name = "product_status", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
+	private String product_status;
 	
-	public Product(int catalogue_id, String product_name, String product_description, String product_category)
+	public Product(int catalogue_id, String product_name, String product_description, String product_category, String product_status)
 	{
 		this.catalogue_id = catalogue_id;
 		this.product_name = product_name;
 		this.product_description = product_description;
 		this.product_category = product_category;
+		this.product_status = product_status;
 	}
 
+	public String getProduct_status()
+	{return product_status;}
+	
+	public void setProduct_status(String product_status)
+	{this.product_status = product_status;}
 
 	public int getCatalogue_id() 
 	{return catalogue_id;}
