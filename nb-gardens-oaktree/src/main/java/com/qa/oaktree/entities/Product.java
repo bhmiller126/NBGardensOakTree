@@ -44,6 +44,17 @@ public class Product
 	private String product_status;
 
 	/**
+	 * Null constructor for Product 
+	 */
+	public Product() {
+		this.catalogue_id = 0;
+		this.product_name = "";
+		this.product_description = "";
+		this.product_category = "";
+		this.product_status = "";
+	}
+	
+	/**
 	 * Full Constructor for Product entity. 
  	 * @param catalogue_id, product's number in catalogue
 	 * @param product_name, product's name
