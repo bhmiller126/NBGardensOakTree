@@ -11,34 +11,49 @@ import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
-//Defines this POJO into an entity
+
 @Entity
 @Table(name = "Wishlist")
 public class WishList {
-	
-//This section adds customer username and uses it as a foreign key from the customer table
-//Added the getter within here so the klin column accesses getCustomerUserName. 
-//TODO check that the cardinallities are correct for annotations
+
+	// This section adds customer username and uses it as a foreign key from the
+	// customer table
+	// Added the getter within here so the column knows to access
+	// getCustomerUserName.
+	// copied the format for this from online, usure if this is std practice
+
+	// TODO check that the cardinallities are correct for annotations
 
 	@OneToOne
 	@JoinColumn(name = "Customer_user_name", nullable = false)
-	
+
 	public int getCustomerUserName() {
 		return customerUserName;
 	}
+
 	@NotNull
 	private int customerUserName;
-//This section adds stock catalogue as a foreign key, similar to customer username above
-//The name = has to match the name of the table created in the database	
+
+	// This section adds stock catalogue as a foreign key, similar to customer
+	// username above
+	// The name = has to match the name of the table created in the database
+
 	@ManyToOne
 	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
 	public int getStockCatalogueId() {
 		return stockCatalogueId;
 	}
+
 	@NotNull
 	private int stockCatalogueId;
 
-	@Column(name = "wish_quantity")
+	// The below section will add the wish quanity column and default value of 1
+	// this will happen when no quantity is selected by user
+	// Not sure if it will work as setting default but will look into it further
+	// for other cases
+	// TODO look int setting default values
+
+	@Column(name = "wish_quantity", columnDefinition = "int default '1'")
 	private int wishQuantity;
 
 	public WishList(int customerUserName, int stockCatalogueId, int wishQuantity) {
