@@ -1,19 +1,29 @@
 package com.qa.oaktree.entities;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.persistence.Column; 
+import javax.persistence.Id; 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.ManyToOne; 
+import javax.persistence.JoinColumn; 
 
-//@Entity
-//@Table (name = "Product")
+@Entity
+@Table (name = "Product")
 public class Product 
 {
-	//@ID
-	//@Column (name = "Catalogue_ID", nullable = false, length = 225)
+	@Id
+	@Column (name = "Catalogue_ID", nullable = false, length = 225)
 	private int catalogue_id;
-	//@Column (name = "Product_Name", nullable = false, length = 225)
-	//@NotNull
-	//@Size(min = 2, max = 225)
+	@Column (name = "Product_Name", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String product_name;
-	//@Column (name = "Product_Description", nullable = false, length 225)
-	//@NotNull
-	//@Size(min 2, max =225  )
+	@Column (name = "Product_Description", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max =225  )
 	private String product_description;
 	private String product_category;
 	
