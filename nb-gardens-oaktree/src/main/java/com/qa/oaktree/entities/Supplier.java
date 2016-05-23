@@ -6,8 +6,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.persistence.Column; 
 import javax.persistence.Id; 
-import javax.persistence.OneToOne;
-import javax.persistence.JoinColumn; 
 
 /**
  * @author Daniel
@@ -36,14 +34,12 @@ public class Supplier {
 	@Size (min = 10, max = 100)
 	private String contactEmail;
 	
-	@OneToOne
-	@JoinColumn (name = "Address_line_1", nullable = false)
+	@Column (name = "Address_line_1", nullable = false, length = 45)
 	@NotNull
 	@Size (min = 2, max = 45)
 	private String addressLine1;
 	
-	@OneToOne
-	@JoinColumn (name = "Address_postcode", nullable = false)
+	@Column (name = "Address_postcode", nullable = false, length = 8)
 	@NotNull
 	@Size (min = 4, max = 8)
 	private String addressPostcode;
