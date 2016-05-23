@@ -1,20 +1,88 @@
 package com.qa.oaktree.entities;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+//import java.sql.Date;
+import javax.persistence.Column; 
+import javax.persistence.Id; 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.ManyToOne; 
+import javax.persistence.JoinColumn; 
 
+@Entity
+@Table (name = "Customer")
 public class Customer {
+	
+	@Id
+	@Column (name = "userName", nullable = false, length = 225)
 	private String userName;
+	
+	@Column (name = "title", nullable = false, length = 10)
+	@NotNull
+	@Size(min = 2, max = 10)
 	private String title;
+	
+	@Column (name = "firstName", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String firstName;
+	
+	@Column (name = "lastName", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String lastName;
+	
+	@Column (name = "password", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String password;
+	
+	@Column (name = "dateOfBirth", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String dateOfBirth;
+	
+	@Column (name = "email", nullable = true, length = 225)
+	@Size(min = 2, max = 225)
 	private String email;
+	
+	@Column (name = "contactNo", nullable = true, length = 225)
+	@Size(min = 2, max = 225)
 	private String contactNo;
+	
+	@Column (name = "status", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String status;
+	
+	@Column (name = "secretQuestion", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String secretQuestion;
+	
+	@Column (name = "secretAnswer", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String secretAnswer;
+	
+	@Column (name = "addressLine1", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String addressLine1;
+
+	@Column (name = "addressPostcode", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private String addressPostcode;
+	
+	@Column (name = "gender", nullable = true)
 	private boolean gender;
+	
+	@Column (name = "credit", nullable = false, length = 225)
+	@NotNull
+	@Size(min = 2, max = 225)
 	private float credit;
 
 	public Customer(String userName, String title, String firstName, String lastName, String password,
