@@ -118,7 +118,7 @@ public class Customer {
 	 * @param lastName String customers last name
 	 * @param password String customers password
 	 * @param dateOfBirth String customers date of birth
-	 * @param gender Boolean customers gender 0 = male 1 = female
+	 * @param gender Boolean customers gender 1 = male 0 = female
 	 * @param credit Float customers current credit level
 	 * @param email String customers contact email address
 	 * @param contactNum String customers contact number
