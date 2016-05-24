@@ -3,24 +3,21 @@ package com.qa.oaktree.entities;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
 
 /**
  * 
- * @author OakTree WishList SQL entity
+ * @author OakTree Bryony
+ * WishList SQL entity
  */
 @Entity
 @Table(name = "Wishlist")
 public class WishList {
 
+	// TODO check that the cardinallities are correct for annotations
 	/**
 	 * This section adds customer username and uses it as a foreign key from the
 	 * customer table with one to one cardinality Added the getter within here
@@ -29,14 +26,11 @@ public class WishList {
 	 * from online, sure if this is std practice
 	 * 
 	 * name = "Customer_user_name" should match the name of the table specified
-	 * in the database so it knows what to access the foreign key from
+	 * in the database so it knows what to access the foreign key from 
+	 * @return
 	 */
-
-	// TODO check that the cardinallities are correct for annotations
-
 	@OneToMany
 	@JoinColumn(name = "Customer_user_name", nullable = false)
-
 	public int getCustomerUserName() {
 		return customerUserName;
 	}
@@ -45,11 +39,11 @@ public class WishList {
 	private int customerUserName;
 
 	/**
-	 * This section adds stock catalogue as a foreign key, similar to customer
+	 * This adds stock catalogue as a foreign key, similar to customer
 	 * username above This is a many to one cardinality The name = has to match
 	 * the name of the table created in the database
+	 * @return
 	 */
-
 	@ManyToOne
 	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
 	public int getStockCatalogueId() {
@@ -59,7 +53,7 @@ public class WishList {
 	@NotNull
 	private int catalogueId;
 
-	/**
+	/*
 	 * columnDefinition = "int default '1'" this should make sure that if the
 	 * customer does not insert a quanity within the wishlist it will place 1 in
 	 * there instead
