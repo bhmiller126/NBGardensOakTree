@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 /**
  * 
  * @author StephenB 
- * Address noSQL entity
+ * Employee noSQL entity
  */
 @Entity
 @Table (name = "Employee")
@@ -19,37 +19,37 @@ public class Employee
 {
 	@Id
 	@Column (name = "employee_name", nullable = false, length = 225)
-	private String employee_name;
+	private String employeeName;
 
 	@Column (name = "employee_username", nullable = false, length = 225)	
-	private String employee_username;
+	private String employeeUsername;
 	
 	@Column (name = "employee_password", nullable = false, length = 225)
-	private String employee_password;
+	private String employeePassword;
 	
 	@Column (name = "employee_department", nullable = false, length = 225)
-	private String employee_department;
+	private String employeeDepartment;
 	
 	@Column (name = "employee_access", nullable = false, length = 225)
-	private int employee_access;
+	private int employeeAccess;
 	
 	@Column (name = "employee_secret_question", nullable = false, length = 225)
-	private String employee_secret_question;
+	private String employeeSecretQuestion;
 	
 	@Column (name = "employee_secret_answer", nullable = false, length = 225)
-	private String employee_secret_answer;
+	private String employeeSecretAnswer;
 	
 	/**
 	 * Null constructor for Employee 
 	 */
 	public Employee() {
-		this.employee_name = "";
-		this.employee_username = "";
-		this.employee_password = "";
-		this.employee_department = "";
-		this.employee_access = 0;
-		this.employee_secret_question = "";
-		this.employee_secret_answer = "";
+		this.employeeName = "";
+		this.employeeUsername = "";
+		this.employeePassword = "";
+		this.employeeDepartment = "";
+		this.employeeAccess = 0;
+		this.employeeSecretQuestion = "";
+		this.employeeSecretAnswer = "";
 	}
 	
 	/**
@@ -62,115 +62,115 @@ public class Employee
 	 * @param employee_secret_question, employee's secret question
 	 * @param employee_secret_answer, employee's secret answer to their secret question
 	 */
-	public Employee(String employee_name, String employee_username, String employee_password, String employee_department, int employee_access,
-					String employee_secret_question, String employee_secret_answer)
+	public Employee(String employeeName, String employeeUsername, String employeePassword, String employeeDepartment, int employeeAccess,
+					String employeeSecretQuestion, String employeeSecretAnswer)
 	{
-		this.employee_name = employee_name;
-		this.employee_username = employee_username;
-		this.employee_password = employee_password;
-		this.employee_department = employee_department;
-		this.employee_access = employee_access;
-		this.employee_secret_question = employee_secret_question;
-		this.employee_secret_answer = employee_secret_answer;
+		this.employeeName = employeeName;
+		this.employeeUsername = employeeUsername;
+		this.employeePassword = employeePassword;
+		this.employeeDepartment = employeeDepartment;
+		this.employeeAccess = employeeAccess;
+		this.employeeSecretQuestion = employeeSecretQuestion;
+		this.employeeSecretAnswer = employeeSecretAnswer;
 	}
 
 	/**
 	 * getter method for employee's name
 	 * @return employee_name
 	 */
-	public String getEmployee_name() 
-	{return employee_name;}
+	public String getEmployeeName() 
+	{return employeeName;}
 	
 	/**
 	 * setter method for employee's name
 	 *  @param employee_name
 	 */
-	public void setEmployee_name(String employee_name) 
-	{this.employee_name = employee_name;}
+	public void setEmployeeName(String employee_name) 
+	{this.employeeName = employee_name;}
 
 	/**
 	 * getter method for employee's username
 	 * @return employee_username
 	 */
-	public String getEmployee_username() 
-	{return employee_username;}
+	public String getEmployeeUsername() 
+	{return employeeUsername;}
 	
 	/**
 	 * setter method for employee's username
 	 * @param employee_username
 	 */
-	public void setEmployee_username(String employee_username)
-	{this.employee_username = employee_username;}
+	public void setEmployeeUsername(String employee_username)
+	{this.employeeUsername = employee_username;}
 
 	/**
 	 * getter method for employee's password
 	 * @return employee_password
 	 */
-	public String getEmployee_password() 
-	{return employee_password;}
+	public String getEmployeePassword() 
+	{return employeePassword;}
 	
 	/**
 	 * setter method for employee's password
 	 * @param employee_password
 	 */
-	public void setEmployee_password(String employee_password) 
-	{this.employee_password = employee_password;}
+	public void setEmployeePassword(String employee_password) 
+	{this.employeePassword = employee_password;}
 
 	/**
 	 * getter method for employee's department
 	 * @return employee_deparment
 	 */
-	public String getEmployee_department()
-	{return employee_department;}
+	public String getEmployeeDepartment()
+	{return employeeDepartment;}
 	
 	/**
 	 * setter method for employee's department
 	 * @param employee_deparment
 	 */
-	public void setEmployee_department(String employee_department) 
-	{this.employee_department = employee_department;}
+	public void setEmployeeDepartment(String employee_department) 
+	{this.employeeDepartment = employee_department;}
 
 	/**
 	 * getter method for employee's access level 
 	 * @return employee_access
 	 */
-	public int getEmployee_access() 
-	{return employee_access;}
+	public int getEmployeeAccess() 
+	{return employeeAccess;}
 	
 	/**
 	 * setter method for employee's access level 
 	 * @param employee_access
 	 */
-	public void setEmployee_access(int employee_access) 
-	{this.employee_access = employee_access;}
+	public void setEmployeeAccess(int employee_access) 
+	{this.employeeAccess = employee_access;}
 
 	/**
 	 * getter method for employee's secret question
 	 * @return employee_secret_question
 	 */
-	public String getEmployee_secret_question() 
-	{return employee_secret_question;}
+	public String getEmployeeSecretQuestion() 
+	{return employeeSecretQuestion;}
 	
 	/**
 	 * setter method for employee's secret question
 	 * @param employee_secret_question
 	 */
-	public void setEmployee_secret_question(String employee_secret_question) 
-	{this.employee_secret_question = employee_secret_question;}
+	public void setEmployeeSecretQuestion(String employee_secret_question) 
+	{this.employeeSecretQuestion = employee_secret_question;}
 
 	/**
 	 * getter method for employee's secret answer
 	 * @return employee_secret_answer
 	 */
-	public String getEmployee_secret_answer() 
-	{return employee_secret_answer;}
+	public String getEmployeeSecretAnswer() 
+	{return employeeSecretAnswer;}
 	
 	/**
 	 * setter method for employee's secret answer
 	 * @param employee_secret_answer
 	 */
-	public void setEmployee_secret_answer(String employee_secret_answer) 
-	{this.employee_secret_answer = employee_secret_answer;}
+	public void setEmployeeSecretAnswer(String employee_secret_answer) 
+	{this.employeeSecretAnswer = employee_secret_answer;}
 
 	/**
 	 * Override object equals method for Employee entity
@@ -186,37 +186,37 @@ public class Employee
 		if (getClass() != obj.getClass())
 			return false;
 		Employee other = (Employee) obj;
-		if (employee_access != other.employee_access)
+		if (employeeAccess != other.employeeAccess)
 			return false;
-		if (employee_department == null) {
-			if (other.employee_department != null)
+		if (employeeDepartment == null) {
+			if (other.employeeDepartment != null)
 				return false;
-		} else if (!employee_department.equals(other.employee_department))
+		} else if (!employeeDepartment.equals(other.employeeDepartment))
 			return false;
-		if (employee_name == null) {
-			if (other.employee_name != null)
+		if (employeeName == null) {
+			if (other.employeeName != null)
 				return false;
-		} else if (!employee_name.equals(other.employee_name))
+		} else if (!employeeName.equals(other.employeeName))
 			return false;
-		if (employee_password == null) {
-			if (other.employee_password != null)
+		if (employeePassword == null) {
+			if (other.employeePassword != null)
 				return false;
-		} else if (!employee_password.equals(other.employee_password))
+		} else if (!employeePassword.equals(other.employeePassword))
 			return false;
-		if (employee_secret_answer == null) {
-			if (other.employee_secret_answer != null)
+		if (employeeSecretAnswer == null) {
+			if (other.employeeSecretAnswer != null)
 				return false;
-		} else if (!employee_secret_answer.equals(other.employee_secret_answer))
+		} else if (!employeeSecretAnswer.equals(other.employeeSecretAnswer))
 			return false;
-		if (employee_secret_question == null) {
-			if (other.employee_secret_question != null)
+		if (employeeSecretQuestion == null) {
+			if (other.employeeSecretQuestion != null)
 				return false;
-		} else if (!employee_secret_question.equals(other.employee_secret_question))
+		} else if (!employeeSecretQuestion.equals(other.employeeSecretQuestion))
 			return false;
-		if (employee_username == null) {
-			if (other.employee_username != null)
+		if (employeeUsername == null) {
+			if (other.employeeUsername != null)
 				return false;
-		} else if (!employee_username.equals(other.employee_username))
+		} else if (!employeeUsername.equals(other.employeeUsername))
 			return false;
 		return true;
 	}
@@ -227,10 +227,10 @@ public class Employee
 	 */
 	@Override
 	public String toString() {
-		return "Employee [employee_name=" + employee_name + ", employee_username=" + employee_username
-				+ ", employee_password=" + employee_password + ", employee_department=" + employee_department
-				+ ", employee_access=" + employee_access + ", employee_secret_question=" + employee_secret_question
-				+ ", employee_secret_answer=" + employee_secret_answer + "]";
+		return "Employee [employee_name=" + employeeName + ", employee_username=" + employeeUsername
+				+ ", employee_password=" + employeePassword + ", employee_department=" + employeeDepartment
+				+ ", employee_access=" + employeeAccess + ", employee_secret_question=" + employeeSecretQuestion
+				+ ", employee_secret_answer=" + employeeSecretAnswer + "]";
 	}	
 	
 }
