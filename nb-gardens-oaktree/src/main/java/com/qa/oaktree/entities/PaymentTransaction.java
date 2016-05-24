@@ -1,7 +1,9 @@
 package com.qa.oaktree.entities;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Column; 
+import javax.persistence.Column;
+
+import java.math.BigDecimal;
 import java.sql.Date;
 
 /**
@@ -26,19 +28,18 @@ public class PaymentTransaction {
 	private Date date;
 	
 	@Column(name = "amount")
-	private double amount;
+	private BigDecimal amount;
 	
 	/**
-	 * Null constructor for Payment Transaction
-	 * I am unsure about how to set some of the variables atm, SB 
+	 * Null constructor for Payment Transaction 
 	 */
-	//public PaymentTransaction() {
-	//	this.transactionID = 0;
-	//	this.paymentMethod = 0;
-	//	this.date = "";
-	//	this.amount = "";
-	//	this.cardCVC2 = "";
-	//}
+	public PaymentTransaction() {
+		this.transactionID = 0;
+		this.paymentMethod = new PaymentMethod();
+		this.date = new Date(0);
+		this.amount = new BigDecimal("");
+		this.cardCVC2 = "";
+	}
 	
 	/**
 	 * constructor for PaymentTransaction entity? I'm not why there are two with different parameters, SB
@@ -47,7 +48,7 @@ public class PaymentTransaction {
 	 * @param date
 	 * @param amount
 	 */
-	public PaymentTransaction(PaymentMethod paymentMethod, String cardCVC2, Date date, double amount) {
+	public PaymentTransaction(PaymentMethod paymentMethod, String cardCVC2, Date date, BigDecimal amount) {
 		super();
 		this.paymentMethod = paymentMethod;
 		this.cardCVC2 = cardCVC2;
@@ -56,7 +57,7 @@ public class PaymentTransaction {
 	}
 
 
-	public PaymentTransaction(int transactionID, PaymentMethod paymentMethod, Date date, double amount) {
+	public PaymentTransaction(int transactionID, PaymentMethod paymentMethod, Date date, BigDecimal amount) {
 		super();
 		this.transactionID = transactionID;
 		this.paymentMethod = paymentMethod;
@@ -134,7 +135,7 @@ public class PaymentTransaction {
 	 * transaction amount getter method
 	 * @return amount
 	 */
-	public double getAmount() {
+	public BigDecimal getAmount() {
 		return amount;
 	}
 
@@ -142,7 +143,7 @@ public class PaymentTransaction {
 	 * transaction amount setter method
 	 * @param amount
 	 */
-	public void setAmount(double amount) {
+	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
 
@@ -160,7 +161,10 @@ public class PaymentTransaction {
 		if (getClass() != obj.getClass())
 			return false;
 		PaymentTransaction other = (PaymentTransaction) obj;
-		if (Double.doubleToLongBits(amount) != Double.doubleToLongBits(other.amount))
+		if (amount == null) {
+			if (other.amount != null)
+				return false;
+		} else if (!amount.equals(other.amount))
 			return false;
 		if (cardCVC2 == null) {
 			if (other.cardCVC2 != null)
@@ -192,7 +196,6 @@ public class PaymentTransaction {
 		return "PaymentTransaction [transactionID=" + transactionID + ", paymentMethod=" + paymentMethod + ", cardCVC2="
 				+ cardCVC2 + ", date=" + date + ", amount=" + amount + "]";
 	}
-	
-	
+
 	
 }
