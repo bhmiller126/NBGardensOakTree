@@ -37,7 +37,7 @@ public class Address
 	@Size(min = 2, max = 50)
 	private String county;
 	
-	@Column(name = "country")
+	@Column(name = "Country")
 	@Size(min = 2, max = 50)
 	private String country;
 	
