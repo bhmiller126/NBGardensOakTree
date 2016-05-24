@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Sales_Order` (
   `sales_id` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `Customer_user_name` VARCHAR(10) NOT NULL COMMENT '',
   `Address_line_1` VARCHAR(45) NULL COMMENT '',
-  `Address_postcode` VARCHAR(7) NULL COMMENT '',
+  `Address_postcode` VARCHAR(8) NULL COMMENT '',
   PRIMARY KEY (`sales_id`)  COMMENT '',
   INDEX `fk_Sales_Order_Customer1_idx` (`Customer_user_name` ASC)  COMMENT '',
   CONSTRAINT `fk_Sales_Order_Customer1`
@@ -73,6 +73,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Sales_Order_Event` (
   `time_stamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '',
   `description` VARCHAR(225) NULL COMMENT '',
   `type` VARCHAR(20) NOT NULL COMMENT '',
+  `Employee_username` VARCHAR(45) NOT NULL COMMENT '',
   PRIMARY KEY (`sales_event_id`)  COMMENT '',
   INDEX `fk_Sales_Event_Sales_Order1_idx` (`Sales_Order_sales_id` ASC)  COMMENT '',
   CONSTRAINT `fk_Sales_Event_Sales_Order1`
@@ -80,6 +81,23 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Sales_Order_Event` (
     REFERENCES `mydb`.`Sales_Order` (`sales_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Supplier`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`Supplier` ;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`Supplier` (
+  `supplier_id` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `name` VARCHAR(45) NOT NULL COMMENT '',
+  `contact_no` VARCHAR(13) NOT NULL COMMENT '',
+  `email` VARCHAR(100) NULL COMMENT '',
+  `Address_line_1` VARCHAR(45) NOT NULL COMMENT '',
+  `Address_postcode` VARCHAR(8) NOT NULL COMMENT '',
+  PRIMARY KEY (`supplier_id`)  COMMENT '',
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC)  COMMENT '')
 ENGINE = InnoDB;
 
 
@@ -92,10 +110,18 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Stock` (
   `catalogue_id` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `sale_price` DECIMAL(7,2) NOT NULL COMMENT '',
   `current_quantity` INT NOT NULL COMMENT '',
-  `low_level_quantity` INT NOT NULL COMMENT '',
+  `reorder_level` INT NOT NULL COMMENT '',
+  `reorder_quantity` INT NOT NULL COMMENT '',
   `stock_status` VARCHAR(30) NOT NULL COMMENT '',
   `warehouse_location` VARCHAR(10) NOT NULL COMMENT '',
-  PRIMARY KEY (`catalogue_id`)  COMMENT '')
+  `Supplier_supplier_id` INT NOT NULL COMMENT '',
+  PRIMARY KEY (`catalogue_id`)  COMMENT '',
+  INDEX `fk_Stock_Supplier1_idx` (`Supplier_supplier_id` ASC)  COMMENT '',
+  CONSTRAINT `fk_Stock_Supplier1`
+    FOREIGN KEY (`Supplier_supplier_id`)
+    REFERENCES `mydb`.`Supplier` (`supplier_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 COMMENT = '			';
 
@@ -139,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Payment_Details` (
   `exp_date` DATE NULL COMMENT '',
   `start_date` DATE NULL COMMENT '',
   `Address_line_1` VARCHAR(45) NULL COMMENT '',
-  `Address_post_code` VARCHAR(7) NULL COMMENT '',
+  `Address_postcode` VARCHAR(8) NULL COMMENT '',
   PRIMARY KEY (`Customer_user_name`, `card_number`)  COMMENT '',
   INDEX `fk_Payment_Details_Customer2_idx` (`Customer_user_name` ASC)  COMMENT '',
   CONSTRAINT `fk_Payment_Details_Customer2`
@@ -176,23 +202,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Transaction` (
     REFERENCES `mydb`.`Payment_Details` (`Customer_user_name` , `card_number`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Supplier`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Supplier` ;
-
-CREATE TABLE IF NOT EXISTS `mydb`.`Supplier` (
-  `supplier_id` INT NOT NULL AUTO_INCREMENT COMMENT '',
-  `name` VARCHAR(45) NOT NULL COMMENT '',
-  `contact_no` VARCHAR(13) NOT NULL COMMENT '',
-  `email` VARCHAR(100) NULL COMMENT '',
-  `Address_line_1` VARCHAR(45) NOT NULL COMMENT '',
-  `Address_postcode` VARCHAR(7) NOT NULL COMMENT '',
-  PRIMARY KEY (`supplier_id`)  COMMENT '',
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC)  COMMENT '')
 ENGINE = InnoDB;
 
 
@@ -251,6 +260,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Purchase_Order_Event` (
   `time_stamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '',
   `description` VARCHAR(225) NULL COMMENT '',
   `type` VARCHAR(20) NOT NULL COMMENT '',
+  `Employee_username` VARCHAR(45) NOT NULL COMMENT '',
   PRIMARY KEY (`purchase_event_id`)  COMMENT '',
   CONSTRAINT `fk_Purchase_Order_Event_Purchase_Order1`
     FOREIGN KEY (`Purchase_Order_purchase_id`)

@@ -73,6 +73,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Sales_Order_Event` (
   `time_stamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '',
   `description` VARCHAR(225) NULL COMMENT '',
   `type` VARCHAR(20) NOT NULL COMMENT '',
+  `Employee_username` VARCHAR(45) NOT NULL COMMENT '',
   PRIMARY KEY (`sales_event_id`)  COMMENT '',
   INDEX `fk_Sales_Event_Sales_Order1_idx` (`Sales_Order_sales_id` ASC)  COMMENT '',
   CONSTRAINT `fk_Sales_Event_Sales_Order1`
@@ -80,6 +81,23 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Sales_Order_Event` (
     REFERENCES `mydb`.`Sales_Order` (`sales_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Supplier`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`Supplier` ;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`Supplier` (
+  `supplier_id` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `name` VARCHAR(45) NOT NULL COMMENT '',
+  `contact_no` VARCHAR(13) NOT NULL COMMENT '',
+  `email` VARCHAR(100) NULL COMMENT '',
+  `Address_line_1` VARCHAR(45) NOT NULL COMMENT '',
+  `Address_postcode` VARCHAR(8) NOT NULL COMMENT '',
+  PRIMARY KEY (`supplier_id`)  COMMENT '',
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC)  COMMENT '')
 ENGINE = InnoDB;
 
 
@@ -147,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Payment_Details` (
   `exp_date` DATE NULL COMMENT '',
   `start_date` DATE NULL COMMENT '',
   `Address_line_1` VARCHAR(45) NULL COMMENT '',
-  `Address_post_code` VARCHAR(8) NULL COMMENT '',
+  `Address_postcode` VARCHAR(8) NULL COMMENT '',
   PRIMARY KEY (`Customer_user_name`, `card_number`)  COMMENT '',
   INDEX `fk_Payment_Details_Customer2_idx` (`Customer_user_name` ASC)  COMMENT '',
   CONSTRAINT `fk_Payment_Details_Customer2`
@@ -184,23 +202,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Transaction` (
     REFERENCES `mydb`.`Payment_Details` (`Customer_user_name` , `card_number`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`Supplier`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Supplier` ;
-
-CREATE TABLE IF NOT EXISTS `mydb`.`Supplier` (
-  `supplier_id` INT NOT NULL AUTO_INCREMENT COMMENT '',
-  `name` VARCHAR(45) NOT NULL COMMENT '',
-  `contact_no` VARCHAR(13) NOT NULL COMMENT '',
-  `email` VARCHAR(100) NULL COMMENT '',
-  `Address_line_1` VARCHAR(45) NOT NULL COMMENT '',
-  `Address_postcode` VARCHAR(8) NOT NULL COMMENT '',
-  PRIMARY KEY (`supplier_id`)  COMMENT '',
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC)  COMMENT '')
 ENGINE = InnoDB;
 
 
@@ -259,6 +260,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Purchase_Order_Event` (
   `time_stamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '',
   `description` VARCHAR(225) NULL COMMENT '',
   `type` VARCHAR(20) NOT NULL COMMENT '',
+  `Employee_username` VARCHAR(45) NOT NULL COMMENT '',
   PRIMARY KEY (`purchase_event_id`)  COMMENT '',
   CONSTRAINT `fk_Purchase_Order_Event_Purchase_Order1`
     FOREIGN KEY (`Purchase_Order_purchase_id`)
@@ -441,18 +443,18 @@ INSERT INTO `mydb`.`stock` (`catalogue_id`, `sale_price`, `current_quantity`, `r
 INSERT INTO `mydb`.`stock` (`catalogue_id`, `sale_price`, `current_quantity`, `reorder_level`, `reorder_quantity`, `stock_status`, `warehouse_location`, `Supplier_supplier_id`) VALUES ('30', '8.99', '436', '70', '800', 'in stock', 'F1', '5');
 
 
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('fchristmas', '0000 0000 0001', 'Nicholas', 'American Express', '2222-12-12', '2013-05-01', '27 Salmon Street', 'M9 7QH');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('bmiller', '2548 2469 2548 ', 'Bryony', 'VISA', '2012-04-15', '2011-02-05', 'Castle 1', 'HG01 3DE');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('bmiller', '1542 5598 6589', 'Bryony', 'VISA', '2019-01-09', NULL, 'Castle 1', 'HG01 3DE');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('bbaggins', '6584 1547 1589', 'Bilbo Baggins', 'MasterCard', '2019-09-01', '2014-02-06', '68 Finch Road', 'GG16 8HL');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('aharris', '1165 2589 3564', 'Angus', 'VISA', '2016-04-26', '2014-01-01', '99 Everyway', 'PR1 1LL');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('darmstrong', '8895 8845 2156', 'D Armstrong', 'MasterCard', '2020-01-01', '2012-04-05', '88 Fatlady Road', 'WA14 5GG');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('bbaggins', '8495 1548 9852', 'Frodo Baggins', 'MasterCard', '2019-02-02', NULL, '68 Finch Road', 'GG16 8HL');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('sbartlett', '5478 5486 2365', 'S Bartlett', 'VISA', '2023-07-01', NULL, 'Touche House', 'GG16 8HL');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('mleech', '1245 0025 8596', 'Mark Leech', 'VISA', '2025-08-01', NULL, '8 Cecil Road', 'M9 6RP');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('aclarke', '5489 2154 6582', 'Mark Leech', 'VISA', '2024-01-09', NULL, '8 Cecil Road', 'M9 6RP');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('lparker', '0056 4582 8569', 'L Parker', 'American Express', '2020-06-01', NULL, '36 Teeside Way', 'PR1 1QR');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_post_code`) VALUES ('aharris', '1258 4578 9856', 'E Harris', 'VISA', '2016-12-12', '2012-12-12', '99 Everyway', 'PR1 1LL');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('fchristmas', '0000 0000 0001', 'Nicholas', 'American Express', '2222-12-12', '2013-05-01', '27 Salmon Street', 'M9 7QH');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bmiller', '2548 2469 2548 ', 'Bryony', 'VISA', '2012-04-15', '2011-02-05', 'Castle 1', 'HG01 3DE');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bmiller', '1542 5598 6589', 'Bryony', 'VISA', '2019-01-09', NULL, 'Castle 1', 'HG01 3DE');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bbaggins', '6584 1547 1589', 'Bilbo Baggins', 'MasterCard', '2019-09-01', '2014-02-06', '68 Finch Road', 'GG16 8HL');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('aharris', '1165 2589 3564', 'Angus', 'VISA', '2016-04-26', '2014-01-01', '99 Everyway', 'PR1 1LL');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('darmstrong', '8895 8845 2156', 'D Armstrong', 'MasterCard', '2020-01-01', '2012-04-05', '88 Fatlady Road', 'WA14 5GG');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bbaggins', '8495 1548 9852', 'Frodo Baggins', 'MasterCard', '2019-02-02', NULL, '68 Finch Road', 'GG16 8HL');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('sbartlett', '5478 5486 2365', 'S Bartlett', 'VISA', '2023-07-01', NULL, 'Touche House', 'GG16 8HL');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('mleech', '1245 0025 8596', 'Mark Leech', 'VISA', '2025-08-01', NULL, '8 Cecil Road', 'M9 6RP');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('aclarke', '5489 2154 6582', 'Mark Leech', 'VISA', '2024-01-09', NULL, '8 Cecil Road', 'M9 6RP');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('lparker', '0056 4582 8569', 'L Parker', 'American Express', '2020-06-01', NULL, '36 Teeside Way', 'PR1 1QR');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('aharris', '1258 4578 9856', 'E Harris', 'VISA', '2016-12-12', '2012-12-12', '99 Everyway', 'PR1 1LL');
 
 INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('1', 'aharris', '99 Everyway', 'PR1 1LL');
 INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('2', 'lparker', '36 Teeside Way', 'PR1 1QR');
@@ -482,6 +484,34 @@ INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue
 INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('7', '13', '5', '135');
 INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('7', '11', '1', '899');
 INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('7', '30', '15', '8.99');
+
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('1', '1', '2016-04-14  10:00', 'Order Created', 'Create', ' bfinch');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('2', '1', '2016-04-14  12:00', 'Order Picked and Packed', 'Packed', ' mhughes0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('3', '2', '2016-04-15  12:15', 'Order Created', 'Create', ' bfinch');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('4', '2', '2016-04-15  14:20', 'Order Picked and Packed', 'Packed', ' mhughes0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('5', '2', '2016-04-16  09:10', 'Order Dispatched', 'Dispatch', ' mhughes0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('6', '1', '2016-04-18  09:10', 'Order Dispatched', 'Dispatch', ' mhughes0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('7', '3', '2016-04-19  08:20', 'Order Created', 'Create', ' delm');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('8', '4', '2016-04-25  16:00', 'Order Packed', 'Packed', ' mhughes0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('9', '4', '2016-04-29  17:00', 'Order Dispatched', 'Dispatch', ' dcarr5');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('10', '5', '2016-05-01  00:00', 'Order Created', 'Create', ' jfinch');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('11', '1', '2016-05-01  00:00', 'Full Payment Received', 'Payment', ' bweaver8');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('12', '5', '2016-05-02  00:00', 'Order Dispatched', 'Dispatch', ' mhughes0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('13', '2', '2016-05-03  12:04', 'Partial Payment Received', 'Payment', ' bweaver8');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('14', '6', '2016-05-04  10:30', 'Order Created', 'Create', ' jfinch');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('15', '6', '2016-05-04  15:24', 'Order Packed', 'Packed', ' mhughes0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('16', '2', '2016-05-04  16:12', 'Return Received', 'Return', ' dcarr5');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('17', '6', '2016-05-04  16:30', 'Order Dispatched', 'Dispatch', ' mhughes0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('18', '3', '2016-05-04  16:31', 'Order Packed', 'Packed', ' dcarr5');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('19', '3', '2016-05-04  16:32', 'Order Dispatched', 'Dispatch', ' dcarr5');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('20', '4', '2016-05-05  09:20', 'Full Payment received ', 'Payment', 'jwatson0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('21', '5', '2016-05-05  09:21', 'Full Payment received ', 'Payment', 'jwatson0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('22', '7', '2016-05-07  08:45', 'Order Created', 'Create', ' delm');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('23', '7', '2016-05-07  10:35', 'Order Packed', 'Packed', ' mhughes0');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('24', '3', '2016-05-08  00:00', 'Full Payment received ', 'Payment', 'eryan3');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('25', '6', '2016-05-09  15:10', 'Full Return', 'Return', ' bweaver8');
+INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('26', '7', '2016-05-10  10:00', 'Full Payment Received', 'Payment', 'jwatson0');
+
 
 INSERT INTO `mydb`.`sales_order_return` (`Sales_Order_sales_id`, `date`, `reason`) VALUES ('2', '2016-05-04', 'Didnt mean to order 2');
 INSERT INTO `mydb`.`sales_order_return` (`Sales_Order_sales_id`, `date`, `reason`) VALUES ('6', '2016-05-09', 'They dont fit in with the garden, they are too big');
@@ -513,14 +543,14 @@ INSERT INTO `mydb`.`purchase_order_return` (`Purchase_Order_purchase_id`, `date`
 INSERT INTO `mydb`.`purchase_order_return_line` (`Purchase_Order_Return_Purchase_Order_purchase_id`, `Stock_catalogue_id`, `return_quantity`) VALUES ('7', '22', '70');
 
 
-INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`) VALUES ('1', '1', '2016-05-14 08:57', NULL, 'Despatched');
-INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`) VALUES ('2', '2', '2016-05-15 08:57', 'due back in 01/07/16', 'Awaiting Delivery');
-INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`) VALUES ('3', '3', '2016-04-15 18:28', 'due back in 05/06/16', 'Awaiting Delivery');
-INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`) VALUES ('4', '4', '2016-05-01 15:48', NULL, 'Despatched');
-INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`) VALUES ('5', '5', '2016-04-29 14:26', NULL, 'Order Confirmed');
-INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`) VALUES ('6', '6', '2016-05-17 07:45', NULL, 'Picking/Packing');
-INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`) VALUES ('7', '7', '2016-04-29 14:26', NULL, 'Payment Required');
-INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`) VALUES ('8', '8', '2016-05-12 17:51', NULL, 'Received');
+INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('1', '1', '2016-05-14  08:57', '', 'Despatched', ' astock');
+INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('2', '2', '2016-05-15  08:57', 'due back in 01/07/16', 'Awaiting Delivery', ' astock');
+INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('3', '3', '2016-04-15  18:28', 'due back in 05/06/16', 'Awaiting Delivery', ' astock');
+INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('4', '4', '2016-05-01  15:48', '', 'Despatched', ' astock');
+INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('5', '5', '2016-04-29  14:26', '', 'Order Confirmed', ' astock');
+INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('6', '6', '2016-05-17  07:45', '', 'Picking/Packing', ' astock');
+INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('7', '7', '2016-04-29  14:26', '', 'Payment Required', ' astock');
+INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('8', '8', '2016-05-12  17:51', '', 'Received', ' astock');
 
 
 INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('aharris', '3', '2');
@@ -536,31 +566,5 @@ INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish
 INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('fchristmas', '8', '10');
 INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('bstinch', '8', '1');
 
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('1', '1', '2016-04-14 10:00', 'Order Created', 'Create');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('2', '1', '2016-04-14 12:00', 'Order Picked and Packed', 'Packed');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('6', '1', '2016-04-18 09:10', 'Order Dispatched', 'Dispatch');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('11', '1', '2016-05-01 00:00', 'Full Payment Received', 'Payment');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('3', '2', '2016-04-15 12:15', 'Order Created', 'Create');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('4', '2', '2016-04-15 14:20', 'Order Picked and Packed', 'Packed');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('5', '2', '2016-04-16 09:10', 'Order Dispatched', 'Dispatch');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('13', '2', '2016-05-03 12:04', 'Partial Payment Received', 'Payment');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('16', '2', '2016-05-04 16:12', 'Return Received', 'Return');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('7', '3', '2016-04-19 08:20', 'Order Created', 'Create');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('18', '3', '2016-05-04 16:31', 'Order Packed', 'Packed');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('19', '3', '2016-05-04 16:32', 'Order Dispatched', 'Dispatch');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('24', '3', '2016-05-08 00:00', 'Full Payment received ', 'Payment');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('8', '4', '2016-04-25 16:00', 'Order Packed', 'Packed');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('9', '4', '2016-04-29 17:00', 'Order Dispatched', 'Dispatch');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('20', '4', '2016-05-05 09:20', 'Full Payment received ', 'Payment');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('10', '5', '2016-05-01 00:00', 'Order Created', 'Create');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('12', '5', '2016-05-02 00:00', 'Order Dispatched', 'Dispatch');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('21', '5', '2016-05-05 09:21', 'Full Payment received ', 'Payment');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('14', '6', '2016-05-04 10:30', 'Order Created', 'Create');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('15', '6', '2016-05-04 15:24', 'Order Packed', 'Packed');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('17', '6', '2016-05-04 16:30', 'Order Dispatched', 'Dispatch');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('25', '6', '2016-05-09 15:10', 'Full Return', 'Return');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('22', '7', '2016-05-07 08:45', 'Order Created', 'Create');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('23', '7', '2016-05-07 10:35', 'Order Packed', 'Packed');
-INSERT INTO `mydb`.`sales_order_event` (`sales_event_id`, `Sales_Order_sales_id`, `time_stamp`, `description`, `type`) VALUES ('26', '7', '2016-05-10 10:00', 'Full Payment Received', 'Payment');
 
 
