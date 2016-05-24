@@ -40,5 +40,8 @@ public class EmployeeTest {
 		testing.setEmployeeSecretAnswer(null);
 		assertNull(testing.getEmployeeSecretAnswer());
 	}
-
+	@Test public void testGetSecretQuestion() {
+		Employee testing = new Employee(); 
+		assertEquals( "b", testing.getEmployeeSecretQuestion()); 
+	}
 }
