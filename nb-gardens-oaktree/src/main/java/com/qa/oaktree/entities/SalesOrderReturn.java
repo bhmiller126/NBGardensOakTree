@@ -31,8 +31,7 @@ public class SalesOrderReturn {
 	
 	@Column (name = "reason")
 	private String reason;
-	
-	
+
 	/**
 	 * Default null constructor for sales order return
 	 */

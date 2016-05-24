@@ -88,6 +88,8 @@ public class Customer {
 	@Size(min = 5, max = 8)
 	private String addressPostcode;
 		
+	
+	
 	/**
 	 * Default Null constructor for Customer 
 	 */
