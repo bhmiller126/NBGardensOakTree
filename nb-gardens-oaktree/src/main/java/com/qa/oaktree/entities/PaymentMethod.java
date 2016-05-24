@@ -54,11 +54,11 @@ public class PaymentMethod {
 
 	@Column(name = "Address_Line_1", length = 45)
 	@Size(min = 1, max = 45)
-	private com.qa.oaktree.entities.Address billingAddressLine1;
+	private String billingAddressLine1;
 
 	@Column(name = "Address_post_code", length = 8)
 	@Size(min = 6, max = 8)
-	private com.qa.oaktree.entities.Address billingAddressPostcode;
+	private String billingAddressPostcode;
 	
 /**
  * Null constuctor for payment method 
@@ -70,8 +70,8 @@ public class PaymentMethod {
 		this.cardType = ""; 
 		this.startDate = new Date(0); 
 		this.expiryDate = new Date (0); 
-		this.billingAddressLine1 = null; 
-		this.billingAddressPostcode = null; 
+		this.billingAddressLine1 = "";
+		this.billingAddressPostcode = ""; 
 		
 	}
 
@@ -89,7 +89,7 @@ public class PaymentMethod {
 	
 	
 	public PaymentMethod(String cardNumber, String cardType, Date startDate, Date expiryDate, String nameOnCard,
-			Address billingAddressLine1, Address billingAddressPostcode, Customer userName) {
+			String billingAddressLine1, String billingAddressPostcode, Customer userName) {
 		super();
 		this.userName = userName;
 		this.cardNumber = cardNumber;
@@ -150,7 +150,7 @@ public class PaymentMethod {
 	 * get billing address line 1 method
 	 * @return the billingAddressLine1
 	 */
-	public com.qa.oaktree.entities.Address getBillingAddressLine1() {
+	public String getBillingAddressLine1() {
 		return billingAddressLine1;
 	}
 
@@ -158,7 +158,7 @@ public class PaymentMethod {
 	 * set billing addres line 1 method
 	 * @set billingAddressLine1 of address
 	 */
-	public void setBillingAddressLine1(com.qa.oaktree.entities.Address billingAddressLine1) {
+	public void setBillingAddressLine1(String billingAddressLine1) {
 		this.billingAddressLine1 = billingAddressLine1;
 	}
 
@@ -166,7 +166,7 @@ public class PaymentMethod {
 	 * gte billing address postcode 
 	 * @return the billingAddressPostcode of address
 	 */
-	public com.qa.oaktree.entities.Address getBillingAddressPostcode() {
+	public String getBillingAddressPostcode() {
 		return billingAddressPostcode;
 	}
 
@@ -174,7 +174,7 @@ public class PaymentMethod {
 	 * set billing address method
 	 * @set billingAddressPostcode of address
 	 */
-	public void setBillingAddressPostcode(com.qa.oaktree.entities.Address billingAddressPostcode) {
+	public void setBillingAddressPostcode(String billingAddressPostcode) {
 		this.billingAddressPostcode = billingAddressPostcode;
 	}
 

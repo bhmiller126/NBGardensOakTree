@@ -11,7 +11,6 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
 
@@ -82,6 +81,7 @@ public class Stock {
 	/**
 	 * *@OneToOne is the cardinality for that variable with another variable in
 	 * a separate entity
+	 * @return 
 	 * 
 	 * @JoinColumn lets the application know where to access the variable and
 	 *             what to return
@@ -89,12 +89,12 @@ public class Stock {
 	 */
 	@OneToOne
 	@JoinColumn(name = "Supplier_supplier_id", nullable = false)
-	public int getSupplierId() {
+	public  int getSupplierId() {
 		return supplierId;
 	}
 
 	@NotNull
-	int supplierId;
+	private int supplierId;
 
 	/**
 	 * Null constructor for stock
