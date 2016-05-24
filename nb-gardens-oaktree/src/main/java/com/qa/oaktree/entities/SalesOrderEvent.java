@@ -6,28 +6,23 @@ import java.util.Date;
 import java.sql.Timestamp;
 import javax.persistence.Column; 
 import javax.persistence.Id; 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne; 
 import javax.persistence.JoinColumn; 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.persistence.ForeignKey;
 
 @Entity
 @Table (name = "Sales_Order_Event")
 public class SalesOrderEvent {
 	@Id
 	@Column (name = "sales_event_id" )
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int salesEventId; 
 	
 	@ManyToOne
-	@JoinColumn (name = "Sales_Order_sales_id", nullable = false)
-	private int getSalesOrderId() {
-		return salesOrderId;
-	}
-	@NotNull
-	private int salesOrderId; 
+	@JoinColumn (name = "Sales_Order_sales_id",
+	             foreignKey = @ForeignKey(name = "Sales_Order_sales_id"))
+	private SalesOrder salesOrder; 
 	
 	@Column (name = "time_stamp", nullable = false)
 	@NotNull
@@ -49,7 +44,7 @@ public class SalesOrderEvent {
 	public SalesOrderEvent()
 	{
 		this.salesEventId = -1;
-		this.salesOrderId = -1;
+		this.salesOrder = null;
 		
 		Date date = new Date();
 		this.timeStamp = new java.sql.Timestamp(date.getTime());
@@ -60,15 +55,15 @@ public class SalesOrderEvent {
 	
 	/**
 	 * 
-	 * @param salesEventId
-	 * @param salesOrderId
-	 * @param timeStamp
-	 * @param description
-	 * @param type
+	 * @param salesEventId; INT, auto-incrementing integer set on DB-commit
+	 * @param order; SalesOrder, the order to which the event relates
+	 * @param timeStamp; Timestamp, date of the event, including time
+	 * @param description; String, optional description for comments
+	 * @param type; String, type of event
 	 */
-	public SalesOrderEvent (int salesEventId, int salesOrderId, Timestamp timeStamp, String description, String type) {
+	public SalesOrderEvent (int salesEventId, SalesOrder order, Timestamp timeStamp, String description, String type) {
 		this.salesEventId = salesEventId; 
-		this.salesOrderId = salesOrderId; 
+		this.salesOrder = order; 
 		this.timeStamp = timeStamp; 
 		this.description = description; 
 		this.type = type; 
@@ -111,10 +106,10 @@ public class SalesOrderEvent {
 	}
 
 	/**
-	 * @param salesOrderId the salesOrderId to set
+	 * @param order the order to set
 	 */
-	public void setSalesOrderId(int salesOrderId) {
-		this.salesOrderId = salesOrderId;
+	public void setSalesOrder(SalesOrder order) {
+		this.salesOrder = order;
 	}
 
 	/**
@@ -157,9 +152,12 @@ public class SalesOrderEvent {
 				return false;
 		} else if (!description.equals(other.description))
 			return false;
-		if (salesEventId != other.salesEventId)
+		if (salesOrder == null) {
+			if (other.salesOrder != null)
+				return false;
+		} else if (!salesOrder.equals(other.salesOrder))
 			return false;
-		if (salesOrderId != other.salesOrderId)
+		if (salesEventId != other.salesEventId)
 			return false;
 		if (timeStamp == null) {
 			if (other.timeStamp != null)
@@ -181,7 +179,7 @@ public class SalesOrderEvent {
 	@Override
 	public String toString() {
 		return "SalesOrderEvent [salesEventId=" + salesEventId 
-				+ ", salesOrderId=" + salesOrderId 
+				+ ", order=" + salesOrder + "(" + salesOrder.getSalesId() + ")" 
 				+ ", timeStamp=" + timeStamp 
 				+ ", description=" + description 
 				+ ", type=" + type + "]";

@@ -22,7 +22,7 @@ public class PurchaseOrderEvent {
 	@ManyToOne
 	@JoinColumn (name = "Purchase_Order_purchase_id",
 	             foreignKey = @ForeignKey(name = "Purchase_Order_purchase_id"))
-	private PurchaseOrder order; 
+	private PurchaseOrder purchaseOrder; 
 	
 	@Column (name = "time_stamp", nullable = false)
 	@NotNull
@@ -44,7 +44,7 @@ public class PurchaseOrderEvent {
 	public PurchaseOrderEvent()
 	{
 		this.purchaseEventId = -1;
-		this.order = null;
+		this.purchaseOrder = null;
 		
 		Date date = new Date();
 		this.timeStamp = new java.sql.Timestamp(date.getTime());
@@ -63,7 +63,7 @@ public class PurchaseOrderEvent {
 	 */
 	public PurchaseOrderEvent (int purchaseEventId, PurchaseOrder order, Timestamp timeStamp, String description, String type) {
 		this.purchaseEventId = purchaseEventId; 
-		this.order = order; 
+		this.purchaseOrder = order; 
 		this.timeStamp = timeStamp; 
 		this.description = description; 
 		this.type = type; 
@@ -109,7 +109,7 @@ public class PurchaseOrderEvent {
 	 * @param order the order to set
 	 */
 	public void setPurchaseOrder(PurchaseOrder order) {
-		this.order = order;
+		this.purchaseOrder = order;
 	}
 
 	/**
@@ -152,10 +152,10 @@ public class PurchaseOrderEvent {
 				return false;
 		} else if (!description.equals(other.description))
 			return false;
-		if (order == null) {
-			if (other.order != null)
+		if (purchaseOrder == null) {
+			if (other.purchaseOrder != null)
 				return false;
-		} else if (!order.equals(other.order))
+		} else if (!purchaseOrder.equals(other.purchaseOrder))
 			return false;
 		if (purchaseEventId != other.purchaseEventId)
 			return false;
@@ -179,7 +179,7 @@ public class PurchaseOrderEvent {
 	@Override
 	public String toString() {
 		return "PurchaseOrderEvent [purchaseEventId=" + purchaseEventId 
-				+ ", order=" + order + "(" + order.getPurchaseId() + ")" 
+				+ ", order=" + purchaseOrder + "(" + purchaseOrder.getPurchaseId() + ")" 
 				+ ", timeStamp=" + timeStamp 
 				+ ", description=" + description 
 				+ ", type=" + type + "]";
