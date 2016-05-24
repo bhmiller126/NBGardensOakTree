@@ -34,7 +34,6 @@ public class WishList {
 	public int getCustomerUserName() {
 		return customerUserName;
 	}
-
 	@NotNull
 	private int customerUserName;
 
