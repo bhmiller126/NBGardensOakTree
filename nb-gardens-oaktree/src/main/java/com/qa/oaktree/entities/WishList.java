@@ -2,21 +2,25 @@ package com.qa.oaktree.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
 
 /**
  * 
  * @author OakTree Bryony & LP
- * WishList SQL entity
+ * WishList SQL Entity. This attaining the relevant Stock item from one to one
+ * cardinality and is associated to one Customer who holds the WishList in an Array
+ * List. 
+ * 
  */
 @Entity
 @Table(name = "Wishlist")
 public class WishList {
 
-	// TODO check that the cardinallities are correct for annotations
 	/**
 	 * This section adds customer username and uses it as a foreign key from the
 	 * customer table with one to one cardinality Added the getter within here
@@ -26,7 +30,6 @@ public class WishList {
 	 * 
 	 * name = "Customer_user_name" should match the name of the table specified
 	 * in the database so it knows what to access the foreign key from 
-	 * @return
 	 */
 	@ManyToOne
 	@JoinColumn(name = "Customer_user_name", nullable = false)
@@ -36,11 +39,9 @@ public class WishList {
 	 * This adds stock catalogue as a foreign key, similar to customer
 	 * username above This is a many to one cardinality The name = has to match
 	 * the name of the table created in the database
-	 * @return
 	 */
-	@ManyToOne
-	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
-	private Stock stock;
+	@OneToOne (mappedBy = "stock", cascade = CascadeType.ALL)
+	private Stock stock; 
 
 	/**
 	 * columnDefinition = "int default '1'" this should make sure that if the
