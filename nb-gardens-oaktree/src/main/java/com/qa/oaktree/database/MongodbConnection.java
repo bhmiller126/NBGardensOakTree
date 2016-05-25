@@ -15,7 +15,7 @@ public class MongodbConnection
 		MongoClient mongo = new MongoClient(new ServerAddress("192.168.1.5", 27017));
 		DB db = mongo.getDB("products");
 		DBCollection collection = db.getCollection("product");
-		showActiveProducts(collection);
+		showOutdoorLiving(collection);
 		//selectAllRecordsFromCollection(collection);
 		
 		//MongoClient mongo = new MongoClient(new ServerAddress("192.168.1.5", 27017));
@@ -43,6 +43,69 @@ public class MongodbConnection
 		}
 	}
 	
+	private static void showFurniture(DBCollection collection)
+	{
+		BasicDBObject whereQuery = new BasicDBObject();
+		whereQuery.put("product_category", "Furniture");
+		
+		DBCursor cursor = collection.find(whereQuery, whereQuery);
+		while (cursor.hasNext())
+		{
+			System.out.println(cursor.next());
+		}
+	}
+	
+	private static void showDecor(DBCollection collection)
+	{
+		BasicDBObject whereQuery = new BasicDBObject();
+		whereQuery.put("product_category", "Decor");
+		
+		DBCursor cursor = collection.find(whereQuery, whereQuery);
+		while (cursor.hasNext())
+		{
+			System.out.println(cursor.next());
+		}
+	}
+	
+	private static void showDIYTools(DBCollection collection)
+	{
+		BasicDBObject whereQuery = new BasicDBObject();
+		whereQuery.put("product_category", "Power Tool");
+		
+		DBCursor cursor = collection.find(whereQuery, whereQuery);
+		while (cursor.hasNext())
+		{
+			System.out.println(cursor.next());
+		}
+
+	}
+	
+	private static void showOutdoorLiving(DBCollection collection)
+	{
+		BasicDBObject whereQuery = new BasicDBObject();
+		whereQuery.put("product_category", "Outdoor Living");
+		
+		DBCursor cursor = collection.find(whereQuery, whereQuery);
+		while (cursor.hasNext())
+		{
+			System.out.println(cursor.next());
+		}
+
+	}
+	
+	private static void showClearance(DBCollection collection)
+	{
+		BasicDBObject whereQuery = new BasicDBObject();
+		whereQuery.put("product_category", "Clearance");
+		
+		DBCursor cursor = collection.find(whereQuery, whereQuery);
+		while (cursor.hasNext())
+		{
+			System.out.println(cursor.next());
+		}
+
+	}
+	
 	private static void selectAllRecordsFromCollection(DBCollection collection)
 	{
 		DBCursor cursor = collection.find();
@@ -50,6 +113,11 @@ public class MongodbConnection
 		{
 			System.out.println(cursor.next());
 		}
+	}
+	
+	private static void closeMongoConnection()
+	{
+		
 	}
 }
 
