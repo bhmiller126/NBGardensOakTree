@@ -1,5 +1,7 @@
 package com.qa.oaktree.entities;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -36,9 +38,9 @@ public class SalesOrderLine {
 
 	@Column(name = "unit_price")
 	@NotNull
-	private double unitCost;
+	private BigDecimal unitCost;
 
-	private double lineTotal;
+	private BigDecimal lineTotal;
 
 	/**
 	 * Default SalesOrderLine constructor that creates a empty orderline for a given product and order.
@@ -50,8 +52,8 @@ public class SalesOrderLine {
 		this.salesOrderID = -1;
 		this.productID = product;
 		this.quantity = 0;
-		this.unitCost = 0;
-		this.lineTotal = 0;
+		this.unitCost = new BigDecimal(0);
+		this.lineTotal = new BigDecimal(0);
 	}
 
 	/**
@@ -66,13 +68,13 @@ public class SalesOrderLine {
 	 * @param unitCost
 	 *            the saleprice per item
 	 */
-	public SalesOrderLine(int salesorder, int product, int quantity, double unitCost) {
+	public SalesOrderLine(int salesorder, int product, int quantity, BigDecimal unitCost) {
 		super();
 		this.salesOrderID = salesorder;
 		this.productID = product;
 		this.quantity = quantity;
 		this.unitCost = unitCost;
-		this.lineTotal = quantity * unitCost;
+		this.lineTotal = unitCost.multiply(BigDecimal.valueOf(quantity));  //quantity * unitCost;
 	}
 
 	/**
@@ -88,7 +90,7 @@ public class SalesOrderLine {
 	/**
 	 * updates the sales order ID of the order line if it has not already been set
 	 * @param salesOrderID
-	 * @return true if the requested change was successfull 
+	 * @return true if the requested change was successful 
 	 */
 	public boolean setSalesOrder(int salesOrderID){
 		if (this.salesOrderID==-1){
@@ -130,7 +132,7 @@ public class SalesOrderLine {
 	 * return the price paid per product on this order
 	 * @return the unit cost for the product
 	 */
-	public double getUnitCost() {
+	public BigDecimal getUnitCost() {
 		return unitCost;
 	}
 
@@ -138,7 +140,7 @@ public class SalesOrderLine {
 	 * update the price per product value and update the order line total to match the new price and quantity
 	 * @param unitCost the new unit cost for the product
 	 */
-	public void setUnitCost(double unitCost) {
+	public void setUnitCost(BigDecimal unitCost) {
 		this.unitCost = unitCost;
 		setLineTotal();
 	}
@@ -147,7 +149,7 @@ public class SalesOrderLine {
 	 * return the calculated line total for the order line
 	 * @return the orderline total value
 	 */
-	public double getLineTotal() {
+	public BigDecimal getLineTotal() {
 		return lineTotal;
 	}
 
@@ -155,12 +157,25 @@ public class SalesOrderLine {
 	 * private method that is only called when the quantity or unit price is changed within the order line
 	 */
 	private void setLineTotal() {
-		this.lineTotal = quantity*unitCost;
+		this.lineTotal = unitCost.multiply(BigDecimal.valueOf(quantity));
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((lineTotal == null) ? 0 : lineTotal.hashCode());
+		result = prime * result + productID;
+		result = prime * result + quantity;
+		result = prime * result + salesOrderID;
+		result = prime * result + ((unitCost == null) ? 0 : unitCost.hashCode());
+		return result;
+	}
 
-	/**
-	 * 
+	/** Overridden equals method that returns true only if all the fields of this entity are equal in value.
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -172,7 +187,10 @@ public class SalesOrderLine {
 		if (getClass() != obj.getClass())
 			return false;
 		SalesOrderLine other = (SalesOrderLine) obj;
-		if (Double.doubleToLongBits(lineTotal) != Double.doubleToLongBits(other.lineTotal))
+		if (lineTotal == null) {
+			if (other.lineTotal != null)
+				return false;
+		} else if (!lineTotal.equals(other.lineTotal))
 			return false;
 		if (productID != other.productID)
 			return false;
@@ -180,10 +198,16 @@ public class SalesOrderLine {
 			return false;
 		if (salesOrderID != other.salesOrderID)
 			return false;
-		if (Double.doubleToLongBits(unitCost) != Double.doubleToLongBits(other.unitCost))
+		if (unitCost == null) {
+			if (other.unitCost != null)
+				return false;
+		} else if (!unitCost.equals(other.unitCost))
 			return false;
 		return true;
 	}
+
+
+	
 	
 	
 
