@@ -16,7 +16,7 @@ import javax.persistence.JoinColumn;
 
 /**
  * 
- * @author OakTree Stock SQl entity
+ * @author OakTree BM Stock SQl entity
  */
 
 @Entity
