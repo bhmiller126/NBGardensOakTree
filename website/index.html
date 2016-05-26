@@ -3,7 +3,7 @@
 <head>
 	<title>NBGardens.com</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="nbgardens.css" />
+	<link rel="stylesheet" type="text/css" href="resources/nbgardens.css" />
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -21,8 +21,9 @@
 
 </head>
 <body>
+<div id="body-wrapper">
 	<!-- Header -->
-	<ul class="w3-navbar w3-theme w3-top w3-left-align w3-large" style="z-index:4;">
+	<ul class="w3-navbar w3-theme w3-top w3-left-align w3-large" style="z-index:4; max-width:1024px">
 	  <li class="w3-opennav w3-left w3-hide-large w3-hide-small">
 		<a class="w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 	  </li>
@@ -34,11 +35,11 @@
 		<form>
 			<i class="fa fa-search"></i>
 			<input class="w3-border w3-padding-left w3-padding-right" type="search" placeholder="Search Catalogue" />
-			<input class="w3-border" type="submit" value="Search"></input>
+			<input class="w3-border" type="submit" value="Search" />
 		</form>
 	  </li>
-	  <li class="w3-right w3-opennav"><a href="#"><img src="images/login.png" alt="Login" style="height:25px"></a></li>
-	  <li class="w3-right w3-opennav"><a href="#"><img src="images/empty-cart-light.png" alt="Basket" style="height:25px"></a></li>
+	  <li class="w3-right w3-opennav"><a href="#"><img src="images/login.png" alt="Login" style="height:25px" /></a></li>
+	  <li class="w3-right w3-opennav"><a href="#"><img src="images/empty-cart-light.png" alt="Basket" style="height:25px" /></a></li>
 	</ul>
 
 	<!-- Navbar menu on small screens -->
@@ -46,8 +47,6 @@
 	  <ul class="w3-navbar w3-left-align w3-black">
 		<li><a class="w3-padding-large" href="#">Shop by Department</a></li>
 		<li><a class="w3-padding-large" href="#">Search</a></li>
-		<li><a class="w3-padding-large" href="#">Login</a></li>
-		<li><a class="w3-padding-large" href="#">Basket</a></li>
 		<li><a class="w3-padding-large" href="">FAQ's</a></li>
 		<li><a class="w3-padding-large" href="">Help</a></li>
 		<li><a class="w3-padding-large" href="">Contact Us</a></li>
@@ -75,14 +74,14 @@
 	<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"></div>
 
 	<!-- Main content: shift it to the right by 250 pixels when the sidenav is visible -->
+	<br/><br/>
 	<div class="w3-main" style="margin-left:250px">
 	
 		<!-- Main Content Area is Here -->
-		<br/><br/>
 		<div class="w3-row-padding w3-center w3-margin-top">
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="images/Product1.jpg" alt="Product 1" class="w3-hover-opacity nb-product-image">
+					<img src="images/Product1.jpg" alt="Product 1" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 1</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -96,7 +95,7 @@
 			</div>
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="Product2.png" alt="Product 2" class="w3-hover-opacity nb-product-image">
+					<img src="Product2.png" alt="Product 2" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 2</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -110,7 +109,7 @@
 			</div>
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="Product3.png" alt="Product 3" class="w3-hover-opacity nb-product-image">
+					<img src="Product3.png" alt="Product 3" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 3</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -126,7 +125,7 @@
 		<div class="w3-row-padding w3-center w3-margin-top">
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="Product1.png" alt="Product 1" class="w3-hover-opacity nb-product-image">
+					<img src="Product1.png" alt="Product 1" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 1</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -140,7 +139,7 @@
 			</div>
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="Product2.png" alt="Product 2" class="w3-hover-opacity nb-product-image">
+					<img src="Product2.png" alt="Product 2" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 2</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -154,7 +153,7 @@
 			</div>
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="Product3.png" alt="Product 3" class="w3-hover-opacity nb-product-image">
+					<img src="Product3.png" alt="Product 3" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 3</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -170,7 +169,7 @@
 		<div class="w3-row-padding w3-center w3-margin-top">
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="Product1.png" alt="Product 1" class="w3-hover-opacity nb-product-image">
+					<img src="Product1.png" alt="Product 1" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 1</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -184,7 +183,7 @@
 			</div>
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="Product2.png" alt="Product 2" class="w3-hover-opacity nb-product-image">
+					<img src="Product2.png" alt="Product 2" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 2</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -198,7 +197,7 @@
 			</div>
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="Product3.png" alt="Product 3" class="w3-hover-opacity nb-product-image">
+					<img src="Product3.png" alt="Product 3" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 3</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -255,6 +254,7 @@
 			<a href="#" class="w3-hover-text-grey w3-show-inline-block"><i class="fa fa-flickr"></i></a>
 			<a href="#" class="w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
 	</footer>
+</div>
 
 	<script>
 	// Script to open and close the sidenav
