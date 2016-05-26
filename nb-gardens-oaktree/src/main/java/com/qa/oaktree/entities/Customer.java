@@ -9,6 +9,8 @@ import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+
 import javax.persistence.Column; 
 import javax.persistence.Id;
 import javax.persistence.OneToMany; 
@@ -90,8 +92,7 @@ public class Customer {
 	private String addressPostcode;
 		
 	@OneToMany (mappedBy = "customer")
-	private ArrayList<WishList> customerWishList; 
-	
+	private List<WishList> customerWishList; 
 	
 	/**
 	 * Default Null constructor for Customer 

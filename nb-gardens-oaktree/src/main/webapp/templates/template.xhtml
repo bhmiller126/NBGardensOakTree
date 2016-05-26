@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-GB" xmlns="http://www.w3.org/1999/xhtml"
+<html lang="en-GB" 
+	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
@@ -8,26 +9,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" href="../resources/nbgardens.css" />
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
-	<link rel="stylesheet"
-		href="http://www.w3schools.com/lib/w3-theme-black.css" />
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css?family=Roboto" />
-	<link rel="stylesheet"
-		href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
-	<style>
-html, body, h1, h2, h3, h4, h5, h6 {
-	font-family: "Roboto", sans-serif
-}
-
-.w3-sidenav a, .w3-sidenav h4 {
-	padding: 12px;
-}
-
-.w3-navbar a {
-	padding-top: 12px !important;
-	padding-bottom: 12px !important;
-}
-</style>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
 
 	<!-- Fix for HTML5 in IE9 or earlier - do not uncomment -->
 	<!--[if lt IE 9]>
@@ -35,7 +19,8 @@ html, body, h1, h2, h3, h4, h5, h6 {
 		<![endif]-->
 
 </h:head>
-<h:body>
+<f:view>
+<body>
 	<div id="body-wrapper">
 		<!-- Header -->
 		<ui:insert name="header-content">
@@ -86,5 +71,6 @@ html, body, h1, h2, h3, h4, h5, h6 {
 		}
 	</script>
 
-</h:body>
+</body>
+</f:view>
 </html>
