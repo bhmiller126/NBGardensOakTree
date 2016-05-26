@@ -7,7 +7,7 @@
 <head>
 	<title>Catalogue Example Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" type="text/css" href="nbgardens.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/nbgardens.css" />
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
@@ -25,7 +25,7 @@
 
 </head>
 <body>
-
+<div id="body-wrapper">
 <!-- Everything outside the ui:composition tags is ignored when parsing the page in xhtml.
      They are included here purely for design purposes. -->
 <ui:composition
@@ -39,7 +39,7 @@ xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 		<div class="w3-row-padding w3-center">
 			<div class="w3-third">
 				<div class="w3-card-2 w3-padding-top">
-					<img src="images/Product1.jpg" alt="Product 1" class="w3-hover-opacity nb-product-image" />
+					<img src="../images/Product1.jpg" alt="Product 1" class="w3-hover-opacity nb-product-image" />
 					<div class="w3-container w3-white">
 						<p><b>Product 1</b></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -183,5 +183,6 @@ xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 	</ui:define>
 </ui:composition>
 
+</div>
 </body>
 </html>
