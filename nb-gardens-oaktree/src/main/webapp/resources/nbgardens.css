@@ -19,3 +19,12 @@ html, body, h1, h2, h3, h4, h5, h6 {
 	padding-top: 12px !important;
 	padding-bottom: 12px !important;
 }
+
+<!--Collapsible List-->
+.row { vertical-align: top; height:auto !important; }
+.list {display:none; }
+.show {display:none; }
+.hide:target + .show {display:inline; }
+.hide:target {display:none; }
+.hide:target ~ .list {display:inline; }
+@media print { .hide, .show { display:none; } }
