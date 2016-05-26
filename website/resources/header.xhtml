@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-GB"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<head>
+	<title>Catalogue Example Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="nbgardens.css" />
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<style>
+		html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+		.w3-sidenav a,.w3-sidenav h4{padding:12px;}
+		.w3-navbar a{padding-top:12px !important;padding-bottom:12px !important;}
+	</style>
+
+	<!-- Fix for HTML5 in IE9 or earlier - do not uncomment -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+</head>
+<body>
+
+<!-- Everything outside the ui:composition tags is ignored when parsing the page in xhtml.
+     They are included here purely for design purposes. -->
+<ui:composition
+template="index.xhtml"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<ui:define name="header-content">
+		<!-- Header -->
+		<ul class="w3-navbar w3-theme w3-top w3-left-align w3-large" style="z-index:4; max-width:1024px">
+		  <li class="w3-opennav w3-left w3-hide-large w3-hide-small">
+			<a class="w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+		  </li>
+		  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+			<a class="w3-padding-large w3-theme-l1" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+		  </li>
+		  <li style="display:inline"><img src="images/Logo.png" alt="NBGardens.com" link="#" /></li>
+		  <li class="w3-hide-small w3-padding-left w3-padding-top w3-padding-bottom">
+			<form>
+				<i class="fa fa-search"></i>
+				<input class="w3-border w3-padding-left w3-padding-right" type="search" placeholder="Search Catalogue" />
+				<input class="w3-border" type="submit" value="Search" />
+			</form>
+		  </li>
+		  <li class="w3-right w3-opennav"><a href="#"><img src="images/login.png" alt="Login" style="height:25px" /></a></li>
+		  <li class="w3-right w3-opennav"><a href="#"><img src="images/empty-cart-light.png" alt="Basket" style="height:25px" /></a></li>
+		</ul>
+	</ui:define>
+</ui:composition>
+
+</body>
+</html>
