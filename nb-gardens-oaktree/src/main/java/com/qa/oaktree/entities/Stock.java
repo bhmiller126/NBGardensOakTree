@@ -12,11 +12,12 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.JoinColumn;
 
 /**
  * 
- * @author OakTree Stock SQl entity
+ * @author OakTree BM Stock SQl entity
  */
 
 @Entity
@@ -92,14 +93,16 @@ public class Stock {
 	public  int getSupplierId() {
 		return supplierId;
 	}
-
 	@NotNull
 	private int supplierId;
 
+	@OneToOne
+	@PrimaryKeyJoinColumn
+	private WishList wishList;
+	
 	/**
 	 * Null constructor for stock
 	 */
-
 	public Stock() {
 		this.catalogueId = 0;
 		this.salePrice = new BigDecimal("");

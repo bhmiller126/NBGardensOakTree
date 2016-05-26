@@ -2,6 +2,8 @@ package com.qa.oaktree.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -13,6 +15,8 @@ import javax.persistence.Table;
 @Table (name = "Sales_Order")
 public class SalesOrder {
 
+	@Id
+	@GeneratedValue
 	@Column (name = "sales_id")
 	private int salesId; 
 	
@@ -24,6 +28,7 @@ public class SalesOrder {
 	
 	@Column (name = "Address_postcode")
 	private String addressPostcode; 
+	
 	
 	/**
 	 * Default null constructor for sales order

@@ -2,6 +2,9 @@ package com.qa.oaktree.entities;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+
+import java.math.BigDecimal;
+
 import javax.persistence.Column; 
 import javax.persistence.Id; 
 import javax.persistence.GeneratedValue;
@@ -36,7 +39,9 @@ public class PurchaseOrderLine {
 
 	@Column(name = "purchase_unit_price")
 	@NotNull
-	private double purchaseUnitPrice;
+	private BigDecimal purchaseUnitPrice;
+	
+	private BigDecimal lineTotal;
 
 	
 	/**
@@ -48,6 +53,9 @@ public class PurchaseOrderLine {
 		super();
 		this.purchaseOrderId = purchaseOrderId;
 		this.productID = productID;
+		this.purchaseQuantity=0;
+		this.purchaseUnitPrice = BigDecimal.valueOf(0);
+		this.lineTotal = new BigDecimal(0);
 	}
 
 	/**
@@ -58,11 +66,12 @@ public class PurchaseOrderLine {
 	 * @param purchaseUnitPrice the price per unit
 	 */
 	public PurchaseOrderLine(int purchaseOrderId, int stockCatalogueId, int purchaseQuantity,
-			double purchaseUnitPrice) {
+			BigDecimal purchaseUnitPrice) {
 		this.purchaseOrderId = purchaseOrderId;
 		this.productID = stockCatalogueId;
 		this.purchaseQuantity = purchaseQuantity;
 		this.purchaseUnitPrice = purchaseUnitPrice;
+		this.lineTotal = purchaseUnitPrice.multiply(BigDecimal.valueOf(purchaseQuantity));
 
 	}
 
@@ -90,7 +99,7 @@ public class PurchaseOrderLine {
 	/**
 	 * @return the purchaseUnitPrice
 	 */
-	public double getPurchaseUnitPrice() {
+	public BigDecimal getPurchaseUnitPrice() {
 		return purchaseUnitPrice;
 	}
 
@@ -118,8 +127,20 @@ public class PurchaseOrderLine {
 	/**
 	 * @param purchaseUnitPrice the purchaseUnitPrice to set
 	 */
-	public void setPurchaseUnitPrice(double purchaseUnitPrice) {
+	public void setPurchaseUnitPrice(BigDecimal purchaseUnitPrice) {
 		this.purchaseUnitPrice = purchaseUnitPrice;
+		setLineTotal();
+	}
+
+	/**
+	 * @return the lineTotal
+	 */
+	public BigDecimal getLineTotal() {
+		return lineTotal;
+	}
+	
+	private void setLineTotal(){
+		this.lineTotal = purchaseUnitPrice.multiply(BigDecimal.valueOf(purchaseQuantity)); 
 	}
 
 

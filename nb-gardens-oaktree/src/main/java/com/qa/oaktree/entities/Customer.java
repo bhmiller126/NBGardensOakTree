@@ -7,10 +7,11 @@ import javax.validation.constraints.Size;
 
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.Calendar;
-
 import javax.persistence.Column; 
-import javax.persistence.Id; 
+import javax.persistence.Id;
+import javax.persistence.OneToMany; 
 
 /**
  * Customer entity
@@ -88,6 +89,10 @@ public class Customer {
 	@Size(min = 5, max = 8)
 	private String addressPostcode;
 		
+	@OneToMany (mappedBy = "customer")
+	private ArrayList<WishList> customerWishList; 
+	
+	
 	/**
 	 * Default Null constructor for Customer 
 	 */
