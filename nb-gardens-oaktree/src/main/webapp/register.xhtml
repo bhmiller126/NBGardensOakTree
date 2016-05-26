@@ -1,0 +1,80 @@
+
+<ui:composition template="../templates/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="main-content">
+	
+		<!-- Main Content Area is Here -->
+		<div class="w3-row-padding w3-center w3-margin-top">
+			<div class="w3-card-2 w3-padding-top">
+				<div class="w3-container w3-white">
+					<p><h2>Register</h2></p>
+					<form id="register">
+						<table>
+							<tr>
+								<td>Title</td> 
+								<td><select class="form input" name="Title">
+										<option value="Mr">Mr</option>
+										<option value="Mrs">Mrs</option>
+										<option value="Miss">Miss</option>
+										<option value="Ms">Ms</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>First Name</td>
+								<td><input class="form input" type="text" name="firstname"></td>
+							</tr>
+							<tr>
+								<td>Last Name</td>
+								<td><input  class="form input" type="text" name="lastname"></td>
+							</tr>
+							<tr>
+								<td colspan="2"><h4>Address</h4></td>
+							</tr>
+							<tr>
+								<td>Line1</td>
+								<td><input  class="form input" type="text" name="line1"></td>
+							</tr>
+							<tr>
+								<td>Line2</td>
+								<td><input  class="form input" type="text" name="line2"></td>
+							</tr>
+							<tr>
+								<td>Town</td>
+								<td><input class="form input"  type="text" name="town"></td>
+							</tr>
+							<tr>
+								<td>City</td>
+								<td><input  class="form input" type="text" name="city"></td>
+							</tr>
+							<tr>
+								<td>County</td>
+								<td><input class="form input"  type="text" name="county"></td>
+							</tr>
+							<tr>
+								<td>Country</td>
+								<td><input class="form input"  type="text" name="country"></td>
+							</tr>
+							<tr>
+								<td>Post Code</td>
+								<td><input  class="form input" type="text" name="postcode"></td>
+							</tr>
+							<tr>
+								<td>Landline No</td>
+								<td><input class="form input"  type="text" name="landline"></td>
+							</tr>
+						</table>
+						<button class="form"  class="w3-btn" onclick="">Submit</button>
+						
+					</form>
+					
+				</div>
+			</div>
+		</div>
+
+	</ui:define>
+</ui:composition>
