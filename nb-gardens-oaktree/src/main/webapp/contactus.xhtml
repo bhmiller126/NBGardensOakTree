@@ -1,0 +1,43 @@
+<ui:composition 
+	template="../templates/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="main-content">
+		<!-- CONTENT GOES HERE -->
+		<div class="main-container-contactus"->
+				<div id="login" style="float:left">
+					<form>
+						<fieldset>							
+							<br><b>Sales Number:</b> 01962 712 115</br>
+							<br><b>Accounts Number:</b> 07794 958 541</br>
+							<br></br>
+							<br><b>Returns Address:</b></br>
+							<p>NB Gardens</p>
+							<p>Brewers Lane</p>
+							<br>Manchester</br>
+							<br>M50 3YJ</br>
+						</fieldset>
+					</form>
+				</div>
+				<div class="" id="contact-form" style="float:left">
+					<form>
+						<fieldset>
+							<br><h2>Contact Form</h2></br>
+							<br>Account Number: <input class="form input" type="text" name="account"></br>
+							<br>First Name: <input class="form input" type="text" name="first"></br>
+							<br>Last Name: <input class="form input" type="text" name="last"></br>
+							<br>Contact Number: <input class="form input" type="text" name="contactnumber"></br>
+							<br>Contact e-mail: <input class="form input" type="text" name="email"></br>
+							<br>Order Number: <input class="form input" type="text" name="ordernumber"></br>							
+							<br>Enquiry:</br>
+							<br><textarea id="id123-control7352207" name="control7352207" onclick=" InputActions(this,'row4');" onkeyup=" InputActions(this,'row4');  " onchange="InputRules(7352207); ;  " rows="4" style="width: 280px" class="no-validation-error"></textarea></br>
+							<br><button class="form w3-btn" onclick="">Register</button></br>
+						</fieldset>
+					</form>				
+				</div>
+			</div>
+	</ui:define>
+</ui:composition>
