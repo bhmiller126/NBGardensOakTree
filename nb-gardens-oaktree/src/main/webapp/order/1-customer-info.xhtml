@@ -1,0 +1,136 @@
+<ui:composition 
+	template="../templates/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="main-content">
+		<!-- YOUR CONTENT GOES HERE -->
+<script type="text/javascript"> function validateForm() {
+    var tl = document.forms["order-form-customer-info"]["title"].value;
+    var fn = document.forms["order-form-customer-info"]["first"].value;
+    var ln = document.forms["order-form-customer-info"]["last"].value;
+    var d = document.forms["order-form-customer-info"]["day"].value;
+    var m = document.forms["order-form-customer-info"]["month"].value;
+    var y = document.forms["order-form-customer-info"]["year"].value;
+    var num = document.forms["order-form-customer-info"]["number"].value;
+    var em = document.forms["order-form-customer-info"]["email"].value;
+
+    if (isNaN(tl) && isNaN(fn) && isNaN(ln) && isNaN(em){
+        if (tl == null || tl == "") {
+            alert("Title must be filled out.");
+            return false;
+        }
+        
+        if (fn == null || fn == "") {
+            alert("Your first name must be filled out.");
+            return false;
+        }
+    
+	if (ln == null || ln == "") {
+		alert("your last name must be filled out.");
+		return false;
+	}
+
+	if (em == null || em == "") {
+		alert("your email must be filled out.");
+		return false;
+	}
+
+        if (isNaN(y) || y.length != "4" || y == null || y == "") {
+            alert("Year needs yyyy format")
+            return false;
+        }
+        
+        if (y < "1895") {
+            alert("You are not older than the oldest person alive");
+            return false;
+        }
+
+        if (y > "2017") {
+            alert("Your birthday must be in the past");
+            return false;
+        }
+
+        if (isNaN(d) || d.length > "2" || d == null || d == "" || d > "31") {
+            alert("Day field inaccurate. 'dd' format needed.");
+            return false;
+        }
+
+        if (isNaN(m) || m.length > "2" || m == null || m == "" || m > "12") {
+            alert("Month field inaccurate. 'mm' format needed");
+            return false;
+        }
+
+        if (num == null || num == "") {
+            alert("Contact number must be filled out.");
+            return false;
+        }
+   } else {
+        alert("Title, Names and Email fields may include, but not be numbers.")
+        return false;
+    }
+} </script>
+
+        <div id="content">
+            <div id = "inputForm">
+                <h2>Hi NB Gardener</h2>
+		<p>Enter your details to start your order
+                <fieldset>
+                <legend>Add Film Informtation:</legend>
+                <form name = "order-form-customer-info" action="web-order-2product-details.jsp" method = "post" onsubmit="return validateForm()">
+                <div id = "inputTable">
+                    <table>
+<tr>
+	<td style="color: #gggggg; font-weight: bold;">Title</td>
+	<td><input type="text" name="title"/></td>
+</tr>
+<tr>
+	<td style="color: #gggggg; font-weight: bold;">First Name</td>
+	<td><input type="text" name="first"/></td>
+</tr>
+<tr>
+	<td style="color: #gggggg; font-weight: bold;">Last Name</td>
+	<td><input type="text" name="last"/></td>
+</tr>
+<tr>
+	<td  style="color: #gggggg; font-weight: bold;" colspan="2" align="center">Date of Birth</td>
+<tr>
+	<td>Day</td>
+	<td><input type="text" name = "day" value="dd"/></td>
+</tr>
+<tr>
+	<td>Month</td>
+	<td><input type="text" name = "month" value="mm"/></td>
+</tr>
+<tr>
+	<td>Year</td>
+	<td><input type="text" name = "year" value="yyyy"/></td>
+</tr>
+<tr><td> </td>
+</tr>
+<tr>
+<td style="color: #gggggg; font-weight: bold;">Contact Num</td>
+<td><input type="text" name="number"/></td>
+</tr>    
+<tr>
+<td style="color: #gggggg; font-weight: bold;">Email</td>
+<td><input type="text" name="email"/></td>
+</tr>    
+<tr>
+<td colspan="2" align="center"><input type="submit" value="Submit"/></td>
+</tr>
+                    </table>
+                </div> <!-- end inputTable -->
+                </form>
+                </fieldset>
+            </div> <!-- end inputForm -->
+        </div><!-- end content -->
+<input type="hidden" name="action" value="checkfilm"/>
+
+
+
+
+	</ui:define>
+</ui:composition>
