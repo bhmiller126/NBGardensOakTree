@@ -1,0 +1,49 @@
+<ui:composition 
+	template="../templates/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="main-content">
+		<!-- YOUR CONTENT GOES HERE -->
+
+    <div id = "inputTable">
+        <fieldset><legend>Check information:</legend>
+            <table>
+            <thead><h2>Check Input</h2></thead>
+            <tbody>
+            <tr><th>Parameter Name</th><th>Parameter Values</th></tr>
+            <tr><td>Film Title</td><td>${param['title']}</td></tr>
+            <tr><td>Film Director</td><td>${param['Director']}</td></tr>
+            <tr><td>Release Year</td><td>${param['Release']}</td></tr>
+            <tr><td>Film Certificate</td><td>${param['Certificate']}</td></tr>
+            <tr><td>Film Genre</td><td>${param['Genre']}</td></tr>
+            <tr><td>Lead Actor</td><td>${param['Actor']}</td></tr>
+            </tbody>
+            </table>
+            
+            <form name = "add-film-form" action="addfilm" method = "post">
+            <div id = "hiddenInputFields">
+            <input type="hidden" name="action"
+            value="addfilmDo"/>
+            <input type="hidden" name="Title"
+            value="${param['Title']}"/>
+            <input type="hidden" name="Director"
+            value="${param['Director']}"/>
+            <input type="hidden" name="Release"
+            value="${param['Release']}"/>
+            <input type="hidden" name="Certificate"
+            value="${param['Certificate']}"/>
+            <input type="hidden" name="Genre"
+            value="${param['Genre']}"/>
+            <input type="hidden" name="Actor"
+            value="${param['Actor']}"/>
+            <input type="submit" value="Submit"/>
+            </div> <!-- End hiddenInputFields -->
+            </form>
+            </fieldset>
+        </div> <!-- End InputTable -->
+
+	</ui:define>
+</ui:composition>
