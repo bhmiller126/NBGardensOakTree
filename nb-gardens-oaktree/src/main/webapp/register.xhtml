@@ -1,0 +1,79 @@
+<ui:composition
+	template="templates/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="main-content">
+		<!-- Main Content Area is Here -->
+		<div class="w3-row-padding w3-center w3-margin-top">
+			<div class="w3-card-2 w3-padding-top">
+				<div class="w3-container w3-white">
+					<p><h2>Register</h2></p>
+					<form id="register" class="nb-register-form">
+						<table>
+							<tr>
+								<td class="nb-register-td">Title</td> 
+								<td class="nb-register-td"><select class="nb-register-form nb-register-input" name="Title">
+										<option value="Mr">Mr</option>
+										<option value="Mrs">Mrs</option>
+										<option value="Miss">Miss</option>
+										<option value="Ms">Ms</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">First Name</td>
+								<td class="nb-register-td"><input class="nb-register-form nb-register-input" type="text" name="firstname"></input></td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">Last Name</td>
+								<td class="nb-register-td"><input  class="nb-register-form nb-register-input" type="text" name="lastname"></input></td>
+							</tr>
+							<tr>
+								<td colspan="2"><h4>Address</h4></td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">Line1</td>
+								<td class="nb-register-td"><input  class="nb-register-form nb-register-input" type="text" name="line1"></input></td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">Line2</td>
+								<td class="nb-register-td"><input  class="nb-register-form nb-register-input" type="text" name="line2"></input></td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">Town</td>
+								<td class="nb-register-td"><input class="nb-register-form nb-register-input"  type="text" name="town"></input></td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">City</td>
+								<td class="nb-register-td"><input  class="nb-register-form nb-register-input" type="text" name="city"></input></td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">County</td>
+								<td class="nb-register-td"><input class="nb-register-form nb-register-input"  type="text" name="county"></input></td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">Country</td>
+								<td class="nb-register-td"><input class="nb-register-form nb-register-input"  type="text" name="country"></input></td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">Post Code</td>
+								<td class="nb-register-td"><input  class="nb-register-form nb-register-input" type="text" name="postcode"></input></td>
+							</tr>
+							<tr>
+								<td class="nb-register-td">Landline No</td>
+								<td class="nb-register-td"><input class="nb-register-form nb-register-input"  type="text" name="landline"></input></td>
+							</tr>
+						</table>
+						<button class="nb-register-form w3-btn" onclick="">Submit</button>
+						
+					</form>
+					
+				</div>
+			</div>
+		</div>
+
+	</ui:define>
+</ui:composition>
