@@ -23,8 +23,8 @@ public class UserService
 		return true;
 	}
 	
-	public long getUserID(String username)
+	public String getUserID(String username)
 	{
-		return customerRepository.findByUsername(username).getId();
+		return customerRepository.findByUsername(username).getUserName();
 	}
 }
