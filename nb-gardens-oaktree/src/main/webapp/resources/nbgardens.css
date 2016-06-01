@@ -1,7 +1,7 @@
 html, body, h1, h2, h3, h4, h5, h6 { font-family: "Roboto", sans-serif }
 
 /*Wrapper for page wrapper to ensure correct display on very large screens*/
-#body-wrapper { max-width:1024px; margin:auto; }
+#body-wrapper { width:100%; max-width:1024px; margin:auto; }
 
 /*Product Listing CSS*/
 img.nb-product-image { width: 100%; }
@@ -35,3 +35,7 @@ img.nb-product-image { width: 100%; }
 .orderline td{border-bottom: 1px solid grey;}
 .quantity{width:50px;}
 .price{width: 100px;}
+
+/*Carousel specific CSS*/
+.slides1 .slides2 {display:none}
+.nb-tag {height:15px;width:15px;padding:0;margin-top:6px}
