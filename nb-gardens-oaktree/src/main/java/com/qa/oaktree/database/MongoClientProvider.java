@@ -7,28 +7,39 @@ import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 
-public class MongodbConnection 
+import java.net.UnknownHostException;
+
+import javax.annotation.PostConstruct;
+import javax.ejb.ConcurrencyManagement;
+import javax.ejb.ConcurrencyManagementType;
+import javax.ejb.Lock;
+import javax.ejb.LockType;
+import javax.ejb.Singleton;
+
+@Singleton
+@ConcurrencyManagement(ConcurrencyManagementType.CONTAINER)
+public class MongoClientProvider
 {	
-	@SuppressWarnings({ "resource", "deprecation" })
-	public static void main (String[] args) 
-	{			
-		MongoClient mongo = new MongoClient(new ServerAddress("192.168.1.5", 27017));
+	private MongoClient mongoClient = null;	
+	
+	@Lock(LockType.READ)
+	public MongoClient getMongoClient()
+		{
+			return mongoClient;
+		}
+	
+	@PostConstruct
+	public void init () 
+	{	
+		final String mongoIpAddress = "192.168.1.5";
+		final Integer mongoPortNumber = 28018;
+
+		mongoClient = new MongoClient(new ServerAddress(mongoIpAddress, mongoPortNumber));
+		
+		/*
 		DB db = mongo.getDB("products");
 		DBCollection collection = db.getCollection("product");
-		showOutdoorLiving(collection);
-		//selectAllRecordsFromCollection(collection);
-		
-		//MongoClient mongo = new MongoClient(new ServerAddress("192.168.1.5", 27017));
-		//MongoCredential credential = MongoCredential.createMongoCRCredential("Stephen", "admin", "rockstar".toCharArray());
-		//MongoClient mongoClient = new MongoClient(new ServerAddress("192.168.1.5", 27017), Arrays.asList(credential));		
-		/*
-		DB db = mongoClient.getDB("products");
-		DBCollection table = db.getCollection("products");
-		BasicDBObject searchQuery = new BasicDBObject();		
-		searchQuery.put("product_status", "Active");
-		DBCursor cursor = table.find(searchQuery);
-		System.out.println(cursor);
-		*/		
+		showOutdoorLiving(collection);	*/
 	}
 	
 	private static void showActiveProducts(DBCollection collection)
