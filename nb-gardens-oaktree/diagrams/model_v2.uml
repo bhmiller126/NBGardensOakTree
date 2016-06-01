@@ -1,0 +1,2402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Q6kAECgHEeagjv2MLMKjtQ" name="RootElement">
+  <packagedElement xmi:type="uml:Model" xmi:id="_i2LRECgHEeagjv2MLMKjtQ" name="generated">
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i2v43ygHEeagjv2MLMKjtQ" name="Double"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_i2LRESgHEeagjv2MLMKjtQ" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_i2LREigHEeagjv2MLMKjtQ" name="qa">
+        <packagedElement xmi:type="uml:Package" xmi:id="_i2LREygHEeagjv2MLMKjtQ" name="oaktree">
+          <packagedElement xmi:type="uml:Package" xmi:id="_i2LRFCgHEeagjv2MLMKjtQ" name="entities">
+            <packagedElement xmi:type="uml:Class" xmi:id="_i2RXsCgHEeagjv2MLMKjtQ" name="Address" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i2RXsSgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author OakTree LP&#xD;
+ * Address noSQL entity&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2RXtigHEeagjv2MLMKjtQ" name="line1" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2RXtygHEeagjv2MLMKjtQ" name="line2" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2RXuCgHEeagjv2MLMKjtQ" name="town" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2RXuSgHEeagjv2MLMKjtQ" name="city" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2RXuigHEeagjv2MLMKjtQ" name="county" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2RXuygHEeagjv2MLMKjtQ" name="country" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2RXvCgHEeagjv2MLMKjtQ" name="postcode" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2RXvSgHEeagjv2MLMKjtQ" name="homePhoneNumber" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RXvigHEeagjv2MLMKjtQ" name="getLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RXvygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address line 1 getter method&#xD;
+	 * @return line 1 of Address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RXwCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RXwSgHEeagjv2MLMKjtQ" name="getLine2" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RXwigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address line 2 getter method&#xD;
+	 * @return line 2 of Address &#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RXwygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RXxCgHEeagjv2MLMKjtQ" name="getTown" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RXxSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address town getter&#xD;
+	 * @return town of Address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RXxigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RXxygHEeagjv2MLMKjtQ" name="getCity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RXyCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address city getter&#xD;
+	 * @return city of Address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RXySgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RXyigHEeagjv2MLMKjtQ" name="getCounty" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RXyygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address county getter method&#xD;
+	 * @return county of Address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RXzCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RXzSgHEeagjv2MLMKjtQ" name="getCountry" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RXzigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address country getter method&#xD;
+	 * @return country of Address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RXzygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RX0CgHEeagjv2MLMKjtQ" name="getPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RX0SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address postcode getter method&#xD;
+	 * @return postcode of Address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RX0igHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RX0ygHEeagjv2MLMKjtQ" name="getHomePhoneNumber" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RX1CgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address phone number getter method&#xD;
+	 * @return phone numer of Address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RX1SgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RX1igHEeagjv2MLMKjtQ" name="setLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RX1ygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address line 1 setter &#xD;
+	 * @param line_1 String to set as address line 1&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RX2CgHEeagjv2MLMKjtQ" name="line1" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RX2SgHEeagjv2MLMKjtQ" name="setLine2" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2RX2igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address line 2 setter &#xD;
+	 * @param line_2 String to set as address line 2&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2RX2ygHEeagjv2MLMKjtQ" name="line2" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2RX3CgHEeagjv2MLMKjtQ" name="setTown" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2XeUCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address town setter &#xD;
+	 * @param town String to set as address town &#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2XeUSgHEeagjv2MLMKjtQ" name="town" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2XeUigHEeagjv2MLMKjtQ" name="setCity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2XeUygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address city setter &#xD;
+	 * @param city String to set as address city &#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2XeVCgHEeagjv2MLMKjtQ" name="city" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2XeVSgHEeagjv2MLMKjtQ" name="setCounty" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2XeVigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address county setter &#xD;
+	 * @param county String to set as address county&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2XeVygHEeagjv2MLMKjtQ" name="county" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2XeWCgHEeagjv2MLMKjtQ" name="setCountry" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2XeWSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address country setter &#xD;
+	 * @param country String to set as address country&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2XeWigHEeagjv2MLMKjtQ" name="country" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2XeWygHEeagjv2MLMKjtQ" name="setPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2XeXCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address postcode setter &#xD;
+	 * @param postcode String to set as address postcode&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2XeXSgHEeagjv2MLMKjtQ" name="postcode" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2XeXigHEeagjv2MLMKjtQ" name="setHomePhoneNumber" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2XeXygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Address homePhoneNumber setter &#xD;
+	 * @param homePhoneNumber String to set as address homePhoneNumber&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2XeYCgHEeagjv2MLMKjtQ" name="homePhoneNumber" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2XeYSgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2XeYigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override object equals method for Address entity&#xD;
+	 * @param other Address to be checked against&#xD;
+	 * @return boolean true if address' are the same&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2XeZigHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2XeZygHEeagjv2MLMKjtQ" name="other" type="_i2RXsCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2XeaCgHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2XeaSgHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Override object's toString method for Address&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2XeaigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i2dk8CgHEeagjv2MLMKjtQ" name="Customer" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i2dk8SgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * Customer entity&#xD;
+ * @author OakTree LP&#xD;
+ *&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk8igHEeagjv2MLMKjtQ" name="userName" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk8ygHEeagjv2MLMKjtQ" name="title" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk9CgHEeagjv2MLMKjtQ" name="firstName" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk9SgHEeagjv2MLMKjtQ" name="lastName" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk9igHEeagjv2MLMKjtQ" name="password" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk-SgHEeagjv2MLMKjtQ" name="dateOfBirth" visibility="private" type="_i2dk-CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk-igHEeagjv2MLMKjtQ" name="gender" visibility="private" type="_i2XeZSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk_SgHEeagjv2MLMKjtQ" name="credit" visibility="private" type="_i2dk_CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk_igHEeagjv2MLMKjtQ" name="email" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dk_ygHEeagjv2MLMKjtQ" name="contactNum" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dlACgHEeagjv2MLMKjtQ" name="status" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dlASgHEeagjv2MLMKjtQ" name="secretQuestion" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dlAigHEeagjv2MLMKjtQ" name="secretAnswer" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2dlAygHEeagjv2MLMKjtQ" name="addressLine1" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2jrkCgHEeagjv2MLMKjtQ" name="addressPostcode" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2jrkigHEeagjv2MLMKjtQ" name="customerWishList" visibility="private" type="_i2jrkSgHEeagjv2MLMKjtQ" isUnique="false">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i2jrkygHEeagjv2MLMKjtQ"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i2jrlCgHEeagjv2MLMKjtQ" value="*"/>
+              </ownedAttribute>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrlSgHEeagjv2MLMKjtQ" name="getUserName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrligHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the userName&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrlygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrmCgHEeagjv2MLMKjtQ" name="getTitle" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrmSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the title&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrmigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrmygHEeagjv2MLMKjtQ" name="getFirstName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrnCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the firstName&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrnSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrnigHEeagjv2MLMKjtQ" name="getLastName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrnygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the lastName&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jroCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jroSgHEeagjv2MLMKjtQ" name="getPassword" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jroigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the password&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jroygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrpCgHEeagjv2MLMKjtQ" name="getDateOfBirth" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrpSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the dateOfBirth&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrpigHEeagjv2MLMKjtQ" type="_i2dk-CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrpygHEeagjv2MLMKjtQ" name="isGender" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrqCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the gender&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrqSgHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrqigHEeagjv2MLMKjtQ" name="getCredit" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrqygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the credit&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrrCgHEeagjv2MLMKjtQ" type="_i2dk_CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrrSgHEeagjv2MLMKjtQ" name="getEmail" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrrigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the email&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrrygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrsCgHEeagjv2MLMKjtQ" name="getContactNum" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrsSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the contactNum&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrsigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrsygHEeagjv2MLMKjtQ" name="getStatus" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrtCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the status&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrtSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrtigHEeagjv2MLMKjtQ" name="getSecretQuestion" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrtygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the secretQuestion&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jruCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jruSgHEeagjv2MLMKjtQ" name="getSecretAnswer" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jruigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the secretAnswer&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jruygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrvCgHEeagjv2MLMKjtQ" name="getAddressLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrvSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the addressLine1&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrvigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrvygHEeagjv2MLMKjtQ" name="getAddressPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrwCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the addressPostcode&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrwSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrwigHEeagjv2MLMKjtQ" name="setUserName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrwygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param userName the userName to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrxCgHEeagjv2MLMKjtQ" name="userName" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrxSgHEeagjv2MLMKjtQ" name="setTitle" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrxigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param title the title to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrxygHEeagjv2MLMKjtQ" name="title" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jryCgHEeagjv2MLMKjtQ" name="setFirstName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrySgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param firstName the firstName to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jryigHEeagjv2MLMKjtQ" name="firstName" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jryygHEeagjv2MLMKjtQ" name="setLastName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrzCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param lastName the lastName to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jrzSgHEeagjv2MLMKjtQ" name="lastName" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jrzigHEeagjv2MLMKjtQ" name="setPassword" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jrzygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param password the password to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr0CgHEeagjv2MLMKjtQ" name="password" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr0SgHEeagjv2MLMKjtQ" name="setDateOfBirth" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr0igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param dateOfBirth the dateOfBirth to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr0ygHEeagjv2MLMKjtQ" name="dateOfBirth" type="_i2dk-CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr1CgHEeagjv2MLMKjtQ" name="setGender" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr1SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param gender the gender to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr1igHEeagjv2MLMKjtQ" name="gender" type="_i2XeZSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr1ygHEeagjv2MLMKjtQ" name="setCredit" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr2CgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param credit the credit to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr2SgHEeagjv2MLMKjtQ" name="credit" type="_i2dk_CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr2igHEeagjv2MLMKjtQ" name="setEmail" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr2ygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param email the email to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr3CgHEeagjv2MLMKjtQ" name="email" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr3SgHEeagjv2MLMKjtQ" name="setContactNum" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr3igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param contactNum the contactNum to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr3ygHEeagjv2MLMKjtQ" name="contactNum" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr4CgHEeagjv2MLMKjtQ" name="setStatus" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr4SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param status the status to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr4igHEeagjv2MLMKjtQ" name="status" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr4ygHEeagjv2MLMKjtQ" name="setSecretQuestion" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr5CgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param secretQuestion the secretQuestion to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr5SgHEeagjv2MLMKjtQ" name="secretQuestion" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr5igHEeagjv2MLMKjtQ" name="setSecretAnswer" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr5ygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param secretAnswer the secretAnswer to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr6CgHEeagjv2MLMKjtQ" name="secretAnswer" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr6SgHEeagjv2MLMKjtQ" name="setAddressLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr6igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param addressLine1 the addressLine1 to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr6ygHEeagjv2MLMKjtQ" name="addressLine1" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr7CgHEeagjv2MLMKjtQ" name="setAddressPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr7SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param addressPostcode the addressPostcode to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr7igHEeagjv2MLMKjtQ" name="addressPostcode" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr8CgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2jr8SgHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Override equals method&#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 * @return false if the customer other is different to this . customer &#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr8igHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2jr8ygHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2jr9CgHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyMCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override object's toString method &#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyMSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i2jrkSgHEeagjv2MLMKjtQ" name="WishList" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0oygHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author OakTree Bryony &amp; LP&#xD;
+ * WishList SQL Entity. This attaining the relevant Stock item from one to one&#xD;
+ * cardinality and is associated to one Customer who holds the WishList in an Array&#xD;
+ * List. &#xD;
+ * &#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3m0pCgHEeagjv2MLMKjtQ" name="customer" visibility="private" type="_i2dk8CgHEeagjv2MLMKjtQ" isUnique="false">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0pSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * This section adds customer username and uses it as a foreign key from the&#xD;
+	 * customer table with one to one cardinality Added the getter within here&#xD;
+	 * so the column knows to access getCustomerUserName. The getter will return&#xD;
+	 * the customer username stored in the database copied the format for this&#xD;
+	 * from online, sure if this is std practice&#xD;
+	 * &#xD;
+	 * name = &quot;Customer_user_name&quot; should match the name of the table specified&#xD;
+	 * in the database so it knows what to access the foreign key from &#xD;
+	 </body>
+                </ownedComment>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3m0pigHEeagjv2MLMKjtQ" name="stock" visibility="private" type="_i3gt0CgHEeagjv2MLMKjtQ" isUnique="false">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0pygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * This adds stock catalogue as a foreign key, similar to customer&#xD;
+	 * username above This is a many to one cardinality The name = has to match&#xD;
+	 * the name of the table created in the database&#xD;
+	 </body>
+                </ownedComment>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3m0qCgHEeagjv2MLMKjtQ" name="wishQuantity" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0qSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * columnDefinition = &quot;int default '1'&quot; this should make sure that if the&#xD;
+	 * customer does not insert a quanity within the wishlist it will place 1 in&#xD;
+	 * there instead&#xD;
+	 </body>
+                </ownedComment>
+              </ownedAttribute>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0qigHEeagjv2MLMKjtQ" name="getCustomer" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0qygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the customer&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0rCgHEeagjv2MLMKjtQ" type="_i2dk8CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0rSgHEeagjv2MLMKjtQ" name="getStock" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0rigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the stock&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0rygHEeagjv2MLMKjtQ" type="_i3gt0CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0sCgHEeagjv2MLMKjtQ" name="getWishQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0sSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the wishQuantity&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0sigHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0sygHEeagjv2MLMKjtQ" name="setCustomer" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0tCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param customer the customer to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0tSgHEeagjv2MLMKjtQ" name="customer" type="_i2dk8CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0tigHEeagjv2MLMKjtQ" name="setStock" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0tygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param stock the stock to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0uCgHEeagjv2MLMKjtQ" name="stock" type="_i3gt0CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0uSgHEeagjv2MLMKjtQ" name="setWishQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0uigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param wishQuantity the wishQuantity to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3s7ECgHEeagjv2MLMKjtQ" name="wishQuantity" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3s7ESgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3s7EigHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * override Object.equals for wishlist&#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3s7EygHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3s7FCgHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3s7FSgHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3s7FigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override Object.toString for wishlist &#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3s7FygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i2pyMigHEeagjv2MLMKjtQ" name="Employee" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyMygHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author StephenB &#xD;
+ * Employee noSQL entity&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2pyNCgHEeagjv2MLMKjtQ" name="employeeName" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2pyNSgHEeagjv2MLMKjtQ" name="employeeUsername" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2pyNigHEeagjv2MLMKjtQ" name="employeePassword" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2pyNygHEeagjv2MLMKjtQ" name="employeeDepartment" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2pyOSgHEeagjv2MLMKjtQ" name="employeeAccess" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2pyOigHEeagjv2MLMKjtQ" name="employeeSecretQuestion" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2pyOygHEeagjv2MLMKjtQ" name="employeeSecretAnswer" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyPCgHEeagjv2MLMKjtQ" name="getEmployeeName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyPSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for employee's name&#xD;
+	 * @return employee_name&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyPigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyPygHEeagjv2MLMKjtQ" name="setEmployeeName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyQCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for employee's name&#xD;
+	 *  @param employee_name&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyQSgHEeagjv2MLMKjtQ" name="employee_name" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyQigHEeagjv2MLMKjtQ" name="getEmployeeUsername" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyQygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for employee's username&#xD;
+	 * @return employee_username&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyRCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyRSgHEeagjv2MLMKjtQ" name="setEmployeeUsername" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyRigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for employee's username&#xD;
+	 * @param employee_username&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyRygHEeagjv2MLMKjtQ" name="employee_username" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pySCgHEeagjv2MLMKjtQ" name="getEmployeePassword" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pySSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for employee's password&#xD;
+	 * @return employee_password&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pySigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pySygHEeagjv2MLMKjtQ" name="setEmployeePassword" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyTCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for employee's password&#xD;
+	 * @param employee_password&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyTSgHEeagjv2MLMKjtQ" name="employee_password" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyTigHEeagjv2MLMKjtQ" name="getEmployeeDepartment" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyTygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for employee's department&#xD;
+	 * @return employee_deparment&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyUCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyUSgHEeagjv2MLMKjtQ" name="setEmployeeDepartment" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyUigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for employee's department&#xD;
+	 * @param employee_deparment&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyUygHEeagjv2MLMKjtQ" name="employee_department" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyVCgHEeagjv2MLMKjtQ" name="getEmployeeAccess" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyVSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for employee's access level &#xD;
+	 * @return employee_access&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyVigHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyVygHEeagjv2MLMKjtQ" name="setEmployeeAccess" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyWCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for employee's access level &#xD;
+	 * @param employee_access&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyWSgHEeagjv2MLMKjtQ" name="employee_access" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyWigHEeagjv2MLMKjtQ" name="getEmployeeSecretQuestion" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyWygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for employee's secret question&#xD;
+	 * @return employee_secret_question&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyXCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyXSgHEeagjv2MLMKjtQ" name="setEmployeeSecretQuestion" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyXigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for employee's secret question&#xD;
+	 * @param employee_secret_question&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyXygHEeagjv2MLMKjtQ" name="employee_secret_question" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyYCgHEeagjv2MLMKjtQ" name="getEmployeeSecretAnswer" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyYSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for employee's secret answer&#xD;
+	 * @return employee_secret_answer&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyYigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyYygHEeagjv2MLMKjtQ" name="setEmployeeSecretAnswer" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyZCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for employee's secret answer&#xD;
+	 * @param employee_secret_answer&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyZSgHEeagjv2MLMKjtQ" name="employee_secret_answer" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyZigHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyZygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override object equals method for Employee entity&#xD;
+	 * @param other Employee to be checked against&#xD;
+	 * @return boolean true if Employees' are the same&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyaCgHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pyaSgHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2pyaigHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2pyaygHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Override object's toString method for Employee&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2pybCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i2v40CgHEeagjv2MLMKjtQ" name="Order_Deleted" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i2v40SgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author Laurence Parker&#xD;
+ * Colaboration OakTree &#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v40igHEeagjv2MLMKjtQ" name="orderID" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v40ygHEeagjv2MLMKjtQ" name="customer" visibility="private" type="_i2dk8CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v41ygHEeagjv2MLMKjtQ" name="supplier" visibility="private" type="_i2v41igHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v42CgHEeagjv2MLMKjtQ" name="orderDate" visibility="private" type="_i2dk-CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v42SgHEeagjv2MLMKjtQ" name="billingAddress" visibility="private" type="_i2RXsCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v42igHEeagjv2MLMKjtQ" name="deliveryAddress" visibility="private" type="_i2RXsCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v43CgHEeagjv2MLMKjtQ" name="orderLines" visibility="private" type="_i2v42ygHEeagjv2MLMKjtQ" isUnique="false">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i2v43SgHEeagjv2MLMKjtQ"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i2v43igHEeagjv2MLMKjtQ" value="*"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v44CgHEeagjv2MLMKjtQ" name="orderTotal" visibility="private" type="_i2v43ygHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v44SgHEeagjv2MLMKjtQ" name="orderStatus" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v44igHEeagjv2MLMKjtQ" name="returnReason" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v45CgHEeagjv2MLMKjtQ" name="orderEvent" visibility="private" type="_i2v44ygHEeagjv2MLMKjtQ" isUnique="false">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i2v45SgHEeagjv2MLMKjtQ"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i2v45igHEeagjv2MLMKjtQ" value="*"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v46CgHEeagjv2MLMKjtQ" name="paymentTransaction" visibility="private" type="_i2v45ygHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v46SgHEeagjv2MLMKjtQ" name="returnOf" visibility="private" type="_i2v40CgHEeagjv2MLMKjtQ" isUnique="false"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i2v42ygHEeagjv2MLMKjtQ" name="SalesOrderLine" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgtCgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * Sales Order Line Entity&#xD;
+ * &#xD;
+ * @author Angus&#xD;
+ *&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3UgtSgHEeagjv2MLMKjtQ" name="salesOrderID" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3UgtigHEeagjv2MLMKjtQ" name="productID" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3UgtygHEeagjv2MLMKjtQ" name="quantity" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3UguCgHEeagjv2MLMKjtQ" name="unitCost" visibility="private" type="_i2dk_CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3UguSgHEeagjv2MLMKjtQ" name="lineTotal" visibility="private" type="_i2dk_CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UguigHEeagjv2MLMKjtQ" name="getSalesOrder" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UguygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * returns the sales order which contains this sales order line&#xD;
+	 * &#xD;
+	 * @return the sales order that contains this sales orderline&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgvCgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgvSgHEeagjv2MLMKjtQ" name="setSalesOrder" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgvigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * updates the sales order ID of the order line if it has not already been set&#xD;
+	 * @param salesOrderID&#xD;
+	 * @return true if the requested change was successful &#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgvygHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgwCgHEeagjv2MLMKjtQ" name="salesOrderID" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgwSgHEeagjv2MLMKjtQ" name="getProduct" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgwigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * returns the product object on the orderline&#xD;
+	 * &#xD;
+	 * @return&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgwygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgxCgHEeagjv2MLMKjtQ" name="getQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgxSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * return Product quantity field&#xD;
+	 * @return the product quantity ordered&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgxigHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgxygHEeagjv2MLMKjtQ" name="setQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgyCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * update the quantity field and lineTotal fields for the order line &#xD;
+	 * @param quantity the new quantity for the product&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgySgHEeagjv2MLMKjtQ" name="quantity" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgyigHEeagjv2MLMKjtQ" name="getUnitCost" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgyygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * return the price paid per product on this order&#xD;
+	 * @return the unit cost for the product&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgzCgHEeagjv2MLMKjtQ" type="_i2dk_CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgzSgHEeagjv2MLMKjtQ" name="setUnitCost" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgzigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * update the price per product value and update the order line total to match the new price and quantity&#xD;
+	 * @param unitCost the new unit cost for the product&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgzygHEeagjv2MLMKjtQ" name="unitCost" type="_i2dk_CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3Ug0CgHEeagjv2MLMKjtQ" name="getLineTotal" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3Ug0SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * return the calculated line total for the order line&#xD;
+	 * @return the orderline total value&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3Ug0igHEeagjv2MLMKjtQ" type="_i2dk_CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3Ug0ygHEeagjv2MLMKjtQ" name="setLineTotal" visibility="private">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3Ug1CgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * private method that is only called when the quantity or unit price is changed within the order line&#xD;
+	 </body>
+                </ownedComment>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3Ug1SgHEeagjv2MLMKjtQ" name="hashCode" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3Ug1igHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3Ug1ygHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3Ug2CgHEeagjv2MLMKjtQ">
+                  <body> Overridden equals method that returns true only if all the fields of this entity are equal in value.&#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3Ug2SgHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3Ug2igHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i2v44ygHEeagjv2MLMKjtQ" name="PurchaseOrderEvent" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CMsCgHEeagjv2MLMKjtQ" name="purchaseEventId" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CMsSgHEeagjv2MLMKjtQ" name="purchaseOrder" visibility="private" type="_i28GPCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CMsygHEeagjv2MLMKjtQ" name="timeStamp" visibility="private" type="_i3CMsigHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CMtCgHEeagjv2MLMKjtQ" name="description" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CMtSgHEeagjv2MLMKjtQ" name="type" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CMtigHEeagjv2MLMKjtQ" name="getPurchaseEventId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CMtygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the purchaseEventId&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CMuCgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CMuSgHEeagjv2MLMKjtQ" name="getTimeStamp" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CMuigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the timeStamp&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CMuygHEeagjv2MLMKjtQ" type="_i3CMsigHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CMvCgHEeagjv2MLMKjtQ" name="getDescription" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CMvSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the description&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CMvigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CMvygHEeagjv2MLMKjtQ" name="getType" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CMwCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the type&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CMwSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CMwigHEeagjv2MLMKjtQ" name="setPurchaseEventId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CMwygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param purchaseEventId the purchaseEventId to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CMxCgHEeagjv2MLMKjtQ" name="purchaseEventId" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CMxSgHEeagjv2MLMKjtQ" name="setPurchaseOrder" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CMxigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param order the order to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CMxygHEeagjv2MLMKjtQ" name="order" type="_i28GPCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CMyCgHEeagjv2MLMKjtQ" name="setTimeStamp" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CMySgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param timeStamp the timeStamp to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CMyigHEeagjv2MLMKjtQ" name="timeStamp" type="_i3CMsigHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CMyygHEeagjv2MLMKjtQ" name="setDescription" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CMzCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param description the description to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CMzSgHEeagjv2MLMKjtQ" name="description" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CMzigHEeagjv2MLMKjtQ" name="setType" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CMzygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param type the type to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CM0CgHEeagjv2MLMKjtQ" name="type" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CM0SgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CM0igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override method equals() for PurchaseOrderEvent &#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 * @return false if the event 'other' is different to this event&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CM0ygHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CM1CgHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3CM1SgHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3CM1igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override method toString() for PurchaseOrderEvent&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3CM1ygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i2v45ygHEeagjv2MLMKjtQ" name="PaymentTransaction" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i21_hygHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author OakTree SB&#xD;
+ * Address noSQL entity&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i21_iCgHEeagjv2MLMKjtQ" name="transactionID" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i21_iSgHEeagjv2MLMKjtQ" name="paymentMethod" visibility="private" type="_i2v46igHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i21_iigHEeagjv2MLMKjtQ" name="cardCVC2" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i21_iygHEeagjv2MLMKjtQ" name="date" visibility="private" type="_i2dk-CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i21_jCgHEeagjv2MLMKjtQ" name="amount" visibility="private" type="_i2dk_CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_jSgHEeagjv2MLMKjtQ" name="getTransactionID" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_jigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * transactionID getter method&#xD;
+	 * @return transactionID&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_jygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_kCgHEeagjv2MLMKjtQ" name="setTransactionID" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_kSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * transactionID setter method&#xD;
+	 * @param transactionID&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_kigHEeagjv2MLMKjtQ" name="transactionID" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_kygHEeagjv2MLMKjtQ" name="getPaymentMethod" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_lCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * PaymentMethod getter method&#xD;
+	 * @return payment method used&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_lSgHEeagjv2MLMKjtQ" type="_i2v46igHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_ligHEeagjv2MLMKjtQ" name="setPaymentMethod" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_lygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * PaymentMethod setter method&#xD;
+	 * @param paymentMethod&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_mCgHEeagjv2MLMKjtQ" name="paymentMethod" type="_i2v46igHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_mSgHEeagjv2MLMKjtQ" name="getCardCVC2" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_migHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * cardCVC2 getter method&#xD;
+	 * @return cardCVC2&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_mygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_nCgHEeagjv2MLMKjtQ" name="setCardCVC2" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_nSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * cardCVC2 setter method&#xD;
+	 * @param cardCVC2&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_nigHEeagjv2MLMKjtQ" name="cardCVC2" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_nygHEeagjv2MLMKjtQ" name="getDate" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_oCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * date getter method&#xD;
+	 * @return date&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_oSgHEeagjv2MLMKjtQ" type="_i2dk-CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_oigHEeagjv2MLMKjtQ" name="setDate" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_oygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * date setter method&#xD;
+	 * @param date&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_pCgHEeagjv2MLMKjtQ" name="date" type="_i2dk-CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_pSgHEeagjv2MLMKjtQ" name="getAmount" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_pigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * transaction amount getter method&#xD;
+	 * @return amount&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_pygHEeagjv2MLMKjtQ" type="_i2dk_CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_qCgHEeagjv2MLMKjtQ" name="setAmount" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_qSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * transaction amount setter method&#xD;
+	 * @param amount&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_qigHEeagjv2MLMKjtQ" name="amount" type="_i2dk_CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_qygHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_rCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override object equals method for PaymentTransaction entity&#xD;
+	 *  @param other PaymentTransaction to be checked against&#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_rSgHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_rigHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_rygHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_sCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override object's toString method for PaymentTransaction&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_sSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i2v46igHEeagjv2MLMKjtQ" name="PaymentMethod" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i2v46ygHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author OakTree Payment Method SQl entity&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v47ygHEeagjv2MLMKjtQ" name="userName" visibility="private" type="_i2dk8CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v48CgHEeagjv2MLMKjtQ" name="cardNumber" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v48SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * card number is the primary key of this entity as it is unique identifier with forgein key customer username&#xD;
+	 * has a minimum and maximum value of 16 as all card numbers must have 16 digits&#xD;
+	 </body>
+                </ownedComment>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v48igHEeagjv2MLMKjtQ" name="nameOnCard" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v48ygHEeagjv2MLMKjtQ" name="cardType" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v49CgHEeagjv2MLMKjtQ" name="startDate" visibility="private" type="_i2dk-CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v49SgHEeagjv2MLMKjtQ" name="expiryDate" visibility="private" type="_i2dk-CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v49igHEeagjv2MLMKjtQ" name="billingAddressLine1" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i2v49ygHEeagjv2MLMKjtQ" name="billingAddressPostcode" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v47CgHEeagjv2MLMKjtQ" name="getUserName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v47SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * One to many dictates the cardinality It joins to customer column to&#xD;
+	 * access username&#xD;
+	 * &#xD;
+	 * @return customer username in the get username method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v47igHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v4-CgHEeagjv2MLMKjtQ" name="getCardNumber" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v4-SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+ * get card number method&#xD;
+ * @return card number of payment method&#xD;
+ </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v4-igHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v4-ygHEeagjv2MLMKjtQ" name="getCardType" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v4_CgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get card type method&#xD;
+	 * @return card type of payment method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v4_SgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v4_igHEeagjv2MLMKjtQ" name="getStartDate" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v4_ygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get start date method&#xD;
+	 * @return start date of payment method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v5ACgHEeagjv2MLMKjtQ" type="_i2dk-CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v5ASgHEeagjv2MLMKjtQ" name="getExpiryDate" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v5AigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get expiry date method&#xD;
+	 * @return expiry date of payment method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v5AygHEeagjv2MLMKjtQ" type="_i2dk-CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v5BCgHEeagjv2MLMKjtQ" name="getNameOnCard" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v5BSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get name on card method&#xD;
+	 * @return name on card of payment method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v5BigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v5BygHEeagjv2MLMKjtQ" name="setUserName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v5CCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set username method&#xD;
+	 * @set the username in customer&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v5CSgHEeagjv2MLMKjtQ" name="userName" type="_i2dk8CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v5CigHEeagjv2MLMKjtQ" name="getBillingAddressLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v5CygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get billing address line 1 method&#xD;
+	 * @return the billingAddressLine1&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v5DCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v5DSgHEeagjv2MLMKjtQ" name="setBillingAddressLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v5DigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set billing addres line 1 method&#xD;
+	 * @set billingAddressLine1 of address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v5DygHEeagjv2MLMKjtQ" name="billingAddressLine1" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v5ECgHEeagjv2MLMKjtQ" name="getBillingAddressPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v5ESgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * gte billing address postcode &#xD;
+	 * @return the billingAddressPostcode of address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2v5EigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i2v5EygHEeagjv2MLMKjtQ" name="setBillingAddressPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i2v5FCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set billing address method&#xD;
+	 * @set billingAddressPostcode of address&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_cCgHEeagjv2MLMKjtQ" name="billingAddressPostcode" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_cSgHEeagjv2MLMKjtQ" name="setCardNumber" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_cigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set card number method&#xD;
+	 * @set cardNumber of payment method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_cygHEeagjv2MLMKjtQ" name="cardNumber" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_dCgHEeagjv2MLMKjtQ" name="setNameOnCard" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_dSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set name on card method&#xD;
+	 * @set name on card of payment method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_digHEeagjv2MLMKjtQ" name="nameOnCard" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_dygHEeagjv2MLMKjtQ" name="setCardType" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_eCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set cardtype method&#xD;
+	 * @set cardType of payment method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_eSgHEeagjv2MLMKjtQ" name="cardType" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_eigHEeagjv2MLMKjtQ" name="setStartDate" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_eygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set start date method&#xD;
+	 * @set startDate of payment method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_fCgHEeagjv2MLMKjtQ" name="startDate" type="_i2dk-CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_fSgHEeagjv2MLMKjtQ" name="setExpiryDate" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_figHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set expiry date method&#xD;
+	 * @set expiryDate of payment method&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_fygHEeagjv2MLMKjtQ" name="expiryDate" type="_i2dk-CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_gCgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_gSgHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Override method for equlas to see if any of the data entered matches a record already in database&#xD;
+	 * false if payment method other is different to this.PaymentMethod&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_gigHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_gygHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i21_hCgHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i21_hSgHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Override to string method, &#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i21_higHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i28GECgHEeagjv2MLMKjtQ" name="Product" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i28GESgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author StephenB &#xD;
+ * Address noSQL entity&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i28GEigHEeagjv2MLMKjtQ" name="catalogue_id" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i28GEygHEeagjv2MLMKjtQ" name="product_name" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i28GFCgHEeagjv2MLMKjtQ" name="product_description" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i28GFSgHEeagjv2MLMKjtQ" name="product_category" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i28GFigHEeagjv2MLMKjtQ" name="product_status" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GFygHEeagjv2MLMKjtQ" name="getProduct_status" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GGCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for product's status.&#xD;
+	 * @return product's status&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GGSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GGigHEeagjv2MLMKjtQ" name="setProduct_status" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GGygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for product's status.&#xD;
+	 * @param product_status&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GHCgHEeagjv2MLMKjtQ" name="product_status" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GHSgHEeagjv2MLMKjtQ" name="getCatalogue_id" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GHigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for product's catalogue id.&#xD;
+	 * This variable is the Primary Key.&#xD;
+	 * @return catalogue_id&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GHygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GICgHEeagjv2MLMKjtQ" name="setCatalogue_id" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GISgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for product's catalogue id.&#xD;
+	 * This variable is the Primary Key&#xD;
+	 * @param catalogue_id&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GIigHEeagjv2MLMKjtQ" name="catalogue_id" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GIygHEeagjv2MLMKjtQ" name="getProduct_name" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GJCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for the product's name.&#xD;
+	 * @return product_name&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GJSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GJigHEeagjv2MLMKjtQ" name="setProduct_name" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GJygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for the product's name.&#xD;
+	 * @param product_name&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GKCgHEeagjv2MLMKjtQ" name="product_name" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GKSgHEeagjv2MLMKjtQ" name="getProduct_description" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GKigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for the product's description.&#xD;
+	 * @return product_description&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GKygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GLCgHEeagjv2MLMKjtQ" name="setProduct_description" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GLSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for the product's description.&#xD;
+	 * @param product_description&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GLigHEeagjv2MLMKjtQ" name="product_description" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GLygHEeagjv2MLMKjtQ" name="getProduct_category" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GMCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * getter method for the product's category.&#xD;
+	 * @return product_category&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GMSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GMigHEeagjv2MLMKjtQ" name="setProduct_category" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GMygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * setter method for the product's description.&#xD;
+	 * @param product_category&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GNCgHEeagjv2MLMKjtQ" name="product_category" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GNSgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GNigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override object equals method for Product entity&#xD;
+	 * @param other Product to be checked against&#xD;
+	 * @return boolean true if products' are the same&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GNygHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GOCgHEeagjv2MLMKjtQ" name="other" type="_i28GECgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GOSgHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GOigHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Override object's toString method for Products&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GOygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i28GPCgHEeagjv2MLMKjtQ" name="PurchaseOrder" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i28GPSgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author OakTree LP&#xD;
+ * Purchase Order&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i28GPigHEeagjv2MLMKjtQ" name="purchaseId" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i28GPygHEeagjv2MLMKjtQ" name="supplierId" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GQCgHEeagjv2MLMKjtQ" name="getPurchaseId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GQSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the purchaseId&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GQigHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GQygHEeagjv2MLMKjtQ" name="getSupplierId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GRCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the supplierId&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GRSgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GRigHEeagjv2MLMKjtQ" name="setPurchaseId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GRygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param purchaseId the purchaseId to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GSCgHEeagjv2MLMKjtQ" name="purchaseId" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GSSgHEeagjv2MLMKjtQ" name="setSupplierId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GSigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param supplierId the supplierId to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GSygHEeagjv2MLMKjtQ" name="supplierId" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GTCgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GTSgHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Override Object.equals method for purchase order&#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GTigHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GTygHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i28GUCgHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i28GUSgHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Overrid Object.toString method for Purchase order&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i28GUigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i3CM2CgHEeagjv2MLMKjtQ" name="PurchaseOrderLine" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i3CM2SgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * Purchase Order Line entity&#xD;
+ * @author Angus&#xD;
+ *&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CM2igHEeagjv2MLMKjtQ" name="purchaseOrderId" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CM2ygHEeagjv2MLMKjtQ" name="productID" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CM3CgHEeagjv2MLMKjtQ" name="purchaseQuantity" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CM3SgHEeagjv2MLMKjtQ" name="purchaseUnitPrice" visibility="private" type="_i2dk_CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3ITUCgHEeagjv2MLMKjtQ" name="lineTotal" visibility="private" type="_i2dk_CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITUSgHEeagjv2MLMKjtQ" name="getPurchaseOrderId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITUigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the purchaseOrderId&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITUygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITVCgHEeagjv2MLMKjtQ" name="getProductID" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITVSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the productID&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITVigHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITVygHEeagjv2MLMKjtQ" name="getPurchaseQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITWCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the purchaseQuantity&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITWSgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITWigHEeagjv2MLMKjtQ" name="getPurchaseUnitPrice" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITWygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the purchaseUnitPrice&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITXCgHEeagjv2MLMKjtQ" type="_i2dk_CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITXSgHEeagjv2MLMKjtQ" name="setPurchaseOrderId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITXigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param purchaseOrderId the purchaseOrderId to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITXygHEeagjv2MLMKjtQ" name="purchaseOrderId" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITYCgHEeagjv2MLMKjtQ" name="setProductID" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITYSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param productID the productID to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITYigHEeagjv2MLMKjtQ" name="productID" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITYygHEeagjv2MLMKjtQ" name="setPurchaseQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITZCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param purchaseQuantity the purchaseQuantity to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITZSgHEeagjv2MLMKjtQ" name="purchaseQuantity" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITZigHEeagjv2MLMKjtQ" name="setPurchaseUnitPrice" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITZygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param purchaseUnitPrice the purchaseUnitPrice to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITaCgHEeagjv2MLMKjtQ" name="purchaseUnitPrice" type="_i2dk_CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITaSgHEeagjv2MLMKjtQ" name="getLineTotal" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITaigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the lineTotal&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITaygHEeagjv2MLMKjtQ" type="_i2dk_CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITbCgHEeagjv2MLMKjtQ" name="setLineTotal" visibility="private"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i3ITbSgHEeagjv2MLMKjtQ" name="PurchaseOrderReturn" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3ITbigHEeagjv2MLMKjtQ" name="Purchase_Order_purchase_id" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3ITbygHEeagjv2MLMKjtQ" name="date" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3ITcCgHEeagjv2MLMKjtQ" name="reason" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITcSgHEeagjv2MLMKjtQ" name="getPurchase_Order_purchase_id" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITcigHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITcygHEeagjv2MLMKjtQ" name="setPurchase_Order_purchase_id" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITdCgHEeagjv2MLMKjtQ" name="purchase_Order_purchase_id" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITdSgHEeagjv2MLMKjtQ" name="getDate" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITdigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITdygHEeagjv2MLMKjtQ" name="setDate" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITeCgHEeagjv2MLMKjtQ" name="date" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITeSgHEeagjv2MLMKjtQ" name="getReason" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITeigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITeygHEeagjv2MLMKjtQ" name="setReason" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3ITfCgHEeagjv2MLMKjtQ" name="reason" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i3ITfSgHEeagjv2MLMKjtQ" name="PurchaseOrderReturnLine" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITfigHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * Purchase Order Return Line Entity that maps to Purchase_Order_Return_Line table in MySQL&#xD;
+ * @author Angus&#xD;
+ *&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3ITfygHEeagjv2MLMKjtQ" name="purchaseOrderId" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3ITgCgHEeagjv2MLMKjtQ" name="productID" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3ITgSgHEeagjv2MLMKjtQ" name="returnQuantity" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3ITgigHEeagjv2MLMKjtQ" name="getPurchaseOrderReturnPurchaseOrderPurchaseId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3ITgygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Get the Purchase Order ID from the return line&#xD;
+	 * @return the Purchase Order ID&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3IThCgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3IThSgHEeagjv2MLMKjtQ" name="getStockCatalogueId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3IThigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Get the products catalogue ID from the order return line&#xD;
+	 * @return theh product id&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OZ8CgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OZ8SgHEeagjv2MLMKjtQ" name="getReturnQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OZ8igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get the quantity returned&#xD;
+	 * @return the product quantity returned&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OZ8ygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OZ9CgHEeagjv2MLMKjtQ" name="setReturnQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OZ9SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set the quantity returned for the purchase order return line&#xD;
+	 * @param returnQuantity the quantity of the product returned&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OZ9igHEeagjv2MLMKjtQ" name="returnQuantity" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OZ9ygHEeagjv2MLMKjtQ" name="hashCode" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OZ-CgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OZ-SgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OZ-igHEeagjv2MLMKjtQ">
+                  <body> Overrides the object equals method to compare field values.&#xD;
+	 * @return True if all field values are equal&#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OZ-ygHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OZ_CgHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i3OZ_SgHEeagjv2MLMKjtQ" name="SalesOrder" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i3OZ_igHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author OakTree LP&#xD;
+ * Sales order entity&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3OZ_ygHEeagjv2MLMKjtQ" name="salesId" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3OaACgHEeagjv2MLMKjtQ" name="customerUserName" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3OaASgHEeagjv2MLMKjtQ" name="addressLine1" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3OaAigHEeagjv2MLMKjtQ" name="addressPostcode" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaAygHEeagjv2MLMKjtQ" name="getSalesId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaBCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the salesId&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaBSgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaBigHEeagjv2MLMKjtQ" name="getCustomerUserName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaBygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the customerUserName&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaCCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaCSgHEeagjv2MLMKjtQ" name="getAddressLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaCigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the addressLine1&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaCygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaDCgHEeagjv2MLMKjtQ" name="getAddressPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaDSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the addressPostcode&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaDigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaDygHEeagjv2MLMKjtQ" name="setSalesId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaECgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param salesId the salesId to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaESgHEeagjv2MLMKjtQ" name="salesId" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaEigHEeagjv2MLMKjtQ" name="setCustomerUserName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaEygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param customerUserName the customerUserName to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaFCgHEeagjv2MLMKjtQ" name="customerUserName" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaFSgHEeagjv2MLMKjtQ" name="setAddressLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaFigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param addressLine1 the addressLine1 to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaFygHEeagjv2MLMKjtQ" name="addressLine1" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaGCgHEeagjv2MLMKjtQ" name="setAddressPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaGSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param addressPostcode the addressPostcode to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaGigHEeagjv2MLMKjtQ" name="addressPostcode" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaGygHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaHCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override object.equals method of Sales Order &#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaHSgHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaHigHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3OaHygHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3OaICgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override Object.toString method for SalesOrder&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3OaISgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i3OaIigHEeagjv2MLMKjtQ" name="SalesOrderEvent" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3OaIygHEeagjv2MLMKjtQ" name="salesEventId" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3OaJCgHEeagjv2MLMKjtQ" name="salesOrder" visibility="private" type="_i3OZ_SgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3OaJSgHEeagjv2MLMKjtQ" name="timeStamp" visibility="private" type="_i3CMsigHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3UgkCgHEeagjv2MLMKjtQ" name="description" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3UgkSgHEeagjv2MLMKjtQ" name="type" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgkigHEeagjv2MLMKjtQ" name="getSalesEventId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgkygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the salesEventId&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UglCgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UglSgHEeagjv2MLMKjtQ" name="getTimeStamp" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgligHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the timeStamp&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UglygHEeagjv2MLMKjtQ" type="_i3CMsigHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgmCgHEeagjv2MLMKjtQ" name="getDescription" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgmSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the description&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgmigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgmygHEeagjv2MLMKjtQ" name="getType" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgnCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the type&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgnSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgnigHEeagjv2MLMKjtQ" name="setSalesEventId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgnygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param salesEventId the salesEventId to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgoCgHEeagjv2MLMKjtQ" name="salesEventId" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgoSgHEeagjv2MLMKjtQ" name="setSalesOrder" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgoigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param order the order to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgoygHEeagjv2MLMKjtQ" name="order" type="_i3OZ_SgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgpCgHEeagjv2MLMKjtQ" name="setTimeStamp" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgpSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param timeStamp the timeStamp to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgpigHEeagjv2MLMKjtQ" name="timeStamp" type="_i3CMsigHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgpygHEeagjv2MLMKjtQ" name="setDescription" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgqCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param description the description to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgqSgHEeagjv2MLMKjtQ" name="description" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgqigHEeagjv2MLMKjtQ" name="setType" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgqygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param type the type to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgrCgHEeagjv2MLMKjtQ" name="type" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgrSgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgrigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override method equals() for SalesOrderEvent &#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 * @return false if the event 'other' is different to this event&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgrygHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgsCgHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3UgsSgHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3UgsigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override method toString() for SalesOrderEvent&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3UgsygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i3anMCgHEeagjv2MLMKjtQ" name="SalesOrderReturn" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i3anMSgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author OakTree LP&#xD;
+ * Sales Order Return class&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3anNCgHEeagjv2MLMKjtQ" name="salesId" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3anNigHEeagjv2MLMKjtQ" name="date" visibility="private" type="_i3anNSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3anNygHEeagjv2MLMKjtQ" name="reason" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anMigHEeagjv2MLMKjtQ" name="getSalesOrderId" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anMygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anOCgHEeagjv2MLMKjtQ" name="getSalesId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anOSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the salesId&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anOigHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anOygHEeagjv2MLMKjtQ" name="getDate" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anPCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the date&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anPSgHEeagjv2MLMKjtQ" type="_i3anNSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anPigHEeagjv2MLMKjtQ" name="getReason" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anPygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the reason&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anQCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anQSgHEeagjv2MLMKjtQ" name="setSalesId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anQigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param salesId the salesId to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anQygHEeagjv2MLMKjtQ" name="salesId" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anRCgHEeagjv2MLMKjtQ" name="setDate" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anRSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param date the date to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anRigHEeagjv2MLMKjtQ" name="date" type="_i3anNSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anRygHEeagjv2MLMKjtQ" name="setReason" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anSCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param reason the reason to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anSSgHEeagjv2MLMKjtQ" name="reason" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anSigHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anSygHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Override object.equals method for Sales Order Return&#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anTCgHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anTSgHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anTigHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anTygHEeagjv2MLMKjtQ">
+                  <body> &#xD;
+	 * Override Object.toString&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anUCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i3anUSgHEeagjv2MLMKjtQ" name="SalesOrderReturnLine" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i3anUigHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * Sales Order Return Line entity&#xD;
+ * @author Angus&#xD;
+ *&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3anUygHEeagjv2MLMKjtQ" name="productID" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3anVCgHEeagjv2MLMKjtQ" name="salesOrderID" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3anVSgHEeagjv2MLMKjtQ" name="returnQuantity" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3anVigHEeagjv2MLMKjtQ" name="shelvedQuantity" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anVygHEeagjv2MLMKjtQ" name="getProductID" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anWCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * returns the product ID of the returned item&#xD;
+	 * @return the product ID&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anWSgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anWigHEeagjv2MLMKjtQ" name="getSalesOrderID" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anWygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * return the orderID of the return line&#xD;
+	 * @return the sales order id&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anXCgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anXSgHEeagjv2MLMKjtQ" name="getReturnQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anXigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get the quantity of the product returned&#xD;
+	 * @return the quantity returned &#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anXygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anYCgHEeagjv2MLMKjtQ" name="setReturnQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anYSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * update the return quantity field for the return line&#xD;
+	 * @param returnQuantity&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anYigHEeagjv2MLMKjtQ" name="returnQuantity" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anYygHEeagjv2MLMKjtQ" name="getShelvedQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anZCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get the amount of products that were able to be sold again&#xD;
+	 * @return the quantity put back on the shelf&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anZSgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3anZigHEeagjv2MLMKjtQ" name="setShelvedQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3anZygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set the quantity that is not damaged and can be put back on the shelf&#xD;
+	 * @param shelvedQuantity the quantity to be but back on the shelf&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3anaCgHEeagjv2MLMKjtQ" name="shelvedQuantity" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i3gt0CgHEeagjv2MLMKjtQ" name="Stock" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt0SgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * &#xD;
+ * @author OakTree BM Stock SQl entity&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3gt0igHEeagjv2MLMKjtQ" name="catalogueId" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt0ygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * The first variable catalogueId has @Id and @GeneratedValue.&#xD;
+	 * &#xD;
+	 * @Id dicatetes that this is the primary key in the database table&#xD;
+	 * @GeneratedValue allows the Id to know that it is an auto incrimented&#xD;
+	 *                 number After @Column the name = &quot; &quot; has to match the name&#xD;
+	 *                 of the table in the datbase so it can be accessed from&#xD;
+	 *                 the application&#xD;
+	 * @NotNull means that column cannot be null, therefore always needs a value&#xD;
+	 *          input&#xD;
+	 * &#xD;
+	 </body>
+                </ownedComment>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3gt1CgHEeagjv2MLMKjtQ" name="salePrice" type="_i2dk_CgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3gt1SgHEeagjv2MLMKjtQ" name="currentQuantity" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3gt1igHEeagjv2MLMKjtQ" name="reorderLevel" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3gt1ygHEeagjv2MLMKjtQ" name="reorderQuantity" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3gt2CgHEeagjv2MLMKjtQ" name="stockStatus" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt2SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Stock status column, has @Size parameter This states that it must have a&#xD;
+	 * minimum of one character and a maximum of 30&#xD;
+	 </body>
+                </ownedComment>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3gt2igHEeagjv2MLMKjtQ" name="warehouseLocation" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt2ygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * warehouse location column, has @Size parameter This states that it must&#xD;
+	 * have a minimum of one character and a maximum of 10&#xD;
+	 </body>
+                </ownedComment>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3gt3ygHEeagjv2MLMKjtQ" name="supplierId" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3gt4CgHEeagjv2MLMKjtQ" name="wishList" visibility="private" type="_i2jrkSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt3CgHEeagjv2MLMKjtQ" name="getSupplierId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt3SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * *@OneToOne is the cardinality for that variable with another variable in&#xD;
+	 * a separate entity&#xD;
+	 * @return &#xD;
+	 * &#xD;
+	 * @JoinColumn lets the application know where to access the variable and&#xD;
+	 *             what to return&#xD;
+	 * @return supplierId from the Supplier entity&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt3igHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt4SgHEeagjv2MLMKjtQ" name="getCatalogueId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt4igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get CatalogueId method&#xD;
+	 * &#xD;
+	 * @return catalogueId&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt4ygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt5CgHEeagjv2MLMKjtQ" name="setCatalogueId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt5SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set CatalogueId method&#xD;
+	 * &#xD;
+	 * @set catalogueId in case we need to add new stock&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt5igHEeagjv2MLMKjtQ" name="catalogueId" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt5ygHEeagjv2MLMKjtQ" name="getSalePrice" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt6CgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Sale price getter&#xD;
+	 * &#xD;
+	 * @return salePrice&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt6SgHEeagjv2MLMKjtQ" type="_i2dk_CgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt6igHEeagjv2MLMKjtQ" name="setSalePrice" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt6ygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set Saleprice method&#xD;
+	 * &#xD;
+	 * @param salePrice&#xD;
+	 *            for when we need to change or add new price&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt7CgHEeagjv2MLMKjtQ" name="salePrice" type="_i2dk_CgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt7SgHEeagjv2MLMKjtQ" name="getCurrentQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt7igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get current quantity method&#xD;
+	 * &#xD;
+	 * @return current quantity in stock&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt7ygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt8CgHEeagjv2MLMKjtQ" name="setCurrentQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt8SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set current quantity method&#xD;
+	 * &#xD;
+	 * @set currentQuantity in case we need to add something back to shelf&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt8igHEeagjv2MLMKjtQ" name="currentQuantity" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt8ygHEeagjv2MLMKjtQ" name="getReorderLevel" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt9CgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get reorder level method&#xD;
+	 * &#xD;
+	 * @return redorder level&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt9SgHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt9igHEeagjv2MLMKjtQ" name="setReorderLevel" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt9ygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set reorder level method&#xD;
+	 * &#xD;
+	 * @set reorder level in case demand of a product changes&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt-CgHEeagjv2MLMKjtQ" name="reorderLevel" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt-SgHEeagjv2MLMKjtQ" name="getReorderQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt-igHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get reorder quanitity method&#xD;
+	 * &#xD;
+	 * @return redorder quantity&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt-ygHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt_CgHEeagjv2MLMKjtQ" name="setReorderQuantity" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3gt_SgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set reorder quantity method&#xD;
+	 * &#xD;
+	 * @set redorder quantity incase need to do a manual purchase order&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3gt_igHEeagjv2MLMKjtQ" name="reorderQuantity" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3gt_ygHEeagjv2MLMKjtQ" name="getStockStatus" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3guACgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get stock status method&#xD;
+	 * &#xD;
+	 * @return status of the stock e.g. in stock&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3guASgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3guAigHEeagjv2MLMKjtQ" name="setStockStatus" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3guAygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set stock status method&#xD;
+	 * &#xD;
+	 * @set status of the stock, normally after confirming and order or&#xD;
+	 *      recieving confirmation of despatch&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3guBCgHEeagjv2MLMKjtQ" name="stockStatus" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3guBSgHEeagjv2MLMKjtQ" name="getWarehouseLocation" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3guBigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * get warehouse location method&#xD;
+	 * &#xD;
+	 * @return location of stock item&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3guBygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3guCCgHEeagjv2MLMKjtQ" name="setWarehouseLocation" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3guCSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set warehouse location method&#xD;
+	 * &#xD;
+	 * @set warehouse location e.g. G4&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3guCigHEeagjv2MLMKjtQ" name="warehouseLocation" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3guCygHEeagjv2MLMKjtQ" name="setSupplierId" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3guDCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * set stock status method&#xD;
+	 * &#xD;
+	 * @set supplier Id if prefferred supplier changes&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3guDSgHEeagjv2MLMKjtQ" name="supplierId" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3guDigHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3guDygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override object equals methof for Stock entity &#xD;
+	 * @param other stock items to be checked against&#xD;
+	 * @return boolean true if stock items are the same&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3guECgHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3guESgHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3guEigHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3guEygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override Objects toString method for stock &#xD;
+	 *&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3guFCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_i3m0cCgHEeagjv2MLMKjtQ" name="Supplier" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0cSgHEeagjv2MLMKjtQ">
+                <body>&#xD;
+ * @author Daniel&#xD;
+ *&#xD;
+ </body>
+              </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3m0cigHEeagjv2MLMKjtQ" name="supplierID" visibility="private" type="_i2pyOCgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3m0cygHEeagjv2MLMKjtQ" name="name" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3m0dCgHEeagjv2MLMKjtQ" name="contactPhoneNumber" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3m0dSgHEeagjv2MLMKjtQ" name="contactEmail" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3m0digHEeagjv2MLMKjtQ" name="addressLine1" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3m0dygHEeagjv2MLMKjtQ" name="addressPostcode" visibility="private" type="_i2RXtSgHEeagjv2MLMKjtQ" isUnique="false"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0eCgHEeagjv2MLMKjtQ" name="getSupplierID" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0eSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the supplierID&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0eigHEeagjv2MLMKjtQ" type="_i2pyOCgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0eygHEeagjv2MLMKjtQ" name="getName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0fCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the name&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0fSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0figHEeagjv2MLMKjtQ" name="getContactPhoneNumber" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0fygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the contactPhoneNumber&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0gCgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0gSgHEeagjv2MLMKjtQ" name="getContactEmail" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0gigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the contactEmail&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0gygHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0hCgHEeagjv2MLMKjtQ" name="getAddressLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0hSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the addressLine1&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0higHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0hygHEeagjv2MLMKjtQ" name="getAddressPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0iCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @return the addressPostcode&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0iSgHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0iigHEeagjv2MLMKjtQ" name="setSupplierID" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0iygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param supplierID the supplierID to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0jCgHEeagjv2MLMKjtQ" name="supplierID" type="_i2pyOCgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0jSgHEeagjv2MLMKjtQ" name="setName" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0jigHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param name the name to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0jygHEeagjv2MLMKjtQ" name="name" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0kCgHEeagjv2MLMKjtQ" name="setContactPhoneNumber" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0kSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param contactPhoneNumber the contactPhoneNumber to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0kigHEeagjv2MLMKjtQ" name="contactPhoneNumber" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0kygHEeagjv2MLMKjtQ" name="setContactEmail" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0lCgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param contactEmail the contactEmail to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0lSgHEeagjv2MLMKjtQ" name="contactEmail" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0ligHEeagjv2MLMKjtQ" name="setAddressLine1" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0lygHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param addressLine1 the addressLine1 to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0mCgHEeagjv2MLMKjtQ" name="addressLine1" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0mSgHEeagjv2MLMKjtQ" name="setAddressPostcode" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0migHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * @param addressPostcode the addressPostcode to set&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0mygHEeagjv2MLMKjtQ" name="addressPostcode" type="_i2RXtSgHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0nCgHEeagjv2MLMKjtQ" name="equals" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0nSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override equals() method for Supplier&#xD;
+	 * @see java.lang.Object#equals(java.lang.Object)&#xD;
+	 * @return false if the supplier 'other' is different to this supplier &#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0nigHEeagjv2MLMKjtQ" type="_i2XeZSgHEeagjv2MLMKjtQ" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0nygHEeagjv2MLMKjtQ" name="obj" type="_i2jr7ygHEeagjv2MLMKjtQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_i3m0oCgHEeagjv2MLMKjtQ" name="toString" visibility="public">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_i3m0oSgHEeagjv2MLMKjtQ">
+                  <body>&#xD;
+	 * Override object's toString() method for Supplier&#xD;
+	 * @see java.lang.Object#toString()&#xD;
+	 </body>
+                </ownedComment>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_i3m0oigHEeagjv2MLMKjtQ" type="_i2RXtSgHEeagjv2MLMKjtQ" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_i2RXsigHEeagjv2MLMKjtQ" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_i2RXsygHEeagjv2MLMKjtQ" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_i2RXtCgHEeagjv2MLMKjtQ" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_i2RXtSgHEeagjv2MLMKjtQ" name="String"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_i2jr7ygHEeagjv2MLMKjtQ" name="Object"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_i2dk9ygHEeagjv2MLMKjtQ" name="sql">
+        <packagedElement xmi:type="uml:Class" xmi:id="_i2dk-CgHEeagjv2MLMKjtQ" name="Date"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_i3CMsigHEeagjv2MLMKjtQ" name="Timestamp"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_i2dk-ygHEeagjv2MLMKjtQ" name="math">
+        <packagedElement xmi:type="uml:Class" xmi:id="_i2dk_CgHEeagjv2MLMKjtQ" name="BigDecimal"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_i2v41CgHEeagjv2MLMKjtQ" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_i3anNSgHEeagjv2MLMKjtQ" name="Date"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_i2v41SgHEeagjv2MLMKjtQ" name="function">
+          <packagedElement xmi:type="uml:Class" xmi:id="_i2v41igHEeagjv2MLMKjtQ" name="Supplier"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_i2XeYygHEeagjv2MLMKjtQ" name="datatype">
+    <packagedElement xmi:type="uml:Package" xmi:id="_i2XeZCgHEeagjv2MLMKjtQ" name="datatype">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i2XeZSgHEeagjv2MLMKjtQ" name="Boolean"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i2pyOCgHEeagjv2MLMKjtQ" name="Integer"/>
+    </packagedElement>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_REexECgHEeagjv2MLMKjtQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_REk3sCgHEeagjv2MLMKjtQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/JAVA/1#/"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://Papyrus_JAVA_PROFILES/java.profile.uml#_6TYLMN0yEd6P1qtlpBOZyg"/>
+  </profileApplication>
+</uml:Model>
