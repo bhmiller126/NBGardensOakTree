@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<title>NBGardens.com</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/nbgardens.css" />
+
+	<!-- Fix for HTML5 in IE9 or earlier - do not uncomment -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+</head>
+<body>
+	<div id="body-wrapper">
+		<!-- YOUR CONTENT STARTS HERE -->
+		<h2>Slideshow/Carousel Type 1</h2>
+		<div class="w3-card-2" style="min-height:0px">
+			<div class="w3-content" style="max-width:800px;position:relative">
+				<img class="slides1 w3-animate-opacity" src="../images/31+N4L1xbYL.jpg" style="width:100%">
+				<img class="slides1 w3-animate-opacity" src="../images/cute-novelty-garden-gnome-snoozing-in-hammock-[2]-7438-p.jpg" style="width:100%">
+				<img class="slides1 w3-animate-opacity" src="../images/garden-decoration.jpg" style="width:100%">
+				<img class="slides1 w3-animate-opacity" src="../images/wooden_garden6furniture.jpg" style="width:100%">
+
+				<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs1(-1)"><i class="fa fa-arrow-left"></i></a>
+				<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs1(+1)"><i class="fa fa-arrow-right"></i></a>
+			</div>
+		</div>
+		
+		<h2>Slideshow/Carousel Type 2</h2>
+		<div class="w3-card-2" style="min-height:0px">
+			<div class="w3-display-container slides2">
+			    <img src="../images/31+N4L1xbYL.jpg" style="width:100%">
+			    <div class="w3-display-topleft w3-text-white w3-container w3-padding-32 w3-hide-small">
+			      <span class="w3-white w3-padding-large w3-animate-bottom">Lorem ipsum</span>
+			    </div>
+			</div>
+			<div class="w3-display-container slides2">
+			    <img src="../images/cute-novelty-garden-gnome-snoozing-in-hammock-[2]-7438-p.jpg" style="width:100%">
+			    <div class="w3-display-middle w3-text-white w3-container w3-padding-32 w3-hide-small">
+			      <span class="w3-white w3-padding-large w3-animate-bottom">Lorem ipsum hipsum</span>
+			    </div>
+			</div>
+			<div class="w3-display-container slides2">
+			    <img src="../images/garden-decoration.jpg" style="width:100%">
+			    <div class="w3-display-topright w3-text-white w3-container w3-padding-32 w3-hide-small">
+			      <span class="w3-white w3-padding-large w3-animate-bottom">Lorem ipsum hipsum</span>
+			    </div>
+			</div>
+			
+			<!-- Slideshow next/previous buttons -->
+			<div class="w3-container w3-dark-grey w3-padding-8">
+				<div class="w3-left w3-hover-text-teal w3-large" onclick="plusDivs2(-1)"><i class="fa fa-chevron-left"></i></div>
+			    <div class="w3-right w3-hover-text-teal w3-large" onclick="plusDivs2(1)"><i class="fa fa-chevron-right"></i></div>
+
+			    <div class="w3-center">
+			    	<span class="w3-tag nb-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv2(1)"></span>
+			    	<span class="w3-tag nb-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv2(2)"></span>
+			    	<span class="w3-tag nb-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv2(3)"></span>
+			    </div>
+			</div>
+		</div>			
+		<!-- YOUR CONTENT ENDS HERE -->
+	</div>
+
+<script>	
+// Slideshows Type 1
+	var slideIndex1 = 1;
+
+	function plusDivs1(n) {
+	slideIndex1 = slideIndex1 + n;
+	showDivs1(slideIndex1);
+	}
+
+	function showDivs1(n) {
+	  var x = document.getElementsByClassName("slides1");
+	  if (n > x.length) {slideIndex1 = 1}    
+	  if (n < 1) {slideIndex1 = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  x[slideIndex1-1].style.display = "block";  
+	}
+
+	showDivs1(1);
+
+	// Slideshows Type 2
+	var slideIndex2 = 1;
+	showDivs2(slideIndex2);
+
+	function plusDivs2(n) {
+	  showDivs2(slideIndex2 += n);
+	}
+
+	function currentDiv2(n) {
+	  showDivs2(slideIndex2 = n);
+	}
+
+	function showDivs2(n) {
+	  var i;
+	  var x = document.getElementsByClassName("slides2");
+	  var dots = document.getElementsByClassName("demodots");
+	  if (n > x.length) {slideIndex2 = 1}    
+	  if (n < 1) {slideIndex2 = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+	     x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	     dots[i].className = dots[i].className.replace(" w3-white", "");
+	  }
+	  x[slideIndex2-1].style.display = "block";  
+	  dots[slideIndex2-1].className += " w3-white";
+	}
+</script>
+
+</body>
+</html>

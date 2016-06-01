@@ -17,86 +17,133 @@
 </head>
 <body>
 	<div id="body-wrapper">
-			<!-- YOUR CONTENT STARTS HERE -->
-					<div class="main-container-faq container">
-			<div id="FAQ-Content">
-				<div class="faq category-name">
-					<h1>Frequently Asked Questions</h1>
-				</div>				
-				<div>
-					<div class="nb-faq-row">
-						<a href="#hide1" class="nb-faq-hide" id="hide1"><h2>Delivery FAQ's</h2></a>
-						<a href="#show1" class="nb-faq-show" id="show1"><h2>Delivery FAQ's</h2></a>
-						<div class="nb-faq-list">
-							<h3>When will my order be delivered?</h3>
-							<p>Usually all orders are dispatched the same day. The courier will then contact you for a delivery date via SMS. The length of time usually depends on the delivery type you have selected.</p>
-							<h3>Can I amend my delivery date?</h3>
-							<p>This depends on the status of the order. If the order is with the courier you should contact them to check whether it is possible to amend the data.</p>
-							<h3>Can I change my delivery address?</h3>
-							<p>This depends on the status of the order. If the courier has already collected the parcel from our warehouse, you will not be able to change the delivery address.</p>
-							<h3>Are receipts sent with deliveries?</h3>
-							<p>Your receipt will be provided inside your parcel. You will also receive an email containing a digital receipt.</p>
-						</div>
+		<!-- YOUR CONTENT STARTS HERE -->
+		<div class="faq category-name">
+			<h1>Frequently Asked Questions</h1>
+		</div>				
+		<div class="w3-card-2" style="min-height:0px">
+			<div class="w3-accordion w3-white">
+				<button onclick="accordionFunction('Section-Delivery')" class="w3-btn-block w3-theme-l1 w3-left-align"><h2>Delivery</h2></button>
+					<div id="Section-Delivery" class="w3-accordion-content w3-container">
+						<button onclick="accordionFunction('Question-Delivery-1')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>When will my order be delivered?</h3></button>
+							<div id="Question-Delivery-1" class="w3-accordion-content w3-container">
+								<p>Usually all orders are dispatched the same day. The courier will then contact you for a delivery date via SMS. The length of time usually depends on the delivery type you have selected.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Delivery-2')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>Can I amend my delivery date?</h3></button>
+							<div id="Question-Delivery-2" class="w3-accordion-content w3-container">
+								<p>This depends on the status of the order. If the order is with the courier you should contact them to check whether it is possible to amend the data.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Delivery-3')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>Can I change my delivery address?</h3></button>
+							<div id="Question-Delivery-3" class="w3-accordion-content w3-container">
+								<p>This depends on the status of the order. If the courier has already collected the parcel from our warehouse, you will not be able to change the delivery address.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Delivery-4')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>Are receipts sent with deliveries?</h3></button>
+							<div id="Question-Delivery-4" class="w3-accordion-content w3-container">
+								<p>Your receipt will be provided inside your parcel. You will also receive an email containing a digital receipt.</p>
+							</div>
 					</div>
-					
-					<div class="nb-faq-row">
-						<a href="#hide2" class="nb-faq-hide" id="hide2"><h2>Returns FAQ's</h2></a>
-						<a href="#show2" class="nb-faq-show" id="show2"><h2>Returns FAQ's</h2></a>
-						<div class="nb-faq-list">
-							<h3>Can I return a product, exchange it or get a refund?</h3>
-							<p>This depends on the type of item you are returning. Most items fall under our 28 day money back guarantee. If the item has been used or has been damaged by the customer we will not accept it for exchange, returns or a refund.</p>
-							<h3>Which products are excluded from the returns policy?</h3>
-							<p>Fitted items will not be able to be returned. </p>		
-							<h3>How long do I have to return an item?</h3>
-							<p>You have up to 28 days. </p>
-							<h3>Is there a charge for returning a product?</h3>
-							<p>No, we will send a courier to collect the parcel. We will also provide a returns sticker.</p>
-							<h3>I have received an incorrect item?</h3>
-							<p>If you have received an incorrect item please contact customer services.</p>
-							<h3>I am unhappy with the quality of my item, what do I do?</h3>
-							<p>NB Gardens uses the best quality products. If you are unsatisfied please contact
-								<em>
-									<a href="http://www.homebase.co.uk/en/static/customer-services/home-delivery" target="_self">customer services.</a>
-								</em>
-							</p>
-							<h3>I have lost my receipt?</h3>
-							<p>Your order number can be used if you have lost your hard copy and digital receipts.</p>
-						</div>
+			</div>
+				
+			<div class="w3-accordion w3-white">
+				<button onclick="accordionFunction('Section-Returns')" class="w3-btn-block w3-theme-l1 w3-left-align"><h2>Returns</h2></button>
+					<div id="Section-Returns" class="w3-accordion-content w3-container">
+						<button onclick="accordionFunction('Question-Returns-1')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>Can I return a product, exchange it or get a refund?</h3></button>
+							<div id="Question-Returns-1" class="w3-accordion-content w3-container">
+								<p>This depends on the type of item you are returning. Most items fall under our 28 day money back guarantee. If the item has been used or has been damaged by the customer we will not accept it for exchange, returns or a refund.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Returns-2')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>Which products are excluded from the returns policy?</h3></button>
+							<div id="Question-Returns-2" class="w3-accordion-content w3-container">
+								<p>Fitted items will not be able to be returned. </p>		
+							</div>
+						<button onclick="accordionFunction('Question-Returns-3')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>How long do I have to return an item?</h3></button>
+							<div id="Question-Returns-3" class="w3-accordion-content w3-container">
+								<p>You have up to 28 days. </p>
+							</div>
+						<button onclick="accordionFunction('Question-Returns-4')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>Is there a charge for returning a product?</h3></button>
+							<div id="Question-Returns-4" class="w3-accordion-content w3-container">
+								<p>No, we will send a courier to collect the parcel. We will also provide a returns sticker.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Returns-5')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>I have received an incorrect item?</h3></button>
+							<div id="Question-Returns-5" class="w3-accordion-content w3-container">
+								<p>If you have received an incorrect item please contact customer services.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Returns-6')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>I am unhappy with the quality of my item, what do I do?</h3></button>
+							<div id="Question-Returns-6" class="w3-accordion-content w3-container">
+								<p>NB Gardens uses the best quality products. If you are unsatisfied please contact
+									<em>
+										<a href="http://www.homebase.co.uk/en/static/customer-services/home-delivery" target="_self">customer services.</a>
+									</em>
+								</p>
+							</div>
+						<button onclick="accordionFunction('Question-Returns-7')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>I have lost my receipt?</h3></button>
+							<div id="Question-Returns-7" class="w3-accordion-content w3-container">
+								<p>Your order number can be used if you have lost your hard copy and digital receipts.</p>
+							</div>
 					</div>
-					
-					<div class="nb-faq-row">
-						<a href="#hide3" class="nb-faq-hide" id="hide3"><h2>Shopping FAQ's</h2></a>
-						<a href="#show3" class="nb-faq-show" id="show3"><h2>Shopping FAQ's</h2></a>
-						<div class="nb-faq-list">
-							<h3>Can I add to an existing order?</h3>
-							<p>You can add items to your order until you confirm your payment details and complete the order. Once the order is confirmed, you can't add items to the same order. If you want to purchase more items, please place a new order.</p>
-							<h3>How can I pay for my purchases?</h3>
-							<p>You can pay online with most major credit or debit cards, including MasterCard, Visa Credit Card, Visa Debit Card, Visa Electron, Maestro, Solo and American Express. You can also buy now, pay later.</p>
-							<h3>When will the payment be taken?</h3>
-							<p>Once the order has been placed payment will be taken to ensure availability of the product with our suppliers. </p>
-							<p>Payment will be taken 28 days after delivery for buy now pay later orders.</p>
-							<h3>How do I know if my order has been placed?</h3>
-							<p>When we receive your online order, an order acknowledgement screen will appear, this includes an order reference number. It's a good idea to print out this page so you can refer back to it, but we'll also email you to confirm we have your order.</p>
-							<h3>How can I search for a product?</h3>
-							<p>There are two easy ways to find just what you want on NB Gardens - browse our product range or search for specific items.</p>
-							<p>From anywhere on NB Gardens you can instantly nip back to the homepage. Just click on the NB Gardens logo in the top left corner of your screen.</p>
-							<h6><b>Browse</b></h6>
-							<p>It's simple to browse all our online product range - just click on one of our main product categories. Do this from the homepage or with the navigation bar at the top of your screen. Each time you choose a category, the menu on the left-hand side of your screen shows a list of relevant sub-categories and criteria you can select for more browsing.</p>
-							<h6><b>Search</b></h6>
-							<p>Search quickly for products by name, brand or size. Just use the search box in the top right corner. Simply enter the kind of product - bed or power drill, for example. Or type in the brand name such as Black and Decker or Flymo. All the products that match your chosen word will be displayed.</p>
-							<h3>Are my details secure?</h3>
-							<p>Shopping on NB Gardens is as safe as shopping in any store. Your bank card details will be encrypted to help keep them secure. Please note that we will never ask you for your bank card details via emails or pop-ups, or for any purpose other than placing an order on NB Gardens.</p>
-							<h3>I chose a product to order, now it is out of stock?</h3>
-							<p>A product page will indicate general availability of the item but you will be asked to enter the delivery postcode to check stock availability for that area. If no stock is available, the out of stock message will appear. Unfortunately we are currently unable to let you know if or when an item is due back in stock.</p>
-							<h3>Can I sign up for the NB Gardens Newsletter?</h3>
-							<p>Yes. Please visit our newsletter signup page.</p>
-						</div>
+			</div>
+
+			<div class="w3-accordion w3-white">
+				<button onclick="accordionFunction('Section-Shopping')" class="w3-btn-block w3-theme-l1 w3-left-align"><h2>Shopping</h2></button>
+					<div id="Section-Shopping" class="w3-accordion-content w3-container">
+						<button onclick="accordionFunction('Question-Shopping-1')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>Can I add to an existing order?</h3></button>
+							<div id="Question-Shopping-1" class="w3-accordion-content w3-container">
+								<p>You can add items to your order until you confirm your payment details and complete the order. Once the order is confirmed, you can't add items to the same order. If you want to purchase more items, please place a new order.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Shopping-2')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>How can I pay for my purchases?</h3></button>
+							<div id="Question-Shopping-2" class="w3-accordion-content w3-container">
+								<p>You can pay online with most major credit or debit cards, including MasterCard, Visa Credit Card, Visa Debit Card, Visa Electron, Maestro, Solo and American Express. You can also buy now, pay later.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Shopping-3')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>When will the payment be taken?</h3></button>
+							<div id="Question-Shopping-3" class="w3-accordion-content w3-container">
+								<p>Once the order has been placed payment will be taken to ensure availability of the product with our suppliers. </p>
+								<p>Payment will be taken 28 days after delivery for buy now pay later orders.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Shopping-4')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>How do I know if my order has been placed?</h3></button>
+							<div id="Question-Shopping-4" class="w3-accordion-content w3-container">
+								<p>When we receive your online order, an order acknowledgement screen will appear, this includes an order reference number. It's a good idea to print out this page so you can refer back to it, but we'll also email you to confirm we have your order.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Shopping-5')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>How can I search for a product?</h3></button>
+							<div id="Question-Shopping-5" class="w3-accordion-content w3-container">
+								<p>There are two easy ways to find just what you want on NB Gardens - browse our product range or search for specific items.</p>
+								<p>From anywhere on NB Gardens you can instantly nip back to the homepage. Just click on the NB Gardens logo in the top left corner of your screen.</p>
+								<h6>Browse</h6>
+								<p>It's simple to browse all our online product range - just click on one of our main product categories. Do this from the homepage or with the navigation bar at the top of your screen. Each time you choose a category, the menu on the left-hand side of your screen shows a list of relevant sub-categories and criteria you can select for more browsing.</p>
+								<h6>Search</h6>
+								<p>Search quickly for products by name, brand or size. Just use the search box in the top right corner. Simply enter the kind of product - bed or power drill, for example. Or type in the brand name such as Black and Decker or Flymo. All the products that match your chosen word will be displayed.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Shopping-6')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>Are my details secure?</h3></button>
+							<div id="Question-Shopping-6" class="w3-accordion-content w3-container">
+								<p>Shopping on NB Gardens is as safe as shopping in any store. Your bank card details will be encrypted to help keep them secure. Please note that we will never ask you for your bank card details via emails or pop-ups, or for any purpose other than placing an order on NB Gardens.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Shopping-7')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>I chose a product to order, now it is out of stock?</h3></button>
+							<div id="Question-Shopping-7" class="w3-accordion-content w3-container">
+								<p>A product page will indicate general availability of the item but you will be asked to enter the delivery postcode to check stock availability for that area. If no stock is available, the out of stock message will appear. Unfortunately we are currently unable to let you know if or when an item is due back in stock.</p>
+							</div>
+						<button onclick="accordionFunction('Question-Shopping-8')" class="w3-btn-block w3-theme-l2 w3-left-align"><h3>Can I sign up for the NB Gardens Newsletter?</h3></button>
+							<div id="Question-Shopping-8" class="w3-accordion-content w3-container">
+								<p>Yes. Please visit our newsletter signup page.</p>
+							</div>
 					</div>
-				</div>
 			</div>
 		</div>
-
-			<!-- YOUR CONTENT ENDS HERE -->
+		<!-- YOUR CONTENT ENDS HERE -->
 	</div>
+
+<script>
+// Accordion
+function accordionFunction(id) {
+    var x = document.getElementById(id);
+   
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-l2";
+    } else { 
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-theme-l2", "");
+    }
+}
+</script>
+
 </body>
 </html>
