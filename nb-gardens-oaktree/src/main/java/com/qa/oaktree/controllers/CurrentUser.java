@@ -11,15 +11,15 @@ import javax.enterprise.context.SessionScoped;
 @SessionScoped
 public class CurrentUser
 {
-	private long currentUser =-1;
+	private String currentUser = "";
 	
-	public long getCurrentUser()
+	public String getCurrentUser()
 	{
 		return currentUser;
 	}
 	
-	public void setCurrentUser(long userID)
+	public void setCurrentUser(String username)
 	{
-		currentUser = userID;
+		currentUser = username;
 	}
 }

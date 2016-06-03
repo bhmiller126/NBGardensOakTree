@@ -52,7 +52,7 @@ public class LoginController
 	
 	public String logout()
 	{
-		currentUser.setCurrentUser(-1);
+		currentUser.setCurrentUser("");
 		return "home";
 	}
 	
