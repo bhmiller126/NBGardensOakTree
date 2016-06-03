@@ -1,5 +1,5 @@
 <ui:composition 
-	template="../templates/template.xhtml"
+	template="templates/template.xhtml"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
@@ -7,36 +7,36 @@
 
 	<ui:define name="main-content">
 		<!-- CONTENT GOES HERE -->
-		<div class="main-container-contactus">
-				<div id="login" style="float:left">
-					<form>
-						<fieldset>							
-							<p><b>Sales Number:</b> 01962 712 115</p>
-							<p><b>Accounts Number:</b> 07794 958 541</p>
-							<br/>
-							<p><b>Returns Address:</b></p>
-							<p>NB Gardens</p>
-							<p>Brewers Lane</p>
-							<p>Manchester</p>
-							<p>M50 3YJ</p>
-						</fieldset>
-					</form>
-				</div>
-				<div class="" id="contact-form" style="float:left">
-					<form>
-						<fieldset>
-							<h2>Contact Form</h2>
-							<p>Account Number: <input class="form input" type="text" name="account"/></p>
-							<p>First Name: <input class="form input" type="text" name="first"/></p>
-							<p>Last Name: <input class="form input" type="text" name="last"/></p>
-							<p>Contact Number: <input class="form input" type="text" name="contactnumber"/></p>
-							<p>Contact e-mail: <input class="form input" type="text" name="email"/></p>
-							<p>Order Number: <input class="form input" type="text" name="ordernumber"/></p>							
-							<p>Enquiry:<br/><textarea id="id123-control7352207" name="control7352207" onclick=" InputActions(this,'row4');" onkeyup=" InputActions(this,'row4');  " onchange="InputRules(7352207); ;  " rows="4" style="width: 280px" class="no-validation-error"/></p>
-							<p><button class="form w3-btn" onclick="">Submit</button></p>
-						</fieldset>
-					</form>				
-				</div>
+		<div class="w3-container">
+			<div class="w3-container w3-half w3-margin-bottom" id="contact-details">
+				<form>
+					<fieldset class="w3-card-2" style="min-height:0">							
+						<p><b>Sales Number:</b> 01962 712 115</p>
+						<p><b>Accounts Number:</b> 07794 958 541</p>
+						<br/>
+						<p><b>Returns Address:</b></p>
+						<p>NB Gardens</p>
+						<p>Brewers Lane</p>
+						<p>Manchester</p>
+						<p>M50 3YJ</p>
+					</fieldset>
+				</form>
+			</div>
+			<div class="w3-container w3-half w3-margin-bottom" id="contact-form">
+				<form>
+					<fieldset class="w3-card-2" style="min-height:0">
+						<h2>Contact Form</h2>
+						<p>Account Number: <input class="form input" type="text" name="account"/></p>
+						<p>First Name: <input class="form input" type="text" name="first"/></p>
+						<p>Last Name: <input class="form input" type="text" name="last"/></p>
+						<p>Contact Number: <input class="form input" type="text" name="contactnumber"/></p>
+						<p>Contact e-mail: <input class="form input" type="text" name="email"/></p>
+						<p>Order Number: <input class="form input" type="text" name="ordernumber"/></p>							
+						<p>Enquiry:<br/><textarea id="id123-control7352207" name="control7352207" onclick=" InputActions(this,'row4');" onkeyup=" InputActions(this,'row4');  " onchange="InputRules(7352207); ;  " rows="4" style="width: 280px" class="no-validation-error"/></p>
+						<p><button class="form w3-btn" onclick="">Submit</button></p>
+					</fieldset>
+				</form>				
+			</div>
 		</div>
 	</ui:define>
 </ui:composition>
