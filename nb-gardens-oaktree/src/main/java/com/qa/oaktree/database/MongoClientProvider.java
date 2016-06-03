@@ -15,31 +15,30 @@ import javax.ejb.ConcurrencyManagementType;
 import javax.ejb.Lock;
 import javax.ejb.LockType;
 import javax.ejb.Singleton;
-
+/*
 @Singleton
 @ConcurrencyManagement(ConcurrencyManagementType.CONTAINER)
 public class MongoClientProvider
 {	
-	private MongoClient mongoClient = null;	
+	protected MongoClient mongoClient = null;
 	
 	@Lock(LockType.READ)
-	public MongoClient getMongoClient()
-		{
-			return mongoClient;
-		}
+	//public MongoClient getMongoClient()
+	//	{
+	//		return mongoClient;
+	//	}
 	
 	@PostConstruct
 	public void init () 
 	{	
 		final String mongoIpAddress = "192.168.1.5";
 		final Integer mongoPortNumber = 28018;
-
 		mongoClient = new MongoClient(new ServerAddress(mongoIpAddress, mongoPortNumber));
 		
 		/*
 		DB db = mongo.getDB("products");
 		DBCollection collection = db.getCollection("product");
-		showOutdoorLiving(collection);	*/
+		showOutdoorLiving(collection);	
 	}
 	
 	private static void showActiveProducts(DBCollection collection)
@@ -131,5 +130,5 @@ public class MongoClientProvider
 		
 	}
 }
-
+*/
 
