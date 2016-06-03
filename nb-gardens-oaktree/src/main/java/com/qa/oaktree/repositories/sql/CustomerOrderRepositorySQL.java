@@ -23,5 +23,11 @@ public class CustomerOrderRepositorySQL implements CustomerOrderRepository {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public SalesOrder findByCustID(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

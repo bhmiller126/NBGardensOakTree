@@ -12,5 +12,7 @@ public interface CustomerOrderRepository {
 	
 	public SalesOrder findByOrderID(int id);
 	
+	public SalesOrder findByCustID(String username);
+	
 	
 }
