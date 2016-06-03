@@ -14,7 +14,8 @@ import com.qa.oaktree.repositories.CustomerRepository;
 @Stateless
 public class UserService
 {
-	@Inject private CustomerRepository customerRepository;
+	@Inject 
+	private CustomerRepository customerRepository;
 	
 	public boolean validateCredentials(String username, String password)
 	{

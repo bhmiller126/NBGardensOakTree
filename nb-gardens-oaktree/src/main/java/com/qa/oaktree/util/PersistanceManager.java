@@ -17,11 +17,11 @@ public class PersistanceManager
 	
 	public EntityManager openEntityManager()
 	{
-		return null;
+		return entityManagerFactory.createEntityManager();
 	}
 	
 	public void closeEntityManager(EntityManager em)
 	{
-		
+		em.close();
 	}
 }
