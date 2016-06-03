@@ -7,7 +7,6 @@ import javax.validation.constraints.Size;
 
 import java.math.BigDecimal;
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 

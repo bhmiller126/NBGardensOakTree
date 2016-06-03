@@ -10,13 +10,16 @@
 		<div class="main-container-login" >
 			<div id="login">	
 				<div class="login" id="login" style="float:left">
-					<form>
+					<h:form>
 						<fieldset>
-							<p>Username: <input class="form input" type="text" name="username"></input></p>
-							<p>Password: <input class="form input" type="password" name="username"></input></p>
-							<p><input type="checkbox" value="1" name="remember_me" checked="checked"></input> Remember me? </p>
+							<h:message class="error" value="#{login.error}"/>
+							<h:outputLabel value="Username: "/>
+							<h:inputText valye="#{login.username}"/>
+							<h:outputLabel value="Password: "/>
+							<h:inputSecret value="#{login.password}"/>
+							<h:commandButton value="Login" action="#{login.login()}"/>
 						</fieldset>
-					</form>
+					</h:form>
 				</div>
 				<div class="register" id="register" style="float:left">
 					<form>
