@@ -6,7 +6,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import java.math.BigDecimal;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
@@ -14,10 +16,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 /**
  * 
- * @author OakTree BM Stock SQl entity
+ * @author OakTree BM Stock SQl entity, cardinality annotation LP
  */
 
 @Entity
@@ -27,10 +30,10 @@ public class Stock {
 	/**
 	 * The first variable catalogueId has @Id and @GeneratedValue.
 	 * 
-	 * @Id dicatetes that this is the primary key in the database table
-	 * @GeneratedValue allows the Id to know that it is an auto incrimented
+	 * @Id dictates that this is the primary key in the database table
+	 * @GeneratedValue allows the Id to know that it is an auto incremented
 	 *                 number After @Column the name = " " has to match the name
-	 *                 of the table in the datbase so it can be accessed from
+	 *                 of the table in the database so it can be accessed from
 	 *                 the application
 	 * @NotNull means that column cannot be null, therefore always needs a value
 	 *          input
@@ -96,9 +99,10 @@ public class Stock {
 	@NotNull
 	private int supplierId;
 
-	@OneToOne
-	@PrimaryKeyJoinColumn
-	private WishList wishList;
+	
+	private Set<WishList> wishList;
+	
+	
 	
 	/**
 	 * Null constructor for stock
@@ -142,6 +146,17 @@ public class Stock {
 		this.stockStatus = stockStatus;
 		this.warehouseLocation = warehouseLocation;
 		this.supplierId = supplierId;
+	}
+
+	/***************** getters and setters ******************/
+	
+	@OneToMany (mappedBy = "stock", cascade = CascadeType.ALL)
+	public Set<WishList> getWishlist() {
+		return wishList;	
+	}
+	
+	public void setWishList(Set<WishList> wishList) {
+		this.wishList = wishList;
 	}
 
 	/**
