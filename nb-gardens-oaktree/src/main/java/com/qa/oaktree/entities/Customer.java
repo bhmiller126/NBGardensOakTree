@@ -11,11 +11,10 @@ import org.hibernate.annotations.NamedQuery;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Calendar;
-import java.util.List;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column; 
 import javax.persistence.Id;
-import javax.persistence.OneToMany; 
+import javax.persistence.OneToOne; 
 
 /**
  * Customer entity
@@ -32,6 +31,7 @@ import javax.persistence.OneToMany;
 	query = "SELECT * FROM Customer WHERE user_name = :username"
 	)
 })
+
 @Entity
 @Table (name = "Customer")
 public class Customer {
@@ -103,8 +103,8 @@ public class Customer {
 	@Size(min = 5, max = 8)
 	private String addressPostcode;
 		
-	@OneToMany (mappedBy = "customer")
-	private List<WishList> customerWishList; 
+	@OneToOne(mappedBy="customer", cascade=CascadeType.ALL)
+    private WishList wishList;	
 	
 	/**
 	 * Default Null constructor for Customer 
@@ -166,6 +166,22 @@ public class Customer {
 		this.addressPostcode = addressPostcode;
 	}
 
+	/***************** getters and setters *****************/
+
+	/**
+	 * @return the wishList
+	 */
+	public WishList getWishList() {
+		return wishList;
+	}
+
+	/**
+	 * @param wishList the wishList to set
+	 */
+	public void setWishList(WishList wishList) {
+		this.wishList = wishList;
+	}
+	
 	/**
 	 * @return the userName
 	 */
@@ -376,6 +392,7 @@ public class Customer {
 		this.addressPostcode = addressPostcode;
 	}
 
+	/***************** equals and to string *****************/
 	/** 
 	 * Override equals method
 	 * @see java.lang.Object#equals(java.lang.Object)

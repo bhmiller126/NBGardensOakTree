@@ -1,11 +1,17 @@
 package com.qa.oaktree.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.CascadeType;
+
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
+
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.JoinColumn;
 
 /**
@@ -20,44 +26,54 @@ import javax.persistence.JoinColumn;
 @Table(name = "Wishlist")
 public class WishList {
 
-	/**
-	 * This section adds customer username and uses it as a foreign key from the
-	 * customer table with one to one cardinality Added the getter within here
-	 * so the column knows to access getCustomerUserName. The getter will return
-	 * the customer username stored in the database copied the format for this
-	 * from online, sure if this is std practice
-	 * 
-	 * name = "Customer_user_name" should match the name of the table specified
-	 * in the database so it knows what to access the foreign key from 
-	 */
+	@Id
+	@Column(name = "Customer_user_name", nullable = false, updatable = false)
+	@GeneratedValue(generator="foreign-gen")
+    @GenericGenerator(name="foreign-gen", strategy="foreign", 
+    		parameters = @Parameter(name="property", value="customer"))
+	private String customerUserName;
+	
 	@ManyToOne
-	@JoinColumn(name = "Customer_user_name", nullable = false)
+	@JoinColumn(name = "stock", nullable = false, updatable = false)
+	private Stock Stock_catalog_id;
+	
+	@OneToOne
+	@PrimaryKeyJoinColumn
 	private Customer customer;
-
-	/**
-	 * This adds stock catalogue as a foreign key, similar to customer
-	 * username above This is a many to one cardinality The name = has to match
-	 * the name of the table created in the database
-	 */
-	@OneToOne (mappedBy = "stock", cascade = CascadeType.ALL)
-	private Stock stock; 
-
-	/**
-	 * columnDefinition = "int default '1'" this should make sure that if the
-	 * customer does not insert a quanity within the wishlist it will place 1 in
-	 * there instead
-	 */
-	@Column(name = "wish_quantity", columnDefinition = "int default '1'")
+	
+	@Column (name = "wish_quantity")
 	private int wishQuantity;
 
+	public WishList() {
+	}
+	
 	/**
-	 * Default null constructor for wishlist entity 
-	 * quantity has a default setting
-	 * of 1
+	 * @param customerUserName
+	 * @param stock_catalog_id
+	 * @param customer
 	 * @param wishQuantity
 	 */
-	public WishList() {
-		this.wishQuantity = 1;
+	public WishList(String customerUserName, Stock stock_catalog_id, Customer customer, int wishQuantity) {
+		super();
+		this.customerUserName = customerUserName;
+		Stock_catalog_id = stock_catalog_id;
+		this.customer = customer;
+		this.wishQuantity = wishQuantity;
+	}
+
+	/**************** getters and setters ******************/
+	/**
+	 * @return the customerUserName
+	 */
+	public String getCustomerUserName() {
+		return customerUserName;
+	}
+
+	/**
+	 * @return the stock_catalog_id
+	 */
+	public Stock getStock_catalog_id() {
+		return Stock_catalog_id;
 	}
 
 	/**
@@ -68,17 +84,24 @@ public class WishList {
 	}
 
 	/**
-	 * @return the stock
-	 */
-	public Stock getStock() {
-		return stock;
-	}
-
-	/**
 	 * @return the wishQuantity
 	 */
 	public int getWishQuantity() {
 		return wishQuantity;
+	}
+
+	/**
+	 * @param customerUserName the customerUserName to set
+	 */
+	public void setCustomerUserName(String customerUserName) {
+		this.customerUserName = customerUserName;
+	}
+
+	/**
+	 * @param stock_catalog_id the stock_catalog_id to set
+	 */
+	public void setStock_catalog_id(Stock stock_catalog_id) {
+		Stock_catalog_id = stock_catalog_id;
 	}
 
 	/**
@@ -89,53 +112,9 @@ public class WishList {
 	}
 
 	/**
-	 * @param stock the stock to set
-	 */
-	public void setStock(Stock stock) {
-		this.stock = stock;
-	}
-
-	/**
 	 * @param wishQuantity the wishQuantity to set
 	 */
 	public void setWishQuantity(int wishQuantity) {
 		this.wishQuantity = wishQuantity;
-	}
-
-	/** 
-	 * override Object.equals for wishlist
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		WishList other = (WishList) obj;
-		if (customer == null) {
-			if (other.customer != null)
-				return false;
-		} else if (!customer.equals(other.customer))
-			return false;
-		if (stock == null) {
-			if (other.stock != null)
-				return false;
-		} else if (!stock.equals(other.stock))
-			return false;
-		if (wishQuantity != other.wishQuantity)
-			return false;
-		return true;
-	}
-
-	/**
-	 * Override Object.toString for wishlist 
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "WishList [customer=" + customer + ", stock=" + stock + ", wishQuantity=" + wishQuantity + "]";
 	}
 }
