@@ -1,5 +1,6 @@
 package com.qa.oaktree.controllers;
 
+import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 
 /**
@@ -9,7 +10,7 @@ import javax.enterprise.context.SessionScoped;
  *
  */
 @SessionScoped
-public class CurrentUser
+public class CurrentUser implements Serializable
 {
 	private String currentUser = "";
 	
