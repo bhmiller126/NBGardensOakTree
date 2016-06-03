@@ -1,56 +1,51 @@
 package com.qa.oaktree;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
-import com.qa.oaktree.entities.Stock;
-import java.math.BigDecimal;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Singleton;
 
+import org.junit.Test;
+
+import com.qa.oaktree.entities.Product;
+
 /**
  * 
  * @author OakTree BM
- *	Stock Test
+ *Product Test
  */
-@Singleton	
-public class StockTestData {
-	
-/**
+@Singleton
+public class ProductTestData {
+	/**
 	 * This hold our test data for testing that the application runs properly
 	 * 
 	 * 
 	 */
-	
-	private List<Stock> stock;
 
-		public void stockTestData() {
-			stock = new ArrayList<Stock>();
-			stock.add(new Stock (0, new BigDecimal(""), 1, 1, 1, "back order", "G4", 1));
-		}
-		
-		public  List<Stock> getStock() {
-			return stock;
-		}
+	private List<Product> product;
+
+	public void productTestData() {
+		product = new ArrayList<Product>();
+		product.add(new Product (1, "gnome", "green gnome", "Gnomes", "in stock"));
+	}
 	
-	
-	
+	public  List<Product> getProduct() {
+		return product;
+	}
 	@Test public void testGetCatalogueId() {
-		Stock testing = new Stock(); 
+		Product testing = new Product(); 
 		assertNull(testing.getCatalogueId());
 	}
-	@Test public void testGetStockStatus(){
-		Stock testing = new Stock();
-		assertNull(testing.getStockStatus());
+	@Test public void testGetProductStatus(){
+		Product testing = new Product();
+		assertNull(testing.getProductStatus());
 		}
 	
-	@Test public void testSetReorderLevel(){
-		Stock testing = new Stock();
-		testing.setReorderLevel(0);
-		assertEquals(0, testing.getReorderLevel());
+	@Test public void testSetProductDescription(){
+		Product testing = new Product();
+		testing.setProductDescription(" ");
+		assertEquals(" ", testing.getProductDescription());
 		}
-	
-	
 }
-
-

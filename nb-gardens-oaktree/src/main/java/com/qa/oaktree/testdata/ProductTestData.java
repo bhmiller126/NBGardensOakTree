@@ -1,4 +1,4 @@
-package com.qa.oaktree;
+package com.qa.oaktree.testdata;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;

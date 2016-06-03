@@ -1,4 +1,4 @@
-package com.qa.oaktree;
+package com.qa.oaktree.testdata;
 
 import java.math.BigDecimal;
 import java.sql.Date;
