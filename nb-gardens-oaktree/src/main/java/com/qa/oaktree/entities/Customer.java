@@ -5,6 +5,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
+
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Calendar;
@@ -19,6 +22,16 @@ import javax.persistence.OneToMany;
  * @author OakTree LP
  *
  */
+@NamedQueries({
+	@NamedQuery(
+	name = "findByUsernameAndPassword",
+	query = "SELECT * FROM Customer WHERE user_name= :username AND password = :password"
+	),
+	@NamedQuery(
+	name = "findByUsername",
+	query = "SELECT * FROM Customer WHERE user_name = :username"
+	)
+})
 @Entity
 @Table (name = "Customer")
 public class Customer {
