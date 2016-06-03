@@ -7,7 +7,7 @@ import javax.persistence.EntityManagerFactory;
 /**
  * This will be the bean in charge of managing our database connections
  * 
- * @author Barry
+ * @author Angus
  *
  */
 @Singleton
