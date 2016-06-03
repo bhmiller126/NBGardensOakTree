@@ -1,7 +1,6 @@
 package com.qa.oaktree.database;
 
 import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
@@ -15,31 +14,45 @@ import javax.ejb.ConcurrencyManagementType;
 import javax.ejb.Lock;
 import javax.ejb.LockType;
 import javax.ejb.Singleton;
-/*
+
 @Singleton
 @ConcurrencyManagement(ConcurrencyManagementType.CONTAINER)
 public class MongoClientProvider
 {	
-	protected MongoClient mongoClient = null;
+	private final String mongoIpAddress = "192.168.1.5";
+	private final Integer mongoPortNumber = 28018;
+	private MongoClient mongoClient = null;
+	
+	public MongoClientProvider()
+	{
+		try {
+			init();
+			}
+		catch (UnknownHostException e)
+		{
+			System.err.println("Mongo is not active");
+			e.printStackTrace();
+		}
+	}
 	
 	@Lock(LockType.READ)
-	//public MongoClient getMongoClient()
-	//	{
-	//		return mongoClient;
-	//	}
+	public MongoClient getMongoClient()
+		{
+			return mongoClient;
+		}
 	
 	@PostConstruct
-	public void init () 
+	public void init () throws UnknownHostException
 	{	
-		final String mongoIpAddress = "192.168.1.5";
-		final Integer mongoPortNumber = 28018;
 		mongoClient = new MongoClient(new ServerAddress(mongoIpAddress, mongoPortNumber));
-		
-		/*
-		DB db = mongo.getDB("products");
-		DBCollection collection = db.getCollection("product");
-		showOutdoorLiving(collection);	
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	private static void showActiveProducts(DBCollection collection)
 	{
@@ -124,11 +137,6 @@ public class MongoClientProvider
 			System.out.println(cursor.next());
 		}
 	}
-	
-	private static void closeMongoConnection()
-	{
-		
-	}
 }
-*/
+
 
