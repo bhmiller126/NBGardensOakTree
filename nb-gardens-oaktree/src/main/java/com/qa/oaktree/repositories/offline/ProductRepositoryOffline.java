@@ -6,7 +6,7 @@ import javax.inject.Inject;
 
 import com.qa.oaktree.entities.Product;
 import com.qa.oaktree.repositories.ProductRepository;
-import com.qa.oaktree.ProductTestData;
+import com.qa.oaktree.testdata.ProductTestData;
 
 /**
  * This is the default implementation of the customer repository interface.
