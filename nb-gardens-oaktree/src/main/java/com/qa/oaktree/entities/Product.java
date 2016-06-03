@@ -17,127 +17,137 @@ public class Product
 {
 	@Id
 	@Column (name = "catalogue_id", nullable = false, length = 225)
-	private int catalogue_id;
+	private int catalogueId;
 	
 	@Column (name = "product_name", nullable = false, length = 225)
 	@NotNull
 	@Size(min = 2, max = 225)
-	private String product_name;
+	private String productName;
 	
 	@Column (name = "product_description", nullable = false, length = 225)
 	@NotNull
 	@Size(min = 2, max = 225)
-	private String product_description;
+	private String productDescription;
 	
 	@Column (name =  "product_category", nullable = false, length = 225)
 	@NotNull
 	@Size(min = 2, max = 225)
-	private String product_category;
+	private String productCategory;
 	
 	@Column (name = "product_status", nullable = false, length = 225)
 	@NotNull
 	@Size(min = 2, max = 225)
-	private String product_status;
+	private String productStatus;
 
 	/**
 	 * Null constructor for Product 
+	 * @param string4 
+	 * @param string3 
+	 * @param string2 
+	 * @param sinttring 
+	 * @param i 
 	 */
 	public Product() {
-		this.catalogue_id = 0;
-		this.product_name = "";
-		this.product_description = "";
-		this.product_category = "";
-		this.product_status = "";
+		this.catalogueId = 0;
+		this.productName = "";
+		this.productDescription = "";
+		this.productCategory = "";
+		this.productStatus = "";
 	}
 	
 	/**
 	 * Full Constructor for Product entity. 
+	 * @param catalogueId 
+	 * @param productCategory 
+	 * @param productDescription 
+	 * @param productName 
+	 * @param productStatus 
  	 * @param catalogue_id, product's number in catalogue
 	 * @param product_name, product's name
 	 * @param product_description, a description of the product
 	 * @param product_category, product's category grouping it with like products
 	 * @param product_status, product's status as to whether it is discontinued, on order, in stock or back order
 	 */
-	public Product(int catalogue_id, String product_name, String product_description, String product_category, String product_status)
+	public Product(int catalogueId, String productCategory, String productDescription, String productName, String productStatus)
 	{
-		this.catalogue_id = catalogue_id;
-		this.product_name = product_name;
-		this.product_description = product_description;
-		this.product_category = product_category;
-		this.product_status = product_status;
+		this.catalogueId = catalogueId;
+		this.productName = productName;
+		this.productDescription = productDescription;
+		this.productCategory = productCategory;
+		this.productStatus = productStatus;
 	}
 
 	/**
 	 * getter method for product's status.
 	 * @return product's status
 	 */
-	public String getProduct_status()
-	{return product_status;}
+	public String getProductStatus()
+	{return productStatus;}
 
 	/**
 	 * setter method for product's status.
 	 * @param product_status
 	 */
-	public void setProduct_status(String product_status)
-	{this.product_status = product_status;}
+	public void setProductStatus(String product_status)
+	{this.productStatus = product_status;}
 
 	/**
 	 * getter method for product's catalogue id.
 	 * This variable is the Primary Key.
 	 * @return catalogue_id
 	 */
-	public int getCatalogue_id() 
-	{return catalogue_id;}
+	public int getCatalogueId() 
+	{return catalogueId;}
 
 	/**
 	 * setter method for product's catalogue id.
 	 * This variable is the Primary Key
 	 * @param catalogue_id
 	 */
-	public void setCatalogue_id(int catalogue_id) 
-	{this.catalogue_id = catalogue_id;}
+	public void setCatalogueId(int catalogue_id) 
+	{this.catalogueId = catalogue_id;}
 
 	/**
 	 * getter method for the product's name.
 	 * @return product_name
 	 */
-	public String getProduct_name() 
-	{return product_name;}
+	public String getProductName() 
+	{return productName;}
 
 	/**
 	 * setter method for the product's name.
 	 * @param product_name
 	 */
-	public void setProduct_name(String product_name) 
-	{this.product_name = product_name;}
+	public void setProductName(String product_name) 
+	{this.productName = product_name;}
 
 	/**
 	 * getter method for the product's description.
 	 * @return product_description
 	 */
-	public String getProduct_description() 
-	{return product_description;}
+	public String getProductDescription() 
+	{return productDescription;}
 
 	/**
 	 * setter method for the product's description.
 	 * @param product_description
 	 */
-	public void setProduct_description(String product_description) 
-	{this.product_description = product_description;}
+	public void setProductDescription(String product_description) 
+	{this.productDescription = product_description;}
 
 	/**
 	 * getter method for the product's category.
 	 * @return product_category
 	 */
-	public String getProduct_category()
-	{return product_category;}
+	public String getProductCategory()
+	{return productCategory;}
 
 	/**
 	 * setter method for the product's description.
 	 * @param product_category
 	 */
-	public void setProduct_category(String product_category) 
-	{this.product_category = product_category;}
+	public void setProductCategory(String product_category) 
+	{this.productCategory = product_category;}
 
 	/**
 	 * Override object equals method for Product entity
@@ -146,7 +156,7 @@ public class Product
 	 */
 	public boolean equals(Product other)
 	{
-		if(this.catalogue_id == other.getCatalogue_id() && this.product_name.equals(other.getProduct_name()) && this.product_description.equals(other.getProduct_description()) && this.product_category.equals(other.getProduct_category()) && this.product_status.equals(other.getProduct_status()))
+		if(this.catalogueId == other.getCatalogueId() && this.productName.equals(other.getProductCategory()) && this.productDescription.equals(other.getProductDescription()) && this.productCategory.equals(other.getProductCategory()) && this.productStatus.equals(other.getProductStatus()))
 		{return true;}
 		else
 		{return false;}
@@ -158,8 +168,8 @@ public class Product
 	 */
 	@Override
 	public String toString() {
-		return "Product [catalogue_id=" + catalogue_id + ", product_name=" + product_name + ", product_description="
-				+ product_description + ", product_category=" + product_category + ", product_status=" + product_status
+		return "Product [catalogue_id=" + catalogueId + ", product_name=" + productName + ", product_description="
+				+ productDescription + ", product_category=" + productCategory + ", product_status=" + productStatus
 				+ "]";
 	}
 	
