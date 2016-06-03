@@ -1,7 +1,0 @@
-db.createUser(
-{
-user: "WarehouseManager",
-pwd: "warehousemanager",
-roles: [{role: "read", db: "products"}, {role: "readWrite", db: "addresses"}]
-}
-)
