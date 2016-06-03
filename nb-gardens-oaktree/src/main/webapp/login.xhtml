@@ -7,28 +7,30 @@
 
 	<ui:define name="main-content">
 		<!-- YOUR CONTENT GOES HERE -->
-		<div class="w3-container w3-half w3-margin-bottom" id="login">
-			<h:form>
-				<fieldset class="w3-card-2" style="min-height:0">
-					<h:message class="error" value="#{login.error}"/>
-					<h:outputLabel class="w3-label w3-text-black" value="Username: "/>
-					<h:inputText class="w3-input w3-border" value="#{login.username}"/>
-					<h:outputLabel class="w3-label w3-text-black" value="Password: "/>
-					<h:inputSecret class="w3-input w3-border" value="#{login.password}"/>
-					<h:commandButton class="w3-btn" value="Login" action="#{login.login()}"/>
-				</fieldset>
-			</h:form>
-		</div>
-		<div class="w3-container w3-half" id="register">
-			<form>
-				<fieldset class="w3-card-2" style="min-height:0">
-					<h2>New Customer?</h2>
-					<h6>Want to Save Orders?</h6>
-					<h6>View Order History?</h6>
-					<h6>Save Products to a Wishlist?</h6>
-					<p><button class="w3-btn" onclick="">Register Now</button></p>
-				</fieldset>
-			</form>				
+		<div class="w3-container">
+			<div class="w3-container w3-half w3-margin-bottom" id="login">
+				<h:form>
+					<fieldset class="w3-card-2" style="min-height:0">
+						<h:message for="login" value="#{login.error}"/>
+						<h:outputLabel class="w3-label w3-text-black" id="username" value="Username: "/>
+						<h:inputText class="w3-input w3-border" value="#{login.username}"/>
+						<h:outputLabel class="w3-label w3-text-black" value="Password: "/>
+						<h:inputSecret class="w3-input w3-border" id="password" value="#{login.password}"/>
+						<br/><h:commandButton class="w3-btn" id="login" value="Login" action="#{login.login()}"/>
+					</fieldset>
+				</h:form>
+			</div>
+			<div class="w3-container w3-half w3-margin-bottom" id="register">
+				<form>
+					<fieldset class="w3-card-2" style="min-height:0">
+						<h2>New Customer?</h2>
+						<h6>Want to Save Orders?</h6>
+						<h6>View Order History?</h6>
+						<h6>Save Products to a Wishlist?</h6>
+						<p><button class="w3-btn" onclick="">Register Now</button></p>
+					</fieldset>
+				</form>				
+			</div>
 		</div>
 	</ui:define>
 </ui:composition>
