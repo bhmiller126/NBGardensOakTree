@@ -21,7 +21,7 @@ public class SalesOrder {
 	private int salesId; 
 	
 	@Column (name = "Customer_user_name")
-	private String customerUserName;
+	private Customer customer;
 	
 	@Column (name = "Address_line_1")
 	private String addressLine1; 
@@ -34,10 +34,7 @@ public class SalesOrder {
 	 * Default null constructor for sales order
 	 */
 	public SalesOrder() {
-		this.salesId = -1;
-		this.customerUserName = "";
-		this.addressLine1 = "";
-		this.addressPostcode = "";	
+	
 	}
 
 	/**
@@ -47,10 +44,10 @@ public class SalesOrder {
 	 * @param addressLine1 String line 1 of the delivery address
 	 * @param addressPostcode String postcode of the delivery address
 	 */
-	public SalesOrder(int salesId, String customerUserName, String addressLine1, String addressPostcode) {
+	public SalesOrder(int salesId, Customer customerUserName, String addressLine1, String addressPostcode) {
 		super();
 		this.salesId = salesId;
-		this.customerUserName = customerUserName;
+		this.customer = customerUserName;
 		this.addressLine1 = addressLine1;
 		this.addressPostcode = addressPostcode;
 	}
@@ -65,8 +62,8 @@ public class SalesOrder {
 	/**
 	 * @return the customerUserName
 	 */
-	public String getCustomerUserName() {
-		return customerUserName;
+	public Customer getCustomer() {
+		return customer;
 	}
 
 	/**
@@ -93,8 +90,8 @@ public class SalesOrder {
 	/**
 	 * @param customerUserName the customerUserName to set
 	 */
-	public void setCustomerUserName(String customerUserName) {
-		this.customerUserName = customerUserName;
+	public void setCustomerUserName(Customer customerUserName) {
+		this.customer = customerUserName;
 	}
 
 	/**
@@ -134,10 +131,10 @@ public class SalesOrder {
 				return false;
 		} else if (!addressPostcode.equals(other.addressPostcode))
 			return false;
-		if (customerUserName == null) {
-			if (other.customerUserName != null)
+		if (customer == null) {
+			if (other.customer != null)
 				return false;
-		} else if (!customerUserName.equals(other.customerUserName))
+		} else if (!customer.equals(other.customer))
 			return false;
 		if (salesId != other.salesId)
 			return false;
@@ -150,7 +147,7 @@ public class SalesOrder {
 	 */
 	@Override
 	public String toString() {
-		return "SalesOrder [salesId=" + salesId + ", customerUserName=" + customerUserName + ", addressLine1="
+		return "SalesOrder [salesId=" + salesId + ", customerUserName=" + customer + ", addressLine1="
 				+ addressLine1 + ", addressPostcode=" + addressPostcode + "]";
 	}
 

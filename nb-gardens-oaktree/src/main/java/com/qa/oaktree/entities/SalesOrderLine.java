@@ -24,13 +24,13 @@ public class SalesOrderLine {
 	@ManyToOne
 	@JoinColumn(name = "Sales_Order_sales_id", nullable = false)
 	@NotNull
-	private int salesOrderID;
+	private SalesOrder salesOrder;
 
 	@Id
 	@ManyToOne
 	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
 	@NotNull
-	private int productID;
+	private Product product;
 
 	@Column(name = "sales_quantity")
 	@NotNull
@@ -47,13 +47,8 @@ public class SalesOrderLine {
 	 * OrderID must be updated when order is committed to the database and given an ID
 	 * The primary key fields must be passed as they cannot be modified later
 	 */
-	public SalesOrderLine(int product) {
-		super();
-		this.salesOrderID = -1;
-		this.productID = product;
-		this.quantity = 0;
-		this.unitCost = new BigDecimal(0);
-		this.lineTotal = new BigDecimal(0);
+	public SalesOrderLine(Product product) {
+		this.product = product;
 	}
 
 	/**
@@ -68,10 +63,10 @@ public class SalesOrderLine {
 	 * @param unitCost
 	 *            the saleprice per item
 	 */
-	public SalesOrderLine(int salesorder, int product, int quantity, BigDecimal unitCost) {
+	public SalesOrderLine(SalesOrder salesorder, Product product, int quantity, BigDecimal unitCost) {
 		super();
-		this.salesOrderID = salesorder;
-		this.productID = product;
+		this.salesOrder = salesorder;
+		this.product = product;
 		this.quantity = quantity;
 		this.unitCost = unitCost;
 		this.lineTotal = unitCost.multiply(BigDecimal.valueOf(quantity));  //quantity * unitCost;
@@ -82,8 +77,8 @@ public class SalesOrderLine {
 	 * 
 	 * @return the sales order that contains this sales orderline
 	 */
-	public int getSalesOrder() {
-		return this.salesOrderID;
+	public SalesOrder getSalesOrder() {
+		return this.salesOrder;
 	}
 	
 
@@ -92,13 +87,10 @@ public class SalesOrderLine {
 	 * @param salesOrderID
 	 * @return true if the requested change was successful 
 	 */
-	public boolean setSalesOrder(int salesOrderID){
-		if (this.salesOrderID==-1){
-			this.salesOrderID = salesOrderID;
-			return true;
-		}else{
-			return false;
-		}
+	public void setSalesOrder(SalesOrder salesOrderID){
+		
+			this.salesOrder = salesOrderID;
+			
 		
 	}
 
@@ -107,8 +99,8 @@ public class SalesOrderLine {
 	 * 
 	 * @return
 	 */
-	public int getProduct() {
-		return productID;
+	public Product getProduct() {
+		return this.product;
 	}
 
 	/**
@@ -160,20 +152,18 @@ public class SalesOrderLine {
 		this.lineTotal = unitCost.multiply(BigDecimal.valueOf(quantity));
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((lineTotal == null) ? 0 : lineTotal.hashCode());
-		result = prime * result + productID;
+		result = prime * result + ((product == null) ? 0 : product.hashCode());
 		result = prime * result + quantity;
-		result = prime * result + salesOrderID;
+		result = prime * result + ((salesOrder == null) ? 0 : salesOrder.hashCode());
 		result = prime * result + ((unitCost == null) ? 0 : unitCost.hashCode());
 		return result;
 	}
+
 
 	/** Overridden equals method that returns true only if all the fields of this entity are equal in value.
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -192,11 +182,17 @@ public class SalesOrderLine {
 				return false;
 		} else if (!lineTotal.equals(other.lineTotal))
 			return false;
-		if (productID != other.productID)
+		if (product == null) {
+			if (other.product != null)
+				return false;
+		} else if (!product.equals(other.product))
 			return false;
 		if (quantity != other.quantity)
 			return false;
-		if (salesOrderID != other.salesOrderID)
+		if (salesOrder == null) {
+			if (other.salesOrder != null)
+				return false;
+		} else if (!salesOrder.equals(other.salesOrder))
 			return false;
 		if (unitCost == null) {
 			if (other.unitCost != null)
@@ -205,6 +201,11 @@ public class SalesOrderLine {
 			return false;
 		return true;
 	}
+
+	
+
+	
+	
 
 
 	
