@@ -1,0 +1,4 @@
+<beans>
+	<!-- Uncomment the following line to switch to the alternative implementation of the customer repository interface -->
+	<!--<alternative>com.qa.example.repositories.sql.CustomerReopsitorySQL</alternative>-->
+</beans>
