@@ -1,4 +1,4 @@
-package com.qa.oaktree.repositories.SQL;
+package com.qa.oaktree.repositories.sql;
 
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Alternative;

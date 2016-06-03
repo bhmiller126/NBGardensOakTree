@@ -1,4 +1,4 @@
-package com.qa.oaktree.repositories;
+package com.qa.oaktree.repositories.offline;
 
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
