@@ -4,9 +4,9 @@ import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
+import com.qa.oaktree.LoginTestData;
 import com.qa.oaktree.entities.Customer;
 import com.qa.oaktree.repositories.CustomerRepository;
-import com.qa.oaktree.util.LoginTestData;
 
 /**
  * This is the default implementation of the customer repository interface.
