@@ -6,6 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 import org.hibernate.annotations.Parameter;
 
 import javax.persistence.Column;
@@ -22,6 +24,12 @@ import javax.persistence.JoinColumn;
  * List. 
  * 
  */
+@NamedQueries({
+	@NamedQuery(
+			name = "displayWishlist",
+			query = "SELECT * from Wishlist WHERE user_name = :username"
+			)
+})
 @Entity
 @Table(name = "Wishlist")
 public class WishList {
