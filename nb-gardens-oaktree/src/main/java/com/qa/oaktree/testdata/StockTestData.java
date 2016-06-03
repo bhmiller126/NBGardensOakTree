@@ -66,7 +66,41 @@ public class StockTestData {
 		Stock testing = new Stock(); 
 		assertNull(testing.getWarehouseLocation());
 	}
+	@Test 
+	public void testSetSalesPrice() {
+		Stock testing = new Stock ();
+		testing.setSalePrice(null);
+		assertEquals(null, testing.getSalePrice());
+	}
 	@Test
+	public void testGetCurrentQuantity() {
+		Stock testing = new Stock (); 
+		assertNull(testing.getCurrentQuantity());
+	}
+	@Test
+	public void testSetReorderQuantity() {
+		Stock testing = new Stock ();
+		testing.setReorderQuantity(0);
+		assertEquals(0, testing.getReorderQuantity());
+	}
+	@Test
+	public void testGetReorderQuantity() {
+		Stock testing = new Stock (); 
+		assertNull(testing.getReorderQuantity()); 
+	}
+	@Test
+	public void testGetReOrderLevel() {
+		Stock testing = new Stock (); 
+		assertNull (testing.getReorderLevel()); 
+	}
+	@Test 
+	public void testSetReorderLevel() {
+		Stock testing = new Stock (); 
+		testing.setReorderLevel(0);
+		assertEquals(0, testing.getReorderLevel());
+	}
 }
+	
+	
 
 
