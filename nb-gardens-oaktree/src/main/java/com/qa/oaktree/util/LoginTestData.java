@@ -14,11 +14,11 @@ import com.qa.oaktree.entities.Customer;
  */
 
 @Singleton
-public class TestData 
+public class LoginTestData 
 {
 	private List<Customer> customers;
 	
-	public TestData()
+	public LoginTestData()
 	{
 		customers = new ArrayList<Customer>();
 		customers.add(new Customer("jbloggs","Mr","Joe","Bloggs","password!",new Date(29221),true,new BigDecimal("10000"),"jbloggs@jbloggs.com","01234 567890","Active","Question!","Answer!","1 any street","aa1 1aa"));

@@ -7,32 +7,28 @@
 
 	<ui:define name="main-content">
 		<!-- YOUR CONTENT GOES HERE -->
-		<div class="main-container-login" >
-			<div id="login">	
-				<div class="login" id="login" style="float:left">
-					<h:form>
-						<fieldset>
-							<h:message class="error" value="#{login.error}"/>
-							<h:outputLabel value="Username: "/>
-							<h:inputText valye="#{login.username}"/>
-							<h:outputLabel value="Password: "/>
-							<h:inputSecret value="#{login.password}"/>
-							<h:commandButton value="Login" action="#{login.login()}"/>
-						</fieldset>
-					</h:form>
-				</div>
-				<div class="register" id="register" style="float:left">
-					<form>
-						<fieldset>
-							<h2>New Customer?</h2>
-							<h6>Want to Save Orders?</h6>
-							<h6>View Order History?</h6>
-							<h6>Save Products to a Wishlist?</h6>
-							<p><button class="form w3-btn" onclick="">Register Now</button></p>
-						</fieldset>
-					</form>				
-				</div>
-			</div>
+		<div class="w3-container w3-half w3-margin-bottom" id="login">
+			<h:form>
+				<fieldset class="w3-card-2" style="min-height:0">
+					<h:message class="error" value="#{login.error}"/>
+					<h:outputLabel class="w3-label w3-text-black" value="Username: "/>
+					<h:inputText class="w3-input w3-border" value="#{login.username}"/>
+					<h:outputLabel class="w3-label w3-text-black" value="Password: "/>
+					<h:inputSecret class="w3-input w3-border" value="#{login.password}"/>
+					<h:commandButton class="w3-btn" value="Login" action="#{login.login()}"/>
+				</fieldset>
+			</h:form>
+		</div>
+		<div class="w3-container w3-half" id="register">
+			<form>
+				<fieldset class="w3-card-2" style="min-height:0">
+					<h2>New Customer?</h2>
+					<h6>Want to Save Orders?</h6>
+					<h6>View Order History?</h6>
+					<h6>Save Products to a Wishlist?</h6>
+					<p><button class="w3-btn" onclick="">Register Now</button></p>
+				</fieldset>
+			</form>				
 		</div>
 	</ui:define>
 </ui:composition>

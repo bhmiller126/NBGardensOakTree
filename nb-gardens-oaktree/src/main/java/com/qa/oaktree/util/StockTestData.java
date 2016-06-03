@@ -1,4 +1,4 @@
-package com.qa.oaktree;
+package com.qa.oaktree.util;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
