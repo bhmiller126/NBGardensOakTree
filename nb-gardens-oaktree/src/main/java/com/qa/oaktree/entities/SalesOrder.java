@@ -1,35 +1,48 @@
 package com.qa.oaktree.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
  * 
  * @author OakTree LP
- * Sales order entity
+ * Sales order entity, used to capture the details of an order made by a customer.
  */
 @Entity
 @Table (name = "sales_order")
 public class SalesOrder {
 
-	@Id @GeneratedValue
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column (name = "sales_id")
 	private int salesId; 
 	
-	@ManyToOne
-	@JoinColumn(name = "user_name", insertable = false, updatable = false)
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Customer customer;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "SalesOrder")
+	private Set<SalesOrderEvent> salesEvent = new HashSet<SalesOrderEvent>();
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "SalesOrder")
+	private Set<SalesOrderLine> salesLine = new HashSet<SalesOrderLine>();
 	
 	@Column (name = "Address_line_1")
 	private String addressLine1; 
 	
 	@Column (name = "Address_postcode")
 	private String addressPostcode; 
+	
+	
+	///////////////////////////////
 	
 	
 	/**

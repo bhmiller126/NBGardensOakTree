@@ -1,12 +1,15 @@
 package com.qa.oaktree.entities;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull; 
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter; 
 
 /**
  * 
@@ -16,34 +19,24 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table (name = "sales_order_return")
 public class SalesOrderReturn {
-	@Id @GeneratedValue
+	@Id @GeneratedValue(generator = "salesGenerator") //PK auto generator for sales orders
+	@GenericGenerator(name = "salesGenerator", strategy = "foreign", 
+			parameters = { @Parameter(value = "salesOrder", name = "property")})
 	private int sales_id;
 	
 	private Date date; 
 	
 	private String reason;	
 	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "sales_id")
 	private SalesOrder salesOrder;
 	
 	////////////////////////
-	
-	
-
-	@JoinColumn (name = "Sales_Order_sales_id")
-	public SalesOrder getSalesOrder() {
-		return salesOrder;
-	}
-	@NotNull
- 
-
-
-
 	/**
 	 * Default null constructor for sales order return
 	 */
-	public SalesOrderReturn() {
-
-	}
+	public SalesOrderReturn() {}
 
 	/**
 	 * Full constructor for sales order return

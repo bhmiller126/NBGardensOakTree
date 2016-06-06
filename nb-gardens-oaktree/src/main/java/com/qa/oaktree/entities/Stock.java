@@ -14,13 +14,13 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 /**
  * 
- * @author OakTree BM Stock SQl entity, cardinality annotation LP
+ * @author OakTree BM Stock SQl entity, cardinality annotation by LP
  */
 
 @Entity
@@ -44,33 +44,31 @@ public class Stock {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "catalogue_id", nullable = false)
 	@NotNull
-	int catalogueId;
+	private int catalogueId;
 
 	@Column(name = "sale_price", nullable = false)
-	@NotNull
-	BigDecimal salePrice;
+	private BigDecimal salePrice;
 
 	@Column(name = "current_quantity", nullable = false)
-	@NotNull
-	int currentQuantity;
+	private int currentQuantity;
 
 	@Column(name = "reorder_level", nullable = false)
-	@NotNull
-	int reorderLevel;
+	private int reorderLevel;
 
 	@Column(name = "re_order_quantity", nullable = false)
-	@NotNull
-	int reorderQuantity;
+	private int reorderQuantity;
 
 	/**
 	 * Stock status column, has @Size parameter This states that it must have a
 	 * minimum of one character and a maximum of 30
 	 */
-
 	@Column(name = "stock_status", length = 30, nullable = false)
 	@NotNull
 	@Size(min = 1, max = 30)
 	String stockStatus;
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	private SalesOrderLine salesLine;	
 
 	/**
 	 * warehouse location column, has @Size parameter This states that it must

@@ -1,36 +1,50 @@
 package com.qa.oaktree.entities;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
+
 /**
  * Sales Order Line Entity
- * 
- * @author Angus
+ * @author OakTree Angus, cardinality mapped by Laurence.
+ * Entity to map stock items to the customers order and adding quantity and unit cost.
  *
  */
 @Entity
 @Table(name = "Sales_Order_Line")
 public class SalesOrderLine {
 
-	@Id
-	@ManyToOne
-	@JoinColumn(name = "Sales_Order_sales_id", nullable = false)
-	@NotNull
+	@Id @GeneratedValue (generator = "salesGenerator") //PK auto generator for sales orders
+	@GenericGenerator(name = "salesGenerator", strategy = "foreign", 
+			parameters = { @Parameter(value = "salesOrder", name = "property")})
+	@Column (name = "sales_Id")
+	private int salesId;
+
+	@Id @GeneratedValue (generator = "stockGenerator") //PK auto generator for sales orders
+	@GenericGenerator(name = "stockGenerator", strategy = "foreign", 
+			parameters = { @Parameter(value = "stock", name = "property")})
+	@Column (name = "catalogue_Id")
+	private int catalogueId;
+
+	@ManyToOne (cascade = CascadeType.ALL)
 	private SalesOrder salesOrder;
 
 	@Id
-	@ManyToOne
-	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
-	@NotNull
-	private Stock product;
+	@OneToMany (cascade = CascadeType.ALL, mappedBy = "SalesOrderLine")
+	private Set<Stock> stock = new HashSet<Stock>();
 
 	@Column(name = "sales_quantity")
 	@NotNull
@@ -43,12 +57,12 @@ public class SalesOrderLine {
 	private BigDecimal lineTotal;
 
 	/**
-	 * Default SalesOrderLine constructor that creates a empty orderline for a given product and order.
+	 * Default SalesOrderLine constructor that creates a empty orderline for a given stock and order.
 	 * OrderID must be updated when order is committed to the database and given an ID
 	 * The primary key fields must be passed as they cannot be modified later
 	 */
-	public SalesOrderLine(Stock product) {
-		this.product = product;
+	public SalesOrderLine(Set<Stock> stock) {
+		this.stock = stock;
 	}
 
 	/**
@@ -56,17 +70,17 @@ public class SalesOrderLine {
 	 * 
 	 * @param salesorder
 	 *            The order ID for the orderline
-	 * @param product
-	 *            the product ID on the orderline
+	 * @param stock
+	 *            the stock ID on the orderline
 	 * @param quantity
-	 *            the quantity of the product ordered
+	 *            the quantity of the stock ordered
 	 * @param unitCost
 	 *            the saleprice per item
 	 */
-	public SalesOrderLine(SalesOrder salesorder, Stock product, int quantity, BigDecimal unitCost) {
+	public SalesOrderLine(SalesOrder salesorder, Set<Stock> stock, int quantity, BigDecimal unitCost) {
 		super();
 		this.salesOrder = salesorder;
-		this.product = product;
+		this.stock = stock;
 		this.quantity = quantity;
 		this.unitCost = unitCost;
 		this.lineTotal = unitCost.multiply(BigDecimal.valueOf(quantity));  //quantity * unitCost;
@@ -95,17 +109,17 @@ public class SalesOrderLine {
 	}
 
 	/**
-	 * returns the product object on the orderline
+	 * returns the stock object on the orderline
 	 * 
 	 * @return
 	 */
-	public Stock getProduct() {
-		return this.product;
+	public Set<Stock> getstock() {
+		return this.stock;
 	}
 
 	/**
-	 * return Product quantity field
-	 * @return the product quantity ordered
+	 * return stock quantity field
+	 * @return the stock quantity ordered
 	 */
 	public int getQuantity() {
 		return quantity;
@@ -113,7 +127,7 @@ public class SalesOrderLine {
 
 	/**
 	 * update the quantity field and lineTotal fields for the order line 
-	 * @param quantity the new quantity for the product
+	 * @param quantity the new quantity for the stock
 	 */
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
@@ -121,16 +135,16 @@ public class SalesOrderLine {
 	}
 
 	/**
-	 * return the price paid per product on this order
-	 * @return the unit cost for the product
+	 * return the price paid per stock on this order
+	 * @return the unit cost for the stock
 	 */
 	public BigDecimal getUnitCost() {
 		return unitCost;
 	}
 
 	/**
-	 * update the price per product value and update the order line total to match the new price and quantity
-	 * @param unitCost the new unit cost for the product
+	 * update the price per stock value and update the order line total to match the new price and quantity
+	 * @param unitCost the new unit cost for the stock
 	 */
 	public void setUnitCost(BigDecimal unitCost) {
 		this.unitCost = unitCost;
@@ -157,7 +171,7 @@ public class SalesOrderLine {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((lineTotal == null) ? 0 : lineTotal.hashCode());
-		result = prime * result + ((product == null) ? 0 : product.hashCode());
+		result = prime * result + ((stock == null) ? 0 : stock.hashCode());
 		result = prime * result + quantity;
 		result = prime * result + ((salesOrder == null) ? 0 : salesOrder.hashCode());
 		result = prime * result + ((unitCost == null) ? 0 : unitCost.hashCode());
@@ -182,10 +196,10 @@ public class SalesOrderLine {
 				return false;
 		} else if (!lineTotal.equals(other.lineTotal))
 			return false;
-		if (product == null) {
-			if (other.product != null)
+		if (stock == null) {
+			if (other.stock != null)
 				return false;
-		} else if (!product.equals(other.product))
+		} else if (!stock.equals(other.stock))
 			return false;
 		if (quantity != other.quantity)
 			return false;

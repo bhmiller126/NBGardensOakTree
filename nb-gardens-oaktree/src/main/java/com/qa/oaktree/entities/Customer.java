@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne; 
 
 /**
- * Customer entity
+ * Customer entity to capture customers information
  * @author OakTree LP
  *
  */
@@ -106,12 +106,12 @@ public class Customer {
 	@NotNull
 	@Size(min = 5, max = 8)
 	private String addressPostcode;
-		
-	@OneToOne(mappedBy="customer", cascade=CascadeType.ALL)
-    private WishList wishList;	
-	
-	private Set<SalesOrder> salesOrderList = new HashSet<SalesOrder>();
 
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
+	private Set<SalesOrder> salesOrder = new HashSet<SalesOrder>();
+	
+	//////////////////////////////
+	
 	
 	/**
 	 * Default Null constructor for Customer 
@@ -174,29 +174,6 @@ public class Customer {
 	}
 
 	/***************** getters and setters *****************/
-
-	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-	public Set<SalesOrder> getSalesOrderList() {
-		return salesOrderList;
-	}
-	public void setCategoryItemRelationships(
-			Set<SalesOrder> salesOrderList) {
-		this.salesOrderList = salesOrderList;
-	}
-
-	/**
-	 * @return the wishList
-	 */
-	public WishList getWishList() {
-		return wishList;
-	}
-
-	/**
-	 * @param wishList the wishList to set
-	 */
-	public void setWishList(WishList wishList) {
-		this.wishList = wishList;
-	}
 	
 	/**
 	 * @return the userName
