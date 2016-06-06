@@ -11,9 +11,13 @@ import org.hibernate.annotations.NamedQuery;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Calendar;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column; 
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne; 
 
 /**
@@ -106,6 +110,9 @@ public class Customer {
 	@OneToOne(mappedBy="customer", cascade=CascadeType.ALL)
     private WishList wishList;	
 	
+	private Set<SalesOrder> salesOrderList = new HashSet<SalesOrder>();
+
+	
 	/**
 	 * Default Null constructor for Customer 
 	 */
@@ -167,6 +174,15 @@ public class Customer {
 	}
 
 	/***************** getters and setters *****************/
+
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+	public Set<SalesOrder> getSalesOrderList() {
+		return salesOrderList;
+	}
+	public void setCategoryItemRelationships(
+			Set<SalesOrder> salesOrderList) {
+		this.salesOrderList = salesOrderList;
+	}
 
 	/**
 	 * @return the wishList

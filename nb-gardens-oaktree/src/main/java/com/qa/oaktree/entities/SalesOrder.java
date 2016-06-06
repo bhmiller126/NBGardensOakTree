@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -12,15 +14,15 @@ import javax.persistence.Table;
  * Sales order entity
  */
 @Entity
-@Table (name = "Sales_Order")
+@Table (name = "sales_order")
 public class SalesOrder {
 
-	@Id
-	@GeneratedValue
+	@Id @GeneratedValue
 	@Column (name = "sales_id")
 	private int salesId; 
 	
-	@Column (name = "Customer_user_name")
+	@ManyToOne
+	@JoinColumn(name = "user_name", insertable = false, updatable = false)
 	private Customer customer;
 	
 	@Column (name = "Address_line_1")

@@ -1,36 +1,42 @@
 package com.qa.oaktree.entities;
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull; 
 
 /**
  * 
  * @author OakTree LP
- * Sales Order Return class
+ * Sales Order Return class. Used for the return information of a customers return order, partial or complete.
  */
 @Entity
-@Table (name = "Sales_Order_Return")
+@Table (name = "sales_order_return")
 public class SalesOrderReturn {
-	@Id
-	@OneToOne
+	@Id @GeneratedValue
+	private int sales_id;
+	
+	private Date date; 
+	
+	private String reason;	
+	
+	private SalesOrder salesOrder;
+	
+	////////////////////////
+	
+	
+
 	@JoinColumn (name = "Sales_Order_sales_id")
 	public SalesOrder getSalesOrder() {
 		return salesOrder;
 	}
 	@NotNull
-	private SalesOrder salesOrder; 
+ 
 
-	@Column (name = "date")
-	private Date date; 
-	
-	@Column (name = "reason")
-	private String reason;
+
 
 	/**
 	 * Default null constructor for sales order return
