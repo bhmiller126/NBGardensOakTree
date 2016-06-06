@@ -184,7 +184,6 @@ DROP TABLE IF EXISTS `mydb`.`Transaction` ;
 CREATE TABLE IF NOT EXISTS `mydb`.`Transaction` (
   `transaction_id` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `Sales_Order_sales_id` INT NOT NULL COMMENT '',
-  `Payment_Details_name_on_card` VARCHAR(45) NOT NULL COMMENT '',
   `date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '',
   `amount` FLOAT NOT NULL COMMENT '',
   `Payment_Details_Customer_user_name` VARCHAR(10) NOT NULL COMMENT '',
@@ -411,6 +410,35 @@ INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Ad
 INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('9', 'Custom Gnomes', '01161 154 889', 'sales@gnomeaccessories.co.uk', '99 High Road', 'TT19NB');
 INSERT INTO `mydb`.`supplier` (`supplier_id`, `name`, `contact_no`, `email`, `Address_line_1`, `Address_postcode`) VALUES ('10', 'Pots and Plants and Pots', '01547 581 214', 'purchases@plantsnpotsnpotsnplants.co.uk', 'Room 3, Moldyhawk Lane', 'W356FB');
 
+
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('fchristmas', '0000 0000 0001', 'Nicholas', 'American Express', '2222-12-12', '2013-05-01', '27 Salmon Street', 'M9 7QH');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bmiller', '2548 2469 2548 ', 'Bryony', 'VISA', '2012-04-15', '2011-02-05', 'Castle 1', 'HG01 3DE');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bmiller', '1542 5598 6589', 'Bryony', 'VISA', '2019-01-09', NULL, 'Castle 1', 'HG01 3DE');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bbaggins', '6584 1547 1589', 'Bilbo Baggins', 'MasterCard', '2019-09-01', '2014-02-06', '68 Finch Road', 'GG16 8HL');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('aharris', '1165 2589 3564', 'Angus', 'VISA', '2016-04-26', '2014-01-01', '99 Everyway', 'PR1 1LL');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('darmstrong', '8895 8845 2156', 'D Armstrong', 'MasterCard', '2020-01-01', '2012-04-05', '88 Fatlady Road', 'WA14 5GG');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bbaggins', '8495 1548 9852', 'Frodo Baggins', 'MasterCard', '2019-02-02', NULL, '68 Finch Road', 'GG16 8HL');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('sbartlett', '5478 5486 2365', 'S Bartlett', 'VISA', '2023-07-01', NULL, 'Touche House', 'GG16 8HL');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('mleech', '1245 0025 8596', 'Mark Leech', 'VISA', '2025-08-01', NULL, '8 Cecil Road', 'M9 6RP');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('aclarke', '5489 2154 6582', 'Mark Leech', 'VISA', '2024-01-09', NULL, '8 Cecil Road', 'M9 6RP');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('lparker', '0056 4582 8569', 'L Parker', 'American Express', '2020-06-01', NULL, '36 Teeside Way', 'PR1 1QR');
+INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('aharris', '1258 4578 9856', 'E Harris', 'VISA', '2016-12-12', '2012-12-12', '99 Everyway', 'PR1 1LL');
+
+INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('1', 'aharris', '99 Everyway', 'PR1 1LL');
+INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('2', 'lparker', '36 Teeside Way', 'PR1 1QR');
+INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('3', 'aharris', '99 Everyway', 'PR1 1LL');
+INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('4', 'fchristmas', 'Grotto', 'NP1');
+INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('5', 'lparker', 'Summer Grotto', 'SP1');
+INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('6', 'bmiller', 'Castle 1', 'HG01 3DE');
+INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('7', 'sbartlett', 'Touche House', 'GG16 8HL');
+
+INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('1', '1', '2016-04-14 10:00', '59.88', 'aharris', '1258 4578 9856');
+INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('2', '2', '2016-04-14 12:00', '3000', 'lparker', '0056 4582 8569');
+INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('3', '3', '2016-04-15 12:15', '699', 'aharris', '1165 2589 3564');
+INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('4', '4', '2016-04-18 09:10', '280', 'fchristmas', '0000 0000 0001');
+INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('5', '5', '2016-04-19 08:20', '9500', 'lparker', '0056 4582 8569');
+INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('6', '7', '2016-05-01 00:00', '1708.85', 'sbartlett', '5478 5486 2365');
+
 INSERT INTO `mydb`.`stock` (`catalogue_id`, `sale_price`, `current_quantity`, `reorder_level`, `reorder_quantity`, `stock_status`, `warehouse_location`, `Supplier_supplier_id`) VALUES ('1', '75', '4', '5', '500', 'on order', 'G4', '8');
 INSERT INTO `mydb`.`stock` (`catalogue_id`, `sale_price`, `current_quantity`, `reorder_level`, `reorder_quantity`, `stock_status`, `warehouse_location`, `Supplier_supplier_id`) VALUES ('2', '350', '58', '12', '75', 'in stock', 'A6', '8');
 INSERT INTO `mydb`.`stock` (`catalogue_id`, `sale_price`, `current_quantity`, `reorder_level`, `reorder_quantity`, `stock_status`, `warehouse_location`, `Supplier_supplier_id`) VALUES ('3', '160', '6', '40', '1000', 'back order', 'E3', '1');
@@ -441,36 +469,6 @@ INSERT INTO `mydb`.`stock` (`catalogue_id`, `sale_price`, `current_quantity`, `r
 INSERT INTO `mydb`.`stock` (`catalogue_id`, `sale_price`, `current_quantity`, `reorder_level`, `reorder_quantity`, `stock_status`, `warehouse_location`, `Supplier_supplier_id`) VALUES ('28', '447.25', '428', '30', '450', 'in stock', 'F1', '2');
 INSERT INTO `mydb`.`stock` (`catalogue_id`, `sale_price`, `current_quantity`, `reorder_level`, `reorder_quantity`, `stock_status`, `warehouse_location`, `Supplier_supplier_id`) VALUES ('29', '149.99', '12', '8', '50', 'in stock', 'F3', '9');
 INSERT INTO `mydb`.`stock` (`catalogue_id`, `sale_price`, `current_quantity`, `reorder_level`, `reorder_quantity`, `stock_status`, `warehouse_location`, `Supplier_supplier_id`) VALUES ('30', '8.99', '436', '70', '800', 'in stock', 'F1', '5');
-
-
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('fchristmas', '0000 0000 0001', 'Nicholas', 'American Express', '2222-12-12', '2013-05-01', '27 Salmon Street', 'M9 7QH');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bmiller', '2548 2469 2548 ', 'Bryony', 'VISA', '2012-04-15', '2011-02-05', 'Castle 1', 'HG01 3DE');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bmiller', '1542 5598 6589', 'Bryony', 'VISA', '2019-01-09', NULL, 'Castle 1', 'HG01 3DE');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bbaggins', '6584 1547 1589', 'Bilbo Baggins', 'MasterCard', '2019-09-01', '2014-02-06', '68 Finch Road', 'GG16 8HL');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('aharris', '1165 2589 3564', 'Angus', 'VISA', '2016-04-26', '2014-01-01', '99 Everyway', 'PR1 1LL');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('darmstrong', '8895 8845 2156', 'D Armstrong', 'MasterCard', '2020-01-01', '2012-04-05', '88 Fatlady Road', 'WA14 5GG');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('bbaggins', '8495 1548 9852', 'Frodo Baggins', 'MasterCard', '2019-02-02', NULL, '68 Finch Road', 'GG16 8HL');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('sbartlett', '5478 5486 2365', 'S Bartlett', 'VISA', '2023-07-01', NULL, 'Touche House', 'GG16 8HL');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('mleech', '1245 0025 8596', 'Mark Leech', 'VISA', '2025-08-01', NULL, '8 Cecil Road', 'M9 6RP');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('aclarke', '5489 2154 6582', 'Mark Leech', 'VISA', '2024-01-09', NULL, '8 Cecil Road', 'M9 6RP');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('lparker', '0056 4582 8569', 'L Parker', 'American Express', '2020-06-01', NULL, '36 Teeside Way', 'PR1 1QR');
-INSERT INTO `mydb`.`payment_details` (`Customer_user_name`, `card_number`, `name_on_card`, `card_type`, `exp_date`, `start_date`, `Address_line_1`, `Address_postcode`) VALUES ('aharris', '1258 4578 9856', 'E Harris', 'VISA', '2016-12-12', '2012-12-12', '99 Everyway', 'PR1 1LL');
-
-INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('1', 'aharris', '99 Everyway', 'PR1 1LL');
-INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('2', 'lparker', '36 Teeside Way', 'PR1 1QR');
-INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('3', 'aharris', '99 Everyway', 'PR1 1LL');
-INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('4', 'fchristmas', 'Grotto', 'NP1');
-INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('5', 'lparker', 'Summer Grotto', 'SP1');
-INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('6', 'bmiller', 'Castle 1', 'HG01 3DE');
-INSERT INTO `mydb`.`sales_order` (`sales_id`, `Customer_user_name`, `Address_line_1`, `Address_postcode`) VALUES ('7', 'sbartlett', 'Touche House', 'GG16 8HL');
-
-INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `Payment_Details_name_on_card`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('1', '1', 'E Harris', '2016-04-14 10:00', '59.88', 'aharris', '1258 4578 9856');
-INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `Payment_Details_name_on_card`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('2', '2', 'L Parker', '2016-04-14 12:00', '3000', 'lparker', '0056 4582 8569');
-INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `Payment_Details_name_on_card`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('3', '3', 'Angus', '2016-04-15 12:15', '699', 'aharris', '1165 2589 3564');
-INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `Payment_Details_name_on_card`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('4', '4', 'Nicholas', '2016-04-18 09:10', '280', 'fchristmas', '0000 0000 0001');
-INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `Payment_Details_name_on_card`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('5', '5', 'L Parker', '2016-04-19 08:20', '9500', 'lparker', '0056 4582 8569');
-INSERT INTO `mydb`.`transaction` (`transaction_id`, `Sales_Order_sales_id`, `Payment_Details_name_on_card`, `date`, `amount`, `Payment_Details_Customer_user_name`, `Payment_Details_card_number`) VALUES ('6', '7', 'S Bartlett', '2016-05-01 00:00', '1708.85', 'sbartlett', '5478 5486 2365');
-
 
 INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('1', '8', '12', '4.99');
 INSERT INTO `mydb`.`sales_order_line` (`Sales_Order_sales_id1`, `Stock_catalogue_id`, `sales_quantity`, `unit_price`) VALUES ('2', '7', '2', '3000');
@@ -538,11 +536,6 @@ INSERT INTO `mydb`.`purchase_order_line` (`Purchase_Order_purchase_id`, `Stock_c
 INSERT INTO `mydb`.`purchase_order_line` (`Purchase_Order_purchase_id`, `Stock_catalogue_id`, `purchase_quantity`, `purchase_unit_price`) VALUES ('7', '22', '70', '50');
 INSERT INTO `mydb`.`purchase_order_line` (`Purchase_Order_purchase_id`, `Stock_catalogue_id`, `purchase_quantity`, `purchase_unit_price`) VALUES ('8', '1', '500', '45.86');
 
-INSERT INTO `mydb`.`purchase_order_return` (`Purchase_Order_purchase_id`, `date`, `reason`) VALUES ('7', '2016-05-15', 'wrong gnome sent');
-
-INSERT INTO `mydb`.`purchase_order_return_line` (`Purchase_Order_Return_Purchase_Order_purchase_id`, `Stock_catalogue_id`, `return_quantity`) VALUES ('7', '22', '70');
-
-
 INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('1', '1', '2016-05-14  08:57', '', 'Despatched', ' astock');
 INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('2', '2', '2016-05-15  08:57', 'due back in 01/07/16', 'Awaiting Delivery', ' astock');
 INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('3', '3', '2016-04-15  18:28', 'due back in 05/06/16', 'Awaiting Delivery', ' astock');
@@ -551,6 +544,11 @@ INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_
 INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('6', '6', '2016-05-17  07:45', '', 'Picking/Packing', ' astock');
 INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('7', '7', '2016-04-29  14:26', '', 'Payment Required', ' astock');
 INSERT INTO `mydb`.`purchase_order_event` (`purchase_event_id`, `Purchase_Order_purchase_id`, `time_stamp`, `description`, `type`, `Employee_username`) VALUES ('8', '8', '2016-05-12  17:51', '', 'Received', ' astock');
+
+
+INSERT INTO `mydb`.`purchase_order_return` (`Purchase_Order_purchase_id`, `date`, `reason`) VALUES ('7', '2016-05-15', 'wrong gnome sent');
+
+INSERT INTO `mydb`.`purchase_order_return_line` (`Purchase_Order_Return_Purchase_Order_purchase_id`, `Stock_catalogue_id`, `return_quantity`) VALUES ('7', '22', '70');
 
 
 INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('aharris', '3', '2');
@@ -565,6 +563,5 @@ INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish
 INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('darmstrong', '8', '3');
 INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('fchristmas', '8', '10');
 INSERT INTO `mydb`.`wishlist` (`Customer_user_name`, `Stock_catalogue_id`, `wish_quantity`) VALUES ('bstinch', '8', '1');
-
 
 
