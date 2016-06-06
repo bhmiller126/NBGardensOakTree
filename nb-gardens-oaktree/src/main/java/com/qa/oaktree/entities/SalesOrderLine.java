@@ -30,7 +30,7 @@ public class SalesOrderLine {
 	@ManyToOne
 	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
 	@NotNull
-	private Product product;
+	private Stock product;
 
 	@Column(name = "sales_quantity")
 	@NotNull
@@ -47,7 +47,7 @@ public class SalesOrderLine {
 	 * OrderID must be updated when order is committed to the database and given an ID
 	 * The primary key fields must be passed as they cannot be modified later
 	 */
-	public SalesOrderLine(Product product) {
+	public SalesOrderLine(Stock product) {
 		this.product = product;
 	}
 
@@ -63,7 +63,7 @@ public class SalesOrderLine {
 	 * @param unitCost
 	 *            the saleprice per item
 	 */
-	public SalesOrderLine(SalesOrder salesorder, Product product, int quantity, BigDecimal unitCost) {
+	public SalesOrderLine(SalesOrder salesorder, Stock product, int quantity, BigDecimal unitCost) {
 		super();
 		this.salesOrder = salesorder;
 		this.product = product;
@@ -99,7 +99,7 @@ public class SalesOrderLine {
 	 * 
 	 * @return
 	 */
-	public Product getProduct() {
+	public Stock getProduct() {
 		return this.product;
 	}
 

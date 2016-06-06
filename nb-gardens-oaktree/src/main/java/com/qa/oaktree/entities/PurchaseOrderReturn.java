@@ -1,22 +1,22 @@
 package com.qa.oaktree.entities;
 public class PurchaseOrderReturn 
 {
-	private int Purchase_Order_purchase_id;
+	private PurchaseOrder purchaseOrder;
 	private String date;
 	private String reason;
 	
-	public PurchaseOrderReturn(int Purchase_Order_purchase_id, String date, String reason)
+	public PurchaseOrderReturn(PurchaseOrder purchaseOrder, String date, String reason)
 	{
-		this.Purchase_Order_purchase_id = Purchase_Order_purchase_id;
+		this.purchaseOrder = purchaseOrder;
 		this.date = date;
 		this.reason = reason;
 	}
 
-	public int getPurchase_Order_purchase_id()
-	{return Purchase_Order_purchase_id;}
+	public PurchaseOrder getPurchaseOrder()
+	{return purchaseOrder;}
 
-	public void setPurchase_Order_purchase_id(int purchase_Order_purchase_id) 
-	{Purchase_Order_purchase_id = purchase_Order_purchase_id;}
+	public void setPurchaseOrder(PurchaseOrder purchaseOrder) 
+	{this.purchaseOrder = purchaseOrder;}
 
 	public String getDate() 
 	{return date;}

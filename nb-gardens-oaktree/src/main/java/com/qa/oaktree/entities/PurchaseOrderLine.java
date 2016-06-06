@@ -29,7 +29,7 @@ public class PurchaseOrderLine {
 	@ManyToOne
 	@JoinColumn(name = "Stock_catalogue_id", nullable = false)
 	@NotNull
-	private int productID;
+	private Stock stock;
 
 	@Column(name = "purchase_quantity")
 	@NotNull
@@ -45,12 +45,12 @@ public class PurchaseOrderLine {
 	/**
 	 * Default Constructor that only requires the fields needed to form the composite key, purchase order id and product id
 	 * @param purchaseOrderId the purchase order id
-	 * @param productID the product id for the order line
+	 * @param stock the product id for the order line
 	 */
-	public PurchaseOrderLine(int purchaseOrderId, int productID) {
+	public PurchaseOrderLine(int purchaseOrderId, Stock stock) {
 		super();
 		this.purchaseOrderId = purchaseOrderId;
-		this.productID = productID;
+		this.stock = stock;
 		this.purchaseQuantity=0;
 		this.purchaseUnitPrice = BigDecimal.valueOf(0);
 		this.lineTotal = new BigDecimal(0);
@@ -59,14 +59,14 @@ public class PurchaseOrderLine {
 	/**
 	 * Full constructor that takes every field
 	 * @param purchaseOrderId the purchase order id
-	 * @param stockCatalogueId the product id
+	 * @param stock the product id
 	 * @param purchaseQuantity the quantity ordered
 	 * @param purchaseUnitPrice the price per unit
 	 */
-	public PurchaseOrderLine(int purchaseOrderId, int stockCatalogueId, int purchaseQuantity,
+	public PurchaseOrderLine(int purchaseOrderId, Stock stock, int purchaseQuantity,
 			BigDecimal purchaseUnitPrice) {
 		this.purchaseOrderId = purchaseOrderId;
-		this.productID = stockCatalogueId;
+		this.stock = stock;
 		this.purchaseQuantity = purchaseQuantity;
 		this.purchaseUnitPrice = purchaseUnitPrice;
 		this.lineTotal = purchaseUnitPrice.multiply(BigDecimal.valueOf(purchaseQuantity));
@@ -83,8 +83,8 @@ public class PurchaseOrderLine {
 	/**
 	 * @return the productID
 	 */
-	public int getProductID() {
-		return productID;
+	public Stock getProductID() {
+		return stock;
 	}
 
 	/**
@@ -111,8 +111,8 @@ public class PurchaseOrderLine {
 	/**
 	 * @param productID the productID to set
 	 */
-	public void setProductID(int productID) {
-		this.productID = productID;
+	public void setProductID(Stock productID) {
+		this.stock = productID;
 	}
 
 	/**

@@ -20,11 +20,11 @@ public class SalesOrderReturn {
 	@Id
 	@OneToOne
 	@JoinColumn (name = "Sales_Order_sales_id")
-	public int getSalesOrderId() {
-		return salesId;
+	public SalesOrder getSalesOrder() {
+		return salesOrder;
 	}
 	@NotNull
-	private int salesId; 
+	private SalesOrder salesOrder; 
 
 	@Column (name = "date")
 	private Date date; 
@@ -36,29 +36,22 @@ public class SalesOrderReturn {
 	 * Default null constructor for sales order return
 	 */
 	public SalesOrderReturn() {
-		this.salesId = -1;
-		this.date = new Date();
-		this.reason = "";
+
 	}
 
 	/**
 	 * Full constructor for sales order return
-	 * @param salesId the original sales order ID
+	 * @param salesOrder the original sales order ID
 	 * @param date for the new 
 	 * @param reason
 	 */
-	public SalesOrderReturn (int salesId, Date date, String reason) {
-		this.salesId = salesId; 
+	public SalesOrderReturn (SalesOrder salesOrder, Date date, String reason) {
+		this.salesOrder = salesOrder; 
 		this.date = date; 
 		this.reason = reason; 
 	}
 
-	/**
-	 * @return the salesId
-	 */
-	public int getSalesId() {
-		return salesId;
-	}
+
 
 	/**
 	 * @return the date
@@ -75,10 +68,10 @@ public class SalesOrderReturn {
 	}
 
 	/**
-	 * @param salesId the salesId to set
+	 * @param salesOrder the salesId to set
 	 */
-	public void setSalesId(int salesId) {
-		this.salesId = salesId;
+	public void setSalesId(SalesOrder salesOrder) {
+		this.salesOrder = salesOrder;
 	}
 
 	/**
@@ -118,7 +111,7 @@ public class SalesOrderReturn {
 				return false;
 		} else if (!reason.equals(other.reason))
 			return false;
-		if (salesId != other.salesId)
+		if (salesOrder != other.salesOrder)
 			return false;
 		return true;
 	}
@@ -129,7 +122,7 @@ public class SalesOrderReturn {
 	 */
 	@Override
 	public String toString() {
-		return "SalesOrderReturn [salesId=" + salesId + ", date=" + date + ", reason=" + reason + "]";
+		return "SalesOrderReturn [salesId=" + salesOrder + ", date=" + date + ", reason=" + reason + "]";
 	}
 
 }

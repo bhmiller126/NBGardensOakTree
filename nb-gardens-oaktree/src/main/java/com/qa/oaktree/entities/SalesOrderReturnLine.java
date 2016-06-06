@@ -20,12 +20,12 @@ public class SalesOrderReturnLine
 	@ManyToOne
 	@JoinColumn(name="Stock_catalogue_id", nullable = false)
 	@NotNull
-	private int productID;
+	private Stock stockItem;
 	
 	@Id
 	@ManyToOne
 	@JoinColumn(name="Sales_Order_sales_id", nullable = false)
-	private int salesOrderID;
+	private SalesOrder salesOrder;
 	
 	@Column(name="return_quantity")
 	private int returnQuantity;
@@ -37,28 +37,28 @@ public class SalesOrderReturnLine
 	
 	/**
 	 * Defualt Constructor that requires the composite key fields (product ID and sales order ID)
-	 * @param productID the product ID for the returned product
-	 * @param salesOrderID the sales order ID that the return is from
+	 * @param stockItem the product ID for the returned product
+	 * @param salesOrder the sales order ID that the return is from
 	 */
-	public SalesOrderReturnLine(int productID, int salesOrderID) {
+	public SalesOrderReturnLine(Stock stockItem, SalesOrder salesOrder) {
 		super();
-		this.productID = productID;
-		this.salesOrderID = salesOrderID;
+		this.stockItem = stockItem;
+		this.salesOrder = salesOrder;
 		this.returnQuantity = 0;
 		this.shelvedQuantity = 0;
 	}
 
 	/**
 	 * The full constructor for a sales order return line that requires all fields
-	 * @param productID the product ID of the returned product
-	 * @param salesOrderID the order ID for the returns
+	 * @param stockItem the product ID of the returned product
+	 * @param salesOrder the order ID for the returns
 	 * @param returnQuantity the quantity of product returned
 	 * @param shelvedQuantity the quantity of returned items placed back on shelf
 	 */
-	public SalesOrderReturnLine(int productID, int salesOrderID, int returnQuantity, int shelvedQuantity) {
+	public SalesOrderReturnLine(Stock stockItem, SalesOrder salesOrder, int returnQuantity, int shelvedQuantity) {
 		super();
-		this.productID = productID;
-		this.salesOrderID = salesOrderID;
+		this.stockItem = stockItem;
+		this.salesOrder = salesOrder;
 		this.returnQuantity = returnQuantity;
 		this.shelvedQuantity = shelvedQuantity;
 	}
@@ -67,16 +67,16 @@ public class SalesOrderReturnLine
 	 * returns the product ID of the returned item
 	 * @return the product ID
 	 */
-	public int getProductID() {
-		return productID;
+	public Stock getStockItem() {
+		return stockItem;
 	}
 
 	/**
 	 * return the orderID of the return line
 	 * @return the sales order id
 	 */
-	public int getSalesOrderID() {
-		return salesOrderID;
+	public SalesOrder getSalesOrder() {
+		return salesOrder;
 	}
 
 	/**

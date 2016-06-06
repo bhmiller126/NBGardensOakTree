@@ -17,16 +17,14 @@ public class PurchaseOrder {
 	private int purchaseId; 
 	
 	@Column (name = "Supplier_supplier_id")
-	private int supplierId; 
+	private Supplier supplier; 
 
 	
 	/**
 	 * Default null constructor for Purchase Order
 	 */
 	public PurchaseOrder() {
-		super();
-		this.purchaseId = 0;
-		this.supplierId = 0;
+
 	}
 
 	/**
@@ -34,10 +32,10 @@ public class PurchaseOrder {
 	 * @param purchaseId Int id of the purchase order
 	 * @param supplierId int id from whom the products are being ordered from 
 	 */
-	public PurchaseOrder(int purchaseId, int supplierId) {
+	public PurchaseOrder(int purchaseId, Supplier supplierId) {
 		super();
 		this.purchaseId = purchaseId;
-		this.supplierId = supplierId;
+		this.supplier = supplierId;
 	}
 
 	/**
@@ -50,8 +48,8 @@ public class PurchaseOrder {
 	/**
 	 * @return the supplierId
 	 */
-	public int getSupplierId() {
-		return supplierId;
+	public Supplier getSupplierId() {
+		return supplier;
 	}
 
 	/**
@@ -64,8 +62,8 @@ public class PurchaseOrder {
 	/**
 	 * @param supplierId the supplierId to set
 	 */
-	public void setSupplierId(int supplierId) {
-		this.supplierId = supplierId;
+	public void setSupplierId(Supplier supplierId) {
+		this.supplier = supplierId;
 	}
 
 	/** 
@@ -83,17 +81,17 @@ public class PurchaseOrder {
 		PurchaseOrder other = (PurchaseOrder) obj;
 		if (purchaseId != other.purchaseId)
 			return false;
-		if (supplierId != other.supplierId)
+		if (supplier != other.supplier)
 			return false;
 		return true;
 	}
 
 	/** 
-	 * Overrid Object.toString method for Purchase order
+	 * Override Object.toString method for Purchase order
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "PurchaseOrder [purchaseId=" + purchaseId + ", supplierId=" + supplierId + "]";
+		return "PurchaseOrder [purchaseId=" + purchaseId + ", supplierId=" + supplier + "]";
 	}
 }

@@ -19,13 +19,13 @@ public class PurchaseOrderReturnLine {
 	@ManyToOne
 	@JoinColumn(name="Purchase_Order_Return_Purchase_Order_purchase_id", nullable=false)
 	@NotNull
-	private int purchaseOrderId;
+	private PurchaseOrder purchaseOrder;
 	
 	@Id
 	@ManyToOne
 	@JoinColumn(name="Stock_catalogue_id", nullable=false)
 	@NotNull
-	private int productID;
+	private Stock stockItem;
 	
 	@Column(name="return_Quantity")
 	@NotNull
@@ -34,24 +34,24 @@ public class PurchaseOrderReturnLine {
 	
 	/**
 	 * Default construtor that only needs the product ID and Purchase Order ID
-	 * @param purchaseOrderId the purchase order ID
-	 * @param productID the product ID being returned
+	 * @param purchaseOrder the purchase order ID
+	 * @param stockItem the product ID being returned
 	 */
-	public PurchaseOrderReturnLine(int purchaseOrderId, int productID) {
+	public PurchaseOrderReturnLine(PurchaseOrder purchaseOrder, Stock stockItem) {
 		super();
-		this.purchaseOrderId = purchaseOrderId;
-		this.productID = productID;
+		this.purchaseOrder = purchaseOrder;
+		this.stockItem = stockItem;
 	}
 
 	/**
 	 * Full constructor for purchase order return line
-	 * @param purchaseId the Purchase Order ID
-	 * @param stockCatalogueId the product ID
+	 * @param purchaseOrder the Purchase Order ID
+	 * @param stockItem the product ID
 	 * @param returnQuantity the quantity returned
 	 */
-	public PurchaseOrderReturnLine (int purchaseId, int stockCatalogueId, int returnQuantity ) {
-		this.purchaseOrderId = purchaseId; 
-		this.productID = stockCatalogueId; 
+	public PurchaseOrderReturnLine (PurchaseOrder purchaseOrder, Stock stockItem, int returnQuantity ) {
+		this.purchaseOrder = purchaseOrder; 
+		this.stockItem = stockItem; 
 		this.returnQuantity = returnQuantity;
 	}
 
@@ -59,8 +59,8 @@ public class PurchaseOrderReturnLine {
 	 * Get the Purchase Order ID from the return line
 	 * @return the Purchase Order ID
 	 */
-	public int getPurchaseOrderReturnPurchaseOrderPurchaseId() {
-		return purchaseOrderId;
+	public PurchaseOrder getPurchaseOrder() {
+		return purchaseOrder;
 	}
 
 
@@ -68,8 +68,8 @@ public class PurchaseOrderReturnLine {
 	 * Get the products catalogue ID from the order return line
 	 * @return theh product id
 	 */
-	public int getStockCatalogueId() {
-		return productID;
+	public Stock getStockCatalogueId() {
+		return stockItem;
 	}
 
 	/**
@@ -88,18 +88,7 @@ public class PurchaseOrderReturnLine {
 		this.returnQuantity = returnQuantity;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + productID;
-		result = prime * result + purchaseOrderId;
-		result = prime * result + returnQuantity;
-		return result;
-	}
+	
 
 	/** Overrides the object equals method to compare field values.
 	 * @return True if all field values are equal
@@ -114,9 +103,9 @@ public class PurchaseOrderReturnLine {
 		if (getClass() != obj.getClass())
 			return false;
 		PurchaseOrderReturnLine other = (PurchaseOrderReturnLine) obj;
-		if (productID != other.productID)
+		if (stockItem != other.stockItem)
 			return false;
-		if (purchaseOrderId != other.purchaseOrderId)
+		if (purchaseOrder != other.purchaseOrder)
 			return false;
 		if (returnQuantity != other.returnQuantity)
 			return false;
