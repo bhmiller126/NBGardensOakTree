@@ -18,7 +18,7 @@ import javax.persistence.JoinColumn;
 
 /**
  * 
- * @author OakTree Bryony & LP
+ * @author OakTree Bryony & LP & Barry
  * WishList SQL Entity. This attaining the relevant Stock item from one to one
  * cardinality and is associated to one Customer who holds the WishList in an Array
  * List. 
@@ -31,7 +31,7 @@ import javax.persistence.JoinColumn;
 			)
 })
 @Entity
-@Table(name = "Wishlist")
+@Table(name = "wishlist")
 public class WishList {
 
 	@Id
