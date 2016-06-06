@@ -27,9 +27,9 @@ import javax.persistence.JoinColumn;
 @NamedQueries({
 	@NamedQuery(
 			name = "displayWishlist",
-			query = "SELECT * from Wishlist WHERE user_name = :username"
-			)
+			query = "SELECT * from Wishlist WHERE user_name = :username")
 })
+
 @Entity
 @Table(name = "wishlist")
 public class WishList {
