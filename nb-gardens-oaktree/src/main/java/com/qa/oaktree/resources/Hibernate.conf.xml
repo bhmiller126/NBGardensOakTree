@@ -5,5 +5,33 @@
   
 <hibernate-configuration>
     <session-factory>
+        <!-- properties -->
+        <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="hibernate.connection.url">jdbc:hsqldb:mem:hibernateDB</property>
+        <property name="hibernate.connection.username">OakTreeRoot</property>
+        <property name="hibernate.connection.password">groot</property>
+        <property name="show_sql">true</property>
+        <!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">create</property>
+
+        <!-- mapping files -->
+        <mapping class="com.qa.oaktree.entities.Customer"/>
+        <mapping class="com.qa.oaktree.entities.WishList"/>
+        <mapping class="com.qa.oaktree.entities.Stock"/>
+<!-- <mapping class="com.qa.oaktree.entities.PaymentMethod"/>
+        <mapping class="com.qa.oaktree.entities.PaymentTransaction"/>
+        <mapping class="com.qa.oaktree.entities.PurchaseOrder"/>
+        <mapping class="com.qa.oaktree.entities.PurchaseOrderEvent"/>
+        <mapping class="com.qa.oaktree.entities.PurchaseOrderLine"/>
+        <mapping class="com.qa.oaktree.entities.PurchaseOrderReturn"/>
+        <mapping class="com.qa.oaktree.entities.PurchaseOrderReturnLine"/>
+        <mapping class="com.qa.oaktree.entities.SalesOrder"/>
+        <mapping class="com.qa.oaktree.entities.SalesOrderEvent"/>
+        <mapping class="com.qa.oaktree.entities.SalesOrderLine"/>
+        <mapping class="com.qa.oaktree.entities.SalesOrderReturn"/>
+        <mapping class="com.qa.oaktree.entities.SalesOrderReturnLine"/>
+        <mapping class="com.qa.oaktree.entities.Stock"/>
+        <mapping class="com.qa.oaktree.entities.Supplier"/> -->
     </session-factory>
 </hibernate-configuration>
