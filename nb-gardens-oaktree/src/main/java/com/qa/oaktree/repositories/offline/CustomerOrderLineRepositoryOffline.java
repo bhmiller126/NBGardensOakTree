@@ -4,15 +4,16 @@ import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 
 /**
+ * 
  * This is the default implementation of the customer repository interface.
  * You DO NOT directly inject this, you ONLY inject the INTERFACE
  * 
- * @author Angus
+ * @author 
  *
  */
 
 @Default
 @Stateless
-public class CustomerOrderRepositoryOffline {
+public class CustomerOrderLineRepositoryOffline {
 
 }
