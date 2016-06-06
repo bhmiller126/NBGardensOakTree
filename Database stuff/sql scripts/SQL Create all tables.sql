@@ -184,7 +184,6 @@ DROP TABLE IF EXISTS `mydb`.`Transaction` ;
 CREATE TABLE IF NOT EXISTS `mydb`.`Transaction` (
   `transaction_id` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `Sales_Order_sales_id` INT NOT NULL COMMENT '',
-  `Payment_Details_name_on_card` VARCHAR(45) NOT NULL COMMENT '',
   `date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '',
   `amount` FLOAT NOT NULL COMMENT '',
   `Payment_Details_Customer_user_name` VARCHAR(10) NOT NULL COMMENT '',
