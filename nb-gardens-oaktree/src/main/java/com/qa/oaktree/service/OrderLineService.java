@@ -14,7 +14,7 @@ import com.qa.oaktree.repositories.CustomerRepository;
  *
  */
 @Stateless
-public class OrderLineSerevice {
+public class OrderLineService {
 
 	@Inject private CustomerOrderLineRepository orderLineRepo;
 	

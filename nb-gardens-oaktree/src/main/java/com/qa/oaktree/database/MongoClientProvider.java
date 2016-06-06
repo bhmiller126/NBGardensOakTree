@@ -25,14 +25,7 @@ public class MongoClientProvider
 	
 	public MongoClientProvider()
 	{
-		try {
-			init();
-			}
-		catch (UnknownHostException e)
-		{
-			System.err.println("Mongo is not active");
-			e.printStackTrace();
-		}
+		init();
 	}
 	
 	@Lock(LockType.READ)
@@ -42,7 +35,7 @@ public class MongoClientProvider
 		}
 	
 	@PostConstruct
-	public void init () throws UnknownHostException
+	public void init ()
 	{	
 		mongoClient = new MongoClient(new ServerAddress(mongoIpAddress, mongoPortNumber));
 	}
