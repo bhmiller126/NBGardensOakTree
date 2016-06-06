@@ -12,11 +12,12 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="resources/nbgardens.css" />
+	<script type="text/javascript" src="resources/nbgardens.js"></script>
 
 	<!-- Fix for HTML5 in IE9 or earlier - do not uncomment -->
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+	<![endif]-->
 
 </h:head>
 <h:body>
@@ -76,8 +77,16 @@
 	<div id="body-wrapper">
 		<!-- Main content: shift it to the right by 250 pixels when the sidenav is visible -->
 		<div class="w3-main" style="margin-left: 250px">
+			<!-- Breadcrumbs -->
+			<div class="w3-container">
+				<script type="text/javascript">
+				<!-- 
+					breadcrumbs()
+				//-->
+				</script>
+			</div>
+			
 			<!-- Main Content Area is Here -->
-			<br/><br/><br/>
 			<div class="w3-margin-top">
 				<ui:insert name="main-content">
 					DefaultText
@@ -119,28 +128,5 @@
 			</div>
 		</footer>
 	</div>
-
-	<script>
-		// Script to open and close the sidenav
-		function w3_open() {
-			document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-			document.getElementsByClassName("w3-overlay")[0].style.display = "block";
-		}
-		function w3_close() {
-			document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-			document.getElementsByClassName("w3-overlay")[0].style.display = "none";
-		}
-
-		// Used to toggle the menu on small screens when clicking on the menu button
-		function myFunction() {
-			var x = document.getElementById("navSmall");
-			if (x.className.indexOf("w3-show") == -1) {
-				x.className += " w3-show";
-			} else {
-				x.className = x.className.replace(" w3-show", "");
-			}
-		}
-	</script>
-
 </h:body>
 </html>

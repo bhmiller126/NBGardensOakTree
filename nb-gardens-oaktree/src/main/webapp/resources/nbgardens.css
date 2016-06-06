@@ -11,6 +11,15 @@ img.nb-product-image { width: 100%; }
 .w3-sidenav a, .w3-sidenav h4 { padding: 12px; }
 .w3-navbar a { padding-top: 12px !important; padding-bottom: 12px !important; }
 
+/*Breadcrumb CSS*/
+/*.breadcrumb { 
+ 	font-size: 0.8em;
+ 	color: #000;
+ 	background-color: #FFCF29;
+ 	border: 1px #00009C solid;
+ 	padding: 0.5em;
+}*/
+
 /*FAQ Specific CSS*/
 .nb-faq-row { vertical-align: top; height:auto !important; }
 .nb-faq-list {display:none; }
@@ -26,7 +35,6 @@ img.nb-product-image { width: 100%; }
 .nb-register-td { width:50%; text-align:right; }
 .nb-register-form { margin-bottom:15px; }
 .nb-register-form h4 { text-align:center; }
-
 
 /*Basket specific CSS*/
 #order-header{border-bottom: 1px solid black;}	
