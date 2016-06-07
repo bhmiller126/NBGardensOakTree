@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -15,7 +16,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 /**
@@ -26,19 +26,6 @@ import javax.persistence.OneToMany;
 @Entity
 @Table(name = "Stock")
 public class Stock {
-
-	/**
-	 * The first variable catalogueId has @Id and @GeneratedValue.
-	 * 
-	 * @Id dictates that this is the primary key in the database table
-	 * @GeneratedValue allows the Id to know that it is an auto incremented
-	 *                 number After @Column the name = " " has to match the name
-	 *                 of the table in the database so it can be accessed from
-	 *                 the application
-	 * @NotNull means that column cannot be null, therefore always needs a value
-	 *          input
-	 * 
-	 */
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -58,84 +45,51 @@ public class Stock {
 	@Column(name = "re_order_quantity", nullable = false)
 	private int reorderQuantity;
 
-	/**
-	 * Stock status column, has @Size parameter This states that it must have a
-	 * minimum of one character and a maximum of 30
-	 */
 	@Column(name = "stock_status", length = 30, nullable = false)
 	@NotNull
 	@Size(min = 1, max = 30)
-	String stockStatus;
-
-	@ManyToOne(cascade = CascadeType.ALL)
-	private SalesOrderLine salesLine;	
-
-	/**
-	 * warehouse location column, has @Size parameter This states that it must
-	 * have a minimum of one character and a maximum of 10
-	 */
+	private String stockStatus;
 
 	@Column(name = "warehouse_location", length = 10, nullable = false)
 	@NotNull
 	@Size(min = 1, max = 10)
 	String warehouseLocation;
 
-	/**
-	 * *@OneToOne is the cardinality for that variable with another variable in
-	 * a separate entity
-	 * @return 
-	 * 
-	 * @JoinColumn lets the application know where to access the variable and
-	 *             what to return
-	 * @return supplierId from the Supplier entity
-	 */
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "Stock")
 	@JoinColumn(name = "Supplier_supplier_id", nullable = false)
-	public  int getSupplierId() {
-		return supplierId;
-	}
 	@NotNull
-	private int supplierId;
+	private Supplier supplierId;
 
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "SalesOrderLine")
+	private Set<SalesOrderLine> salesLine = new HashSet<SalesOrderLine>();	
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "WishList")
+	private Set<WishList> wishList = new HashSet<WishList>();	
 	
-	private Set<WishList> wishList;
-	
-	
-	
-	/**
-	 * Null constructor for stock
-	 */
-	public Stock() {
-		this.catalogueId = 0;
-		this.salePrice = new BigDecimal("");
-		this.currentQuantity = 0;
-		this.reorderLevel = 0;
-		this.reorderQuantity = 0;
-		this.stockStatus = "";
-		this.warehouseLocation = "";
-		this.supplierId = 0;
-	}
+	////////////////////////////////////////////
 
 	/**
-	 * Full constructor for stock
 	 * 
+	 */
+	public Stock() {}
+	
+	
+	/**
 	 * @param catalogueId
-	 * @param salePrice,
-	 *            price item is sold for
-	 * @param currentQuantity,
-	 *            amount currently in stock
-	 * @param reorderLevel,
-	 *            at what level do we reorder more stock
-	 * @param reorderQuantity,
-	 *            how much do we want to reorder
-	 * @param stockStatus,
-	 *            in stock, discontinued, on order, back order
+	 * @param salePrice
+	 * @param currentQuantity
+	 * @param reorderLevel
+	 * @param reorderQuantity
+	 * @param stockStatus
 	 * @param warehouseLocation
 	 * @param supplierId
+	 * @param salesLine
+	 * @param wishList
 	 */
 	public Stock(int catalogueId, BigDecimal salePrice, int currentQuantity, int reorderLevel, int reorderQuantity,
-			String stockStatus, String warehouseLocation, int supplierId) {
-
+			String stockStatus, String warehouseLocation, Supplier supplierId, Set<SalesOrderLine> salesLine,
+			Set<WishList> wishList) {
+		super();
 		this.catalogueId = catalogueId;
 		this.salePrice = salePrice;
 		this.currentQuantity = currentQuantity;
@@ -144,215 +98,168 @@ public class Stock {
 		this.stockStatus = stockStatus;
 		this.warehouseLocation = warehouseLocation;
 		this.supplierId = supplierId;
-	}
-
-	/***************** getters and setters ******************/
-	
-	@OneToMany (mappedBy = "stock", cascade = CascadeType.ALL)
-	public Set<WishList> getWishlist() {
-		return wishList;	
-	}
-	
-	public void setWishList(Set<WishList> wishList) {
+		this.salesLine = salesLine;
 		this.wishList = wishList;
 	}
+	////////////////////////////////////////////
+
 
 	/**
-	 * get CatalogueId method
-	 * 
-	 * @return catalogueId
+	 * @return the catalogueId
 	 */
-
 	public int getCatalogueId() {
 		return catalogueId;
 	}
 
-	/**
-	 * set CatalogueId method
-	 * 
-	 * @set catalogueId in case we need to add new stock
-	 */
-	public void setCatalogueId(int catalogueId) {
-		this.catalogueId = catalogueId;
-	}
 
 	/**
-	 * Sale price getter
-	 * 
-	 * @return salePrice
+	 * @return the salePrice
 	 */
 	public BigDecimal getSalePrice() {
 		return salePrice;
 	}
 
-	/**
-	 * set Saleprice method
-	 * 
-	 * @param salePrice
-	 *            for when we need to change or add new price
-	 */
-	public void setSalePrice(BigDecimal salePrice) {
-		this.salePrice = salePrice;
-	}
 
 	/**
-	 * get current quantity method
-	 * 
-	 * @return current quantity in stock
+	 * @return the currentQuantity
 	 */
 	public int getCurrentQuantity() {
 		return currentQuantity;
 	}
 
-	/**
-	 * set current quantity method
-	 * 
-	 * @set currentQuantity in case we need to add something back to shelf
-	 */
-	public void setCurrentQuantity(int currentQuantity) {
-		this.currentQuantity = currentQuantity;
-	}
 
 	/**
-	 * get reorder level method
-	 * 
-	 * @return redorder level
+	 * @return the reorderLevel
 	 */
 	public int getReorderLevel() {
 		return reorderLevel;
 	}
 
-	/**
-	 * set reorder level method
-	 * 
-	 * @set reorder level in case demand of a product changes
-	 */
-
-	public void setReorderLevel(int reorderLevel) {
-		this.reorderLevel = reorderLevel;
-	}
 
 	/**
-	 * get reorder quanitity method
-	 * 
-	 * @return redorder quantity
+	 * @return the reorderQuantity
 	 */
 	public int getReorderQuantity() {
 		return reorderQuantity;
 	}
 
-	/**
-	 * set reorder quantity method
-	 * 
-	 * @set redorder quantity incase need to do a manual purchase order
-	 */
-	public void setReorderQuantity(int reorderQuantity) {
-		this.reorderQuantity = reorderQuantity;
-	}
 
 	/**
-	 * get stock status method
-	 * 
-	 * @return status of the stock e.g. in stock
+	 * @return the stockStatus
 	 */
 	public String getStockStatus() {
 		return stockStatus;
 	}
 
-	/**
-	 * set stock status method
-	 * 
-	 * @set status of the stock, normally after confirming and order or
-	 *      recieving confirmation of despatch
-	 */
-	public void setStockStatus(String stockStatus) {
-		this.stockStatus = stockStatus;
-	}
 
 	/**
-	 * get warehouse location method
-	 * 
-	 * @return location of stock item
+	 * @return the warehouseLocation
 	 */
 	public String getWarehouseLocation() {
 		return warehouseLocation;
 	}
 
+
 	/**
-	 * set warehouse location method
-	 * 
-	 * @set warehouse location e.g. G4
+	 * @return the supplierId
+	 */
+	public Supplier getSupplierId() {
+		return supplierId;
+	}
+
+
+	/**
+	 * @return the salesLine
+	 */
+	public Set<SalesOrderLine> getSalesLine() {
+		return salesLine;
+	}
+
+
+	/**
+	 * @return the wishList
+	 */
+	public Set<WishList> getWishList() {
+		return wishList;
+	}
+
+
+	/**
+	 * @param catalogueId the catalogueId to set
+	 */
+	public void setCatalogueId(int catalogueId) {
+		this.catalogueId = catalogueId;
+	}
+
+
+	/**
+	 * @param salePrice the salePrice to set
+	 */
+	public void setSalePrice(BigDecimal salePrice) {
+		this.salePrice = salePrice;
+	}
+
+
+	/**
+	 * @param currentQuantity the currentQuantity to set
+	 */
+	public void setCurrentQuantity(int currentQuantity) {
+		this.currentQuantity = currentQuantity;
+	}
+
+
+	/**
+	 * @param reorderLevel the reorderLevel to set
+	 */
+	public void setReorderLevel(int reorderLevel) {
+		this.reorderLevel = reorderLevel;
+	}
+
+
+	/**
+	 * @param reorderQuantity the reorderQuantity to set
+	 */
+	public void setReorderQuantity(int reorderQuantity) {
+		this.reorderQuantity = reorderQuantity;
+	}
+
+
+	/**
+	 * @param stockStatus the stockStatus to set
+	 */
+	public void setStockStatus(String stockStatus) {
+		this.stockStatus = stockStatus;
+	}
+
+
+	/**
+	 * @param warehouseLocation the warehouseLocation to set
 	 */
 	public void setWarehouseLocation(String warehouseLocation) {
 		this.warehouseLocation = warehouseLocation;
 	}
 
+
 	/**
-	 * set stock status method
-	 * 
-	 * @set supplier Id if prefferred supplier changes
+	 * @param supplierId the supplierId to set
 	 */
-	public void setSupplierId(int supplierId) {
+	public void setSupplierId(Supplier supplierId) {
 		this.supplierId = supplierId;
 	}
 
 
 	/**
-	 * Override object equals methof for Stock entity 
-	 * @param other stock items to be checked against
-	 * @return boolean true if stock items are the same
+	 * @param salesLine the salesLine to set
 	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Stock other = (Stock) obj;
-		if (catalogueId != other.catalogueId)
-			return false;
-		if (currentQuantity != other.currentQuantity)
-			return false;
-		if (reorderLevel != other.reorderLevel)
-			return false;
-		if (reorderQuantity != other.reorderQuantity)
-			return false;
-		if (salePrice == null) {
-			if (other.salePrice != null)
-				return false;
-		} else if (!salePrice.equals(other.salePrice))
-			return false;
-		if (stockStatus == null) {
-			if (other.stockStatus != null)
-				return false;
-		} else if (!stockStatus.equals(other.stockStatus))
-			return false;
-		if (supplierId != other.supplierId)
-			return false;
-		if (warehouseLocation == null) {
-			if (other.warehouseLocation != null)
-				return false;
-		} else if (!warehouseLocation.equals(other.warehouseLocation))
-			return false;
-		return true;
+	public void setSalesLine(Set<SalesOrderLine> salesLine) {
+		this.salesLine = salesLine;
 	}
+
 
 	/**
-	 * Override Objects toString method for stock 
-	 *
+	 * @param wishList the wishList to set
 	 */
-	@Override
-	public String toString() {
-		return "Stock [catalogueId= " + catalogueId + ","
-				+ "salePrice= " + salePrice + "," 
-				+ "currentQuantity= " + currentQuantity + ","
-				+ "reorderLevel= " + reorderLevel + "," 
-				+ "reorderQuantity= " + reorderQuantity + "," 
-				+ "stockStatus= " + stockStatus + "," 
-				+ "warehouseLocation= " + warehouseLocation + ","
-				+ "supplierId= " + supplierId + "]";
-	}
-
+	public void setWishList(Set<WishList> wishList) {
+		this.wishList = wishList;
+	}	
 }

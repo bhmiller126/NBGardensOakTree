@@ -32,7 +32,8 @@ public class SalesOrderReturn {
 	@JoinColumn(name = "sales_id")
 	private SalesOrder salesOrder;
 	
-	////////////////////////
+	////////////////////////////////////////////
+
 	/**
 	 * Default null constructor for sales order return
 	 */
@@ -50,7 +51,7 @@ public class SalesOrderReturn {
 		this.reason = reason; 
 	}
 
-
+	////////////////////////////////////////////
 
 	/**
 	 * @return the date
@@ -86,42 +87,4 @@ public class SalesOrderReturn {
 	public void setReason(String reason) {
 		this.reason = reason;
 	}
-
-	/** 
-	 * Override object.equals method for Sales Order Return
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		SalesOrderReturn other = (SalesOrderReturn) obj;
-		if (date == null) {
-			if (other.date != null)
-				return false;
-		} else if (!date.equals(other.date))
-			return false;
-		if (reason == null) {
-			if (other.reason != null)
-				return false;
-		} else if (!reason.equals(other.reason))
-			return false;
-		if (salesOrder != other.salesOrder)
-			return false;
-		return true;
-	}
-
-	/** 
-	 * Override Object.toString
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "SalesOrderReturn [salesId=" + salesOrder + ", date=" + date + ", reason=" + reason + "]";
-	}
-
 }

@@ -9,8 +9,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -41,130 +43,115 @@ public class SalesOrder {
 	@Column (name = "Address_postcode")
 	private String addressPostcode; 
 	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "SalesOrder")
+	private Set<PaymentTransaction> transaction = new HashSet<PaymentTransaction>();
 	
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "SalesOrder")
+	@JoinColumn(name = "sales_id")
+	private SalesOrderReturn salesOrderReturn;
+
 	///////////////////////////////
-	
 	
 	/**
 	 * Default null constructor for sales order
 	 */
-	public SalesOrder() {
-	
-	}
+	public SalesOrder() {}
 
+	
 	/**
-	 * Full constructor for Sales Order
-	 * @param salesId Int of the sales id
-	 * @param customerUserName String of the Customers user name who is creating the order
-	 * @param addressLine1 String line 1 of the delivery address
-	 * @param addressPostcode String postcode of the delivery address
+	 * @param salesId
+	 * @param customer
+	 * @param salesEvent
+	 * @param salesLine
+	 * @param addressLine1
+	 * @param addressPostcode
+	 * @param transaction
+	 * @param salesOrderReturn
 	 */
-	public SalesOrder(int salesId, Customer customerUserName, String addressLine1, String addressPostcode) {
+	public SalesOrder(int salesId, Customer customer, Set<SalesOrderEvent> salesEvent, Set<SalesOrderLine> salesLine,
+			String addressLine1, String addressPostcode, Set<PaymentTransaction> transaction,
+			SalesOrderReturn salesOrderReturn) {
 		super();
 		this.salesId = salesId;
-		this.customer = customerUserName;
+		this.customer = customer;
+		this.salesEvent = salesEvent;
+		this.salesLine = salesLine;
 		this.addressLine1 = addressLine1;
 		this.addressPostcode = addressPostcode;
+		this.transaction = transaction;
+		this.salesOrderReturn = salesOrderReturn;
 	}
+
+	///////////////////////////////
 
 	/**
-	 * @return the salesId
+	 * @return the salesEvent
 	 */
-	public int getSalesId() {
-		return salesId;
+	public Set<SalesOrderEvent> getSalesEvent() {
+		return salesEvent;
 	}
+
 
 	/**
-	 * @return the customerUserName
+	 * @return the salesLine
 	 */
-	public Customer getCustomer() {
-		return customer;
+	public Set<SalesOrderLine> getSalesLine() {
+		return salesLine;
 	}
+
 
 	/**
-	 * @return the addressLine1
+	 * @return the transaction
 	 */
-	public String getAddressLine1() {
-		return addressLine1;
+	public Set<PaymentTransaction> getTransaction() {
+		return transaction;
 	}
+
 
 	/**
-	 * @return the addressPostcode
+	 * @return the salesOrderReturn
 	 */
-	public String getAddressPostcode() {
-		return addressPostcode;
+	public SalesOrderReturn getSalesOrderReturn() {
+		return salesOrderReturn;
 	}
+
 
 	/**
-	 * @param salesId the salesId to set
+	 * @param customer the customer to set
 	 */
-	public void setSalesId(int salesId) {
-		this.salesId = salesId;
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
+
 
 	/**
-	 * @param customerUserName the customerUserName to set
+	 * @param salesEvent the salesEvent to set
 	 */
-	public void setCustomerUserName(Customer customerUserName) {
-		this.customer = customerUserName;
+	public void setSalesEvent(Set<SalesOrderEvent> salesEvent) {
+		this.salesEvent = salesEvent;
 	}
+
 
 	/**
-	 * @param addressLine1 the addressLine1 to set
+	 * @param salesLine the salesLine to set
 	 */
-	public void setAddressLine1(String addressLine1) {
-		this.addressLine1 = addressLine1;
+	public void setSalesLine(Set<SalesOrderLine> salesLine) {
+		this.salesLine = salesLine;
 	}
+
 
 	/**
-	 * @param addressPostcode the addressPostcode to set
+	 * @param transaction the transaction to set
 	 */
-	public void setAddressPostcode(String addressPostcode) {
-		this.addressPostcode = addressPostcode;
+	public void setTransaction(Set<PaymentTransaction> transaction) {
+		this.transaction = transaction;
 	}
+
 
 	/**
-	 * Override object.equals method of Sales Order 
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * @param salesOrderReturn the salesOrderReturn to set
 	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		SalesOrder other = (SalesOrder) obj;
-		if (addressLine1 == null) {
-			if (other.addressLine1 != null)
-				return false;
-		} else if (!addressLine1.equals(other.addressLine1))
-			return false;
-		if (addressPostcode == null) {
-			if (other.addressPostcode != null)
-				return false;
-		} else if (!addressPostcode.equals(other.addressPostcode))
-			return false;
-		if (customer == null) {
-			if (other.customer != null)
-				return false;
-		} else if (!customer.equals(other.customer))
-			return false;
-		if (salesId != other.salesId)
-			return false;
-		return true;
+	public void setSalesOrderReturn(SalesOrderReturn salesOrderReturn) {
+		this.salesOrderReturn = salesOrderReturn;
 	}
-
-	/**
-	 * Override Object.toString method for SalesOrder
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "SalesOrder [salesId=" + salesId + ", customerUserName=" + customer + ", addressLine1="
-				+ addressLine1 + ", addressPostcode=" + addressPostcode + "]";
-	}
-
-	
 }
