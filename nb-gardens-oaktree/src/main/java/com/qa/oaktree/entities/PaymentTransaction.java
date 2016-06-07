@@ -1,6 +1,11 @@
 package com.qa.oaktree.entities;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 import java.math.BigDecimal;
@@ -8,194 +13,127 @@ import java.sql.Date;
 
 /**
  * 
- * @author OakTree SB
- * Address noSQL entity
+ * @author OakTree SB, cardinality mapping by Laurence
+ * Payment Transaction entity to capture customers payment for their orders
+ * this may be partial or full payments for the orders as such has a many to one relation
+ * ship with orders
  */
 @Entity
-@Table(name = "PaymentTransaction")
+@Table(name = "payment_transaction")
 public class PaymentTransaction {
 	
-	@Column(name = "transactionID")
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "transaction_id")
 	private int transactionID;
 	
-	@Column(name = "paymentMethod")
-	private PaymentMethod paymentMethod;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private SalesOrder salesOrder;
 	
-	@Column(name = "cardCVC2")
-	private String cardCVC2;
-	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@Column(name = "payment_method")
+	private PaymentMethod paymentMethod; 
+		
 	@Column(name = "date")
 	private Date date;
 	
 	@Column(name = "amount")
 	private BigDecimal amount;
+
+	//////////////////////////////////
 	
 	/**
-	 * Null constructor for Payment Transaction 
+	 * 
 	 */
-	public PaymentTransaction() {
-		this.transactionID = 0;
-		this.paymentMethod = new PaymentMethod();
-		this.date = new Date(0);
-		this.amount = new BigDecimal("");
-		this.cardCVC2 = "";
-	}
-	
+	public PaymentTransaction() {}
+
 	/**
-	 * constructor for PaymentTransaction entity? I'm not why there are two with different parameters, SB
+	 * @param transactionID
+	 * @param salesOrder
 	 * @param paymentMethod
-	 * @param cardCVC2
 	 * @param date
 	 * @param amount
 	 */
-	public PaymentTransaction(PaymentMethod paymentMethod, String cardCVC2, Date date, BigDecimal amount) {
-		super();
-		this.paymentMethod = paymentMethod;
-		this.cardCVC2 = cardCVC2;
-		this.date = date;
-		this.amount = amount;
-	}
-
-
-	public PaymentTransaction(int transactionID, PaymentMethod paymentMethod, Date date, BigDecimal amount) {
+	public PaymentTransaction(int transactionID, SalesOrder salesOrder, PaymentMethod paymentMethod, Date date,
+			BigDecimal amount) {
 		super();
 		this.transactionID = transactionID;
+		this.salesOrder = salesOrder;
 		this.paymentMethod = paymentMethod;
 		this.date = date;
 		this.amount = amount;
 	}
 
-
+	/////////////////////////////////////////
+	
+	
 	/**
-	 * transactionID getter method
-	 * @return transactionID
+	 * @return the transactionID
 	 */
 	public int getTransactionID() {
 		return transactionID;
 	}
 
 	/**
-	 * transactionID setter method
-	 * @param transactionID
+	 * @return the salesOrder
 	 */
-	public void setTransactionID(int transactionID) {
-		this.transactionID = transactionID;
+	public SalesOrder getSalesOrder() {
+		return salesOrder;
 	}
 
 	/**
-	 * PaymentMethod getter method
-	 * @return payment method used
+	 * @return the paymentMethod
 	 */
 	public PaymentMethod getPaymentMethod() {
 		return paymentMethod;
 	}
 
 	/**
-	 * PaymentMethod setter method
-	 * @param paymentMethod
-	 */
-	public void setPaymentMethod(PaymentMethod paymentMethod) {
-		this.paymentMethod = paymentMethod;
-	}
-
-
-	/**
-	 * cardCVC2 getter method
-	 * @return cardCVC2
-	 */
-	public String getCardCVC2() {
-		return cardCVC2;
-	}
-
-	/**
-	 * cardCVC2 setter method
-	 * @param cardCVC2
-	 */
-	public void setCardCVC2(String cardCVC2) {
-		this.cardCVC2 = cardCVC2;
-	}
-
-	/**
-	 * date getter method
-	 * @return date
+	 * @return the date
 	 */
 	public Date getDate() {
 		return date;
 	}
 
 	/**
-	 * date setter method
-	 * @param date
-	 */
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	/**
-	 * transaction amount getter method
-	 * @return amount
+	 * @return the amount
 	 */
 	public BigDecimal getAmount() {
 		return amount;
 	}
 
 	/**
-	 * transaction amount setter method
-	 * @param amount
+	 * @param transactionID the transactionID to set
+	 */
+	public void setTransactionID(int transactionID) {
+		this.transactionID = transactionID;
+	}
+
+	/**
+	 * @param salesOrder the salesOrder to set
+	 */
+	public void setSalesOrder(SalesOrder salesOrder) {
+		this.salesOrder = salesOrder;
+	}
+
+	/**
+	 * @param paymentMethod the paymentMethod to set
+	 */
+	public void setPaymentMethod(PaymentMethod paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+
+	/**
+	 * @param date the date to set
+	 */
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	/**
+	 * @param amount the amount to set
 	 */
 	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
-
-	/**
-	 * Override object equals method for PaymentTransaction entity
-	 *  @param other PaymentTransaction to be checked against
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		PaymentTransaction other = (PaymentTransaction) obj;
-		if (amount == null) {
-			if (other.amount != null)
-				return false;
-		} else if (!amount.equals(other.amount))
-			return false;
-		if (cardCVC2 == null) {
-			if (other.cardCVC2 != null)
-				return false;
-		} else if (!cardCVC2.equals(other.cardCVC2))
-			return false;
-		if (date == null) {
-			if (other.date != null)
-				return false;
-		} else if (!date.equals(other.date))
-			return false;
-		if (paymentMethod == null) {
-			if (other.paymentMethod != null)
-				return false;
-		} else if (!paymentMethod.equals(other.paymentMethod))
-			return false;
-		if (transactionID != other.transactionID)
-			return false;
-		return true;
-	}
-
-
-	/**
-	 * Override object's toString method for PaymentTransaction
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "PaymentTransaction [transactionID=" + transactionID + ", paymentMethod=" + paymentMethod + ", cardCVC2="
-				+ cardCVC2 + ", date=" + date + ", amount=" + amount + "]";
-	}
-
-	
 }

@@ -4,12 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.persistence.CascadeType;
 import javax.persistence.Column; 
-import javax.persistence.Id; 
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne; 
 
 /**
- * @author Daniel
- *
+ * @author Daniel, cardinality mapped by Laurence 
+ * Entity used to capture supplier information
  */
 
 @Entity
@@ -44,38 +47,37 @@ public class Supplier {
 	@Size (min = 4, max = 8)
 	private String addressPostcode;
 	
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "Stock")
+	@JoinColumn(name = "catalogue_id")
+	private Stock stock;
+	
 	/**
 	 * Default null constructor for Supplier
 	 */
-	public Supplier()
-	{
-		this.supplierID = -1;
-		this.name = "";
-		this.contactPhoneNumber = "";
-		this.contactEmail = "";
-		this.addressLine1 = "";
-		this.addressPostcode = "";
-	}
+	public Supplier() {}
 	
 	/**
-	 * Full constructor for Supplier
+	 * 	 * Full constructor for Supplier
 	 * @param supplierID; Int autoincrementing integer
 	 * @param name; String Supplier's company name
 	 * @param contactPhoneNumber; String Supplier's contact phone number
 	 * @param contactEmail; String Supplier's contact email address
 	 * @param addressLine1; String First line of supplier's address 
 	 * @param addressPostcode; String Postal code of supplier's address
+	 * @param stock; Stock used to map to stock for preffered supplier.
 	 */
-	public Supplier (int supplierID, String name, String contactPhoneNumber, String contactEmail, String addressLine1, String addressPostcode) 
-	{
-		this.supplierID = supplierID; 
-		this.name = name; 
-		this.contactPhoneNumber = contactPhoneNumber; 
-		this.contactEmail = contactEmail; 
-		this.addressLine1 = addressLine1; 
-		this.addressPostcode = addressPostcode; 
-		
+	public Supplier(int supplierID, String name, String contactPhoneNumber, String contactEmail, String addressLine1,
+			String addressPostcode, Stock stock) {
+		super();
+		this.supplierID = supplierID;
+		this.name = name;
+		this.contactPhoneNumber = contactPhoneNumber;
+		this.contactEmail = contactEmail;
+		this.addressLine1 = addressLine1;
+		this.addressPostcode = addressPostcode;
+		this.stock = stock;
 	}
+	//////////////////////////////////////
 
 	/**
 	 * @return the supplierID
@@ -117,6 +119,13 @@ public class Supplier {
 	 */
 	public String getAddressPostcode() {
 		return addressPostcode;
+	}
+
+	/**
+	 * @return the stock
+	 */
+	public Stock getStock() {
+		return stock;
 	}
 
 	/**
@@ -162,60 +171,9 @@ public class Supplier {
 	}
 
 	/**
-	 * Override equals() method for Supplier
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 * @return false if the supplier 'other' is different to this supplier 
+	 * @param stock the stock to set
 	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Supplier other = (Supplier) obj;
-		if (addressLine1 == null) {
-			if (other.addressLine1 != null)
-				return false;
-		} else if (!addressLine1.equals(other.addressLine1))
-			return false;
-		if (addressPostcode == null) {
-			if (other.addressPostcode != null)
-				return false;
-		} else if (!addressPostcode.equals(other.addressPostcode))
-			return false;
-		if (contactEmail == null) {
-			if (other.contactEmail != null)
-				return false;
-		} else if (!contactEmail.equals(other.contactEmail))
-			return false;
-		if (contactPhoneNumber == null) {
-			if (other.contactPhoneNumber != null)
-				return false;
-		} else if (!contactPhoneNumber.equals(other.contactPhoneNumber))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (supplierID != other.supplierID)
-			return false;
-		return true;
-	}
-
-	/**
-	 * Override object's toString() method for Supplier
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "Supplier [supplierID=" + supplierID 
-				+ ", name=" + name 
-				+ ", contactPhoneNumber=" + contactPhoneNumber
-				+ ", contactEmail=" + contactEmail 
-				+ ", addressLine1=" + addressLine1 
-				+ ", addressPostcode=" + addressPostcode + "]";
+	public void setStock(Stock stock) {
+		this.stock = stock;
 	}
 }

@@ -2,12 +2,15 @@ package com.qa.oaktree.entities;
 
 import java.sql.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.validation.constraints.NotNull;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 /**
  * 
@@ -15,24 +18,15 @@ import javax.validation.constraints.Size;
  */
 public class PaymentMethod {
 
-	/**
-	 * One to many dictates the cardinality It joins to customer column to
-	 * access username
-	 * 
-	 * @return customer username in the get username method
-	 */
-	@OneToMany
-	@JoinColumn(name = "Customer", nullable = false)
-	public String getUserName() {
-		return getUserName();
-	}
-
-	@NotNull
-	private com.qa.oaktree.entities.Customer userName;
-	/**
-	 * card number is the primary key of this entity as it is unique identifier with forgein key customer username
-	 * has a minimum and maximum value of 16 as all card numbers must have 16 digits
-	 */
+	@Id @GeneratedValue (generator = "customer") //PK auto generator for sales orders
+	@GenericGenerator(name = "customer", strategy = "foreign", 
+	parameters = { @Parameter(value = "customer", name = "property")})
+	@Column (name = "user_name")
+	private String userName;
+		
+	@ManyToOne (cascade = CascadeType.ALL)
+	private Customer customer;
+	
 	@Id
 	@Column(name = "card_number", length = 16)
 	@Size(min = 16, max = 16)
@@ -59,39 +53,30 @@ public class PaymentMethod {
 	@Column(name = "Address_post_code", length = 8)
 	@Size(min = 6, max = 8)
 	private String billingAddressPostcode;
+
+	///////////////////////////////////////
 	
-/**
- * Null constuctor for payment method 
- */
-	public PaymentMethod() {
-		this.userName = null; 
-		this.cardNumber = "0"; 
-		this.nameOnCard = ""; 
-		this.cardType = ""; 
-		this.startDate = new Date(0); 
-		this.expiryDate = new Date (0); 
-		this.billingAddressLine1 = "";
-		this.billingAddressPostcode = ""; 
-		
-	}
+	/**
+	 * 
+	 */
+	public PaymentMethod() {}
 
 	/**
-	 * Full constructor for payment method
-	 * @param String cardNumber
-	 * @param String cardType
-	 * @param Date startDate
-	 * @param Date expiryDate
-	 * @param String nameOnCard
-	 * @param String billingAddressLine1 from address
-	 * @param String billingAddressPostcode from address
-	 * @param String userName from customer
+	 * @param userName
+	 * @param customer
+	 * @param cardNumber
+	 * @param nameOnCard
+	 * @param cardType
+	 * @param startDate
+	 * @param expiryDate
+	 * @param billingAddressLine1
+	 * @param billingAddressPostcode
 	 */
-	
-	
-	public PaymentMethod(String cardNumber, String cardType, Date startDate, Date expiryDate, String nameOnCard,
-			String billingAddressLine1, String billingAddressPostcode, Customer userName) {
+	public PaymentMethod(String userName, Customer customer, String cardNumber, String nameOnCard, String cardType,
+			Date startDate, Date expiryDate, String billingAddressLine1, String billingAddressPostcode) {
 		super();
 		this.userName = userName;
+		this.customer = customer;
 		this.cardNumber = cardNumber;
 		this.nameOnCard = nameOnCard;
 		this.cardType = cardType;
@@ -101,53 +86,58 @@ public class PaymentMethod {
 		this.billingAddressPostcode = billingAddressPostcode;
 	}
 
+	///////////////////////////////////////////////
+	
+	/**
+	 * @return the userName
+	 */
+	public String getUserName() {
+		return userName;
+	}
 
-/**
- * get card number method
- * @return card number of payment method
- */
+	/**
+	 * @return the customer
+	 */
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	/**
+	 * @return the cardNumber
+	 */
 	public String getCardNumber() {
 		return cardNumber;
 	}
+
 	/**
-	 * get card type method
-	 * @return card type of payment method
-	 */
-	public String getCardType() {
-		return cardType;
-	}
-	/**
-	 * get start date method
-	 * @return start date of payment method
-	 */
-	public Date getStartDate() {
-		return startDate;
-	}
-	/**
-	 * get expiry date method
-	 * @return expiry date of payment method
-	 */
-	public Date getExpiryDate() {
-		return expiryDate;
-	}
-	/**
-	 * get name on card method
-	 * @return name on card of payment method
+	 * @return the nameOnCard
 	 */
 	public String getNameOnCard() {
 		return nameOnCard;
 	}
 
 	/**
-	 * set username method
-	 * @set the username in customer
+	 * @return the cardType
 	 */
-	public void setUserName(Customer userName) {
-		this.userName = userName;
+	public String getCardType() {
+		return cardType;
 	}
 
 	/**
-	 * get billing address line 1 method
+	 * @return the startDate
+	 */
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	/**
+	 * @return the expiryDate
+	 */
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
+
+	/**
 	 * @return the billingAddressLine1
 	 */
 	public String getBillingAddressLine1() {
@@ -155,139 +145,72 @@ public class PaymentMethod {
 	}
 
 	/**
-	 * set billing addres line 1 method
-	 * @set billingAddressLine1 of address
-	 */
-	public void setBillingAddressLine1(String billingAddressLine1) {
-		this.billingAddressLine1 = billingAddressLine1;
-	}
-
-	/**
-	 * gte billing address postcode 
-	 * @return the billingAddressPostcode of address
+	 * @return the billingAddressPostcode
 	 */
 	public String getBillingAddressPostcode() {
 		return billingAddressPostcode;
 	}
 
 	/**
-	 * set billing address method
-	 * @set billingAddressPostcode of address
+	 * @param userName the userName to set
 	 */
-	public void setBillingAddressPostcode(String billingAddressPostcode) {
-		this.billingAddressPostcode = billingAddressPostcode;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	/**
-	 * set card number method
-	 * @set cardNumber of payment method
+	 * @param customer the customer to set
+	 */
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	/**
+	 * @param cardNumber the cardNumber to set
 	 */
 	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
 	}
 
 	/**
-	 * set name on card method
-	 * @set name on card of payment method
+	 * @param nameOnCard the nameOnCard to set
 	 */
-	
 	public void setNameOnCard(String nameOnCard) {
 		this.nameOnCard = nameOnCard;
 	}
 
 	/**
-	 * set cardtype method
-	 * @set cardType of payment method
+	 * @param cardType the cardType to set
 	 */
 	public void setCardType(String cardType) {
 		this.cardType = cardType;
 	}
 
 	/**
-	 * set start date method
-	 * @set startDate of payment method
+	 * @param startDate the startDate to set
 	 */
 	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 
 	/**
-	 * set expiry date method
-	 * @set expiryDate of payment method
+	 * @param expiryDate the expiryDate to set
 	 */
 	public void setExpiryDate(Date expiryDate) {
 		this.expiryDate = expiryDate;
 	}
-	/** 
-	 * Override method for equlas to see if any of the data entered matches a record already in database
-	 * false if payment method other is different to this.PaymentMethod
+
+	/**
+	 * @param billingAddressLine1 the billingAddressLine1 to set
 	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		PaymentMethod other = (PaymentMethod) obj;
-		if (billingAddressLine1 == null) {
-			if (other.billingAddressLine1 != null)
-				return false;
-		} else if (!billingAddressLine1.equals(other.billingAddressLine1))
-			return false;
-		if (billingAddressPostcode == null) {
-			if (other.billingAddressPostcode != null)
-				return false;
-		} else if (!billingAddressPostcode.equals(other.billingAddressPostcode))
-			return false;
-		if (cardNumber == null) {
-			if (other.cardNumber != null)
-				return false;
-		} else if (!cardNumber.equals(other.cardNumber))
-			return false;
-		if (cardType == null) {
-			if (other.cardType != null)
-				return false;
-		} else if (!cardType.equals(other.cardType))
-			return false;
-		if (expiryDate == null) {
-			if (other.expiryDate != null)
-				return false;
-		} else if (!expiryDate.equals(other.expiryDate))
-			return false;
-		if (nameOnCard == null) {
-			if (other.nameOnCard != null)
-				return false;
-		} else if (!nameOnCard.equals(other.nameOnCard))
-			return false;
-		if (startDate == null) {
-			if (other.startDate != null)
-				return false;
-		} else if (!startDate.equals(other.startDate))
-			return false;
-		if (userName == null) {
-			if (other.userName != null)
-				return false;
-		} else if (!userName.equals(other.userName))
-			return false;
-		return true;
+	public void setBillingAddressLine1(String billingAddressLine1) {
+		this.billingAddressLine1 = billingAddressLine1;
 	}
 
-	/** 
-	 * Override to string method, 
+	/**
+	 * @param billingAddressPostcode the billingAddressPostcode to set
 	 */
-	@Override
-	public String toString() {
-		return "PaymentMethod [userName= " + userName + "," 
-				+ "cardNumber=" + cardNumber + "," 
-				+ "nameOnCard= " + nameOnCard + "," 
-				+ "cardType= " + cardType + "," 
-				+ "startDate= " + startDate + "," 
-				+ "expiryDate= " + expiryDate + ","
-				+ "billingAddressLine1= " + billingAddressLine1 + "," 
-				+ "billingAddressPostcode= " + billingAddressPostcode
-				+ "]";
+	public void setBillingAddressPostcode(String billingAddressPostcode) {
+		this.billingAddressPostcode = billingAddressPostcode;
 	}
-
 }

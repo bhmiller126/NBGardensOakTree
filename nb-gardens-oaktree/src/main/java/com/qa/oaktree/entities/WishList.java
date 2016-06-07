@@ -10,10 +10,10 @@ import org.hibernate.annotations.NamedQueries;
 import org.hibernate.annotations.NamedQuery;
 import org.hibernate.annotations.Parameter;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.JoinColumn;
 
 /**
@@ -45,16 +45,16 @@ public class WishList {
 	@JoinColumn(name = "stock", nullable = false, updatable = false)
 	private Stock Stock_catalog_id;
 	
-	@OneToOne
-	@PrimaryKeyJoinColumn
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "Customer")
 	private Customer customer;
 	
 	@Column (name = "wish_quantity")
 	private int wishQuantity;
 
-	public WishList() {
-	}
+	///////////////////////////////////
 	
+	public WishList() {}
+
 	/**
 	 * @param customerUserName
 	 * @param stock_catalog_id
@@ -69,7 +69,8 @@ public class WishList {
 		this.wishQuantity = wishQuantity;
 	}
 
-	/**************** getters and setters ******************/
+	///////////////////////////////////
+
 	/**
 	 * @return the customerUserName
 	 */

@@ -57,7 +57,6 @@ public class SalesOrder {
 	 */
 	public SalesOrder() {}
 
-	
 	/**
 	 * @param salesId
 	 * @param customer
