@@ -12,11 +12,13 @@
 				<h:form>
 					<fieldset class="w3-card-2" style="min-height:0">
 						<h:message for="login" value="#{login.error}"/>
-						<h:outputLabel class="w3-label w3-text-black" id="username" value="Username: "/>
-						<h:inputText class="w3-input w3-border" value="#{login.username}"/>
-						<h:outputLabel class="w3-label w3-text-black" value="Password: "/>
+						<h:outputLabel class="w3-label w3-text-black" id="username_label" value="Username: "/>
+						<h:inputText class="w3-input w3-border" id="username" value="#{login.username}"/>
+						<h:outputLabel class="w3-label w3-text-black" id="password_label" value="Password: "/>
 						<h:inputSecret class="w3-input w3-border" id="password" value="#{login.password}"/>
-						<br/><h:commandButton class="w3-btn" id="login" value="Login" action="#{login.login()}"/>
+						<h:selectBooleanCheckbox class="w3-check" type="checkbox" id="remember_me" checked="checked"/>
+						<h:outputLabel class="w3-label w3-text-black" id="remember_me_label" value="Keep me logged in (for up to 30 days)"/>
+						<br/><h:commandButton class="w3-btn" id="login_submit" value="Login" action="#{login.login()}"/>
 					</fieldset>
 				</h:form>
 			</div>
