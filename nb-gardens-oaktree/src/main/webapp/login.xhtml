@@ -16,9 +16,9 @@
 						<h:inputText class="w3-input w3-border" id="username" value="#{login.username}"/>
 						<h:outputLabel class="w3-label w3-text-black" id="password_label" value="Password: "/>
 						<h:inputSecret class="w3-input w3-border" id="password" value="#{login.password}"/>						
+						<h:selectBooleanCheckbox class="w3-check" type="checkbox" id="remember_me" checked="checked"/>				
 						<h:outputLabel class="w3-label w3-text-black" id="remember_me_label" value="Keep me logged in"/>
-						<h:selectBooleanCheckbox class="w3-check" type="checkbox" id="remember_me" checked="checked"/>
-						<h:commandButton class="w3-btn" id="login_submit" style="padding-right: 2px" value="Login" action="#{login.login()}"/> <br />
+						<h:commandButton class="w3-btn" id="login_submit" value="Login" action="#{login.login()}"/> <br />
 						<h:link class="forgotten-login-link w3-text-blue" id="forgotten_details" value="Forgotten Password?" outcome="policies.xhtml"/>				
 					</fieldset>
 				</h:form>
